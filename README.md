@@ -4,7 +4,7 @@
 
 This section introduces how to set up [DetectionLab](https://github.com/clong/DetectionLab) on your machine. Select the corresponding environment for your machine:
 
-### Win10 + VMware Workstation Pro 16
+### Windows 10 + VMware Workstation Pro 16
 
 #### Build Procedure
 
@@ -24,6 +24,12 @@ This section introduces how to set up [DetectionLab](https://github.com/clong/De
 3. Outputting debug information is highly recommended. This can be done by adding the `--debug 2>&1 | Tee-Object -FilePath "PATH TO YOUR LOG FILE"` flag after each `vagrant` command. Refer to [the official documentation](https://www.vagrantup.com/docs/other/debugging).
 4. When building **dc**, Vagrant might complain about "Timed out while waiting for the machine to boot" as described [here](https://github.com/clong/DetectionLab/issues/827). If you encounter this error but observe your **dc** VM is indeed up and running, you might want to change `timeout` settings in `Vagrantfile` under `DetectionLab/Vagrant` directory. A working practice is to set `timeout` to `2400`.
 5. When building Windows VMs (i.e., **dc**, **wef**, **win10**), *VMware Tools* might not be installed correctly, causing the failure of enabling shared folder, as described [here](https://github.com/clong/DetectionLab/issues/720). You should manually install *VMware Tools* inside those VMs. After installation, run the command `vagrant reload <VM name>`.
+
+### Ubuntu 20.04 + VrtualBox 6.1.34
+
+#### Build Procedure
+
+#### Things to Notice
 
 ## BlueTeam.Lab Setup
 
