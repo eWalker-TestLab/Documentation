@@ -43,7 +43,7 @@
   sudo apt install ssh
   ```
 
-  However, errors might occur if building the lab with SSH service enabled due to some library conflicts. It is recommended to temporarily stop the SSH service prior to building the lab by executing the following command:
+  However, due to some library conflicts, errors might occur if building the lab with SSH service enabled. It is recommended to temporarily stop the SSH service by executing the following command prior to building the lab:
 
   ```bash
   sudo systemctl stop ssh
