@@ -1,3 +1,4 @@
+!!! DRAFT - UNDER CONSTRUCTION !!! 
 # ESXi installation(https://clo.ng/blog/detectionlab-on-esxi/):
 - register account, get a license key, and download the ESXi .ISOs
 	https://www.vmware.com/go/get-free-esxi
