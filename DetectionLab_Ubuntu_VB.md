@@ -1,4 +1,3 @@
-
 # Ubuntu 20.04 + VirtualBox 6.1
 
 ## Build Procedure

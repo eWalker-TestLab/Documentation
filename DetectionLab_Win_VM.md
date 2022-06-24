@@ -1,4 +1,3 @@
-
 # Windows 10 + VMware Workstation Pro 16
 
 ## Build Procedure
