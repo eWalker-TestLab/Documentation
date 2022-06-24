@@ -33,19 +33,20 @@ This section introduces how to set up [DetectionLab](https://github.com/clong/De
 
 ### ESXi (working)
 
-#### ESXi installation(<https://clo.ng/blog/detectionlab-on-esxi/>)
+#### ESXi installation
 
 - register account, get a license key, and download the ESXi .ISOs
  <https://www.vmware.com/go/get-free-esxi>
 - create a bootable USB using Rufus (<https://rufus.ie/>)
 - install ESXi using bootable USB
+- follow the instructions [here](https://clo.ng/blog/detectionlab-on-esxi)
 - !!! 'No Network Adapter' issue during ESXi installation:
  using ESXi v6.7 would solve issue.
 
 #### prereq
 
-	https://detectionlab.network/introduction/prerequisites/
- https://detectionlab.network/deployment/esxi/
+ <https://detectionlab.network/introduction/prerequisites/>
+ <https://detectionlab.network/deployment/esxi/>
 
 - ESXi 6.x
 - Vagrant 2.2.9+
