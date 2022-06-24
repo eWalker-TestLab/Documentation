@@ -32,4 +32,6 @@
 
   ![Install VMware Tools](./img/DetectionLab/install_vmtool.png)
 
+- After finishing the build procedure, you may want to execute the `post_build_checks.ps1` script to validate the build result. You can use the modified version [here](./misc/post_build_checks.ps1) instead of the original version to detect errors better.
+
 - Before executing the `post_build_checks.ps1` script, ensure your machine's execution policy is correct. Refer to [the official documentation](https://docs.microsoft.com/en-us/powershell/module/microsoft.powershell.core/about/about_execution_policies?preserve-view=true&view=powershell-7.2&viewFallbackFrom=powershell-7.1). Alternatively, temporarily bypass the policy by adding the `-ep Bypass` flag to the command, e.g., `pwsh -ep Bypass .\post_build_checks.ps1`.
