@@ -33,7 +33,7 @@
    sudo apt-get update && sudo apt-get install packer
    ```
 
-6. After all the installation, follow the instructions [here](https://www.detectionlab.network/deployment/linuxvm/#instructions)
+6. After all the installation, follow the instructions [here](https://www.detectionlab.network/deployment/linuxvm/#instructions).
 
 ## Things to Notice
 
