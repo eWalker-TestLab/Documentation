@@ -42,7 +42,7 @@ Some additional steps are recommended besides the original instructions [here](h
 5. Upgrade some packages required by the toolchain using the following command.
 
    ```bash
-   python3 -m pip install --upgrade cryptography pyJWT
+   python3 -m pip install --upgrade cryptography PyJWT
    ```
 
 6. Finally, install python and various packages needed for remote connections and other activities using the following command.
