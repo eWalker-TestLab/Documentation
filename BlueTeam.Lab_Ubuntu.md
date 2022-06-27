@@ -6,7 +6,7 @@ Although this setup is done using guest OS in VMware, the same should apply to n
 
 ### Prerequisites
 
-Basically, you only have to follow the instructions [here](https://github.com/op7ic/BlueTeam.Lab#prerequisites), but some additional steps are recommended. Thus, please use the following steps:
+Some additional steps are recommended besides the original instructions [here](https://github.com/op7ic/BlueTeam.Lab#prerequisites). Thus, please use the following steps:
 
 1. Install *Azure CLI* using the following command. More details can be found in the [official documentation](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt).
 
