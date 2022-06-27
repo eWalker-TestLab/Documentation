@@ -57,7 +57,7 @@ Some additional steps are recommended besides the original instructions [here](h
 
 ### Prerequisites
 
-- It is recommended to install setup the environment using supported *Linux* distributions listed [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux). *Windows* is not recommended because some of the tools, such as *Ansible*, cannot run on *Windows* according to the [official documentation](https://docs.ansible.com/ansible/latest/user_guide/windows_faq.html#can-ansible-run-on-windows)
+- It is recommended to install setup the environment using supported *Linux* distributions listed [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux). *Windows* is not recommended because some of the tools, such as *Ansible*, cannot run on *Windows* according to the [official documentation](https://docs.ansible.com/ansible/latest/user_guide/windows_faq.html#can-ansible-run-on-windows).
 
 - After installing packages using `pip3`, `pip3` may complain about the following:
 
@@ -73,7 +73,7 @@ Some additional steps are recommended besides the original instructions [here](h
 
 ### Building and Deploying
 
-- Outputting the *Terraform* debug info is highly recommended, which the following commands can achieve. More details can be found in the [official documentation](https://www.terraform.io/internals/debugging)
+- Outputting the *Terraform* debug info is highly recommended, which the following commands can achieve. More details can be found in the [official documentation](https://www.terraform.io/internals/debugging) and this [blog](https://www.suse.com/support/kb/doc/?id=000020022).
 
   ```bash
   export TF_LOG="DEBUG"
