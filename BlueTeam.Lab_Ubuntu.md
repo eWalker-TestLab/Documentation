@@ -55,6 +55,8 @@ Basically, you only have to follow the instructions [here](https://github.com/op
 
 ## Things to Notice
 
+### Prerequisites
+
 - It is recommended to install setup the environment using supported *Linux* distributions listed [here](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux). *Windows* is not recommended because some of the tools, such as *Ansible*, cannot run on *Windows* according to the [official documentation](https://docs.ansible.com/ansible/latest/user_guide/windows_faq.html#can-ansible-run-on-windows)
 
 - After installing packages using `pip3`, `pip3` may complain about the following:
@@ -69,7 +71,9 @@ Basically, you only have to follow the instructions [here](https://github.com/op
   export PATH="~/.local/bin:$PATH"
   ```
 
-- It is recommended to output *Terraform* debug info, which can be achieved by the following commands. More details can be found in the [official documentation](https://www.terraform.io/internals/debugging)
+### Building and Deploying
+
+- Outputting the *Terraform* debug info is highly recommended, which the following commands can achieve. More details can be found in the [official documentation](https://www.terraform.io/internals/debugging)
 
   ```bash
   export TF_LOG="DEBUG"
