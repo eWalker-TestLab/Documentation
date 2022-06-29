@@ -9,7 +9,7 @@
 2. Install necessary tools by executing the following command:
 
    ```bash
-   sudo apt install build-essential curl git
+   sudo apt install build-essential curl git gnupg software-properties-common
    ```
 
 3. Install *VirtualBox* and *extension packs* by executing the following command:
