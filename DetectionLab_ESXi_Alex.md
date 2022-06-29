@@ -100,21 +100,3 @@ After all the installation, follow the instructions [here](https://www.detection
 - It is recommended to install setup the environment using *Linux* or *macOS*. *Windows* is not recommended because some of the tools, such as *Ansible*, cannot run on *Windows* according to the [official documentation](https://docs.ansible.com/ansible/latest/user_guide/windows_faq.html#can-ansible-run-on-windows).
 
 ### Building and Deploying
-
-- SSH is commonly used when managing a remote machine. And SSH service could be installed by the following command:
-
-  ```bash
-  sudo apt install ssh
-  ```
-
-  However, due to some library conflicts, errors might occur if building the lab with SSH service enabled. It is recommended to temporarily stop the SSH service by executing the following command prior to building the lab:
-
-  ```bash
-  sudo systemctl stop ssh
-  ```
-
-  After the lab is built, the SSH service can be started by executing the following command:
-
-  ```bash
-  sudo systemctl start ssh
-  ```
