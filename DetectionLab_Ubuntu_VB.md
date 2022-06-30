@@ -46,6 +46,8 @@ After all the installation, follow the instructions [here](https://www.detection
 
 ### Building and Deploying
 
+- Outputting *Vagrant* debug information is highly recommended. This can be done by adding the `--debug &> <PATH TO YOUR LOG FILE>` flag after each `vagrant` command. For example, `vagrant up --debug &> ~/vagrant_up.log`. Refer to [the official documentation](https://www.vagrantup.com/docs/other/debugging).
+
 - SSH is commonly used when managing a remote machine. And SSH service could be installed by the following command:
 
   ```bash

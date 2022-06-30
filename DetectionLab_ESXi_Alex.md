@@ -83,15 +83,17 @@ Follow the instructions [here](https://clo.ng/blog/detectionlab-on-esxi/) in the
 
 2. Allow Packer to infer the guest IP from ESXi without the VM needing to report it itself.
 
-3. Open VNC ports on the firewall.
+3. Open VNC ports on the firewall. More info on the [official article 1](https://kb.vmware.com/s/article/2008226) and [official article 2](https://kb.vmware.com/s/article/2043564).
 
 #### DetectionLab Project File Modifications
 
 First of all, clone the repository to your workspace by `git clone git@github.com:clong/DetectionLab.git`
 
-### Building and Deploying
+1. Edit the `variables.json` file in `DetectionLab/ESXi/Packer` as described [here](https://detectionlab.network/deployment/esxi/#steps)
 
-After all the installation, follow the instructions [here](https://www.detectionlab.network/deployment/linuxvm/#instructions).
+2. Since ESXi 6.7 is used, the steps described [here](https://detectionlab.network/deployment/esxi/#special-configuration-for-esxi-6x) should also be executed.
+
+### Building and Deploying
 
 ## Things to Notice
 
@@ -100,3 +102,11 @@ After all the installation, follow the instructions [here](https://www.detection
 - It is recommended to install setup the environment using *Linux* or *macOS*. *Windows* is not recommended because some of the tools, such as *Ansible*, cannot run on *Windows* according to the [official documentation](https://docs.ansible.com/ansible/latest/user_guide/windows_faq.html#can-ansible-run-on-windows).
 
 ### Building and Deploying
+
+- Outputting *Packer* debug information is highly recommended. To do so, use the following commands instead of the original build commands. More info on the [official website](https://www.packer.io/docs/debugging)
+
+  ```bash
+  PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json windows_10_esxi.json &> logs/packer_build_win10.log
+  PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json windows_2016_esxi.json &> logs/packer_build_winserver2016.log
+  PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json ubuntu2004_esxi.json &> logs/packer_build_ubuntu20.log
+  ```
