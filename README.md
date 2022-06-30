@@ -8,9 +8,10 @@ This section introduces how to set up [DetectionLab](https://github.com/clong/De
 - [Ubuntu 20.04 + VirtualBox 6.1](./DetectionLab_Ubuntu_VB.md)
 - [ESXi 6.7 (build with win & wsl) (NOT DONE)](./DetectionLab_ESXi_1.md)
 - [ESXi 6.7 (all build with ubuntu in VMware) (NOT DONE)](./DetectionLab_ESXi_2.md)
+- [ESXi 6.7 on NUC8i7BEH (with Ubuntu 20.04 in VMware Workstation Pro 16)](./DetectionLab_ESXi_Alex.md)
 
 ## BlueTeam.Lab Setup
 
 This section introduces how to set up [BlueTeam.Lab](https://github.com/op7ic/BlueTeam.Lab) on your machine. Select the corresponding environment for your machine:
 
-- [Ubuntu 20.04 in VMware Workstation Pro 16](./BlueTeam.Lab_Ubuntu.md)
+- [Azure (with Ubuntu 20.04 in VMware Workstation Pro 16)](./BlueTeam.Lab_Azure_Ubuntu.md)

@@ -1,6 +1,6 @@
-# Ubuntu 20.04 in VMware Workstation Pro 16
+# Azure (with Ubuntu 20.04 in VMware Workstation Pro 16)
 
-Although this setup is done using guest OS in VMware, the same should apply to native OS running bare metal.
+Although this setup is done using Ubuntu 20.04 guest OS in VMware, the same should apply to native OS running bare metal.
 
 ## Build Procedure
 
@@ -42,13 +42,13 @@ Some additional steps are recommended besides the original instructions [here](h
 5. Upgrade some packages required by the toolchain using the following command.
 
    ```bash
-   python3 -m pip install --upgrade cryptography PyJWT
+   pip3 install --upgrade cryptography PyJWT
    ```
 
 6. Finally, install python and various packages needed for remote connections and other activities using the following command.
 
    ```bash
-   python3 -m pip install pywinrm requests msrest msrestazure azure-cli
+   pip3 install pywinrm requests msrest msrestazure azure-cli
    ```
 
 ### Building and Deploying
