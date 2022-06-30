@@ -25,7 +25,7 @@
 	echo 'export PATH="<path to ovftool file>:$PATH"' >> ~/.bashrc
 	source ~/.bashrc
 	```
-4. install ansible and pywinrm, and and add ansible to $PATH[^1]
+4. install ansible and pywinrm, and and add ansible to $PATH
 	```
 	pip3 ansible pywinrm
 	echo 'export PATH="<path to ansible>:$PATH"' >> ~/.bashrc
@@ -38,25 +38,23 @@
 - reference to the [step](https://detectionlab.network/deployment/esxi/#steps) to deploy the DetectionLab
 
 ### Step 4 - Set up VMs:
-- From "<some dir>/DetectionLab/ESXi/Packer", run: [^1]
+- From "<some dir>/DetectionLab/ESXi/Packer", run:
 	```
 	PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json windows_10_esxi.json
 	PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json windows_2016_esxi.json
 	PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json ubuntu2004_esxi.json
 	```
 
-!!!!!!!!!
-
-### Step 5 - Create VMs
+### Step 5 - Create VMs {{{WORKING}}}
 
 
 ## Things to Notice
-[^1]: ensure the ansible config file is from "DetectionLab/ESXi/ansible/ansible.cfg"
+1.ensure the ansible config file is from "DetectionLab/ESXi/ansible/ansible.cfg"
 ```
 cd ~/code/DetectionLab/ESXi/ansible
 ansible --version
 ```
-[^2]: You can use following syntax to send out debug log:
+2.you can use following syntax to send out debug log:
 ```
 PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json windows_10_esxi.json &> ~/code/log/packer_build_windows_10_esxi_1.log
 PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json windows_2016_esxi.json &> ~/code/log/packer_build_windows_2016_esxi_1.log
@@ -64,14 +62,16 @@ PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file v
 ```
 In another terminal: 
 ```
-tail -f <log file dir>/packer_build_windows_10_esxi_1.log
-tail -f <log file dir>/packer_build_windows_2016_esxi_1.log
-tail -f <log file dir>/packer_build_ubuntu2004_esxi_1.log
+tail -f ~/code/log/packer_build_windows_10_esxi_1.log
+tail -f ~/code/log/packer_build_windows_2016_esxi_1.log
+tail -f ~/code/log/packer_build_ubuntu2004_esxi_1.log
 ```
 
 
 ## Reference 
-[guide esxi install]: https://clo.ng/blog/detectionlab-on-esxi/
-[guide DetectionLab deployment]: https://detectionlab.network/deployment/esxi/
-[guide esxi host config]: https://nickcharlton.net/posts/using-packer-esxi-6.html
+guide esxi install: https://clo.ng/blog/detectionlab-on-esxi/
+
+guide DetectionLab deployment: https://detectionlab.network/deployment/esxi/
+
+guide esxi host config: https://nickcharlton.net/posts/using-packer-esxi-6.html
 
