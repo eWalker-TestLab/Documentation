@@ -107,20 +107,50 @@ First of all, clone the repository to your workspace by `git clone git@github.co
 
 ### Building and Deploying
 
+After all the prerequisites are satisfied, do the following.
+
+1. Execute the following commands from the `DetectionLab/ESXi/Packer` directory.
+
+   ```bash
+   PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json windows_10_esxi.json
+   PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json windows_2016_esxi.json
+   PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json ubuntu2004_esxi.json
+   ```
+
+   After the *Packer* build finishes, verify that you now see `Windows10`, `WindowsServer2016`, and `Ubuntu2004` in the ESXi console.
+
+2. In `DetectionLab/ESXi`, Create a `terraform.tfvars` file to override the default variables listed in `variables.tf`. The file should be like the following:
+
+   ![terraform.tfvars](img/DetectionLab/terraform.tfvars.jpg)
+
+3. In `DetectionLab/ESXi`, execute the following commands.
+
+   ```bash
+   terraform init
+   terraform apply
+   ```
+
 ## Things to Notice
 
 ### Prerequisites
 
 - It is recommended to install setup the environment using *Linux* or *macOS*. *Windows* is not recommended because some of the tools, such as *Ansible*, cannot run on *Windows* according to the [official documentation](https://docs.ansible.com/ansible/latest/user_guide/windows_faq.html#can-ansible-run-on-windows).
 
-- It is recommended to check your system's proxy settings. Also, it is recommended not to use any proxy applications or browser plugins (e.g. *SwitchyOmega*) during the setup process.
+- It is recommended to check your system's proxy settings. Also, it is recommended not to use any proxy applications or browser plugins (e.g., *SwitchyOmega*) during the setup process.
 
 ### Building and Deploying
 
-- Outputting *Packer* debug information is highly recommended. To do so, use the following commands instead of the original build commands. More info on the [official website](https://www.packer.io/docs/debugging)
+- Outputting *Packer* debug information is highly recommended. To do so, use the following commands instead of the original build commands. More info on the [official website](https://www.packer.io/docs/debugging).
 
   ```bash
   PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json windows_10_esxi.json &> logs/packer_build_win10.log
   PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json windows_2016_esxi.json &> logs/packer_build_winserver2016.log
   PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json ubuntu2004_esxi.json &> logs/packer_build_ubuntu20.log
+  ```
+
+- Outputting *Terraform* debug information is highly recommended. To do so, use the following commands instead of the original build commands. More info on the [official website](https://www.terraform.io/internals/debugging).
+
+  ```bash
+  TF_LOG=DEBUG terraform init &> logs/terraform_init_0.log
+  TF_LOG=DEBUG terraform apply &> logs/terraform_apply_0.log
   ```

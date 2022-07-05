@@ -1,0 +1,14 @@
+    1  ll
+    2  l
+    3  cd
+    4  l
+    5  nvim ~/.zshrc
+    6  exit
+    7  cd workspace/eWalker/DetectionLab/Vagrant/
+    8  l
+    9  nvim vagrant_0_up.log
+   10  systemctl status ssh
+   11  ifconfig
+   12  ip address
+   13  history
+   14  bash
