@@ -91,15 +91,19 @@ Refer to the instructions [here](https://clo.ng/blog/detectionlab-on-esxi/) in t
    esxcli system settings advanced set -o /Net/GuestIPHack -i 1
    ```
 
-3. Open VNC ports on the firewall. More info on the [official article 1](https://kb.vmware.com/s/article/2008226) and [official article 2](https://kb.vmware.com/s/article/2043564).
+3. Open VNC ports on the firewall. You can either configure it temporarily following the instructions [here](https://nickcharlton.net/posts/using-packer-esxi-6.html) or permanently [here](https://github.com/sukster/ESXi-Packer-VNC). More info on the [official article 1](https://kb.vmware.com/s/article/2008226) and [official article 2](https://kb.vmware.com/s/article/2043564). You can check it by the following command.
+
+   ```bash
+   esxcli network firewall ruleset list | grep vnc
+   ```
 
 #### DetectionLab Project File Modifications
 
 First of all, clone the repository to your workspace by `git clone git@github.com:clong/DetectionLab.git`
 
-1. Edit the `variables.json` file in `DetectionLab/ESXi/Packer` as described [here](https://detectionlab.network/deployment/esxi/#steps)
+1. Edit `DetectionLab/ESXi/Packer/variables.json` as described [here](https://detectionlab.network/deployment/esxi/#steps).
 
-2. Since ESXi 6.7 is used, the steps described [here](https://detectionlab.network/deployment/esxi/#special-configuration-for-esxi-6x) should also be executed.
+2. Since ESXi 6.7 is used, edit `DetectionLab/ESXi/Packer/windows_10_esxi.json`, `DetectionLab/ESXi/Packer/windows_2016_esxi.json` and `DetectionLab/ESXi/Packer/ubuntu2004_esxi.json` as described [here](https://detectionlab.network/deployment/esxi/#special-configuration-for-esxi-6x).
 
 ### Building and Deploying
 
