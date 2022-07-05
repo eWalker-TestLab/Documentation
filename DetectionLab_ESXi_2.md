@@ -1,13 +1,22 @@
 # ESXI 6.7 (all build with ubuntu in VMware) (NOT DONE)
 ## Build Procedure
-### Step 1 - Prepare ESXi:
+### Step 1(1) - Prepare ESXi:
 - register account, get a license key, and download the ESXi .ISOs from: https://www.vmware.com/go/get-free-esxi
 - create a bootable USB using [Rufus](https://rufus.ie/)
 - install ESXi using the bootable USB
 - reference to the guide from [here](https://clo.ng/blog/detectionlab-on-esxi/) and [here](https://nickcharlton.net/posts/using-packer-esxi-6.html) to set up ESXi host networking and configuration
 
+### Step 1(2) - Prepare ESXi: ///
+- download ESXi 7.0 offline bundle
+- download Network Community Driver from [here](http)
+- run commands as [here](http)
+- install ESXi using bootable USB using [Rufus](http)
+- set vlanID of Management Network to 4095 on ESXi host 
+- set vlanID for host and VM Network on web
+
 ### Step 2 - Prepare Ubuntu:
 - run all commands as root user or with sudo
+- change <some path> to your corresponding path
 - have your packages up-to-date
 - reference to: https://detectionlab.network/deployment/esxi/
 1. ensure curl, git, pip3, sshpass installed
@@ -25,7 +34,7 @@
 	echo 'export PATH="<path to ovftool file>:$PATH"' >> ~/.bashrc
 	source ~/.bashrc
 	```
-4. install ansible and pywinrm, and and add ansible to $PATH
+4. install ansible and pywinrm, and add ansible to $PATH
 	```
 	pip3 ansible pywinrm
 	echo 'export PATH="<path to ansible>:$PATH"' >> ~/.bashrc
@@ -37,15 +46,37 @@
 ### Step 3 - Edit configuration files
 - reference to the [step](https://detectionlab.network/deployment/esxi/#steps) to deploy the DetectionLab
 
-### Step 4 - Set up VMs:
-- From "<some dir>/DetectionLab/ESXi/Packer", run:
+### Step 4 - prepare VMs:
+- From "<some path>/DetectionLab/ESXi/Packer", run:
 	```
 	PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json windows_10_esxi.json
 	PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json windows_2016_esxi.json
 	PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json ubuntu2004_esxi.json
 	```
 
-### Step 5 - Create VMs {{{WORKING}}}
+### Step 5 - terraform ///
+- locate to "DetectionLab/ESXi", create adn edit "terraform.tfvars" file
+	```
+	esxi_hostname = "192.168.1.224"
+	esxi_password = "eWalker123"
+	esxi_datastore = "datastore1"
+	vm_network = "VM Network"
+	hostonly_network = "HostOnly" 
+	```
+- creagte logger, dc, wef, win10
+	run 
+	```
+	terraform init
+	terraform apply
+	```
+
+### Step 6 - ansible
+- locate to "DetectionLab/ESXi/ansible", edit "inventory.yml" as [step8. here](https://detectionlab.network/deployment/esxi/）
+- take snapshot on VMs before ansible playlook
+- run
+	```
+	ansible-playbook -v detectionlab.yml
+	```
 
 
 ## Things to Notice
