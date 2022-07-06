@@ -1,0 +1,1146 @@
+ansible-playbook [core 2.13.1]
+  config file = /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/ansible.cfg
+  configured module search path = ['/home/az/.ansible/plugins/modules', '/usr/share/ansible/plugins/modules']
+  ansible python module location = /home/az/.local/lib/python3.8/site-packages/ansible
+  ansible collection location = /home/az/.ansible/collections:/usr/share/ansible/collections
+  executable location = /home/az/.local/bin/ansible-playbook
+  python version = 3.8.10 (default, Mar 15 2022, 12:22:08) [GCC 9.4.0]
+  jinja version = 3.1.2
+  libyaml = True
+Using /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/ansible.cfg as config file
+host_list declined parsing /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/inventory.yml as it did not pass its verify_file() method
+script declined parsing /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/inventory.yml as it did not pass its verify_file() method
+Parsed /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/inventory.yml inventory source with yaml plugin
+redirecting (type: action) ansible.builtin.synchronize to ansible.posix.synchronize
+redirecting (type: modules) ansible.builtin.win_hostname to ansible.windows.win_hostname
+redirecting (type: action) ansible.builtin.win_reboot to ansible.windows.win_reboot
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_chocolatey to chocolatey.chocolatey.win_chocolatey
+redirecting (type: modules) ansible.builtin.win_stat to ansible.windows.win_stat
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: action) ansible.builtin.win_reboot to ansible.windows.win_reboot
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_hostname to ansible.windows.win_hostname
+redirecting (type: action) ansible.builtin.win_reboot to ansible.windows.win_reboot
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_chocolatey to chocolatey.chocolatey.win_chocolatey
+redirecting (type: modules) ansible.builtin.win_stat to ansible.windows.win_stat
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: action) ansible.builtin.win_reboot to ansible.windows.win_reboot
+redirecting (type: modules) ansible.builtin.win_get_url to ansible.windows.win_get_url
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_hostname to ansible.windows.win_hostname
+redirecting (type: action) ansible.builtin.win_reboot to ansible.windows.win_reboot
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_chocolatey to chocolatey.chocolatey.win_chocolatey
+redirecting (type: modules) ansible.builtin.win_stat to ansible.windows.win_stat
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: action) ansible.builtin.win_reboot to ansible.windows.win_reboot
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: action) ansible.builtin.win_reboot to ansible.windows.win_reboot
+redirecting (type: modules) ansible.builtin.win_file to ansible.windows.win_file
+redirecting (type: modules) ansible.builtin.win_get_url to ansible.windows.win_get_url
+redirecting (type: modules) ansible.builtin.win_disk_image to community.windows.win_disk_image
+redirecting (type: modules) ansible.builtin.win_package to ansible.windows.win_package
+redirecting (type: modules) ansible.builtin.win_package to ansible.windows.win_package
+redirecting (type: modules) ansible.builtin.win_package to ansible.windows.win_package
+redirecting (type: action) ansible.builtin.win_reboot to ansible.windows.win_reboot
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_hostname to ansible.windows.win_hostname
+redirecting (type: action) ansible.builtin.win_reboot to ansible.windows.win_reboot
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_chocolatey to chocolatey.chocolatey.win_chocolatey
+redirecting (type: modules) ansible.builtin.win_stat to ansible.windows.win_stat
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: action) ansible.builtin.win_reboot to ansible.windows.win_reboot
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_chocolatey to chocolatey.chocolatey.win_chocolatey
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+Skipping callback 'default', as we already have a stdout callback.
+Skipping callback 'minimal', as we already have a stdout callback.
+Skipping callback 'oneline', as we already have a stdout callback.
+
+PLAYBOOK: detectionlab.yml *****************************************************
+5 plays in detectionlab.yml
+
+PLAY [logger] ******************************************************************
+META: ran handlers
+META: 
+META: ran handlers
+META: ran handlers
+
+PLAY [dc] **********************************************************************
+META: ran handlers
+META: 
+META: 
+META: ran handlers
+META: ran handlers
+
+PLAY [wef] *********************************************************************
+
+TASK [Gathering Facts] *********************************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/detectionlab.yml:13
+/usr/lib/python3/dist-packages/paramiko/transport.py:219: CryptographyDeprecationWarning: Blowfish has been deprecated
+  "class": algorithms.Blowfish,
+redirecting (type: modules) ansible.builtin.setup to ansible.windows.setup
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/setup.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+ok: [192.168.1.46]
+META: ran handlers
+
+TASK [wef : Hostname -> WEF] ***************************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:3
+redirecting (type: modules) ansible.builtin.win_hostname to ansible.windows.win_hostname
+redirecting (type: modules) ansible.builtin.win_hostname to ansible.windows.win_hostname
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/win_hostname.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+ok: [192.168.1.46] => {
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "name": "wef"
+        }
+    },
+    "old_name": "wef",
+    "reboot_required": false
+}
+redirecting (type: action) ansible.builtin.win_reboot to ansible.windows.win_reboot
+
+TASK [wef : Reboot] ************************************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:8
+skipping: [192.168.1.46] => {
+    "changed": false,
+    "skip_reason": "Conditional result was False"
+}
+
+TASK [wef : Set HostOnly IP Address] *******************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:13
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/win_shell.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+changed: [192.168.1.46] => {
+    "changed": true,
+    "cmd": "If (-not(get-netipaddress | where {$_.IPAddress -eq '192.168.56.103'})) {$adapter = (get-netadapter | where {$_.MacAddress -eq '00-50-56-A1-B4-C4'}).Name; New-NetIPAddress –InterfaceAlias $adapter –AddressFamily IPv4 -IPAddress 192.168.56.103 –PrefixLength 24 -DefaultGateway 192.168.56.1 } Else { Write-Host 'IP Address Already Created.' }",
+    "delta": "0:00:01.018057",
+    "end": "2022-07-06 02:44:22.948218",
+    "rc": 0,
+    "start": "2022-07-06 02:44:21.930160",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "IP Address Already Created.\n",
+    "stdout_lines": [
+        "IP Address Already Created."
+    ]
+}
+
+TASK [wef : Set HostOnly DNS Address] ******************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:17
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/win_shell.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+changed: [192.168.1.46] => {
+    "changed": true,
+    "cmd": "$adapter = (get-netadapter | where {$_.MacAddress -eq '00-50-56-A1-B4-C4'}).Name; Set-DnsClientServerAddress -InterfaceAlias $adapter -ServerAddresses 192.168.56.102,8.8.8.8",
+    "delta": "0:00:01.453082",
+    "end": "2022-07-06 02:44:25.733380",
+    "rc": 0,
+    "start": "2022-07-06 02:44:24.280298",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "",
+    "stdout_lines": []
+}
+
+TASK [wef : Install git] *******************************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:20
+redirecting (type: modules) ansible.builtin.win_chocolatey to chocolatey.chocolatey.win_chocolatey
+redirecting (type: modules) ansible.builtin.win_chocolatey to chocolatey.chocolatey.win_chocolatey
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/chocolatey/chocolatey/plugins/modules/win_chocolatey.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+ok: [192.168.1.46] => {
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "allow_empty_checksums": false,
+            "allow_multiple": false,
+            "allow_prerelease": false,
+            "architecture": "default",
+            "choco_args": null,
+            "force": false,
+            "ignore_checksums": false,
+            "ignore_dependencies": false,
+            "install_args": null,
+            "name": [
+                "git"
+            ],
+            "override_args": false,
+            "package_params": null,
+            "pinned": null,
+            "proxy_password": null,
+            "proxy_url": null,
+            "proxy_username": null,
+            "remove_dependencies": false,
+            "skip_scripts": false,
+            "source": null,
+            "source_password": null,
+            "source_username": null,
+            "state": "present",
+            "timeout": 2700,
+            "validate_certs": true,
+            "version": null
+        }
+    },
+    "rc": 0
+}
+
+TASK [wef : Check if existing DetectionLab directory] **************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:25
+redirecting (type: modules) ansible.builtin.win_stat to ansible.windows.win_stat
+redirecting (type: modules) ansible.builtin.win_stat to ansible.windows.win_stat
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/win_stat.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+ok: [192.168.1.46] => {
+    "changed": false,
+    "invocation": {
+        "module_args": {
+            "checksum_algorithm": "sha1",
+            "follow": false,
+            "get_checksum": true,
+            "path": "c:\\DetectionLab"
+        }
+    },
+    "stat": {
+        "attributes": "Directory",
+        "creationtime": 1657016797.7318976,
+        "exists": true,
+        "filename": "DetectionLab",
+        "hlnk_targets": [],
+        "isarchive": false,
+        "isdir": true,
+        "ishidden": false,
+        "isjunction": false,
+        "islnk": false,
+        "isreadonly": false,
+        "isreg": false,
+        "isshared": false,
+        "lastaccesstime": 1657016814.4511592,
+        "lastwritetime": 1657016814.4511592,
+        "nlink": 1,
+        "owner": "BUILTIN\\Administrators",
+        "path": "c:\\DetectionLab",
+        "size": 354955820
+    }
+}
+
+TASK [wef : Git clone Detectionlab] ********************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:30
+skipping: [192.168.1.46] => {
+    "changed": false,
+    "skip_reason": "Conditional result was False"
+}
+
+TASK [wef : Copy scripts to c:\vagrant] ****************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:36
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/win_shell.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+changed: [192.168.1.46] => {
+    "changed": true,
+    "cmd": "Copy-Item -Recurse c:\\DetectionLab\\Vagrant c:\\vagrant",
+    "delta": "0:00:01.147064",
+    "end": "2022-07-06 02:44:32.750782",
+    "rc": 0,
+    "start": "2022-07-06 02:44:31.603718",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "",
+    "stdout_lines": []
+}
+
+TASK [wef : Join the Domain] ***************************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:39
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/win_shell.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+ok: [192.168.1.46] => {
+    "changed": false,
+    "cmd": ".\\\\provision.ps1",
+    "delta": "0:00:05.574319",
+    "end": "2022-07-06 02:44:39.774187",
+    "rc": 0,
+    "start": "2022-07-06 02:44:34.199867",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "[02:44] Setting timezone to UTC...\n[02:44] Checking if Windows evaluation is expiring soon or expired...\n[02:44] 180 days left until expiration, no need to rearm.\nUnable to connect to ping.detectionlab.network\n[02:44] Disabling IPv6 on all network adatpers...\n\r\nName                           DisplayName                                        ComponentID          Enabled     \r\n----                           -----------                                        -----------          -------     \r\nEthernet1                      Internet Protocol Version 6 (TCP/IPv6)             ms_tcpip6            False       \r\nEthernet0 2                    Internet Protocol Version 6 (TCP/IPv6)             ms_tcpip6            False       \r\nThe operation completed successfully.\r\r\n[02:44] I am domain joined!\n[02:44] Setting the registry for auto-login...\n[02:44] Provisioning after joining domain...\n\r\n\r\n",
+    "stdout_lines": [
+        "[02:44] Setting timezone to UTC...",
+        "[02:44] Checking if Windows evaluation is expiring soon or expired...",
+        "[02:44] 180 days left until expiration, no need to rearm.",
+        "Unable to connect to ping.detectionlab.network",
+        "[02:44] Disabling IPv6 on all network adatpers...",
+        "",
+        "Name                           DisplayName                                        ComponentID          Enabled     ",
+        "----                           -----------                                        -----------          -------     ",
+        "Ethernet1                      Internet Protocol Version 6 (TCP/IPv6)             ms_tcpip6            False       ",
+        "Ethernet0 2                    Internet Protocol Version 6 (TCP/IPv6)             ms_tcpip6            False       ",
+        "The operation completed successfully.",
+        "",
+        "[02:44] I am domain joined!",
+        "[02:44] Setting the registry for auto-login...",
+        "[02:44] Provisioning after joining domain...",
+        "",
+        ""
+    ]
+}
+
+TASK [wef : debug] *************************************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:46
+ok: [192.168.1.46] => {
+    "msg": [
+        "[02:44] Setting timezone to UTC...",
+        "[02:44] Checking if Windows evaluation is expiring soon or expired...",
+        "[02:44] 180 days left until expiration, no need to rearm.",
+        "Unable to connect to ping.detectionlab.network",
+        "[02:44] Disabling IPv6 on all network adatpers...",
+        "",
+        "Name                           DisplayName                                        ComponentID          Enabled     ",
+        "----                           -----------                                        -----------          -------     ",
+        "Ethernet1                      Internet Protocol Version 6 (TCP/IPv6)             ms_tcpip6            False       ",
+        "Ethernet0 2                    Internet Protocol Version 6 (TCP/IPv6)             ms_tcpip6            False       ",
+        "The operation completed successfully.",
+        "",
+        "[02:44] I am domain joined!",
+        "[02:44] Setting the registry for auto-login...",
+        "[02:44] Provisioning after joining domain...",
+        "",
+        ""
+    ]
+}
+redirecting (type: action) ansible.builtin.win_reboot to ansible.windows.win_reboot
+
+TASK [wef : Reboot After Joining the Domain] ***********************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:48
+redirecting (type: modules) ansible.builtin.win_reboot to ansible.windows.win_reboot
+redirecting (type: action) ansible.builtin.win_reboot to ansible.windows.win_reboot
+redirecting (type: action) ansible.builtin.win_reboot to ansible.windows.win_reboot
+win_reboot: getting boot time
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+win_reboot: last boot time: 133014908464982870
+win_reboot: saving original connection_timeout of None
+win_reboot: rebooting server...
+EXEC (via pipeline wrapper)
+win_reboot: waiting an additional 60.0 seconds
+win_reboot validating reboot
+win_reboot: attempting to get system boot time
+win_reboot: setting connect_timeout 5
+win_reboot: closing connection plugin
+win_reboot: resetting connection plugin
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+win_reboot: attempting to get system boot time
+win_reboot: getting boot time
+EXEC (via pipeline wrapper)
+win_reboot: last boot time: 133015491384981210
+win_reboot: setting connect_timeout None
+win_reboot: resetting connection plugin
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+win_reboot running post reboot test command
+win_reboot: attempting post-reboot test command
+EXEC (via pipeline wrapper)
+win_reboot: attempting post-reboot test command
+EXEC (via pipeline wrapper)
+win_reboot: attempting post-reboot test command
+EXEC (via pipeline wrapper)
+win_reboot: attempting post-reboot test command
+EXEC (via pipeline wrapper)
+win_reboot: attempting post-reboot test command
+EXEC (via pipeline wrapper)
+win_reboot: attempting post-reboot test command
+EXEC (via pipeline wrapper)
+win_reboot: attempting post-reboot test command
+EXEC (via pipeline wrapper)
+win_reboot: attempting post-reboot test command
+EXEC (via pipeline wrapper)
+win_reboot: system successfully rebooted
+changed: [192.168.1.46] => {
+    "changed": true,
+    "elapsed": 134,
+    "rebooted": true,
+    "unreachable": false
+}
+
+TASK [wef : Download Microsoft ATA] ********************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:55
+redirecting (type: modules) ansible.builtin.win_get_url to ansible.windows.win_get_url
+redirecting (type: modules) ansible.builtin.win_get_url to ansible.windows.win_get_url
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/win_get_url.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+ok: [192.168.1.46] => {
+    "changed": false,
+    "checksum_dest": "2e55cfba31a5d6af822b6149bb348e926834e68a",
+    "checksum_src": "2e55cfba31a5d6af822b6149bb348e926834e68a",
+    "dest": "C:\\Users\\vagrant\\AppData\\Local\\Temp\\Microsoft ATA 1.9.iso",
+    "elapsed": 19.7049608,
+    "invocation": {
+        "module_args": {
+            "checksum": null,
+            "checksum_algorithm": "sha1",
+            "checksum_url": null,
+            "client_cert": null,
+            "client_cert_password": null,
+            "dest": "C:\\Users\\vagrant\\AppData\\Local\\Temp\\Microsoft ATA 1.9.iso",
+            "follow_redirects": "safe",
+            "force": true,
+            "force_basic_auth": false,
+            "headers": null,
+            "http_agent": "ansible-httpget",
+            "maximum_redirection": 50,
+            "proxy_password": null,
+            "proxy_url": null,
+            "proxy_use_default_credential": false,
+            "proxy_username": null,
+            "timeout": 3600,
+            "url": "http://download.microsoft.com/download/4/9/1/491394D1-3F28-4261-ABC6-C836A301290E/ATA1.9.iso",
+            "url_method": null,
+            "url_password": null,
+            "url_timeout": 3600,
+            "url_username": null,
+            "use_default_credential": false,
+            "use_proxy": true,
+            "validate_certs": true
+        }
+    },
+    "msg": "OK",
+    "size": 407433216,
+    "status_code": 200,
+    "url": "http://download.microsoft.com/download/4/9/1/491394D1-3F28-4261-ABC6-C836A301290E/ATA1.9.iso"
+}
+
+TASK [wef : Clear Event Logs] **************************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:61
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/win_shell.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+changed: [192.168.1.46] => {
+    "changed": true,
+    "cmd": "wevtutil el | Select-String -notmatch \"Microsoft-Windows-LiveId\" | Foreach-Object {wevtutil cl \"$_\"}",
+    "delta": "0:00:09.761498",
+    "end": "2022-07-06 02:47:28.270098",
+    "rc": 0,
+    "start": "2022-07-06 02:47:18.508600",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "",
+    "stdout_lines": []
+}
+
+TASK [wef : Downloading the Palantir WEF Configuration] ************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:64
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/win_shell.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+changed: [192.168.1.46] => {
+    "changed": true,
+    "cmd": ".\\download_palantir_wef.ps1",
+    "delta": "0:00:00.437377",
+    "end": "2022-07-06 02:47:29.847770",
+    "failed_when_result": false,
+    "rc": 0,
+    "start": "2022-07-06 02:47:29.410393",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "[02:47] Downloading and unzipping the Palantir Windows Event Forwarding Repo from Github...\n[02:47] C:\\Users\\vagrant\\AppData\\Local\\Temp\\wef-Master.zip already exists. Moving On.\n[02:47] Palantir WEF download complete!\n",
+    "stdout_lines": [
+        "[02:47] Downloading and unzipping the Palantir Windows Event Forwarding Repo from Github...",
+        "[02:47] C:\\Users\\vagrant\\AppData\\Local\\Temp\\wef-Master.zip already exists. Moving On.",
+        "[02:47] Palantir WEF download complete!"
+    ]
+}
+
+TASK [wef : debug] *************************************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:71
+ok: [192.168.1.46] => {
+    "msg": [
+        "[02:47] Downloading and unzipping the Palantir Windows Event Forwarding Repo from Github...",
+        "[02:47] C:\\Users\\vagrant\\AppData\\Local\\Temp\\wef-Master.zip already exists. Moving On.",
+        "[02:47] Palantir WEF download complete!"
+    ]
+}
+
+TASK [wef : Installing WEF Subscriptions] **************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:73
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/win_shell.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+changed: [192.168.1.46] => {
+    "changed": true,
+    "cmd": ".\\install-wefsubscriptions.ps1",
+    "delta": "0:01:02.695235",
+    "end": "2022-07-06 02:48:33.698950",
+    "failed_when_result": false,
+    "rc": 0,
+    "start": "2022-07-06 02:47:31.003714",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "[02:47] Installing WEF Subscriptions...\n[02:47] Copying Custom Event Channels DLL...\n[02:47] WEF Subscriptions are already installed, moving on...\nThe Windows Event Collector service is starting.\r\nThe Windows Event Collector service was started successfully.\r\n\r\n",
+    "stdout_lines": [
+        "[02:47] Installing WEF Subscriptions...",
+        "[02:47] Copying Custom Event Channels DLL...",
+        "[02:47] WEF Subscriptions are already installed, moving on...",
+        "The Windows Event Collector service is starting.",
+        "The Windows Event Collector service was started successfully.",
+        ""
+    ]
+}
+
+TASK [wef : debug] *************************************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:80
+ok: [192.168.1.46] => {
+    "msg": [
+        "[02:47] Installing WEF Subscriptions...",
+        "[02:47] Copying Custom Event Channels DLL...",
+        "[02:47] WEF Subscriptions are already installed, moving on...",
+        "The Windows Event Collector service is starting.",
+        "The Windows Event Collector service was started successfully.",
+        ""
+    ]
+}
+
+TASK [wef : Installing the Splunk Universal Forwarder] *************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:82
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/win_shell.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+changed: [192.168.1.46] => {
+    "changed": true,
+    "cmd": ".\\install-splunkuf.ps1",
+    "delta": "0:00:00.476027",
+    "end": "2022-07-06 02:49:02.689437",
+    "failed_when_result": false,
+    "rc": 0,
+    "start": "2022-07-06 02:49:02.213409",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "[02:49] Splunk is already installed. Moving on.\n[02:49] Splunk installation complete!\n",
+    "stdout_lines": [
+        "[02:49] Splunk is already installed. Moving on.",
+        "[02:49] Splunk installation complete!"
+    ]
+}
+
+TASK [wef : debug] *************************************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:89
+ok: [192.168.1.46] => {
+    "msg": [
+        "[02:49] Splunk is already installed. Moving on.",
+        "[02:49] Splunk installation complete!"
+    ]
+}
+
+TASK [wef : Install Splunk Windows TA] *****************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:91
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/win_shell.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+changed: [192.168.1.46] => {
+    "changed": true,
+    "cmd": ".\\install-windows_ta.ps1",
+    "delta": "0:00:00.396018",
+    "end": "2022-07-06 02:49:46.662707",
+    "failed_when_result": false,
+    "rc": 0,
+    "start": "2022-07-06 02:49:46.266689",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "[02:49] Installing the Windows TA for Splunk\n[02:49] Windows TA is already installed. Moving on.\n",
+    "stdout_lines": [
+        "[02:49] Installing the Windows TA for Splunk",
+        "[02:49] Windows TA is already installed. Moving on."
+    ]
+}
+
+TASK [wef : debug] *************************************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:98
+ok: [192.168.1.46] => {
+    "msg": [
+        "[02:49] Installing the Windows TA for Splunk",
+        "[02:49] Windows TA is already installed. Moving on."
+    ]
+}
+
+TASK [wef : Installing the Powershell Log Transcription Share] *****************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:100
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/win_shell.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+changed: [192.168.1.46] => {
+    "changed": true,
+    "cmd": ".\\configure-pslogstranscriptsshare.ps1",
+    "delta": "0:00:00.757040",
+    "end": "2022-07-06 02:50:23.391669",
+    "failed_when_result": false,
+    "rc": 0,
+    "start": "2022-07-06 02:50:22.634629",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "[02:50] Configuring the Powershell Transcripts Share\n",
+    "stdout_lines": [
+        "[02:50] Configuring the Powershell Transcripts Share"
+    ]
+}
+
+TASK [wef : debug] *************************************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:107
+ok: [192.168.1.46] => {
+    "msg": [
+        "[02:50] Configuring the Powershell Transcripts Share"
+    ]
+}
+
+TASK [wef : Installing the EVTX Event Samples] *********************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:109
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/win_shell.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+changed: [192.168.1.46] => {
+    "changed": true,
+    "cmd": ".\\install-evtx-attack-samples.ps1",
+    "delta": "0:00:00.413022",
+    "end": "2022-07-06 02:51:08.277117",
+    "failed_when_result": false,
+    "rc": 0,
+    "start": "2022-07-06 02:51:07.864094",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "[02:51] Indexing EVTX Attack Samples into Splunk...\n[02:51] EVTX attack samples were already installed. Moving On.\n",
+    "stdout_lines": [
+        "[02:51] Indexing EVTX Attack Samples into Splunk...",
+        "[02:51] EVTX attack samples were already installed. Moving On."
+    ]
+}
+
+TASK [wef : debug] *************************************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:116
+ok: [192.168.1.46] => {
+    "msg": [
+        "[02:51] Indexing EVTX Attack Samples into Splunk...",
+        "[02:51] EVTX attack samples were already installed. Moving On."
+    ]
+}
+
+TASK [wef : Installing Microsoft Advanced Threat Analytics] ********************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:118
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/win_shell.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+changed: [192.168.1.46] => {
+    "changed": true,
+    "cmd": ".\\install-microsoft-ata.ps1",
+    "delta": "0:01:28.184815",
+    "end": "2022-07-06 02:53:20.910314",
+    "failed_when_result": false,
+    "rc": 0,
+    "start": "2022-07-06 02:51:52.725499",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "[02:53] [DC] Installing the ATA Lightweight gateway on DC...\n[02:53] [DC] Adding wef.windomain.local to hosts file...\n[02:53] [DC] Microsoft Gateway has already been already downloaded. Moving On.\n[02:53] [DC] The Microsoft ATA Gateway was already installed. Moving On.\n\r\n",
+    "stdout_lines": [
+        "[02:53] [DC] Installing the ATA Lightweight gateway on DC...",
+        "[02:53] [DC] Adding wef.windomain.local to hosts file...",
+        "[02:53] [DC] Microsoft Gateway has already been already downloaded. Moving On.",
+        "[02:53] [DC] The Microsoft ATA Gateway was already installed. Moving On.",
+        ""
+    ]
+}
+
+TASK [wef : debug] *************************************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:125
+ok: [192.168.1.46] => {
+    "msg": [
+        "[02:53] [DC] Installing the ATA Lightweight gateway on DC...",
+        "[02:53] [DC] Adding wef.windomain.local to hosts file...",
+        "[02:53] [DC] Microsoft Gateway has already been already downloaded. Moving On.",
+        "[02:53] [DC] The Microsoft ATA Gateway was already installed. Moving On.",
+        ""
+    ]
+}
+
+TASK [wef : Configure WEF with raw Commands] ***********************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/wef/tasks/main.yml:127
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/win_shell.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+changed: [192.168.1.46] => (item=wevtutil el | Select-String -notmatch "Microsoft-Windows-LiveId" | Foreach-Object {wevtutil cl "$_"}) => {
+    "ansible_loop_var": "item",
+    "changed": true,
+    "cmd": "wevtutil el | Select-String -notmatch \"Microsoft-Windows-LiveId\" | Foreach-Object {wevtutil cl \"$_\"}",
+    "delta": "0:00:10.716463",
+    "end": "2022-07-06 02:54:08.448445",
+    "item": "wevtutil el | Select-String -notmatch \"Microsoft-Windows-LiveId\" | Foreach-Object {wevtutil cl \"$_\"}",
+    "rc": 0,
+    "start": "2022-07-06 02:53:57.731982",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "",
+    "stdout_lines": []
+}
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/win_shell.ps1
+Pipelining is enabled.
+EXEC (via pipeline wrapper)
+changed: [192.168.1.46] => (item=Set-SmbServerConfiguration -AuditSmb1Access $true -Force) => {
+    "ansible_loop_var": "item",
+    "changed": true,
+    "cmd": "Set-SmbServerConfiguration -AuditSmb1Access $true -Force",
+    "delta": "0:00:00.628037",
+    "end": "2022-07-06 02:54:25.480250",
+    "item": "Set-SmbServerConfiguration -AuditSmb1Access $true -Force",
+    "rc": 0,
+    "start": "2022-07-06 02:54:24.852212",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "",
+    "stdout_lines": []
+}
+META: role_complete for 192.168.1.46
+
+TASK [common : Downloading the Palantir WEF Configuration] *********************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/common/tasks/main.yml:3
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/win_shell.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+changed: [192.168.1.46] => {
+    "changed": true,
+    "cmd": ".\\download_palantir_wef.ps1",
+    "delta": "0:00:00.446022",
+    "end": "2022-07-06 02:55:01.753065",
+    "failed_when_result": false,
+    "rc": 0,
+    "start": "2022-07-06 02:55:01.307043",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "[02:55] Downloading and unzipping the Palantir Windows Event Forwarding Repo from Github...\n[02:55] C:\\Users\\vagrant\\AppData\\Local\\Temp\\wef-Master.zip already exists. Moving On.\n[02:55] Palantir WEF download complete!\n",
+    "stdout_lines": [
+        "[02:55] Downloading and unzipping the Palantir Windows Event Forwarding Repo from Github...",
+        "[02:55] C:\\Users\\vagrant\\AppData\\Local\\Temp\\wef-Master.zip already exists. Moving On.",
+        "[02:55] Palantir WEF download complete!"
+    ]
+}
+
+TASK [common : debug] **********************************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/common/tasks/main.yml:10
+ok: [192.168.1.46] => {
+    "msg": [
+        "[02:55] Downloading and unzipping the Palantir Windows Event Forwarding Repo from Github...",
+        "[02:55] C:\\Users\\vagrant\\AppData\\Local\\Temp\\wef-Master.zip already exists. Moving On.",
+        "[02:55] Palantir WEF download complete!"
+    ]
+}
+
+TASK [common : Installing osquery] *********************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/common/tasks/main.yml:12
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/win_shell.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+changed: [192.168.1.46] => {
+    "changed": true,
+    "cmd": ".\\install-osquery.ps1",
+    "delta": "0:00:01.485076",
+    "end": "2022-07-06 02:55:12.008592",
+    "failed_when_result": false,
+    "rc": 0,
+    "start": "2022-07-06 02:55:10.523516",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "[02:55] Installing osquery...\nInstalling the following packages:\r\nosquery\r\nBy installing, you accept licenses for the packages.\r\nosquery v5.2.2 already installed.\r\n Use --force to reinstall, specify a version to install, or try upgrade.\r\n\r\nChocolatey installed 0/1 packages. \r\n See the log for details (C:\\ProgramData\\chocolatey\\logs\\chocolatey.log).\r\n\r\nWarnings:\r\n - osquery - osquery v5.2.2 already installed.\r\n Use --force to reinstall, specify a version to install, or try upgrade.\r\n\r\n[02:55] osquery is already installed. Moving On.\n",
+    "stdout_lines": [
+        "[02:55] Installing osquery...",
+        "Installing the following packages:",
+        "osquery",
+        "By installing, you accept licenses for the packages.",
+        "osquery v5.2.2 already installed.",
+        " Use --force to reinstall, specify a version to install, or try upgrade.",
+        "",
+        "Chocolatey installed 0/1 packages. ",
+        " See the log for details (C:\\ProgramData\\chocolatey\\logs\\chocolatey.log).",
+        "",
+        "Warnings:",
+        " - osquery - osquery v5.2.2 already installed.",
+        " Use --force to reinstall, specify a version to install, or try upgrade.",
+        "",
+        "[02:55] osquery is already installed. Moving On."
+    ]
+}
+
+TASK [common : debug] **********************************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/common/tasks/main.yml:19
+ok: [192.168.1.46] => {
+    "msg": [
+        "[02:55] Installing osquery...",
+        "Installing the following packages:",
+        "osquery",
+        "By installing, you accept licenses for the packages.",
+        "osquery v5.2.2 already installed.",
+        " Use --force to reinstall, specify a version to install, or try upgrade.",
+        "",
+        "Chocolatey installed 0/1 packages. ",
+        " See the log for details (C:\\ProgramData\\chocolatey\\logs\\chocolatey.log).",
+        "",
+        "Warnings:",
+        " - osquery - osquery v5.2.2 already installed.",
+        " Use --force to reinstall, specify a version to install, or try upgrade.",
+        "",
+        "[02:55] osquery is already installed. Moving On."
+    ]
+}
+
+TASK [common : Installing SysInternals Tools] **********************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/common/tasks/main.yml:21
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/win_shell.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+changed: [192.168.1.46] => {
+    "changed": true,
+    "cmd": ".\\install-sysinternals.ps1",
+    "delta": "0:00:00.428021",
+    "end": "2022-07-06 02:55:13.645676",
+    "failed_when_result": false,
+    "rc": 0,
+    "start": "2022-07-06 02:55:13.217654",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "[02:55] Installing SysInternals Tooling...\n[02:55] Tools directory exists, no need to re-install. Exiting.\n",
+    "stdout_lines": [
+        "[02:55] Installing SysInternals Tooling...",
+        "[02:55] Tools directory exists, no need to re-install. Exiting."
+    ]
+}
+
+TASK [common : debug] **********************************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/common/tasks/main.yml:28
+ok: [192.168.1.46] => {
+    "msg": [
+        "[02:55] Installing SysInternals Tooling...",
+        "[02:55] Tools directory exists, no need to re-install. Exiting."
+    ]
+}
+
+TASK [common : Installing Velociraptor] ****************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/common/tasks/main.yml:30
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/win_shell.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+changed: [192.168.1.46] => {
+    "changed": true,
+    "cmd": ".\\install-velociraptor.ps1",
+    "delta": "0:00:01.643084",
+    "end": "2022-07-06 02:55:16.553825",
+    "failed_when_result": false,
+    "rc": 0,
+    "start": "2022-07-06 02:55:14.910741",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "[02:55] Hosts file already updated. Moving on.\n[02:55] Determining latest release of Velociraptor...\n[02:55] Velociraptor was already installed. Moving On.\n",
+    "stdout_lines": [
+        "[02:55] Hosts file already updated. Moving on.",
+        "[02:55] Determining latest release of Velociraptor...",
+        "[02:55] Velociraptor was already installed. Moving On."
+    ]
+}
+
+TASK [common : debug] **********************************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/common/tasks/main.yml:37
+ok: [192.168.1.46] => {
+    "msg": [
+        "[02:55] Hosts file already updated. Moving on.",
+        "[02:55] Determining latest release of Velociraptor...",
+        "[02:55] Velociraptor was already installed. Moving On."
+    ]
+}
+
+TASK [common : Installing AutorunsToWineventlog] *******************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/common/tasks/main.yml:39
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/win_shell.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+changed: [192.168.1.46] => {
+    "changed": true,
+    "cmd": ".\\install-autorunstowineventlog.ps1",
+    "delta": "0:00:00.914043",
+    "end": "2022-07-06 02:55:18.691935",
+    "failed_when_result": false,
+    "rc": 0,
+    "start": "2022-07-06 02:55:17.777892",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "[02:55] Installing AutorunsToWinEventLog...\n[02:55] AutorunsToWinEventLog already installed. Moving On.\n",
+    "stdout_lines": [
+        "[02:55] Installing AutorunsToWinEventLog...",
+        "[02:55] AutorunsToWinEventLog already installed. Moving On."
+    ]
+}
+
+TASK [common : debug] **********************************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/common/tasks/main.yml:46
+ok: [192.168.1.46] => {
+    "msg": [
+        "[02:55] Installing AutorunsToWinEventLog...",
+        "[02:55] AutorunsToWinEventLog already installed. Moving On."
+    ]
+}
+
+TASK [common : Installing Red Team Tooling] ************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/common/tasks/main.yml:48
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/win_shell.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+changed: [192.168.1.46] => {
+    "changed": true,
+    "cmd": ".\\install-redteam.ps1",
+    "delta": "0:00:01.455075",
+    "end": "2022-07-06 02:55:21.367074",
+    "failed_when_result": false,
+    "rc": 0,
+    "start": "2022-07-06 02:55:19.911998",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "[02:55] Installing Red Team Tooling...\n[02:55] Windows Defender has already been disabled or uninstalled.\n[02:55] Determining latest release of Mimikatz...\n[02:55] Mimikatz was already installed. Moving On.\n[02:55] Downloading Powersploit...\n[02:55] PowerSploit was already installed. Moving On.\n[02:55] Downloading BadBlood...\n[02:55] BadBlood was already installed. Moving On.\n[02:55] Downloading Invoke-AtomicRedTeam and atomic tests...\n[02:55] Invoke-AtomicRedTeam was already installed. Moving On.\n[02:55] PurpleSharp folder already exists. Moving On.\n[02:55] Determining latest release of Purplesharp...\n[02:55] PurpleSharp was already installed. Moving On.\n[02:55] Red Team tooling installation complete!\n",
+    "stdout_lines": [
+        "[02:55] Installing Red Team Tooling...",
+        "[02:55] Windows Defender has already been disabled or uninstalled.",
+        "[02:55] Determining latest release of Mimikatz...",
+        "[02:55] Mimikatz was already installed. Moving On.",
+        "[02:55] Downloading Powersploit...",
+        "[02:55] PowerSploit was already installed. Moving On.",
+        "[02:55] Downloading BadBlood...",
+        "[02:55] BadBlood was already installed. Moving On.",
+        "[02:55] Downloading Invoke-AtomicRedTeam and atomic tests...",
+        "[02:55] Invoke-AtomicRedTeam was already installed. Moving On.",
+        "[02:55] PurpleSharp folder already exists. Moving On.",
+        "[02:55] Determining latest release of Purplesharp...",
+        "[02:55] PurpleSharp was already installed. Moving On.",
+        "[02:55] Red Team tooling installation complete!"
+    ]
+}
+
+TASK [common : debug] **********************************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/common/tasks/main.yml:55
+ok: [192.168.1.46] => {
+    "msg": [
+        "[02:55] Installing Red Team Tooling...",
+        "[02:55] Windows Defender has already been disabled or uninstalled.",
+        "[02:55] Determining latest release of Mimikatz...",
+        "[02:55] Mimikatz was already installed. Moving On.",
+        "[02:55] Downloading Powersploit...",
+        "[02:55] PowerSploit was already installed. Moving On.",
+        "[02:55] Downloading BadBlood...",
+        "[02:55] BadBlood was already installed. Moving On.",
+        "[02:55] Downloading Invoke-AtomicRedTeam and atomic tests...",
+        "[02:55] Invoke-AtomicRedTeam was already installed. Moving On.",
+        "[02:55] PurpleSharp folder already exists. Moving On.",
+        "[02:55] Determining latest release of Purplesharp...",
+        "[02:55] PurpleSharp was already installed. Moving On.",
+        "[02:55] Red Team tooling installation complete!"
+    ]
+}
+
+TASK [common : Install Utilities] **********************************************
+task path: /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/roles/common/tasks/main.yml:57
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+redirecting (type: modules) ansible.builtin.win_shell to ansible.windows.win_shell
+Using module file /home/az/.local/lib/python3.8/site-packages/ansible_collections/ansible/windows/plugins/modules/win_shell.ps1
+Pipelining is enabled.
+<192.168.1.46> ESTABLISH WINRM CONNECTION FOR USER: vagrant on PORT 5985 TO 192.168.1.46
+EXEC (via pipeline wrapper)
+changed: [192.168.1.46] => {
+    "changed": true,
+    "cmd": ".\\install-utilities.ps1",
+    "delta": "0:00:01.629083",
+    "end": "2022-07-06 02:55:24.261221",
+    "failed_when_result": false,
+    "rc": 0,
+    "start": "2022-07-06 02:55:22.632138",
+    "stderr": "",
+    "stderr_lines": [],
+    "stdout": "[02:55] Chocolatey is already installed.\n[02:55] Installing utilities...\nInstalling the following packages:\r\nNotepadPlusPlus;WinRar;processhacker\r\nBy installing, you accept licenses for the packages.\r\nnotepadplusplus v8.4.2 already installed.\r\n Use --force to reinstall, specify a version to install, or try upgrade.\r\nwinrar v6.11.0.20220504 already installed.\r\n Use --force to reinstall, specify a version to install, or try upgrade.\r\nprocesshacker v2.39 already installed.\r\n Use --force to reinstall, specify a version to install, or try upgrade.\r\n\r\nChocolatey installed 0/3 packages. \r\n See the log for details (C:\\ProgramData\\chocolatey\\logs\\chocolatey.log).\r\n\r\nWarnings:\r\n - notepadplusplus - notepadplusplus v8.4.2 already installed.\r\n Use --force to reinstall, specify a version to install, or try upgrade.\r\n - winrar - winrar v6.11.0.20220504 already installed.\r\n Use --force to reinstall, specify a version to install, or try upgrade.\r\n - processhacker - processhacker v2.39 already installed.\r\n Use --force to reinstall, specify a version to install, or try upgrade.\r\nInstalling the following packages:\r\nGoogleChrome\r\nBy installing, you accept licenses for the packages.\r\nGoogleChrome v103.0.5060.114 already installed.\r\n Use --force to reinstall, specify a version to install, or try upgrade.\r\n\r\nChocolatey installed 0/1 packages. \r\n See the log for details (C:\\ProgramData\\chocolatey\\logs\\chocolatey.log).\r\n\r\nWarnings:\r\n - googlechrome - GoogleChrome v103.0.5060.114 already installed.\r\n Use --force to reinstall, specify a version to install, or try upgrade.\r\n[02:55] Utilties installation complete!\n",
+    "stdout_lines": [
+        "[02:55] Chocolatey is already installed.",
+        "[02:55] Installing utilities...",
+        "Installing the following packages:",
+        "NotepadPlusPlus;WinRar;processhacker",
+        "By installing, you accept licenses for the packages.",
+        "notepadplusplus v8.4.2 already installed.",
+        " Use --force to reinstall, specify a version to install, or try upgrade.",
+        "winrar v6.11.0.20220504 already installed.",
+        " Use --force to reinstall, specify a version to install, or try upgrade.",
+        "processhacker v2.39 already installed.",
+        " Use --force to reinstall, specify a version to install, or try upgrade.",
+        "",
+        "Chocolatey installed 0/3 packages. ",
+        " See the log for details (C:\\ProgramData\\chocolatey\\logs\\chocolatey.log).",
+        "",
+        "Warnings:",
+        " - notepadplusplus - notepadplusplus v8.4.2 already installed.",
+        " Use --force to reinstall, specify a version to install, or try upgrade.",
+        " - winrar - winrar v6.11.0.20220504 already installed.",
+        " Use --force to reinstall, specify a version to install, or try upgrade.",
+        " - processhacker - processhacker v2.39 already installed.",
+        " Use --force to reinstall, specify a version to install, or try upgrade.",
+        "Installing the following packages:",
+        "GoogleChrome",
+        "By installing, you accept licenses for the packages.",
+        "GoogleChrome v103.0.5060.114 already installed.",
+        " Use --force to reinstall, specify a version to install, or try upgrade.",
+        "",
+        "Chocolatey installed 0/1 packages. ",
+        " See the log for details (C:\\ProgramData\\chocolatey\\logs\\chocolatey.log).",
+        "",
+        "Warnings:",
+        " - googlechrome - GoogleChrome v103.0.5060.114 already installed.",
+        " Use --force to reinstall, specify a version to install, or try upgrade.",
+        "[02:55] Utilties installation complete!"
+    ]
+}
+META: role_complete for 192.168.1.46
+META: ran handlers
+META: ran handlers
+[WARNING]: Could not match supplied host pattern, ignoring: exchange
+
+PLAY [exchange] ****************************************************************
+skipping: no hosts matched
+
+PLAY [win10] *******************************************************************
+META: ran handlers
+META: 
+META: 
+META: ran handlers
+META: ran handlers
+
+PLAY RECAP *********************************************************************
+192.168.1.46               : ok=40   changed=20   unreachable=0    failed=0    skipped=2    rescued=0    ignored=0   
+

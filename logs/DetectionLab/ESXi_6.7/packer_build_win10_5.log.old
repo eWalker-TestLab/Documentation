@@ -1,0 +1,1400 @@
+2022/07/04 15:06:48 [INFO] Packer version: 1.8.2 [go1.17.11 linux amd64]
+2022/07/04 15:06:48 [TRACE] discovering plugins in /usr/bin
+2022/07/04 15:06:48 [TRACE] discovering plugins in /home/az/.config/packer/plugins
+2022/07/04 15:06:48 [TRACE] discovering plugins in .
+2022/07/04 15:06:48 [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2022/07/04 15:06:48 [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/az/.packerconfig
+2022/07/04 15:06:48 [WARN] Config file doesn't exist: /home/az/.packerconfig
+2022/07/04 15:06:48 [INFO] Setting cache directory: /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache
+2022/07/04 15:06:48 [TRACE] Starting internal plugin packer-builder-vmware-iso
+2022/07/04 15:06:48 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "plugin", "packer-builder-vmware-iso"}
+2022/07/04 15:06:48 Waiting for RPC address for: /usr/bin/packer
+2022/07/04 15:06:48 packer-builder-vmware-iso plugin: [INFO] Packer version: 1.8.2 [go1.17.11 linux amd64]
+2022/07/04 15:06:48 packer-builder-vmware-iso plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2022/07/04 15:06:48 packer-builder-vmware-iso plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/az/.packerconfig
+2022/07/04 15:06:48 packer-builder-vmware-iso plugin: [WARN] Config file doesn't exist: /home/az/.packerconfig
+2022/07/04 15:06:48 packer-builder-vmware-iso plugin: [INFO] Setting cache directory: /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache
+2022/07/04 15:06:48 packer-builder-vmware-iso plugin: args: []string{"packer-builder-vmware-iso"}
+2022/07/04 15:06:48 packer-builder-vmware-iso plugin: Plugin address: unix /tmp/packer-plugin2402330205
+2022/07/04 15:06:48 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin2402330205
+2022/07/04 15:06:48 packer-builder-vmware-iso plugin: Waiting for connection...
+2022/07/04 15:06:48 packer-builder-vmware-iso plugin: Serving a plugin connection...
+2022/07/04 15:06:48 [TRACE] Starting internal plugin packer-provisioner-windows-shell
+2022/07/04 15:06:48 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "plugin", "packer-provisioner-windows-shell"}
+2022/07/04 15:06:48 Waiting for RPC address for: /usr/bin/packer
+2022/07/04 15:06:48 packer-provisioner-windows-shell plugin: [INFO] Packer version: 1.8.2 [go1.17.11 linux amd64]
+2022/07/04 15:06:48 packer-provisioner-windows-shell plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2022/07/04 15:06:48 packer-provisioner-windows-shell plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/az/.packerconfig
+2022/07/04 15:06:48 packer-provisioner-windows-shell plugin: [WARN] Config file doesn't exist: /home/az/.packerconfig
+2022/07/04 15:06:48 packer-provisioner-windows-shell plugin: [INFO] Setting cache directory: /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache
+2022/07/04 15:06:48 packer-provisioner-windows-shell plugin: args: []string{"packer-provisioner-windows-shell"}
+2022/07/04 15:06:48 packer-provisioner-windows-shell plugin: Plugin address: unix /tmp/packer-plugin1087356234
+2022/07/04 15:06:48 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin1087356234
+2022/07/04 15:06:48 packer-provisioner-windows-shell plugin: Waiting for connection...
+2022/07/04 15:06:48 [TRACE] Starting internal plugin packer-provisioner-powershell
+2022/07/04 15:06:48 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "plugin", "packer-provisioner-powershell"}
+2022/07/04 15:06:48 packer-provisioner-windows-shell plugin: Serving a plugin connection...
+2022/07/04 15:06:48 Waiting for RPC address for: /usr/bin/packer
+2022/07/04 15:06:48 packer-provisioner-powershell plugin: [INFO] Packer version: 1.8.2 [go1.17.11 linux amd64]
+2022/07/04 15:06:48 packer-provisioner-powershell plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2022/07/04 15:06:48 packer-provisioner-powershell plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/az/.packerconfig
+2022/07/04 15:06:48 packer-provisioner-powershell plugin: [WARN] Config file doesn't exist: /home/az/.packerconfig
+2022/07/04 15:06:48 packer-provisioner-powershell plugin: [INFO] Setting cache directory: /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache
+2022/07/04 15:06:48 packer-provisioner-powershell plugin: args: []string{"packer-provisioner-powershell"}
+2022/07/04 15:06:48 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin805260310
+2022/07/04 15:06:48 packer-provisioner-powershell plugin: Plugin address: unix /tmp/packer-plugin805260310
+2022/07/04 15:06:48 packer-provisioner-powershell plugin: Waiting for connection...
+2022/07/04 15:06:48 packer-provisioner-powershell plugin: Serving a plugin connection...
+2022/07/04 15:06:48 [TRACE] Starting internal plugin packer-provisioner-windows-restart
+2022/07/04 15:06:48 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "plugin", "packer-provisioner-windows-restart"}
+2022/07/04 15:06:48 Waiting for RPC address for: /usr/bin/packer
+2022/07/04 15:06:48 packer-provisioner-windows-restart plugin: [INFO] Packer version: 1.8.2 [go1.17.11 linux amd64]
+2022/07/04 15:06:48 packer-provisioner-windows-restart plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2022/07/04 15:06:48 packer-provisioner-windows-restart plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/az/.packerconfig
+2022/07/04 15:06:48 packer-provisioner-windows-restart plugin: [WARN] Config file doesn't exist: /home/az/.packerconfig
+2022/07/04 15:06:48 packer-provisioner-windows-restart plugin: [INFO] Setting cache directory: /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache
+2022/07/04 15:06:48 packer-provisioner-windows-restart plugin: args: []string{"packer-provisioner-windows-restart"}
+2022/07/04 15:06:48 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin1825473521
+2022/07/04 15:06:48 packer-provisioner-windows-restart plugin: Plugin address: unix /tmp/packer-plugin1825473521
+2022/07/04 15:06:48 packer-provisioner-windows-restart plugin: Waiting for connection...
+2022/07/04 15:06:48 packer-provisioner-windows-restart plugin: Serving a plugin connection...
+2022/07/04 15:06:48 [TRACE] Starting internal plugin packer-provisioner-powershell
+2022/07/04 15:06:48 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "plugin", "packer-provisioner-powershell"}
+2022/07/04 15:06:48 Waiting for RPC address for: /usr/bin/packer
+2022/07/04 15:06:48 packer-provisioner-powershell plugin: [INFO] Packer version: 1.8.2 [go1.17.11 linux amd64]
+2022/07/04 15:06:48 packer-provisioner-powershell plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2022/07/04 15:06:48 packer-provisioner-powershell plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/az/.packerconfig
+2022/07/04 15:06:48 packer-provisioner-powershell plugin: [WARN] Config file doesn't exist: /home/az/.packerconfig
+2022/07/04 15:06:48 packer-provisioner-powershell plugin: [INFO] Setting cache directory: /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache
+2022/07/04 15:06:48 packer-provisioner-powershell plugin: args: []string{"packer-provisioner-powershell"}
+2022/07/04 15:06:48 packer-provisioner-powershell plugin: Plugin address: unix /tmp/packer-plugin1811844721
+2022/07/04 15:06:48 packer-provisioner-powershell plugin: Waiting for connection...
+2022/07/04 15:06:48 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin1811844721
+2022/07/04 15:06:48 packer-provisioner-powershell plugin: Serving a plugin connection...
+2022/07/04 15:06:48 [TRACE] Starting internal plugin packer-provisioner-windows-shell
+2022/07/04 15:06:48 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "plugin", "packer-provisioner-windows-shell"}
+2022/07/04 15:06:48 Waiting for RPC address for: /usr/bin/packer
+2022/07/04 15:06:48 packer-provisioner-windows-shell plugin: [INFO] Packer version: 1.8.2 [go1.17.11 linux amd64]
+2022/07/04 15:06:48 packer-provisioner-windows-shell plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2022/07/04 15:06:48 packer-provisioner-windows-shell plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/az/.packerconfig
+2022/07/04 15:06:48 packer-provisioner-windows-shell plugin: [WARN] Config file doesn't exist: /home/az/.packerconfig
+2022/07/04 15:06:48 packer-provisioner-windows-shell plugin: [INFO] Setting cache directory: /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache
+2022/07/04 15:06:48 packer-provisioner-windows-shell plugin: args: []string{"packer-provisioner-windows-shell"}
+2022/07/04 15:06:48 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin1236242086
+2022/07/04 15:06:48 packer-provisioner-windows-shell plugin: Plugin address: unix /tmp/packer-plugin1236242086
+2022/07/04 15:06:48 packer-provisioner-windows-shell plugin: Waiting for connection...
+2022/07/04 15:06:48 packer-provisioner-windows-shell plugin: Serving a plugin connection...
+2022/07/04 15:06:48 Preparing build: vmware-iso
+Warning: Warning when preparing build: "vmware-iso"
+
+Your vmx data contains the following variable(s), which Packer normally sets
+
+Your vmx data contains the following variable(s), which Packer normally sets
+when it generates its own default vmx template. This may cause your build to
+fail or behave unpredictably: numvcpus, memsize, scsi0.virtualDev
+
+2022/07/04 15:06:49 Build debug mode: false
+2022/07/04 15:06:49 Force build: false
+2022/07/04 15:06:49 On error: 
+2022/07/04 15:06:49 Waiting on builds to complete...
+2022/07/04 15:06:49 Starting build run: vmware-iso
+2022/07/04 15:06:49 Running builder: vmware-iso
+2022/07/04 15:06:49 [INFO] (telemetry) Starting builder vmware-iso
+when it generates its own default vmx template. This may cause your build to
+fail or behave unpredictably: numvcpus, memsize, scsi0.virtualDev
+
+
+[1;32mvmware-iso: output will be in this color.[0m
+
+2022/07/04 15:06:49 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/04 15:06:49 packer-builder-vmware-iso plugin: [DEBUG] handshaking with SSH
+2022/07/04 15:06:49 packer-builder-vmware-iso plugin: Keyboard interactive challenge:
+2022/07/04 15:06:49 packer-builder-vmware-iso plugin: -- User:
+2022/07/04 15:06:49 packer-builder-vmware-iso plugin: -- Instructions:
+2022/07/04 15:06:49 packer-builder-vmware-iso plugin: -- Question 1: Password:
+2022/07/04 15:06:49 packer-builder-vmware-iso plugin: Keyboard interactive challenge:
+2022/07/04 15:06:49 packer-builder-vmware-iso plugin: -- User:
+2022/07/04 15:06:49 packer-builder-vmware-iso plugin: -- Instructions:
+2022/07/04 15:06:49 packer-builder-vmware-iso plugin: [DEBUG] handshake complete!
+2022/07/04 15:06:49 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:06:49 packer-builder-vmware-iso plugin: [INFO] agent forwarding enabled
+2022/07/04 15:06:49 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:06:49 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv system version get
+2022/07/04 15:06:49 packer-builder-vmware-iso plugin: Connected to VMware ESXi 6.7.0 Releasebuild-14320388
+2022/07/04 15:06:49 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:06:50 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv system settings advanced list -o /Net/GuestIPHack
+2022/07/04 15:06:50 packer-builder-vmware-iso plugin: Testing against vmware driver *common.ESX5Driver, Success: true
+[1;32m==> vmware-iso: Retrieving ISO[0m
+[1;32m==> vmware-iso: Trying https://software-download.microsoft.com/download/pr/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso[0m
+2022/07/04 15:06:50 packer-builder-vmware-iso plugin: Acquiring lock for: https://software-download.microsoft.com/download/pr/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso?checksum=sha256%3Aab4862ba7d1644c27f27516d24cb21e6b39234eb3301e5f1fb365a78b22f79b3 (/home/az/workspace/eWalker/DetectionLab/Packer/packer_cache/d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso.lock)
+[1;32m==> vmware-iso: Trying https://software-download.microsoft.com/download/pr/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso?checksum=sha256%3Aab4862ba7d1644c27f27516d24cb21e6b39234eb3301e5f1fb365a78b22f79b3[0m
+[1;32m==> vmware-iso: https://software-download.microsoft.com/download/pr/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso?checksum=sha256%3Aab4862ba7d1644c27f27516d24cb21e6b39234eb3301e5f1fb365a78b22f79b3 => /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache/d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m
+[1;32m==> vmware-iso: Configuring output and export directories...[0m
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: Leaving retrieve loop for ISO
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: test -e "/vmfs/volumes/datastore1/Windows10"
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: [ERROR] Remote command exited with '1': test -e "/vmfs/volumes/datastore1/Windows10"
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: mkdir -p "/vmfs/volumes/datastore1/Windows10"
+[1;32m==> vmware-iso: Creating floppy disk...[0m
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: Floppy path: /tmp/packer1658454154
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: Initializing block device backed by temporary file
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: Formatting the block device with a FAT filesystem...
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: Initializing FAT filesystem on block device
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: Reading the root directory from the filesystem
+[0;32m    vmware-iso: Copying files flatly from floppy_files[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/answer_files/10/Autounattend.xml[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/floppy/WindowsPowershell.lnk[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/floppy/PinTo10.exe[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/fixnetwork.ps1[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/rearm-windows.ps1[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/disable-screensaver.ps1[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/disable-winrm.ps1[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/enable-winrm.ps1[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/microsoft-updates.bat[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/win-updates.ps1[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/unattend.xml[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/sysprep.bat[0m
+[0;32m    vmware-iso: Done copying files from floppy_files[0m
+[0;32m    vmware-iso: Collecting paths from floppy_dirs[0m
+[0;32m    vmware-iso: Resulting paths from floppy_dirs : [][0m
+[0;32m    vmware-iso: Done copying paths from floppy_dirs[0m
+[0;32m    vmware-iso: Copying files from floppy_content[0m
+[0;32m    vmware-iso: Done copying files from floppy_content[0m
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: No CD files specified. CD disk will not be made.
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: stat "/vmfs/volumes/datastore1/packer_cache/packer1658454154"
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: [ERROR] Remote command exited with '1': stat "/vmfs/volumes/datastore1/packer_cache/packer1658454154"
+[1;32m==> vmware-iso: Uploading Floppy to remote machine...[0m
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: Remote uploading: /tmp/packer1658454154
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: mkdir -p "/vmfs/volumes/datastore1/packer_cache"
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: Verifying checksum of /vmfs/volumes/datastore1/packer_cache/packer1658454154
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: stat "/vmfs/volumes/datastore1/packer_cache/packer1658454154"
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: [ERROR] Remote command exited with '1': stat "/vmfs/volumes/datastore1/packer_cache/packer1658454154"
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: Initial checksum did not match, uploading.
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: [DEBUG] Starting remote scp process:  scp -vt /vmfs/volumes/datastore1/packer_cache
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: [DEBUG] Started SCP session, beginning transfers...
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: [DEBUG] scp: Uploading packer1658454154: perms=C0600 size=1474560
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: [DEBUG] SCP session complete, closing stdin pipe.
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: [DEBUG] Waiting for SSH session to complete.
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: [DEBUG] scp stderr (length 37): Sink: C0600 1474560 packer1658454154
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: closing
+[0;32m    vmware-iso: packer1658454154[0m 1.41 MiB / 1.41 MiB [========================================================] 100.00% 0s
+[1A[0;32m    vmware-iso: packer1658454154[0m 1.41 MiB / 1.41 MiB [========================================================] 100.00% 0s
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: stat "/vmfs/volumes/datastore1/packer_cache/packer1658454154"
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: running: ab4862ba7d1644c27f27516d24cb21e6b39234eb3301e5f1fb365a78b22f79b3  /vmfs/volumes/datastore1/packer_cache/d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso | [sha256sum -c]
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:07:05 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: sha256sum -c
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: [ERROR] Remote command exited with '1': sha256sum -c
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: checksum failed: 'sha256sum -c'
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: 
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: Stdout: /vmfs/volumes/datastore1/packer_cache/d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso: FAILED
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: 
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: 
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: Stderr: sha256sum: can't open '/vmfs/volumes/datastore1/packer_cache/d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso': No such file or directory
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: sha256sum: WARNING: 1 of 1 computed checksums did NOT match
+[1;32m==> vmware-iso: Uploading ISO to remote machine...[0m
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: Remote uploading: /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache/d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: mkdir -p "/vmfs/volumes/datastore1/packer_cache"
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: Verifying checksum of /vmfs/volumes/datastore1/packer_cache/d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: running: ab4862ba7d1644c27f27516d24cb21e6b39234eb3301e5f1fb365a78b22f79b3  /vmfs/volumes/datastore1/packer_cache/d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso | [sha256sum -c]
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: sha256sum -c
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: [ERROR] Remote command exited with '1': sha256sum -c
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: checksum failed: 'sha256sum -c'
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: 
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: Stdout: /vmfs/volumes/datastore1/packer_cache/d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso: FAILED
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: 
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: 
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: Stderr: sha256sum: can't open '/vmfs/volumes/datastore1/packer_cache/d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso': No such file or directory
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: sha256sum: WARNING: 1 of 1 computed checksums did NOT match
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: Initial checksum did not match, uploading.
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: [DEBUG] Starting remote scp process:  scp -vt /vmfs/volumes/datastore1/packer_cache
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: [DEBUG] Started SCP session, beginning transfers...
+2022/07/04 15:07:06 packer-builder-vmware-iso plugin: [DEBUG] scp: Uploading d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso: perms=C0664 size=4439830528
+[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.66 MiB / 4.13 GiB [>-----------------------]   0.06% 05m15s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 10.41 MiB / 4.13 GiB [>----------------------]   0.25% 02m43s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 16.03 MiB / 4.13 GiB [>----------------------]   0.38% 02m39s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 21.53 MiB / 4.13 GiB [>----------------------]   0.51% 02m34s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 28.53 MiB / 4.13 GiB [>----------------------]   0.67% 02m25s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 35.16 MiB / 4.13 GiB [>----------------------]   0.83% 02m20s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 41.12 MiB / 4.13 GiB [>----------------------]   0.97% 02m20s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 46.12 MiB / 4.13 GiB [>----------------------]   1.09% 02m24s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 51.94 MiB / 4.13 GiB [>----------------------]   1.23% 02m24s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 58.78 MiB / 4.13 GiB [>----------------------]   1.39% 02m20s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 64.97 MiB / 4.13 GiB [>----------------------]   1.53% 02m19s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 70.94 MiB / 4.13 GiB [>----------------------]   1.68% 02m19s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 77.41 MiB / 4.13 GiB [>----------------------]   1.83% 02m19s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 83.69 MiB / 4.13 GiB [>----------------------]   1.98% 02m19s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 89.44 MiB / 4.13 GiB [>----------------------]   2.11% 02m19s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 95.53 MiB / 4.13 GiB [>----------------------]   2.26% 02m18s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 102.62 MiB / 4.13 GiB [>---------------------]   2.42% 02m14s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 108.38 MiB / 4.13 GiB [>---------------------]   2.56% 02m14s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 114.56 MiB / 4.13 GiB [>---------------------]   2.71% 02m13s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 120.41 MiB / 4.13 GiB [>---------------------]   2.84% 02m13s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 125.78 MiB / 4.13 GiB [>---------------------]   2.97% 02m17s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 132.22 MiB / 4.13 GiB [>---------------------]   3.12% 02m17s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 137.34 MiB / 4.13 GiB [>---------------------]   3.24% 02m17s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 143.53 MiB / 4.13 GiB [>---------------------]   3.39% 02m17s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 149.91 MiB / 4.13 GiB [>---------------------]   3.54% 02m17s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 156.47 MiB / 4.13 GiB [>---------------------]   3.70% 02m12s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 163.25 MiB / 4.13 GiB [>---------------------]   3.86% 02m12s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 170.00 MiB / 4.13 GiB [>---------------------]   4.01% 02m12s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 176.53 MiB / 4.13 GiB [>---------------------]   4.17% 02m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 183.25 MiB / 4.13 GiB [>---------------------]   4.33% 02m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 189.59 MiB / 4.13 GiB [>---------------------]   4.48% 02m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 195.19 MiB / 4.13 GiB [=>--------------------]   4.61% 02m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 199.72 MiB / 4.13 GiB [=>--------------------]   4.72% 02m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 204.75 MiB / 4.13 GiB [=>--------------------]   4.84% 02m10s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 210.84 MiB / 4.13 GiB [=>--------------------]   4.98% 02m10s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 216.50 MiB / 4.13 GiB [=>--------------------]   5.11% 02m10s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 223.59 MiB / 4.13 GiB [=>--------------------]   5.28% 02m10s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 230.81 MiB / 4.13 GiB [=>--------------------]   5.45% 02m10s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 236.28 MiB / 4.13 GiB [=>--------------------]   5.58% 02m09s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 242.12 MiB / 4.13 GiB [=>--------------------]   5.72% 02m09s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 248.53 MiB / 4.13 GiB [=>--------------------]   5.87% 02m09s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 254.75 MiB / 4.13 GiB [=>--------------------]   6.02% 02m09s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 259.03 MiB / 4.13 GiB [=>--------------------]   6.12% 02m09s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 264.09 MiB / 4.13 GiB [=>--------------------]   6.24% 02m13s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 270.00 MiB / 4.13 GiB [=>--------------------]   6.38% 02m13s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 276.38 MiB / 4.13 GiB [=>--------------------]   6.53% 02m08s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 282.88 MiB / 4.13 GiB [=>--------------------]   6.68% 02m08s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 289.19 MiB / 4.13 GiB [=>--------------------]   6.83% 02m08s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 294.97 MiB / 4.13 GiB [=>--------------------]   6.97% 02m08s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 302.56 MiB / 4.13 GiB [=>--------------------]   7.15% 02m07s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 308.16 MiB / 4.13 GiB [=>--------------------]   7.28% 02m07s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 313.47 MiB / 4.13 GiB [=>--------------------]   7.40% 02m07s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 320.75 MiB / 4.13 GiB [=>--------------------]   7.58% 02m07s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 324.38 MiB / 4.13 GiB [=>--------------------]   7.66% 02m07s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 331.06 MiB / 4.13 GiB [=>--------------------]   7.82% 02m06s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 337.41 MiB / 4.13 GiB [=>--------------------]   7.97% 02m06s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 344.41 MiB / 4.13 GiB [=>--------------------]   8.13% 02m06s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 350.09 MiB / 4.13 GiB [=>--------------------]   8.27% 02m06s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 355.16 MiB / 4.13 GiB [=>--------------------]   8.39% 02m06s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 361.81 MiB / 4.13 GiB [=>--------------------]   8.55% 02m05s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 367.78 MiB / 4.13 GiB [=>--------------------]   8.69% 02m05s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 372.91 MiB / 4.13 GiB [=>--------------------]   8.81% 02m05s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 379.72 MiB / 4.13 GiB [=>--------------------]   8.97% 02m05s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 385.53 MiB / 4.13 GiB [==>-------------------]   9.11% 02m05s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 391.44 MiB / 4.13 GiB [==>-------------------]   9.24% 02m04s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 397.59 MiB / 4.13 GiB [==>-------------------]   9.39% 02m04s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 405.16 MiB / 4.13 GiB [==>-------------------]   9.57% 02m04s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 410.97 MiB / 4.13 GiB [==>-------------------]   9.71% 02m04s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 418.50 MiB / 4.13 GiB [==>-------------------]   9.88% 02m04s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 424.19 MiB / 4.13 GiB [==>-------------------]  10.02% 02m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 430.94 MiB / 4.13 GiB [==>-------------------]  10.18% 02m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 437.03 MiB / 4.13 GiB [==>-------------------]  10.32% 02m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 444.25 MiB / 4.13 GiB [==>-------------------]  10.49% 02m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 449.59 MiB / 4.13 GiB [==>-------------------]  10.62% 02m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 455.84 MiB / 4.13 GiB [==>-------------------]  10.77% 02m02s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 461.31 MiB / 4.13 GiB [==>-------------------]  10.90% 02m02s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 466.84 MiB / 4.13 GiB [==>-------------------]  11.03% 02m02s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 472.97 MiB / 4.13 GiB [==>-------------------]  11.17% 02m02s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 480.09 MiB / 4.13 GiB [==>-------------------]  11.34% 02m02s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 485.38 MiB / 4.13 GiB [==>-------------------]  11.46% 02m01s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 491.53 MiB / 4.13 GiB [==>-------------------]  11.61% 02m01s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 498.16 MiB / 4.13 GiB [==>-------------------]  11.77% 02m01s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 504.06 MiB / 4.13 GiB [==>-------------------]  11.90% 02m01s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 510.12 MiB / 4.13 GiB [==>-------------------]  12.05% 02m01s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 517.22 MiB / 4.13 GiB [==>-------------------]  12.22% 02m00s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 524.25 MiB / 4.13 GiB [==>-------------------]  12.38% 02m00s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 529.72 MiB / 4.13 GiB [==>-------------------]  12.51% 02m00s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 535.78 MiB / 4.13 GiB [==>-------------------]  12.65% 02m00s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 542.41 MiB / 4.13 GiB [==>-------------------]  12.81% 02m00s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 548.22 MiB / 4.13 GiB [==>-------------------]  12.95% 01m59s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 555.09 MiB / 4.13 GiB [==>-------------------]  13.11% 01m59s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 562.34 MiB / 4.13 GiB [==>-------------------]  13.28% 01m59s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 568.44 MiB / 4.13 GiB [==>-------------------]  13.43% 01m59s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 575.16 MiB / 4.13 GiB [==>-------------------]  13.58% 01m58s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 581.69 MiB / 4.13 GiB [===>------------------]  13.74% 01m58s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 588.38 MiB / 4.13 GiB [===>------------------]  13.90% 01m58s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 593.97 MiB / 4.13 GiB [===>------------------]  14.03% 01m58s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 600.22 MiB / 4.13 GiB [===>------------------]  14.18% 01m58s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 605.84 MiB / 4.13 GiB [===>------------------]  14.31% 01m57s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 610.72 MiB / 4.13 GiB [===>------------------]  14.42% 01m57s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 615.69 MiB / 4.13 GiB [===>------------------]  14.54% 01m57s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 621.22 MiB / 4.13 GiB [===>------------------]  14.67% 01m57s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 626.66 MiB / 4.13 GiB [===>------------------]  14.80% 01m57s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 632.94 MiB / 4.13 GiB [===>------------------]  14.95% 01m57s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 635.78 MiB / 4.13 GiB [===>------------------]  15.02% 01m56s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 638.94 MiB / 4.13 GiB [===>------------------]  15.09% 01m56s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 641.75 MiB / 4.13 GiB [===>------------------]  15.16% 02m00s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 644.41 MiB / 4.13 GiB [===>------------------]  15.22% 02m00s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 647.41 MiB / 4.13 GiB [===>------------------]  15.29% 02m00s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 651.00 MiB / 4.13 GiB [===>------------------]  15.37% 02m00s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 653.97 MiB / 4.13 GiB [===>------------------]  15.45% 02m00s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 656.66 MiB / 4.13 GiB [===>------------------]  15.51% 02m00s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 659.59 MiB / 4.13 GiB [===>------------------]  15.58% 01m59s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 662.47 MiB / 4.13 GiB [===>------------------]  15.65% 02m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 665.03 MiB / 4.13 GiB [===>------------------]  15.71% 02m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 667.47 MiB / 4.13 GiB [===>------------------]  15.76% 02m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 670.56 MiB / 4.13 GiB [===>------------------]  15.84% 02m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 673.47 MiB / 4.13 GiB [===>------------------]  15.91% 02m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 676.56 MiB / 4.13 GiB [===>------------------]  15.98% 02m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 679.72 MiB / 4.13 GiB [===>------------------]  16.05% 02m02s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 682.72 MiB / 4.13 GiB [===>------------------]  16.12% 02m06s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 685.78 MiB / 4.13 GiB [===>------------------]  16.20% 02m06s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 689.03 MiB / 4.13 GiB [===>------------------]  16.27% 02m06s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 692.03 MiB / 4.13 GiB [===>------------------]  16.34% 02m06s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 694.25 MiB / 4.13 GiB [===>------------------]  16.40% 02m06s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 696.72 MiB / 4.13 GiB [===>------------------]  16.45% 02m06s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 699.53 MiB / 4.13 GiB [===>------------------]  16.52% 02m06s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 701.81 MiB / 4.13 GiB [===>------------------]  16.58% 02m09s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 702.62 MiB / 4.13 GiB [===>------------------]  16.59% 02m09s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 705.91 MiB / 4.13 GiB [===>------------------]  16.67% 02m09s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 708.56 MiB / 4.13 GiB [===>------------------]  16.73% 02m09s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 710.91 MiB / 4.13 GiB [===>------------------]  16.79% 02m09s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 713.66 MiB / 4.13 GiB [===>------------------]  16.85% 02m09s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 716.03 MiB / 4.13 GiB [===>------------------]  16.91% 02m12s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 719.00 MiB / 4.13 GiB [===>------------------]  16.98% 02m12s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 722.72 MiB / 4.13 GiB [===>------------------]  17.07% 02m12s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 725.84 MiB / 4.13 GiB [===>------------------]  17.14% 02m12s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 728.62 MiB / 4.13 GiB [===>------------------]  17.21% 02m12s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 731.59 MiB / 4.13 GiB [===>------------------]  17.28% 02m12s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 734.81 MiB / 4.13 GiB [===>------------------]  17.35% 02m12s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 738.44 MiB / 4.13 GiB [===>------------------]  17.44% 02m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 741.62 MiB / 4.13 GiB [===>------------------]  17.52% 02m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 745.12 MiB / 4.13 GiB [===>------------------]  17.60% 02m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 748.38 MiB / 4.13 GiB [===>------------------]  17.67% 02m15s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 751.94 MiB / 4.13 GiB [===>------------------]  17.76% 02m15s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 754.56 MiB / 4.13 GiB [===>------------------]  17.82% 02m14s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 757.88 MiB / 4.13 GiB [===>------------------]  17.90% 02m14s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 761.19 MiB / 4.13 GiB [===>------------------]  17.98% 02m14s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 764.88 MiB / 4.13 GiB [===>------------------]  18.06% 02m14s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 767.72 MiB / 4.13 GiB [===>------------------]  18.13% 02m14s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 771.16 MiB / 4.13 GiB [====>-----------------]  18.21% 02m14s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 774.41 MiB / 4.13 GiB [====>-----------------]  18.29% 02m14s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 780.50 MiB / 4.13 GiB [====>-----------------]  18.43% 02m13s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 787.03 MiB / 4.13 GiB [====>-----------------]  18.59% 02m13s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 793.91 MiB / 4.13 GiB [====>-----------------]  18.75% 02m13s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 799.91 MiB / 4.13 GiB [====>-----------------]  18.89% 02m13s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 804.31 MiB / 4.13 GiB [====>-----------------]  19.00% 02m13s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 809.38 MiB / 4.13 GiB [====>-----------------]  19.12% 02m12s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 816.31 MiB / 4.13 GiB [====>-----------------]  19.28% 02m12s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 820.44 MiB / 4.13 GiB [====>-----------------]  19.38% 02m12s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 826.66 MiB / 4.13 GiB [====>-----------------]  19.52% 02m12s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 833.22 MiB / 4.13 GiB [====>-----------------]  19.68% 02m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 838.47 MiB / 4.13 GiB [====>-----------------]  19.80% 02m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 844.75 MiB / 4.13 GiB [====>-----------------]  19.95% 02m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 850.69 MiB / 4.13 GiB [====>-----------------]  20.09% 02m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 857.66 MiB / 4.13 GiB [====>-----------------]  20.26% 02m10s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 863.44 MiB / 4.13 GiB [====>-----------------]  20.39% 02m10s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 869.91 MiB / 4.13 GiB [====>-----------------]  20.54% 02m10s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 876.41 MiB / 4.13 GiB [====>-----------------]  20.70% 02m10s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 884.00 MiB / 4.13 GiB [====>-----------------]  20.88% 02m06s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 889.34 MiB / 4.13 GiB [====>-----------------]  21.00% 02m06s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 894.59 MiB / 4.13 GiB [====>-----------------]  21.13% 02m09s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 902.25 MiB / 4.13 GiB [====>-----------------]  21.31% 02m05s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 908.62 MiB / 4.13 GiB [====>-----------------]  21.46% 02m05s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 914.84 MiB / 4.13 GiB [====>-----------------]  21.61% 02m05s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 921.03 MiB / 4.13 GiB [====>-----------------]  21.75% 02m05s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 927.47 MiB / 4.13 GiB [====>-----------------]  21.90% 02m04s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 933.88 MiB / 4.13 GiB [====>-----------------]  22.06% 02m04s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 940.16 MiB / 4.13 GiB [====>-----------------]  22.20% 02m04s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 947.56 MiB / 4.13 GiB [====>-----------------]  22.38% 02m04s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 953.19 MiB / 4.13 GiB [====>-----------------]  22.51% 02m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 958.16 MiB / 4.13 GiB [====>-----------------]  22.63% 02m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 961.59 MiB / 4.13 GiB [====>-----------------]  22.71% 02m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 967.56 MiB / 4.13 GiB [=====>----------------]  22.85% 02m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 974.34 MiB / 4.13 GiB [=====>----------------]  23.01% 02m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 981.47 MiB / 4.13 GiB [=====>----------------]  23.18% 02m02s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 987.78 MiB / 4.13 GiB [=====>----------------]  23.33% 02m02s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 994.28 MiB / 4.13 GiB [=====>----------------]  23.48% 02m02s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 999.38 MiB / 4.13 GiB [=====>----------------]  23.60% 02m02s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1005.50 MiB / 4.13 GiB [====>----------------]  23.75% 02m01s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1011.84 MiB / 4.13 GiB [=====>---------------]  23.90% 02m01s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1017.34 MiB / 4.13 GiB [=====>---------------]  24.03% 02m01s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1023.50 MiB / 4.13 GiB [=====>---------------]  24.17% 02m01s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.00 GiB / 4.13 GiB [=====>------------------]  24.25% 02m01s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.01 GiB / 4.13 GiB [=====>------------------]  24.41% 02m00s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.02 GiB / 4.13 GiB [=====>------------------]  24.58% 02m00s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.02 GiB / 4.13 GiB [=====>------------------]  24.73% 02m00s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.03 GiB / 4.13 GiB [=====>------------------]  24.88% 02m00s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.03 GiB / 4.13 GiB [======>-----------------]  25.02% 01m59s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.04 GiB / 4.13 GiB [======>-----------------]  25.16% 01m59s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.05 GiB / 4.13 GiB [======>-----------------]  25.31% 01m59s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.05 GiB / 4.13 GiB [======>-----------------]  25.46% 01m59s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.06 GiB / 4.13 GiB [======>-----------------]  25.62% 01m55s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.06 GiB / 4.13 GiB [======>-----------------]  25.75% 01m55s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.07 GiB / 4.13 GiB [======>-----------------]  25.88% 01m55s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.08 GiB / 4.13 GiB [======>-----------------]  26.04% 01m54s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.08 GiB / 4.13 GiB [======>-----------------]  26.18% 01m54s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.09 GiB / 4.13 GiB [======>-----------------]  26.30% 01m54s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.09 GiB / 4.13 GiB [======>-----------------]  26.44% 01m54s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.10 GiB / 4.13 GiB [======>-----------------]  26.62% 01m54s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.11 GiB / 4.13 GiB [======>-----------------]  26.75% 01m53s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.11 GiB / 4.13 GiB [======>-----------------]  26.86% 01m53s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.12 GiB / 4.13 GiB [======>-----------------]  27.01% 01m53s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.12 GiB / 4.13 GiB [======>-----------------]  27.16% 01m53s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.13 GiB / 4.13 GiB [======>-----------------]  27.31% 01m52s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.13 GiB / 4.13 GiB [======>-----------------]  27.43% 01m52s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.14 GiB / 4.13 GiB [======>-----------------]  27.58% 01m52s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.15 GiB / 4.13 GiB [======>-----------------]  27.71% 01m52s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.15 GiB / 4.13 GiB [======>-----------------]  27.85% 01m52s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.16 GiB / 4.13 GiB [======>-----------------]  28.00% 01m51s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.16 GiB / 4.13 GiB [======>-----------------]  28.15% 01m51s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.17 GiB / 4.13 GiB [======>-----------------]  28.32% 01m51s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.18 GiB / 4.13 GiB [======>-----------------]  28.45% 01m51s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.18 GiB / 4.13 GiB [======>-----------------]  28.57% 01m50s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.19 GiB / 4.13 GiB [======>-----------------]  28.74% 01m50s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.19 GiB / 4.13 GiB [======>-----------------]  28.89% 01m50s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.20 GiB / 4.13 GiB [======>-----------------]  29.01% 01m50s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.21 GiB / 4.13 GiB [======>-----------------]  29.16% 01m50s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.21 GiB / 4.13 GiB [=======>----------------]  29.30% 01m49s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.22 GiB / 4.13 GiB [=======>----------------]  29.42% 01m49s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.22 GiB / 4.13 GiB [=======>----------------]  29.54% 01m49s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.23 GiB / 4.13 GiB [=======>----------------]  29.71% 01m49s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.23 GiB / 4.13 GiB [=======>----------------]  29.85% 01m49s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.24 GiB / 4.13 GiB [=======>----------------]  29.97% 01m48s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.24 GiB / 4.13 GiB [=======>----------------]  30.10% 01m48s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.25 GiB / 4.13 GiB [=======>----------------]  30.27% 01m48s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.26 GiB / 4.13 GiB [=======>----------------]  30.41% 01m48s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.26 GiB / 4.13 GiB [=======>----------------]  30.53% 01m47s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.27 GiB / 4.13 GiB [=======>----------------]  30.67% 01m47s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.27 GiB / 4.13 GiB [=======>----------------]  30.83% 01m47s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.28 GiB / 4.13 GiB [=======>----------------]  30.95% 01m47s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.29 GiB / 4.13 GiB [=======>----------------]  31.08% 01m47s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.29 GiB / 4.13 GiB [=======>----------------]  31.20% 01m46s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.30 GiB / 4.13 GiB [=======>----------------]  31.34% 01m46s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.30 GiB / 4.13 GiB [=======>----------------]  31.50% 01m46s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.31 GiB / 4.13 GiB [=======>----------------]  31.63% 01m46s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.31 GiB / 4.13 GiB [=======>----------------]  31.79% 01m45s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.32 GiB / 4.13 GiB [=======>----------------]  31.92% 01m45s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.33 GiB / 4.13 GiB [=======>----------------]  32.07% 01m45s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.33 GiB / 4.13 GiB [=======>----------------]  32.20% 01m45s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.34 GiB / 4.13 GiB [=======>----------------]  32.32% 01m45s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.34 GiB / 4.13 GiB [=======>----------------]  32.44% 01m44s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.35 GiB / 4.13 GiB [=======>----------------]  32.58% 01m44s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.35 GiB / 4.13 GiB [=======>----------------]  32.71% 01m44s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.36 GiB / 4.13 GiB [=======>----------------]  32.86% 01m44s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.36 GiB / 4.13 GiB [=======>----------------]  32.99% 01m44s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.37 GiB / 4.13 GiB [=======>----------------]  33.11% 01m43s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.37 GiB / 4.13 GiB [=======>----------------]  33.20% 01m43s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.38 GiB / 4.13 GiB [========>---------------]  33.36% 01m43s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.39 GiB / 4.13 GiB [========>---------------]  33.52% 01m43s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.39 GiB / 4.13 GiB [========>---------------]  33.66% 01m43s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.40 GiB / 4.13 GiB [========>---------------]  33.80% 01m42s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.40 GiB / 4.13 GiB [========>---------------]  33.92% 01m42s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.41 GiB / 4.13 GiB [========>---------------]  34.07% 01m42s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.41 GiB / 4.13 GiB [========>---------------]  34.19% 01m42s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.42 GiB / 4.13 GiB [========>---------------]  34.36% 01m42s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.43 GiB / 4.13 GiB [========>---------------]  34.49% 01m41s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.43 GiB / 4.13 GiB [========>---------------]  34.64% 01m41s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.44 GiB / 4.13 GiB [========>---------------]  34.78% 01m41s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.44 GiB / 4.13 GiB [========>---------------]  34.91% 01m41s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.45 GiB / 4.13 GiB [========>---------------]  35.04% 01m40s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.45 GiB / 4.13 GiB [========>---------------]  35.17% 01m40s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.46 GiB / 4.13 GiB [========>---------------]  35.32% 01m40s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.47 GiB / 4.13 GiB [========>---------------]  35.46% 01m40s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.47 GiB / 4.13 GiB [========>---------------]  35.61% 01m40s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.48 GiB / 4.13 GiB [========>---------------]  35.76% 01m39s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.48 GiB / 4.13 GiB [========>---------------]  35.89% 01m39s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.49 GiB / 4.13 GiB [========>---------------]  36.02% 01m39s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.50 GiB / 4.13 GiB [========>---------------]  36.18% 01m39s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.50 GiB / 4.13 GiB [========>---------------]  36.30% 01m38s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.51 GiB / 4.13 GiB [========>---------------]  36.44% 01m38s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.51 GiB / 4.13 GiB [========>---------------]  36.59% 01m35s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.52 GiB / 4.13 GiB [========>---------------]  36.71% 01m35s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.52 GiB / 4.13 GiB [========>---------------]  36.85% 01m35s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.53 GiB / 4.13 GiB [========>---------------]  37.00% 01m35s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.54 GiB / 4.13 GiB [========>---------------]  37.16% 01m34s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.54 GiB / 4.13 GiB [========>---------------]  37.27% 01m34s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.55 GiB / 4.13 GiB [========>---------------]  37.42% 01m34s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.55 GiB / 4.13 GiB [=========>--------------]  37.58% 01m34s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.56 GiB / 4.13 GiB [=========>--------------]  37.71% 01m34s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.56 GiB / 4.13 GiB [=========>--------------]  37.85% 01m33s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.57 GiB / 4.13 GiB [=========>--------------]  37.99% 01m33s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.58 GiB / 4.13 GiB [=========>--------------]  38.14% 01m33s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.58 GiB / 4.13 GiB [=========>--------------]  38.28% 01m33s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.59 GiB / 4.13 GiB [=========>--------------]  38.40% 01m32s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.59 GiB / 4.13 GiB [=========>--------------]  38.55% 01m32s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.60 GiB / 4.13 GiB [=========>--------------]  38.66% 01m32s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.60 GiB / 4.13 GiB [=========>--------------]  38.78% 01m32s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.61 GiB / 4.13 GiB [=========>--------------]  38.86% 01m32s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.61 GiB / 4.13 GiB [=========>--------------]  38.94% 01m32s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.61 GiB / 4.13 GiB [=========>--------------]  39.02% 01m34s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.62 GiB / 4.13 GiB [=========>--------------]  39.13% 01m34s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.62 GiB / 4.13 GiB [=========>--------------]  39.29% 01m34s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.63 GiB / 4.13 GiB [=========>--------------]  39.41% 01m34s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.64 GiB / 4.13 GiB [=========>--------------]  39.56% 01m31s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.64 GiB / 4.13 GiB [=========>--------------]  39.67% 01m33s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.65 GiB / 4.13 GiB [=========>--------------]  39.79% 01m33s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.65 GiB / 4.13 GiB [=========>--------------]  39.93% 01m33s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.66 GiB / 4.13 GiB [=========>--------------]  40.07% 01m33s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.66 GiB / 4.13 GiB [=========>--------------]  40.18% 01m32s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.67 GiB / 4.13 GiB [=========>--------------]  40.31% 01m32s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.67 GiB / 4.13 GiB [=========>--------------]  40.44% 01m32s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.68 GiB / 4.13 GiB [=========>--------------]  40.60% 01m32s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.68 GiB / 4.13 GiB [=========>--------------]  40.74% 01m29s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.69 GiB / 4.13 GiB [=========>--------------]  40.87% 01m29s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.69 GiB / 4.13 GiB [=========>--------------]  40.98% 01m31s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.70 GiB / 4.13 GiB [=========>--------------]  41.14% 01m28s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.71 GiB / 4.13 GiB [=========>--------------]  41.27% 01m28s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.71 GiB / 4.13 GiB [=========>--------------]  41.43% 01m28s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.72 GiB / 4.13 GiB [=========>--------------]  41.52% 01m28s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.72 GiB / 4.13 GiB [=========>--------------]  41.64% 01m30s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.73 GiB / 4.13 GiB [==========>-------------]  41.81% 01m27s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.73 GiB / 4.13 GiB [==========>-------------]  41.94% 01m27s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.74 GiB / 4.13 GiB [==========>-------------]  42.06% 01m27s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.75 GiB / 4.13 GiB [==========>-------------]  42.20% 01m27s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.75 GiB / 4.13 GiB [==========>-------------]  42.34% 01m27s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.76 GiB / 4.13 GiB [==========>-------------]  42.44% 01m26s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.76 GiB / 4.13 GiB [==========>-------------]  42.59% 01m26s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.77 GiB / 4.13 GiB [==========>-------------]  42.74% 01m26s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.77 GiB / 4.13 GiB [==========>-------------]  42.88% 01m26s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.78 GiB / 4.13 GiB [==========>-------------]  43.00% 01m26s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.78 GiB / 4.13 GiB [==========>-------------]  43.13% 01m25s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.79 GiB / 4.13 GiB [==========>-------------]  43.25% 01m25s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.79 GiB / 4.13 GiB [==========>-------------]  43.35% 01m25s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.80 GiB / 4.13 GiB [==========>-------------]  43.50% 01m25s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.81 GiB / 4.13 GiB [==========>-------------]  43.66% 01m25s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.81 GiB / 4.13 GiB [==========>-------------]  43.81% 01m24s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.82 GiB / 4.13 GiB [==========>-------------]  43.97% 01m24s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.83 GiB / 4.13 GiB [==========>-------------]  44.14% 01m24s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.83 GiB / 4.13 GiB [==========>-------------]  44.29% 01m24s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.84 GiB / 4.13 GiB [==========>-------------]  44.41% 01m23s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.84 GiB / 4.13 GiB [==========>-------------]  44.55% 01m23s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.85 GiB / 4.13 GiB [==========>-------------]  44.69% 01m23s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.86 GiB / 4.13 GiB [==========>-------------]  44.87% 01m23s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.86 GiB / 4.13 GiB [==========>-------------]  44.99% 01m23s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.87 GiB / 4.13 GiB [==========>-------------]  45.13% 01m22s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.87 GiB / 4.13 GiB [==========>-------------]  45.27% 01m22s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.88 GiB / 4.13 GiB [==========>-------------]  45.40% 01m22s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.88 GiB / 4.13 GiB [==========>-------------]  45.54% 01m22s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.89 GiB / 4.13 GiB [==========>-------------]  45.69% 01m21s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.89 GiB / 4.13 GiB [==========>-------------]  45.83% 01m21s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.90 GiB / 4.13 GiB [===========>------------]  45.97% 01m21s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.91 GiB / 4.13 GiB [===========>------------]  46.11% 01m21s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.91 GiB / 4.13 GiB [===========>------------]  46.25% 01m21s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.92 GiB / 4.13 GiB [===========>------------]  46.38% 01m20s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.92 GiB / 4.13 GiB [===========>------------]  46.52% 01m20s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.93 GiB / 4.13 GiB [===========>------------]  46.64% 01m20s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.93 GiB / 4.13 GiB [===========>------------]  46.76% 01m20s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.94 GiB / 4.13 GiB [===========>------------]  46.89% 01m20s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.95 GiB / 4.13 GiB [===========>------------]  47.05% 01m19s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.95 GiB / 4.13 GiB [===========>------------]  47.18% 01m19s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.96 GiB / 4.13 GiB [===========>------------]  47.34% 01m19s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.96 GiB / 4.13 GiB [===========>------------]  47.46% 01m19s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.97 GiB / 4.13 GiB [===========>------------]  47.60% 01m19s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.97 GiB / 4.13 GiB [===========>------------]  47.72% 01m18s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.98 GiB / 4.13 GiB [===========>------------]  47.87% 01m18s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.98 GiB / 4.13 GiB [===========>------------]  48.00% 01m18s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 1.99 GiB / 4.13 GiB [===========>------------]  48.16% 01m18s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.00 GiB / 4.13 GiB [===========>------------]  48.30% 01m18s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.00 GiB / 4.13 GiB [===========>------------]  48.43% 01m17s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.01 GiB / 4.13 GiB [===========>------------]  48.57% 01m17s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.01 GiB / 4.13 GiB [===========>------------]  48.69% 01m17s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.02 GiB / 4.13 GiB [===========>------------]  48.82% 01m17s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.02 GiB / 4.13 GiB [===========>------------]  48.95% 01m17s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.03 GiB / 4.13 GiB [===========>------------]  49.08% 01m16s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.03 GiB / 4.13 GiB [===========>------------]  49.21% 01m16s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.04 GiB / 4.13 GiB [===========>------------]  49.35% 01m16s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.05 GiB / 4.13 GiB [===========>------------]  49.48% 01m16s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.05 GiB / 4.13 GiB [===========>------------]  49.61% 01m16s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.06 GiB / 4.13 GiB [===========>------------]  49.76% 01m15s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.06 GiB / 4.13 GiB [===========>------------]  49.87% 01m15s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.07 GiB / 4.13 GiB [===========>------------]  49.98% 01m15s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.07 GiB / 4.13 GiB [============>-----------]  50.08% 01m15s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.08 GiB / 4.13 GiB [============>-----------]  50.23% 01m15s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.08 GiB / 4.13 GiB [============>-----------]  50.32% 01m14s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.09 GiB / 4.13 GiB [============>-----------]  50.47% 01m14s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.09 GiB / 4.13 GiB [============>-----------]  50.59% 01m14s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.10 GiB / 4.13 GiB [============>-----------]  50.72% 01m14s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.10 GiB / 4.13 GiB [============>-----------]  50.86% 01m14s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.11 GiB / 4.13 GiB [============>-----------]  51.00% 01m13s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.11 GiB / 4.13 GiB [============>-----------]  51.12% 01m13s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.12 GiB / 4.13 GiB [============>-----------]  51.26% 01m13s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.12 GiB / 4.13 GiB [============>-----------]  51.38% 01m13s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.13 GiB / 4.13 GiB [============>-----------]  51.49% 01m13s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.13 GiB / 4.13 GiB [============>-----------]  51.62% 01m13s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.14 GiB / 4.13 GiB [============>-----------]  51.77% 01m12s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.15 GiB / 4.13 GiB [============>-----------]  51.89% 01m12s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.15 GiB / 4.13 GiB [============>-----------]  52.00% 01m12s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.15 GiB / 4.13 GiB [============>-----------]  52.11% 01m12s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.16 GiB / 4.13 GiB [============>-----------]  52.22% 01m12s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.17 GiB / 4.13 GiB [============>-----------]  52.39% 01m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.17 GiB / 4.13 GiB [============>-----------]  52.48% 01m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.17 GiB / 4.13 GiB [============>-----------]  52.55% 01m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.18 GiB / 4.13 GiB [============>-----------]  52.62% 01m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.18 GiB / 4.13 GiB [============>-----------]  52.72% 01m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.18 GiB / 4.13 GiB [============>-----------]  52.82% 01m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.19 GiB / 4.13 GiB [============>-----------]  52.91% 01m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.19 GiB / 4.13 GiB [============>-----------]  53.04% 01m10s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.20 GiB / 4.13 GiB [============>-----------]  53.18% 01m10s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.20 GiB / 4.13 GiB [============>-----------]  53.28% 01m10s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.21 GiB / 4.13 GiB [============>-----------]  53.43% 01m10s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.22 GiB / 4.13 GiB [============>-----------]  53.58% 01m10s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.22 GiB / 4.13 GiB [============>-----------]  53.71% 01m09s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.23 GiB / 4.13 GiB [============>-----------]  53.83% 01m09s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.23 GiB / 4.13 GiB [============>-----------]  53.96% 01m09s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.24 GiB / 4.13 GiB [============>-----------]  54.06% 01m09s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.24 GiB / 4.13 GiB [=============>----------]  54.20% 01m09s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.25 GiB / 4.13 GiB [=============>----------]  54.37% 01m08s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.25 GiB / 4.13 GiB [=============>----------]  54.47% 01m08s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.26 GiB / 4.13 GiB [=============>----------]  54.60% 01m08s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.26 GiB / 4.13 GiB [=============>----------]  54.71% 01m08s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.27 GiB / 4.13 GiB [=============>----------]  54.84% 01m08s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.27 GiB / 4.13 GiB [=============>----------]  54.96% 01m07s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.28 GiB / 4.13 GiB [=============>----------]  55.10% 01m07s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.28 GiB / 4.13 GiB [=============>----------]  55.22% 01m07s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.29 GiB / 4.13 GiB [=============>----------]  55.34% 01m07s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.29 GiB / 4.13 GiB [=============>----------]  55.48% 01m07s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.30 GiB / 4.13 GiB [=============>----------]  55.61% 01m07s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.30 GiB / 4.13 GiB [=============>----------]  55.72% 01m06s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.31 GiB / 4.13 GiB [=============>----------]  55.83% 01m06s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.31 GiB / 4.13 GiB [=============>----------]  55.97% 01m06s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.32 GiB / 4.13 GiB [=============>----------]  56.10% 01m06s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.33 GiB / 4.13 GiB [=============>----------]  56.24% 01m06s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.33 GiB / 4.13 GiB [=============>----------]  56.37% 01m05s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.34 GiB / 4.13 GiB [=============>----------]  56.51% 01m05s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.34 GiB / 4.13 GiB [=============>----------]  56.66% 01m05s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.35 GiB / 4.13 GiB [=============>----------]  56.82% 01m05s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.36 GiB / 4.13 GiB [=============>----------]  56.99% 01m04s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.36 GiB / 4.13 GiB [=============>----------]  57.13% 01m04s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.37 GiB / 4.13 GiB [=============>----------]  57.27% 01m04s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.37 GiB / 4.13 GiB [=============>----------]  57.38% 01m04s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.38 GiB / 4.13 GiB [=============>----------]  57.53% 01m04s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.38 GiB / 4.13 GiB [=============>----------]  57.67% 01m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.39 GiB / 4.13 GiB [=============>----------]  57.81% 01m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.40 GiB / 4.13 GiB [=============>----------]  57.95% 01m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.40 GiB / 4.13 GiB [=============>----------]  58.07% 01m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.41 GiB / 4.13 GiB [=============>----------]  58.20% 01m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.41 GiB / 4.13 GiB [==============>---------]  58.36% 01m02s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.42 GiB / 4.13 GiB [==============>---------]  58.52% 01m02s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.42 GiB / 4.13 GiB [==============>---------]  58.65% 01m02s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.43 GiB / 4.13 GiB [==============>---------]  58.77% 01m02s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.44 GiB / 4.13 GiB [==============>---------]  58.91% 01m02s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.44 GiB / 4.13 GiB [==============>---------]  59.06% 01m01s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.45 GiB / 4.13 GiB [==============>---------]  59.19% 01m01s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.45 GiB / 4.13 GiB [==============>---------]  59.33% 01m01s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.46 GiB / 4.13 GiB [==============>---------]  59.44% 01m01s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.46 GiB / 4.13 GiB [==============>---------]  59.54% 01m01s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.47 GiB / 4.13 GiB [==============>---------]  59.68% 01m00s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.47 GiB / 4.13 GiB [==============>---------]  59.80% 01m00s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.48 GiB / 4.13 GiB [==============>---------]  59.92% 01m00s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.48 GiB / 4.13 GiB [==============>---------]  60.05% 01m00s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.49 GiB / 4.13 GiB [==============>---------]  60.19% 01m00s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.50 GiB / 4.13 GiB [==============>---------]  60.35% 00m59s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.50 GiB / 4.13 GiB [==============>---------]  60.50% 00m59s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.51 GiB / 4.13 GiB [==============>---------]  60.62% 00m59s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.51 GiB / 4.13 GiB [==============>---------]  60.75% 00m59s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.52 GiB / 4.13 GiB [==============>---------]  60.91% 00m59s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.52 GiB / 4.13 GiB [==============>---------]  61.03% 00m58s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.53 GiB / 4.13 GiB [==============>---------]  61.15% 00m58s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.53 GiB / 4.13 GiB [==============>---------]  61.30% 00m58s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.54 GiB / 4.13 GiB [==============>---------]  61.41% 00m58s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.54 GiB / 4.13 GiB [==============>---------]  61.52% 00m58s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.55 GiB / 4.13 GiB [==============>---------]  61.66% 00m57s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.55 GiB / 4.13 GiB [==============>---------]  61.78% 00m57s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.56 GiB / 4.13 GiB [==============>---------]  61.90% 00m57s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.57 GiB / 4.13 GiB [==============>---------]  62.05% 00m57s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.57 GiB / 4.13 GiB [==============>---------]  62.18% 00m57s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.58 GiB / 4.13 GiB [==============>---------]  62.31% 00m56s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.58 GiB / 4.13 GiB [==============>---------]  62.48% 00m56s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.59 GiB / 4.13 GiB [===============>--------]  62.60% 00m56s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.59 GiB / 4.13 GiB [===============>--------]  62.72% 00m56s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.60 GiB / 4.13 GiB [===============>--------]  62.85% 00m56s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.60 GiB / 4.13 GiB [===============>--------]  62.99% 00m55s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.61 GiB / 4.13 GiB [===============>--------]  63.11% 00m55s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.61 GiB / 4.13 GiB [===============>--------]  63.23% 00m55s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.62 GiB / 4.13 GiB [===============>--------]  63.38% 00m55s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.63 GiB / 4.13 GiB [===============>--------]  63.50% 00m55s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.63 GiB / 4.13 GiB [===============>--------]  63.61% 00m54s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.64 GiB / 4.13 GiB [===============>--------]  63.76% 00m54s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.64 GiB / 4.13 GiB [===============>--------]  63.88% 00m54s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.65 GiB / 4.13 GiB [===============>--------]  64.03% 00m54s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.65 GiB / 4.13 GiB [===============>--------]  64.15% 00m54s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.66 GiB / 4.13 GiB [===============>--------]  64.24% 00m53s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.66 GiB / 4.13 GiB [===============>--------]  64.37% 00m53s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.67 GiB / 4.13 GiB [===============>--------]  64.52% 00m53s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.67 GiB / 4.13 GiB [===============>--------]  64.68% 00m53s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.68 GiB / 4.13 GiB [===============>--------]  64.81% 00m53s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.69 GiB / 4.13 GiB [===============>--------]  64.97% 00m52s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.69 GiB / 4.13 GiB [===============>--------]  65.10% 00m52s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.70 GiB / 4.13 GiB [===============>--------]  65.22% 00m52s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.70 GiB / 4.13 GiB [===============>--------]  65.36% 00m52s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.71 GiB / 4.13 GiB [===============>--------]  65.50% 00m52s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.71 GiB / 4.13 GiB [===============>--------]  65.65% 00m51s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.72 GiB / 4.13 GiB [===============>--------]  65.77% 00m51s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.73 GiB / 4.13 GiB [===============>--------]  65.92% 00m51s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.73 GiB / 4.13 GiB [===============>--------]  66.04% 00m51s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.74 GiB / 4.13 GiB [===============>--------]  66.16% 00m51s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.74 GiB / 4.13 GiB [===============>--------]  66.31% 00m50s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.75 GiB / 4.13 GiB [===============>--------]  66.41% 00m50s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.75 GiB / 4.13 GiB [===============>--------]  66.54% 00m50s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.76 GiB / 4.13 GiB [===============>--------]  66.66% 00m50s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.76 GiB / 4.13 GiB [================>-------]  66.80% 00m50s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.77 GiB / 4.13 GiB [================>-------]  66.93% 00m49s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.77 GiB / 4.13 GiB [================>-------]  67.07% 00m49s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.78 GiB / 4.13 GiB [================>-------]  67.20% 00m49s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.79 GiB / 4.13 GiB [================>-------]  67.37% 00m49s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.79 GiB / 4.13 GiB [================>-------]  67.49% 00m49s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.80 GiB / 4.13 GiB [================>-------]  67.62% 00m48s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.80 GiB / 4.13 GiB [================>-------]  67.78% 00m48s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.81 GiB / 4.13 GiB [================>-------]  67.92% 00m48s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.81 GiB / 4.13 GiB [================>-------]  68.03% 00m48s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.82 GiB / 4.13 GiB [================>-------]  68.17% 00m48s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.82 GiB / 4.13 GiB [================>-------]  68.29% 00m47s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.83 GiB / 4.13 GiB [================>-------]  68.42% 00m47s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.83 GiB / 4.13 GiB [================>-------]  68.55% 00m47s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.84 GiB / 4.13 GiB [================>-------]  68.69% 00m47s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.85 GiB / 4.13 GiB [================>-------]  68.83% 00m47s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.85 GiB / 4.13 GiB [================>-------]  69.00% 00m46s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.86 GiB / 4.13 GiB [================>-------]  69.11% 00m46s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.86 GiB / 4.13 GiB [================>-------]  69.25% 00m46s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.87 GiB / 4.13 GiB [================>-------]  69.40% 00m46s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.87 GiB / 4.13 GiB [================>-------]  69.50% 00m46s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.88 GiB / 4.13 GiB [================>-------]  69.65% 00m45s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.89 GiB / 4.13 GiB [================>-------]  69.80% 00m45s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.89 GiB / 4.13 GiB [================>-------]  69.95% 00m45s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.90 GiB / 4.13 GiB [================>-------]  70.06% 00m45s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.90 GiB / 4.13 GiB [================>-------]  70.23% 00m44s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.91 GiB / 4.13 GiB [================>-------]  70.36% 00m44s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.92 GiB / 4.13 GiB [================>-------]  70.50% 00m44s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.92 GiB / 4.13 GiB [================>-------]  70.65% 00m44s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.93 GiB / 4.13 GiB [================>-------]  70.75% 00m44s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.93 GiB / 4.13 GiB [=================>------]  70.90% 00m43s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.94 GiB / 4.13 GiB [=================>------]  71.02% 00m43s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.94 GiB / 4.13 GiB [=================>------]  71.16% 00m43s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.95 GiB / 4.13 GiB [=================>------]  71.30% 00m43s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.95 GiB / 4.13 GiB [=================>------]  71.43% 00m43s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.96 GiB / 4.13 GiB [=================>------]  71.60% 00m42s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.97 GiB / 4.13 GiB [=================>------]  71.73% 00m42s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.97 GiB / 4.13 GiB [=================>------]  71.87% 00m42s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.98 GiB / 4.13 GiB [=================>------]  72.01% 00m42s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.98 GiB / 4.13 GiB [=================>------]  72.14% 00m42s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.99 GiB / 4.13 GiB [=================>------]  72.28% 00m41s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 2.99 GiB / 4.13 GiB [=================>------]  72.43% 00m41s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.00 GiB / 4.13 GiB [=================>------]  72.55% 00m41s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.00 GiB / 4.13 GiB [=================>------]  72.66% 00m41s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.01 GiB / 4.13 GiB [=================>------]  72.81% 00m41s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.02 GiB / 4.13 GiB [=================>------]  72.94% 00m40s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.02 GiB / 4.13 GiB [=================>------]  73.06% 00m40s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.03 GiB / 4.13 GiB [=================>------]  73.19% 00m40s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.03 GiB / 4.13 GiB [=================>------]  73.32% 00m40s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.04 GiB / 4.13 GiB [=================>------]  73.44% 00m40s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.04 GiB / 4.13 GiB [=================>------]  73.64% 00m39s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.05 GiB / 4.13 GiB [=================>------]  73.77% 00m39s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.06 GiB / 4.13 GiB [=================>------]  73.90% 00m39s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.06 GiB / 4.13 GiB [=================>------]  74.02% 00m39s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.07 GiB / 4.13 GiB [=================>------]  74.14% 00m39s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.07 GiB / 4.13 GiB [=================>------]  74.28% 00m38s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.08 GiB / 4.13 GiB [=================>------]  74.38% 00m38s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.08 GiB / 4.13 GiB [=================>------]  74.50% 00m38s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.08 GiB / 4.13 GiB [=================>------]  74.59% 00m38s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.09 GiB / 4.13 GiB [=================>------]  74.72% 00m38s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.10 GiB / 4.13 GiB [=================>------]  74.85% 00m37s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.10 GiB / 4.13 GiB [==================>-----]  75.02% 00m37s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.11 GiB / 4.13 GiB [==================>-----]  75.14% 00m37s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.11 GiB / 4.13 GiB [==================>-----]  75.27% 00m37s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.12 GiB / 4.13 GiB [==================>-----]  75.42% 00m37s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.12 GiB / 4.13 GiB [==================>-----]  75.57% 00m36s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.13 GiB / 4.13 GiB [==================>-----]  75.71% 00m36s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.14 GiB / 4.13 GiB [==================>-----]  75.85% 00m36s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.14 GiB / 4.13 GiB [==================>-----]  75.96% 00m36s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.15 GiB / 4.13 GiB [==================>-----]  76.09% 00m36s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.15 GiB / 4.13 GiB [==================>-----]  76.23% 00m35s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.16 GiB / 4.13 GiB [==================>-----]  76.36% 00m35s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.16 GiB / 4.13 GiB [==================>-----]  76.50% 00m35s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.17 GiB / 4.13 GiB [==================>-----]  76.64% 00m35s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.17 GiB / 4.13 GiB [==================>-----]  76.77% 00m35s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.18 GiB / 4.13 GiB [==================>-----]  76.93% 00m34s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.19 GiB / 4.13 GiB [==================>-----]  77.04% 00m34s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.19 GiB / 4.13 GiB [==================>-----]  77.19% 00m34s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.20 GiB / 4.13 GiB [==================>-----]  77.32% 00m34s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.20 GiB / 4.13 GiB [==================>-----]  77.43% 00m34s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.21 GiB / 4.13 GiB [==================>-----]  77.55% 00m33s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.21 GiB / 4.13 GiB [==================>-----]  77.69% 00m33s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.22 GiB / 4.13 GiB [==================>-----]  77.81% 00m33s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.22 GiB / 4.13 GiB [==================>-----]  77.97% 00m33s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.23 GiB / 4.13 GiB [==================>-----]  78.13% 00m33s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.24 GiB / 4.13 GiB [==================>-----]  78.27% 00m32s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.24 GiB / 4.13 GiB [==================>-----]  78.43% 00m32s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.25 GiB / 4.13 GiB [==================>-----]  78.53% 00m32s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.25 GiB / 4.13 GiB [==================>-----]  78.68% 00m32s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.26 GiB / 4.13 GiB [==================>-----]  78.82% 00m31s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.27 GiB / 4.13 GiB [==================>-----]  78.98% 00m31s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.27 GiB / 4.13 GiB [==================>-----]  79.15% 00m31s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.28 GiB / 4.13 GiB [===================>----]  79.29% 00m31s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.28 GiB / 4.13 GiB [===================>----]  79.40% 00m31s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.29 GiB / 4.13 GiB [===================>----]  79.51% 00m30s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.29 GiB / 4.13 GiB [===================>----]  79.64% 00m30s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.30 GiB / 4.13 GiB [===================>----]  79.76% 00m30s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.30 GiB / 4.13 GiB [===================>----]  79.89% 00m30s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.31 GiB / 4.13 GiB [===================>----]  80.04% 00m30s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.31 GiB / 4.13 GiB [===================>----]  80.14% 00m29s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.32 GiB / 4.13 GiB [===================>----]  80.29% 00m29s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.33 GiB / 4.13 GiB [===================>----]  80.42% 00m29s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.33 GiB / 4.13 GiB [===================>----]  80.55% 00m29s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.34 GiB / 4.13 GiB [===================>----]  80.69% 00m29s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.34 GiB / 4.13 GiB [===================>----]  80.80% 00m28s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.35 GiB / 4.13 GiB [===================>----]  80.93% 00m28s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.35 GiB / 4.13 GiB [===================>----]  81.06% 00m28s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.36 GiB / 4.13 GiB [===================>----]  81.19% 00m28s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.36 GiB / 4.13 GiB [===================>----]  81.34% 00m28s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.37 GiB / 4.13 GiB [===================>----]  81.47% 00m27s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.37 GiB / 4.13 GiB [===================>----]  81.60% 00m27s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.38 GiB / 4.13 GiB [===================>----]  81.72% 00m27s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.38 GiB / 4.13 GiB [===================>----]  81.85% 00m27s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.39 GiB / 4.13 GiB [===================>----]  81.99% 00m27s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.39 GiB / 4.13 GiB [===================>----]  82.09% 00m27s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.40 GiB / 4.13 GiB [===================>----]  82.23% 00m26s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.41 GiB / 4.13 GiB [===================>----]  82.38% 00m26s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.41 GiB / 4.13 GiB [===================>----]  82.52% 00m26s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.42 GiB / 4.13 GiB [===================>----]  82.64% 00m26s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.42 GiB / 4.13 GiB [===================>----]  82.80% 00m25s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.43 GiB / 4.13 GiB [===================>----]  82.93% 00m25s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.44 GiB / 4.13 GiB [===================>----]  83.09% 00m25s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.44 GiB / 4.13 GiB [===================>----]  83.23% 00m25s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.45 GiB / 4.13 GiB [====================>---]  83.37% 00m25s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.45 GiB / 4.13 GiB [====================>---]  83.51% 00m24s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.46 GiB / 4.13 GiB [====================>---]  83.64% 00m24s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.46 GiB / 4.13 GiB [====================>---]  83.77% 00m24s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.47 GiB / 4.13 GiB [====================>---]  83.85% 00m24s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.47 GiB / 4.13 GiB [====================>---]  83.98% 00m24s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.48 GiB / 4.13 GiB [====================>---]  84.12% 00m23s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.48 GiB / 4.13 GiB [====================>---]  84.26% 00m23s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.49 GiB / 4.13 GiB [====================>---]  84.40% 00m23s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.49 GiB / 4.13 GiB [====================>---]  84.52% 00m23s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.50 GiB / 4.13 GiB [====================>---]  84.64% 00m23s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.51 GiB / 4.13 GiB [====================>---]  84.78% 00m22s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.51 GiB / 4.13 GiB [====================>---]  84.90% 00m22s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.52 GiB / 4.13 GiB [====================>---]  85.02% 00m22s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.52 GiB / 4.13 GiB [====================>---]  85.18% 00m22s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.53 GiB / 4.13 GiB [====================>---]  85.28% 00m22s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.53 GiB / 4.13 GiB [====================>---]  85.42% 00m22s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.54 GiB / 4.13 GiB [====================>---]  85.56% 00m21s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.54 GiB / 4.13 GiB [====================>---]  85.72% 00m21s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.55 GiB / 4.13 GiB [====================>---]  85.83% 00m21s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.55 GiB / 4.13 GiB [====================>---]  85.96% 00m21s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.56 GiB / 4.13 GiB [====================>---]  86.08% 00m21s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.57 GiB / 4.13 GiB [====================>---]  86.24% 00m20s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.57 GiB / 4.13 GiB [====================>---]  86.37% 00m20s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.58 GiB / 4.13 GiB [====================>---]  86.48% 00m20s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.58 GiB / 4.13 GiB [====================>---]  86.62% 00m20s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.59 GiB / 4.13 GiB [====================>---]  86.77% 00m19s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.59 GiB / 4.13 GiB [====================>---]  86.91% 00m19s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.60 GiB / 4.13 GiB [====================>---]  87.05% 00m19s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.61 GiB / 4.13 GiB [====================>---]  87.21% 00m19s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.61 GiB / 4.13 GiB [====================>---]  87.35% 00m19s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.62 GiB / 4.13 GiB [====================>---]  87.48% 00m18s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.62 GiB / 4.13 GiB [=====================>--]  87.60% 00m18s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.63 GiB / 4.13 GiB [=====================>--]  87.75% 00m18s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.64 GiB / 4.13 GiB [=====================>--]  87.92% 00m18s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.64 GiB / 4.13 GiB [=====================>--]  88.07% 00m18s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.65 GiB / 4.13 GiB [=====================>--]  88.22% 00m17s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.65 GiB / 4.13 GiB [=====================>--]  88.35% 00m17s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.66 GiB / 4.13 GiB [=====================>--]  88.47% 00m17s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.66 GiB / 4.13 GiB [=====================>--]  88.62% 00m17s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.67 GiB / 4.13 GiB [=====================>--]  88.76% 00m16s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.68 GiB / 4.13 GiB [=====================>--]  88.91% 00m16s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.68 GiB / 4.13 GiB [=====================>--]  89.05% 00m16s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.69 GiB / 4.13 GiB [=====================>--]  89.17% 00m16s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.69 GiB / 4.13 GiB [=====================>--]  89.29% 00m16s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.70 GiB / 4.13 GiB [=====================>--]  89.41% 00m15s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.70 GiB / 4.13 GiB [=====================>--]  89.53% 00m15s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.71 GiB / 4.13 GiB [=====================>--]  89.68% 00m15s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.71 GiB / 4.13 GiB [=====================>--]  89.79% 00m15s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.72 GiB / 4.13 GiB [=====================>--]  89.93% 00m15s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.72 GiB / 4.13 GiB [=====================>--]  90.07% 00m14s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.73 GiB / 4.13 GiB [=====================>--]  90.20% 00m14s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.74 GiB / 4.13 GiB [=====================>--]  90.37% 00m14s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.74 GiB / 4.13 GiB [=====================>--]  90.50% 00m14s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.75 GiB / 4.13 GiB [=====================>--]  90.63% 00m14s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.75 GiB / 4.13 GiB [=====================>--]  90.74% 00m13s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.76 GiB / 4.13 GiB [=====================>--]  90.89% 00m13s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.76 GiB / 4.13 GiB [=====================>--]  91.01% 00m13s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.77 GiB / 4.13 GiB [=====================>--]  91.15% 00m13s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.77 GiB / 4.13 GiB [=====================>--]  91.28% 00m13s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.78 GiB / 4.13 GiB [=====================>--]  91.41% 00m12s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.79 GiB / 4.13 GiB [=====================>--]  91.57% 00m12s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.79 GiB / 4.13 GiB [======================>-]  91.71% 00m12s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.80 GiB / 4.13 GiB [======================>-]  91.86% 00m12s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.80 GiB / 4.13 GiB [======================>-]  91.99% 00m12s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.81 GiB / 4.13 GiB [======================>-]  92.09% 00m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.81 GiB / 4.13 GiB [======================>-]  92.16% 00m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.81 GiB / 4.13 GiB [======================>-]  92.23% 00m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.82 GiB / 4.13 GiB [======================>-]  92.32% 00m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.82 GiB / 4.13 GiB [======================>-]  92.43% 00m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.83 GiB / 4.13 GiB [======================>-]  92.56% 00m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.83 GiB / 4.13 GiB [======================>-]  92.68% 00m11s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.84 GiB / 4.13 GiB [======================>-]  92.81% 00m10s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.84 GiB / 4.13 GiB [======================>-]  92.90% 00m10s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.85 GiB / 4.13 GiB [======================>-]  93.02% 00m10s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.85 GiB / 4.13 GiB [======================>-]  93.15% 00m10s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.86 GiB / 4.13 GiB [======================>-]  93.26% 00m10s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.86 GiB / 4.13 GiB [======================>-]  93.40% 00m09s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.87 GiB / 4.13 GiB [======================>-]  93.51% 00m09s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.87 GiB / 4.13 GiB [======================>-]  93.66% 00m09s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.88 GiB / 4.13 GiB [======================>-]  93.77% 00m09s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.88 GiB / 4.13 GiB [======================>-]  93.93% 00m09s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.89 GiB / 4.13 GiB [======================>-]  94.03% 00m09s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.89 GiB / 4.13 GiB [======================>-]  94.14% 00m08s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.90 GiB / 4.13 GiB [======================>-]  94.27% 00m08s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.90 GiB / 4.13 GiB [======================>-]  94.39% 00m08s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.91 GiB / 4.13 GiB [======================>-]  94.54% 00m08s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.91 GiB / 4.13 GiB [======================>-]  94.67% 00m08s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.92 GiB / 4.13 GiB [======================>-]  94.79% 00m07s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.93 GiB / 4.13 GiB [======================>-]  94.93% 00m07s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.93 GiB / 4.13 GiB [======================>-]  95.08% 00m07s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.94 GiB / 4.13 GiB [======================>-]  95.23% 00m07s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.94 GiB / 4.13 GiB [======================>-]  95.36% 00m06s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.95 GiB / 4.13 GiB [======================>-]  95.49% 00m06s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.95 GiB / 4.13 GiB [======================>-]  95.62% 00m06s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.96 GiB / 4.13 GiB [======================>-]  95.74% 00m06s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.96 GiB / 4.13 GiB [========================]  95.88% 00m06s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.97 GiB / 4.13 GiB [========================]  96.04% 00m05s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.98 GiB / 4.13 GiB [========================]  96.19% 00m05s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.98 GiB / 4.13 GiB [========================]  96.30% 00m05s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.99 GiB / 4.13 GiB [========================]  96.45% 00m05s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 3.99 GiB / 4.13 GiB [========================]  96.58% 00m05s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.00 GiB / 4.13 GiB [========================]  96.73% 00m04s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.01 GiB / 4.13 GiB [========================]  96.86% 00m04s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.01 GiB / 4.13 GiB [========================]  96.99% 00m04s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.02 GiB / 4.13 GiB [========================]  97.14% 00m04s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.02 GiB / 4.13 GiB [========================]  97.28% 00m04s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.03 GiB / 4.13 GiB [========================]  97.41% 00m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.03 GiB / 4.13 GiB [========================]  97.57% 00m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.04 GiB / 4.13 GiB [========================]  97.69% 00m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.04 GiB / 4.13 GiB [========================]  97.83% 00m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.05 GiB / 4.13 GiB [========================]  97.97% 00m03s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.06 GiB / 4.13 GiB [========================]  98.12% 00m02s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.06 GiB / 4.13 GiB [========================]  98.26% 00m02s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.07 GiB / 4.13 GiB [========================]  98.38% 00m02s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.07 GiB / 4.13 GiB [========================]  98.49% 00m02s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.08 GiB / 4.13 GiB [========================]  98.65% 00m02s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.08 GiB / 4.13 GiB [========================]  98.75% 00m01s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.09 GiB / 4.13 GiB [========================]  98.90% 00m01s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.10 GiB / 4.13 GiB [========================]  99.06% 00m01s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.10 GiB / 4.13 GiB [========================]  99.23% 00m01s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.11 GiB / 4.13 GiB [========================]  99.34% 00m01s
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.11 GiB / 4.13 GiB [===============================]  99.46%
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.12 GiB / 4.13 GiB [===============================]  99.56%
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.12 GiB / 4.13 GiB [===============================]  99.69%
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.13 GiB / 4.13 GiB [===============================]  99.82%
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.13 GiB / 4.13 GiB [===============================]  99.96%
+2022/07/04 15:09:39 packer-builder-vmware-iso plugin: [DEBUG] SCP session complete, closing stdin pipe.
+2022/07/04 15:09:39 packer-builder-vmware-iso plugin: [DEBUG] Waiting for SSH session to complete.
+2022/07/04 15:09:39 packer-builder-vmware-iso plugin: [DEBUG] scp stderr (length 68): Sink: C0664 4439830528 d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso
+2022/07/04 15:09:39 packer-builder-vmware-iso plugin: closing
+[1A[0;32m    vmware-iso: d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m 4.13 GiB / 4.13 GiB [=========================] 100.00% 2m33s
+2022/07/04 15:09:39 packer-builder-vmware-iso plugin: running: ab4862ba7d1644c27f27516d24cb21e6b39234eb3301e5f1fb365a78b22f79b3  /vmfs/volumes/datastore1/packer_cache/d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso | [sha256sum -c]
+2022/07/04 15:09:39 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:09:39 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: sha256sum -c
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: [INFO] Creating disk with Path: Windows10/disk.vmdk and Size: 61440M
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+[1;32m==> vmware-iso: Creating required virtual machine disks[0m
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vmkfstools -c 61440M -d zeroedthick -a lsilogic "/vmfs/volumes/datastore1/Windows10/disk.vmdk"
+[1;32m==> vmware-iso: Building and writing VMX file[0m
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: Writing VMX to: /tmp/vmw-iso1725850951/Windows10.vmx
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: Configuring VMX...
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: Setting VMX: 'tools.syncTime' = '0'
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: Setting VMX: 'time.synchronize.shrink' = '0'
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: Setting VMX: 'numvcpus' = '2'
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: Setting VMX: 'time.synchronize.restore' = '0'
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: Setting VMX: 'time.synchronize.resume.disk' = '0'
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: Setting VMX: 'memsize' = '2048'
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: Setting VMX: 'time.synchronize.continue' = '0'
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: Setting VMX: 'scsi0.virtualDev' = 'lsisas1068'
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: Setting VMX: 'time.synchronize.tools.startup' = '0'
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: Setting VMX: 'time.synchronize.tools.enable' = '0'
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: Setting VMX: 'ethernet0.networkName' = 'VM Network'
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: Setting VMX: 'time.synchronize.resume.host' = '0'
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: Floppy path present, setting in VMX
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: Writing VMX to: /tmp/vmw-iso1725850951/Windows10.vmx
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: Suppressing messages in VMX
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: Host IP for the VMware machine: 192.168.222.130
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: Looking for available port between 5900 and 5980
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network ip connection list
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: ESXi listening on address [fe80:3::96c6:91ff:feaa:28d5]:427, port 427 unavailable for VNC
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: ESXi listening on address 192.168.137.156:427, port 427 unavailable for VNC
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: ESXi listening on address 0.0.0.0:443, port 443 unavailable for VNC
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: ESXi listening on address [::]:443, port 443 unavailable for VNC
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: ESXi listening on address 0.0.0.0:80, port 80 unavailable for VNC
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: ESXi listening on address [::]:80, port 80 unavailable for VNC
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: ESXi listening on address [::]:22, port 22 unavailable for VNC
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: ESXi listening on address 0.0.0.0:22, port 22 unavailable for VNC
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: ESXi listening on address [::]:9080, port 9080 unavailable for VNC
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: ESXi listening on address [::]:8000, port 8000 unavailable for VNC
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: ESXi listening on address [::]:902, port 902 unavailable for VNC
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: ESXi listening on address 0.0.0.0:902, port 902 unavailable for VNC
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: ESXi listening on address [::]:8300, port 8300 unavailable for VNC
+2022/07/04 15:10:08 packer-builder-vmware-iso plugin: Trying address: 192.168.137.156:5900...
+2022/07/04 15:10:10 packer-builder-vmware-iso plugin: Found available VNC port: 192.168.137.156:5900
+2022/07/04 15:10:10 packer-builder-vmware-iso plugin: Writing VMX to: /tmp/vmw-iso1725850951/Windows10.vmx
+[1;32m==> vmware-iso: Registering remote VM...[0m
+2022/07/04 15:10:10 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:10:10 packer-builder-vmware-iso plugin: [DEBUG] Starting remote scp process:  scp -vt /vmfs/volumes/datastore1/Windows10
+2022/07/04 15:10:10 packer-builder-vmware-iso plugin: [DEBUG] Started SCP session, beginning transfers...
+2022/07/04 15:10:10 packer-builder-vmware-iso plugin: [DEBUG] Copying input data into temporary file so we can read the length
+2022/07/04 15:10:10 packer-builder-vmware-iso plugin: [DEBUG] scp: Uploading Windows10.vmx: perms=C0644 size=3207
+2022/07/04 15:10:10 packer-builder-vmware-iso plugin: [DEBUG] SCP session complete, closing stdin pipe.
+2022/07/04 15:10:10 packer-builder-vmware-iso plugin: [DEBUG] Waiting for SSH session to complete.
+2022/07/04 15:10:10 packer-builder-vmware-iso plugin: [DEBUG] scp stderr (length 31): Sink: C0644 3207 Windows10.vmx
+2022/07/04 15:10:10 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:10:10 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd solo/registervm "/vmfs/volumes/datastore1/Windows10/Windows10.vmx"
+[1;32m==> vmware-iso: Starting virtual machine...[0m
+2022/07/04 15:10:11 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:10:11 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.on 3
+2022/07/04 15:10:37 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:10:37 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 3
+[1;32m==> vmware-iso: Connecting to VNC...[0m
+[1;32m==> vmware-iso: Waiting 6m0s for boot...[0m
+[1;32m==> vmware-iso: Typing the boot command over VNC...[0m
+2022/07/04 15:16:37 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:16:37 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:16:37 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:16:37 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:16:40 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:16:40 packer-builder-vmware-iso plugin: [DEBUG] Unable to get address during connection step: No interface on the VM has an IP address ready
+2022/07/04 15:16:40 packer-builder-vmware-iso plugin: Waiting for WinRM, up to timeout: 4h0m0s
+[1;32m==> vmware-iso: Waiting for WinRM to become available...[0m
+2022/07/04 15:16:40 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:16:40 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:16:40 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:16:40 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:16:41 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:16:46 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:16:46 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:16:46 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:16:46 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:16:48 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:16:48 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:16:53 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:16:53 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:16:53 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:16:54 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:16:56 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:16:56 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:17:01 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:17:01 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:17:01 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:17:01 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:17:03 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:17:03 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:17:08 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:17:08 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:17:09 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:17:09 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:17:11 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:17:11 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:17:16 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:17:16 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:17:16 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:17:16 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:17:19 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:17:19 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:17:24 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:17:24 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:17:24 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:17:24 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:17:26 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:17:26 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:17:31 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:17:31 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:17:32 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:17:32 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:17:34 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:17:34 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:17:39 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:17:39 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:17:39 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:17:39 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:17:41 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:17:41 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:17:46 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:17:46 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:17:47 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:17:47 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:17:49 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:17:49 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:17:54 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:17:54 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:17:54 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:17:54 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:17:57 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:17:57 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:18:02 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:18:02 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:18:02 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:18:02 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:18:04 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:18:04 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:18:09 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:18:09 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:18:09 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:18:10 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:18:12 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:18:12 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:18:17 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:18:17 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:18:17 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:18:17 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:18:19 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:18:19 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:18:24 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:18:24 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:18:25 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:18:25 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:18:27 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:18:27 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:18:32 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:18:32 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:18:32 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:18:32 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:18:35 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:18:35 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:18:40 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:18:40 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:18:40 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:18:40 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:18:42 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:18:42 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:18:47 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:18:47 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:18:48 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:18:48 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:18:50 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:18:50 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:18:55 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:18:55 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:18:55 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:18:55 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:18:58 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:18:58 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:19:03 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:19:03 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:19:03 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:19:03 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:19:05 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:19:05 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:19:10 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:19:10 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:19:10 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:19:11 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:19:13 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:19:13 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:19:18 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:19:18 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:19:18 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:19:18 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:19:20 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:19:20 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:19:25 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:19:25 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:19:26 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:19:26 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:19:28 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:19:28 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:19:33 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:19:33 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:19:33 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:19:33 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:19:36 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:19:36 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:19:41 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:19:41 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:19:41 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:19:41 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:19:43 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:19:43 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:19:48 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:19:48 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:19:49 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:19:49 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:19:51 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:19:51 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:19:56 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:19:56 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:19:56 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:19:56 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:19:59 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:19:59 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:20:04 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:20:04 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:20:04 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:20:04 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:20:06 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:20:06 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:20:11 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:20:11 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:20:11 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:20:11 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:20:14 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:20:14 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:20:19 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:20:19 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:20:19 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:20:19 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:20:21 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:20:21 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:20:26 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:20:26 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:20:27 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:20:27 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:20:29 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:20:29 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:20:34 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:20:34 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:20:34 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:20:34 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:20:37 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:20:37 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:20:42 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:20:42 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:20:42 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:20:42 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:20:44 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:20:44 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:20:49 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:20:49 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:20:49 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:20:49 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:20:52 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:20:52 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:20:57 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:20:57 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:20:57 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:20:57 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:20:59 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:20:59 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:21:04 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:21:04 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:21:05 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:21:05 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:21:07 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:21:07 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:21:12 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:21:12 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:21:12 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:21:12 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:21:15 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:21:15 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:21:20 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:21:20 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:21:20 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:21:20 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:21:22 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:21:22 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:21:27 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:21:27 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:21:27 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:21:28 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:21:30 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:21:30 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:21:35 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:21:35 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:21:35 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:21:35 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:21:37 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:21:37 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:21:42 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:21:42 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:21:43 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:21:43 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:21:45 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:21:45 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:21:50 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:21:50 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:21:50 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:21:50 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:21:53 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:21:53 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:21:58 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:21:58 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:21:58 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:21:58 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2102345
+2022/07/04 15:22:00 packer-builder-vmware-iso plugin: Timeout connecting to 169.254.192.151
+2022/07/04 15:22:00 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/04 15:35:12 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:35:12 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'read tcp 192.168.222.130:44708->192.168.137.156:22: read: connection reset by peer', attempting reconnect
+2022/07/04 15:35:12 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/04 15:35:12 packer-builder-vmware-iso plugin: [DEBUG] handshaking with SSH
+2022/07/04 15:35:12 packer-builder-vmware-iso plugin: Keyboard interactive challenge:
+2022/07/04 15:35:12 packer-builder-vmware-iso plugin: -- User:
+2022/07/04 15:35:12 packer-builder-vmware-iso plugin: -- Instructions:
+2022/07/04 15:35:12 packer-builder-vmware-iso plugin: -- Question 1: Password:
+2022/07/04 15:35:12 packer-builder-vmware-iso plugin: Keyboard interactive challenge:
+2022/07/04 15:35:12 packer-builder-vmware-iso plugin: -- User:
+2022/07/04 15:35:12 packer-builder-vmware-iso plugin: -- Instructions:
+2022/07/04 15:35:12 packer-builder-vmware-iso plugin: [DEBUG] handshake complete!
+2022/07/04 15:35:12 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:35:12 packer-builder-vmware-iso plugin: [INFO] agent forwarding enabled
+2022/07/04 15:35:12 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:35:12 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: EOF
+2022/07/04 15:35:17 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:35:17 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:35:17 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: EOF
+2022/07/04 15:35:22 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:35:22 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:35:23 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: EOF
+2022/07/04 15:35:28 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:35:28 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/04 15:35:28 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: EOF
+2022/07/04 15:35:32 packer-provisioner-windows-shell plugin: Received interrupt signal (count: 1). Ignoring.
+2022/07/04 15:35:32 packer-provisioner-powershell plugin: Received interrupt signal (count: 1). Ignoring.
+2022/07/04 15:35:32 packer-provisioner-windows-restart plugin: Received interrupt signal (count: 1). Ignoring.
+2022/07/04 15:35:32 Cancelling builder after context cancellation context canceled
+2022/07/04 15:35:32 packer-provisioner-windows-shell plugin: Received interrupt signal (count: 1). Ignoring.
+2022/07/04 15:35:32 packer-provisioner-powershell plugin: Received interrupt signal (count: 1). Ignoring.
+2022/07/04 15:35:32 packer-builder-vmware-iso plugin: Received interrupt signal (count: 1). Ignoring.
+Cancelling build after receiving interrupt
+2022/07/04 15:35:32 packer-builder-vmware-iso plugin: [INFO] WinRM wait cancelled. Exiting loop.
+2022/07/04 15:35:32 packer-builder-vmware-iso plugin: Interrupt detected, quitting waiting for WinRM.
+2022/07/04 15:35:32 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:35:32 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 3
+2022/07/04 15:35:32 packer-builder-vmware-iso plugin: [ERROR] Remote command exited with '1': vim-cmd vmsvc/power.getstate 3
+2022/07/04 15:35:32 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+[1;32m==> vmware-iso: Destroying virtual machine...[0m
+2022/07/04 15:35:32 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/destroy 3
+2022/07/04 15:35:32 packer-builder-vmware-iso plugin: [ERROR] Remote command exited with '1': vim-cmd vmsvc/destroy 3
+[1;31m==> vmware-iso: Error destroying VM: 'vim-cmd vmsvc/destroy 3'
+==> vmware-iso: 
+==> vmware-iso: Stdout: 
+==> vmware-iso: 
+==> vmware-iso: 
+==> vmware-iso: Stderr: (vim.fault.NotFound) {
+==> vmware-iso:    faultCause = (vmodl.MethodFault) null, 
+==> vmware-iso:    faultMessage = <unset>
+==> vmware-iso:    msg = "Unable to find a VM corresponding to "3""
+==> vmware-iso: }
+==> vmware-iso:[0m
+==> vmware-iso: Stdout: 
+==> vmware-iso: 
+==> vmware-iso: Stderr: (vim.fault.NotFound) {
+==> vmware-iso:    faultCause = (vmodl.MethodFault) null, 
+==> vmware-iso:    faultMessage = <unset>
+==> vmware-iso:    msg = "Unable to find a VM corresponding to "3""
+==> vmware-iso: }
+==> vmware-iso:[0m
+2022/07/04 15:35:32 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:35:32 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: test ! -e "/vmfs/volumes/datastore1/Windows10"
+2022/07/04 15:35:32 packer-builder-vmware-iso plugin: Cleaning up remote path: /vmfs/volumes/datastore1/packer_cache/packer1658454154
+2022/07/04 15:35:32 packer-builder-vmware-iso plugin: Removing remote cache path /vmfs/volumes/datastore1/packer_cache/packer1658454154 (local /vmfs/volumes/datastore1/packer_cache/packer1658454154)
+2022/07/04 15:35:32 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:35:33 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: rm -f "/vmfs/volumes/datastore1/packer_cache/packer1658454154"
+2022/07/04 15:35:33 packer-builder-vmware-iso plugin: Deleting floppy disk: /tmp/packer1658454154
+2022/07/04 15:35:33 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:35:33 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: test -e "/vmfs/volumes/datastore1/Windows10"
+2022/07/04 15:35:33 packer-builder-vmware-iso plugin: [ERROR] Remote command exited with '1': test -e "/vmfs/volumes/datastore1/Windows10"
+2022/07/04 15:35:33 [INFO] (telemetry) ending vmware-iso
+[1;31mBuild 'vmware-iso' errored after 15 minutes 37 seconds: Build was cancelled.[0m
+
+==> Wait completed after 15 minutes 37 seconds
+Cleanly cancelled builds after being interrupted.
+==> Wait completed after 15 minutes 37 seconds
+2022/07/04 15:35:33 [INFO] (telemetry) Finalizing.
+2022/07/04 15:35:33 waiting for all plugin processes to complete...
+2022/07/04 15:35:33 /usr/bin/packer: plugin process exited
+2022/07/04 15:35:33 /usr/bin/packer: plugin process exited
+2022/07/04 15:35:33 /usr/bin/packer: plugin process exited
+2022/07/04 15:35:33 /usr/bin/packer: plugin process exited
+2022/07/04 15:35:33 /usr/bin/packer: plugin process exited
+2022/07/04 15:35:33 /usr/bin/packer: plugin process exited

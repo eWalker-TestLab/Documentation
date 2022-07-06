@@ -1,0 +1,1105 @@
+2022/07/05 14:55:21 [INFO] Packer version: 1.8.2 [go1.17.11 linux amd64]
+2022/07/05 14:55:21 [TRACE] discovering plugins in /usr/bin
+2022/07/05 14:55:21 [TRACE] discovering plugins in /home/az/.config/packer/plugins
+2022/07/05 14:55:21 [TRACE] discovering plugins in .
+2022/07/05 14:55:21 [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2022/07/05 14:55:21 [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/az/.packerconfig
+2022/07/05 14:55:21 [WARN] Config file doesn't exist: /home/az/.packerconfig
+2022/07/05 14:55:21 [INFO] Setting cache directory: /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache
+2022/07/05 14:55:21 [TRACE] Starting internal plugin packer-builder-vmware-iso
+2022/07/05 14:55:21 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "plugin", "packer-builder-vmware-iso"}
+2022/07/05 14:55:21 Waiting for RPC address for: /usr/bin/packer
+2022/07/05 14:55:21 packer-builder-vmware-iso plugin: [INFO] Packer version: 1.8.2 [go1.17.11 linux amd64]
+2022/07/05 14:55:21 packer-builder-vmware-iso plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2022/07/05 14:55:21 packer-builder-vmware-iso plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/az/.packerconfig
+2022/07/05 14:55:21 packer-builder-vmware-iso plugin: [WARN] Config file doesn't exist: /home/az/.packerconfig
+2022/07/05 14:55:21 packer-builder-vmware-iso plugin: [INFO] Setting cache directory: /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache
+2022/07/05 14:55:21 packer-builder-vmware-iso plugin: args: []string{"packer-builder-vmware-iso"}
+2022/07/05 14:55:21 packer-builder-vmware-iso plugin: Plugin address: unix /tmp/packer-plugin410106265
+2022/07/05 14:55:21 packer-builder-vmware-iso plugin: Waiting for connection...
+2022/07/05 14:55:21 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin410106265
+2022/07/05 14:55:21 packer-builder-vmware-iso plugin: Serving a plugin connection...
+2022/07/05 14:55:21 [TRACE] Starting internal plugin packer-provisioner-windows-shell
+2022/07/05 14:55:21 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "plugin", "packer-provisioner-windows-shell"}
+2022/07/05 14:55:21 Waiting for RPC address for: /usr/bin/packer
+2022/07/05 14:55:21 packer-provisioner-windows-shell plugin: [INFO] Packer version: 1.8.2 [go1.17.11 linux amd64]
+2022/07/05 14:55:21 packer-provisioner-windows-shell plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2022/07/05 14:55:21 packer-provisioner-windows-shell plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/az/.packerconfig
+2022/07/05 14:55:21 packer-provisioner-windows-shell plugin: [WARN] Config file doesn't exist: /home/az/.packerconfig
+2022/07/05 14:55:21 packer-provisioner-windows-shell plugin: [INFO] Setting cache directory: /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache
+2022/07/05 14:55:21 packer-provisioner-windows-shell plugin: args: []string{"packer-provisioner-windows-shell"}
+2022/07/05 14:55:21 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin88475670
+2022/07/05 14:55:21 packer-provisioner-windows-shell plugin: Plugin address: unix /tmp/packer-plugin88475670
+2022/07/05 14:55:21 packer-provisioner-windows-shell plugin: Waiting for connection...
+2022/07/05 14:55:21 packer-provisioner-windows-shell plugin: Serving a plugin connection...
+2022/07/05 14:55:21 [TRACE] Starting internal plugin packer-provisioner-powershell
+2022/07/05 14:55:21 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "plugin", "packer-provisioner-powershell"}
+2022/07/05 14:55:21 Waiting for RPC address for: /usr/bin/packer
+2022/07/05 14:55:21 packer-provisioner-powershell plugin: [INFO] Packer version: 1.8.2 [go1.17.11 linux amd64]
+2022/07/05 14:55:21 packer-provisioner-powershell plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2022/07/05 14:55:21 packer-provisioner-powershell plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/az/.packerconfig
+2022/07/05 14:55:21 packer-provisioner-powershell plugin: [WARN] Config file doesn't exist: /home/az/.packerconfig
+2022/07/05 14:55:21 packer-provisioner-powershell plugin: [INFO] Setting cache directory: /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache
+2022/07/05 14:55:21 packer-provisioner-powershell plugin: args: []string{"packer-provisioner-powershell"}
+2022/07/05 14:55:21 packer-provisioner-powershell plugin: Plugin address: unix /tmp/packer-plugin19371735
+2022/07/05 14:55:21 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin19371735
+2022/07/05 14:55:21 packer-provisioner-powershell plugin: Waiting for connection...
+2022/07/05 14:55:21 packer-provisioner-powershell plugin: Serving a plugin connection...
+2022/07/05 14:55:21 [TRACE] Starting internal plugin packer-provisioner-windows-restart
+2022/07/05 14:55:21 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "plugin", "packer-provisioner-windows-restart"}
+2022/07/05 14:55:21 Waiting for RPC address for: /usr/bin/packer
+2022/07/05 14:55:21 packer-provisioner-windows-restart plugin: [INFO] Packer version: 1.8.2 [go1.17.11 linux amd64]
+2022/07/05 14:55:21 packer-provisioner-windows-restart plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2022/07/05 14:55:21 packer-provisioner-windows-restart plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/az/.packerconfig
+2022/07/05 14:55:21 packer-provisioner-windows-restart plugin: [WARN] Config file doesn't exist: /home/az/.packerconfig
+2022/07/05 14:55:21 packer-provisioner-windows-restart plugin: [INFO] Setting cache directory: /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache
+2022/07/05 14:55:21 packer-provisioner-windows-restart plugin: args: []string{"packer-provisioner-windows-restart"}
+2022/07/05 14:55:21 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin3066735354
+2022/07/05 14:55:21 packer-provisioner-windows-restart plugin: Plugin address: unix /tmp/packer-plugin3066735354
+2022/07/05 14:55:21 packer-provisioner-windows-restart plugin: Waiting for connection...
+2022/07/05 14:55:21 packer-provisioner-windows-restart plugin: Serving a plugin connection...
+2022/07/05 14:55:21 [TRACE] Starting internal plugin packer-provisioner-powershell
+2022/07/05 14:55:21 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "plugin", "packer-provisioner-powershell"}
+2022/07/05 14:55:21 Waiting for RPC address for: /usr/bin/packer
+2022/07/05 14:55:21 packer-provisioner-powershell plugin: [INFO] Packer version: 1.8.2 [go1.17.11 linux amd64]
+2022/07/05 14:55:21 packer-provisioner-powershell plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2022/07/05 14:55:21 packer-provisioner-powershell plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/az/.packerconfig
+2022/07/05 14:55:21 packer-provisioner-powershell plugin: [WARN] Config file doesn't exist: /home/az/.packerconfig
+2022/07/05 14:55:21 packer-provisioner-powershell plugin: [INFO] Setting cache directory: /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache
+2022/07/05 14:55:21 packer-provisioner-powershell plugin: args: []string{"packer-provisioner-powershell"}
+2022/07/05 14:55:21 packer-provisioner-powershell plugin: Plugin address: unix /tmp/packer-plugin2207490386
+2022/07/05 14:55:21 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin2207490386
+2022/07/05 14:55:21 packer-provisioner-powershell plugin: Waiting for connection...
+2022/07/05 14:55:21 packer-provisioner-powershell plugin: Serving a plugin connection...
+2022/07/05 14:55:21 [TRACE] Starting internal plugin packer-provisioner-windows-shell
+2022/07/05 14:55:21 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "plugin", "packer-provisioner-windows-shell"}
+2022/07/05 14:55:21 Waiting for RPC address for: /usr/bin/packer
+2022/07/05 14:55:21 packer-provisioner-windows-shell plugin: [INFO] Packer version: 1.8.2 [go1.17.11 linux amd64]
+2022/07/05 14:55:21 packer-provisioner-windows-shell plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2022/07/05 14:55:21 packer-provisioner-windows-shell plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/az/.packerconfig
+2022/07/05 14:55:21 packer-provisioner-windows-shell plugin: [WARN] Config file doesn't exist: /home/az/.packerconfig
+2022/07/05 14:55:21 packer-provisioner-windows-shell plugin: [INFO] Setting cache directory: /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache
+2022/07/05 14:55:21 packer-provisioner-windows-shell plugin: args: []string{"packer-provisioner-windows-shell"}
+2022/07/05 14:55:21 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin141894664
+2022/07/05 14:55:21 packer-provisioner-windows-shell plugin: Plugin address: unix /tmp/packer-plugin141894664
+2022/07/05 14:55:21 packer-provisioner-windows-shell plugin: Waiting for connection...
+2022/07/05 14:55:21 packer-provisioner-windows-shell plugin: Serving a plugin connection...
+2022/07/05 14:55:21 Preparing build: vmware-iso
+Warning: Warning when preparing build: "vmware-iso"
+
+
+Your vmx data contains the following variable(s), which Packer normally sets
+when it generates its own default vmx template. This may cause your build to
+fail or behave unpredictably: numvcpus, memsize, scsi0.virtualDev
+
+2022/07/05 14:55:21 Build debug mode: false
+2022/07/05 14:55:21 Force build: false
+2022/07/05 14:55:21 On error: 
+2022/07/05 14:55:21 Waiting on builds to complete...
+2022/07/05 14:55:21 Starting build run: vmware-iso
+2022/07/05 14:55:21 Running builder: vmware-iso
+2022/07/05 14:55:21 [INFO] (telemetry) Starting builder vmware-iso
+Your vmx data contains the following variable(s), which Packer normally sets
+when it generates its own default vmx template. This may cause your build to
+fail or behave unpredictably: numvcpus, memsize, scsi0.virtualDev
+
+
+[1;32mvmware-iso: output will be in this color.[0m
+
+2022/07/05 14:55:21 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:55:21 packer-builder-vmware-iso plugin: [DEBUG] handshaking with SSH
+2022/07/05 14:55:22 packer-builder-vmware-iso plugin: Keyboard interactive challenge:
+2022/07/05 14:55:22 packer-builder-vmware-iso plugin: -- User:
+2022/07/05 14:55:22 packer-builder-vmware-iso plugin: -- Instructions:
+2022/07/05 14:55:22 packer-builder-vmware-iso plugin: -- Question 1: Password:
+2022/07/05 14:55:22 packer-builder-vmware-iso plugin: Keyboard interactive challenge:
+2022/07/05 14:55:22 packer-builder-vmware-iso plugin: -- User:
+2022/07/05 14:55:22 packer-builder-vmware-iso plugin: -- Instructions:
+2022/07/05 14:55:22 packer-builder-vmware-iso plugin: [DEBUG] handshake complete!
+2022/07/05 14:55:22 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:55:22 packer-builder-vmware-iso plugin: [INFO] agent forwarding enabled
+2022/07/05 14:55:22 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:55:22 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv system version get
+2022/07/05 14:55:22 packer-builder-vmware-iso plugin: Connected to VMware ESXi 6.7.0 Releasebuild-14320388
+2022/07/05 14:55:22 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:55:22 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv system settings advanced list -o /Net/GuestIPHack
+2022/07/05 14:55:22 packer-builder-vmware-iso plugin: Testing against vmware driver *common.ESX5Driver, Success: true
+[1;32m==> vmware-iso: Retrieving ISO[0m
+[1;32m==> vmware-iso: Trying https://software-download.microsoft.com/download/pr/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso[0m
+2022/07/05 14:55:22 packer-builder-vmware-iso plugin: Acquiring lock for: https://software-download.microsoft.com/download/pr/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso?checksum=sha256%3Aab4862ba7d1644c27f27516d24cb21e6b39234eb3301e5f1fb365a78b22f79b3 (/home/az/workspace/eWalker/DetectionLab/Packer/packer_cache/d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso.lock)
+[1;32m==> vmware-iso: Trying https://software-download.microsoft.com/download/pr/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso?checksum=sha256%3Aab4862ba7d1644c27f27516d24cb21e6b39234eb3301e5f1fb365a78b22f79b3[0m
+[1;32m==> vmware-iso: https://software-download.microsoft.com/download/pr/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso?checksum=sha256%3Aab4862ba7d1644c27f27516d24cb21e6b39234eb3301e5f1fb365a78b22f79b3 => /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache/d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m
+[1;32m==> vmware-iso: Configuring output and export directories...[0m
+2022/07/05 14:55:39 packer-builder-vmware-iso plugin: Leaving retrieve loop for ISO
+2022/07/05 14:55:39 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:55:39 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: test -e "/vmfs/volumes/datastore1/Windows10"
+2022/07/05 14:55:39 packer-builder-vmware-iso plugin: [ERROR] Remote command exited with '1': test -e "/vmfs/volumes/datastore1/Windows10"
+2022/07/05 14:55:39 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:55:39 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: mkdir -p "/vmfs/volumes/datastore1/Windows10"
+[1;32m==> vmware-iso: Creating floppy disk...[0m
+2022/07/05 14:55:39 packer-builder-vmware-iso plugin: Floppy path: /tmp/packer2332465485
+2022/07/05 14:55:39 packer-builder-vmware-iso plugin: Initializing block device backed by temporary file
+2022/07/05 14:55:39 packer-builder-vmware-iso plugin: Formatting the block device with a FAT filesystem...
+2022/07/05 14:55:39 packer-builder-vmware-iso plugin: Initializing FAT filesystem on block device
+2022/07/05 14:55:39 packer-builder-vmware-iso plugin: Reading the root directory from the filesystem
+[0;32m    vmware-iso: Copying files flatly from floppy_files[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/answer_files/10/Autounattend.xml[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/floppy/WindowsPowershell.lnk[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/floppy/PinTo10.exe[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/fixnetwork.ps1[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/rearm-windows.ps1[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/disable-screensaver.ps1[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/disable-winrm.ps1[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/enable-winrm.ps1[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/microsoft-updates.bat[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/win-updates.ps1[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/unattend.xml[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/sysprep.bat[0m
+[0;32m    vmware-iso: Done copying files from floppy_files[0m
+[0;32m    vmware-iso: Collecting paths from floppy_dirs[0m
+[0;32m    vmware-iso: Resulting paths from floppy_dirs : [][0m
+[0;32m    vmware-iso: Done copying paths from floppy_dirs[0m
+[0;32m    vmware-iso: Copying files from floppy_content[0m
+[0;32m    vmware-iso: Done copying files from floppy_content[0m
+2022/07/05 14:55:39 packer-builder-vmware-iso plugin: No CD files specified. CD disk will not be made.
+2022/07/05 14:55:39 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:55:39 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: stat "/vmfs/volumes/datastore1/packer_cache/packer2332465485"
+2022/07/05 14:55:39 packer-builder-vmware-iso plugin: [ERROR] Remote command exited with '1': stat "/vmfs/volumes/datastore1/packer_cache/packer2332465485"
+[1;32m==> vmware-iso: Uploading Floppy to remote machine...[0m
+2022/07/05 14:55:39 packer-builder-vmware-iso plugin: Remote uploading: /tmp/packer2332465485
+2022/07/05 14:55:39 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:55:39 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: mkdir -p "/vmfs/volumes/datastore1/packer_cache"
+2022/07/05 14:55:39 packer-builder-vmware-iso plugin: Verifying checksum of /vmfs/volumes/datastore1/packer_cache/packer2332465485
+2022/07/05 14:55:39 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:55:39 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: stat "/vmfs/volumes/datastore1/packer_cache/packer2332465485"
+2022/07/05 14:55:39 packer-builder-vmware-iso plugin: [ERROR] Remote command exited with '1': stat "/vmfs/volumes/datastore1/packer_cache/packer2332465485"
+2022/07/05 14:55:39 packer-builder-vmware-iso plugin: Initial checksum did not match, uploading.
+2022/07/05 14:55:39 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:55:40 packer-builder-vmware-iso plugin: [DEBUG] Starting remote scp process:  scp -vt /vmfs/volumes/datastore1/packer_cache
+2022/07/05 14:55:40 packer-builder-vmware-iso plugin: [DEBUG] Started SCP session, beginning transfers...
+2022/07/05 14:55:40 packer-builder-vmware-iso plugin: [DEBUG] scp: Uploading packer2332465485: perms=C0600 size=1474560
+2022/07/05 14:55:40 packer-builder-vmware-iso plugin: [DEBUG] SCP session complete, closing stdin pipe.
+2022/07/05 14:55:40 packer-builder-vmware-iso plugin: [DEBUG] Waiting for SSH session to complete.
+2022/07/05 14:55:40 packer-builder-vmware-iso plugin: [DEBUG] scp stderr (length 37): Sink: C0600 1474560 packer2332465485
+2022/07/05 14:55:40 packer-builder-vmware-iso plugin: closing
+[0;32m    vmware-iso: packer2332465485[0m 1.41 MiB / 1.41 MiB [========================================================] 100.00% 0s
+2022/07/05 14:55:40 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+[1A[0;32m    vmware-iso: packer2332465485[0m 1.41 MiB / 1.41 MiB [========================================================] 100.00% 0s
+2022/07/05 14:55:40 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: stat "/vmfs/volumes/datastore1/packer_cache/packer2332465485"
+2022/07/05 14:55:40 packer-builder-vmware-iso plugin: running: ab4862ba7d1644c27f27516d24cb21e6b39234eb3301e5f1fb365a78b22f79b3  /vmfs/volumes/datastore1/packer_cache/d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso | [sha256sum -c]
+2022/07/05 14:55:40 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:55:40 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: sha256sum -c
+[1;32m==> vmware-iso: Remote cache was verified skipping remote upload...[0m
+[1;32m==> vmware-iso: Creating required virtual machine disks[0m
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: [INFO] Creating disk with Path: Windows10/disk.vmdk and Size: 61440M
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vmkfstools -c 61440M -d zeroedthick -a lsilogic "/vmfs/volumes/datastore1/Windows10/disk.vmdk"
+[1;32m==> vmware-iso: Building and writing VMX file[0m
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: Writing VMX to: /tmp/vmw-iso3507546469/Windows10.vmx
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: Configuring VMX...
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: Setting VMX: 'time.synchronize.restore' = '0'
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: Setting VMX: 'time.synchronize.tools.startup' = '0'
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: Setting VMX: 'time.synchronize.continue' = '0'
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: Setting VMX: 'time.synchronize.shrink' = '0'
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: Setting VMX: 'time.synchronize.resume.disk' = '0'
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: Setting VMX: 'ethernet0.networkName' = 'VM Network'
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: Setting VMX: 'time.synchronize.tools.enable' = '0'
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: Setting VMX: 'time.synchronize.resume.host' = '0'
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: Setting VMX: 'numvcpus' = '2'
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: Setting VMX: 'tools.syncTime' = '0'
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: Setting VMX: 'memsize' = '2048'
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: Setting VMX: 'scsi0.virtualDev' = 'lsisas1068'
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: Floppy path present, setting in VMX
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: Writing VMX to: /tmp/vmw-iso3507546469/Windows10.vmx
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: Suppressing messages in VMX
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: Host IP for the VMware machine: 192.168.222.130
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: Looking for available port between 5900 and 5980
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network ip connection list
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: ESXi listening on address [fe80:2::96c6:91ff:feaa:28d5]:427, port 427 unavailable for VNC
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: ESXi listening on address 192.168.1.205:427, port 427 unavailable for VNC
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: ESXi listening on address 0.0.0.0:443, port 443 unavailable for VNC
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: ESXi listening on address [::]:443, port 443 unavailable for VNC
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: ESXi listening on address 0.0.0.0:80, port 80 unavailable for VNC
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: ESXi listening on address [::]:80, port 80 unavailable for VNC
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: ESXi listening on address [::]:9080, port 9080 unavailable for VNC
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: ESXi listening on address [::]:22, port 22 unavailable for VNC
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: ESXi listening on address 0.0.0.0:22, port 22 unavailable for VNC
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: ESXi listening on address [::]:8000, port 8000 unavailable for VNC
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: ESXi listening on address [::]:902, port 902 unavailable for VNC
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: ESXi listening on address 0.0.0.0:902, port 902 unavailable for VNC
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: ESXi listening on address [::]:8300, port 8300 unavailable for VNC
+2022/07/05 14:56:09 packer-builder-vmware-iso plugin: Trying address: 192.168.1.205:5900...
+2022/07/05 14:56:11 packer-builder-vmware-iso plugin: Found available VNC port: 192.168.1.205:5900
+2022/07/05 14:56:11 packer-builder-vmware-iso plugin: Writing VMX to: /tmp/vmw-iso3507546469/Windows10.vmx
+2022/07/05 14:56:11 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+[1;32m==> vmware-iso: Registering remote VM...[0m
+2022/07/05 14:56:11 packer-builder-vmware-iso plugin: [DEBUG] Starting remote scp process:  scp -vt /vmfs/volumes/datastore1/Windows10
+2022/07/05 14:56:11 packer-builder-vmware-iso plugin: [DEBUG] Started SCP session, beginning transfers...
+2022/07/05 14:56:11 packer-builder-vmware-iso plugin: [DEBUG] Copying input data into temporary file so we can read the length
+2022/07/05 14:56:11 packer-builder-vmware-iso plugin: [DEBUG] scp: Uploading Windows10.vmx: perms=C0644 size=3207
+2022/07/05 14:56:11 packer-builder-vmware-iso plugin: [DEBUG] SCP session complete, closing stdin pipe.
+2022/07/05 14:56:11 packer-builder-vmware-iso plugin: [DEBUG] Waiting for SSH session to complete.
+2022/07/05 14:56:11 packer-builder-vmware-iso plugin: [DEBUG] scp stderr (length 31): Sink: C0644 3207 Windows10.vmx
+2022/07/05 14:56:11 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:56:11 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd solo/registervm "/vmfs/volumes/datastore1/Windows10/Windows10.vmx"
+2022/07/05 14:56:12 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+[1;32m==> vmware-iso: Starting virtual machine...[0m
+2022/07/05 14:56:12 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.on 1
+2022/07/05 14:56:12 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:56:13 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+[1;32m==> vmware-iso: Connecting to VNC...[0m
+[1;32m==> vmware-iso: Waiting 6m0s for boot...[0m
+[1;32m==> vmware-iso: Typing the boot command over VNC...[0m
+2022/07/05 15:02:13 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:02:13 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/05 15:02:13 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:02:13 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2100536
+2022/07/05 15:02:15 packer-builder-vmware-iso plugin: Timeout connecting to 192.168.1.110
+2022/07/05 15:02:15 packer-builder-vmware-iso plugin: [DEBUG] Unable to get address during connection step: No interface on the VM has an IP address ready
+2022/07/05 15:02:15 packer-builder-vmware-iso plugin: Waiting for WinRM, up to timeout: 4h0m0s
+[1;32m==> vmware-iso: Waiting for WinRM to become available...[0m
+2022/07/05 15:02:15 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:02:15 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/05 15:02:16 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:02:16 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2100536
+2022/07/05 15:02:18 packer-builder-vmware-iso plugin: Timeout connecting to 192.168.1.110
+2022/07/05 15:02:18 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/05 15:02:23 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:02:23 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/05 15:02:23 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:02:23 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2100536
+2022/07/05 15:02:26 packer-builder-vmware-iso plugin: Timeout connecting to 192.168.1.110
+2022/07/05 15:02:26 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/05 15:02:31 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:02:31 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/05 15:02:31 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:02:31 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2100536
+2022/07/05 15:02:33 packer-builder-vmware-iso plugin: Timeout connecting to 192.168.1.110
+2022/07/05 15:02:33 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/05 15:02:38 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:02:38 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/05 15:02:39 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:02:39 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2100536
+2022/07/05 15:02:41 packer-builder-vmware-iso plugin: Timeout connecting to 192.168.1.110
+2022/07/05 15:02:41 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: No interface on the VM has an IP address ready
+2022/07/05 15:02:46 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:02:46 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm list
+2022/07/05 15:02:46 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:02:46 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network vm port list -w 2100536
+2022/07/05 15:02:47 packer-builder-vmware-iso plugin: [INFO] Attempting WinRM connection...
+2022/07/05 15:02:47 packer-builder-vmware-iso plugin: [DEBUG] connecting to remote shell using WinRM
+2022/07/05 15:02:52 packer-builder-vmware-iso plugin: Checking that WinRM is connected with: 'powershell.exe -EncodedCommand JABQAHIAbwBnAHIAZQBzAHMAUAByAGUAZgBlAHIAZQBuAGMAZQAgAD0AIAAnAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAJwA7AGkAZgAgACgAVABlAHMAdAAtAFAAYQB0AGgAIAB2AGEAcgBpAGEAYgBsAGUAOgBnAGwAbwBiAGEAbAA6AFAAcgBvAGcAcgBlAHMAcwBQAHIAZQBmAGUAcgBlAG4AYwBlACkAewAkAFAAcgBvAGcAcgBlAHMAcwBQAHIAZQBmAGUAcgBlAG4AYwBlAD0AJwBTAGkAbABlAG4AdABsAHkAQwBvAG4AdABpAG4AdQBlACcAfQA7ACAAZQBjAGgAbwAgACIAVwBpAG4AUgBNACAAYwBvAG4AbgBlAGMAdABlAGQALgAiAA=='
+2022/07/05 15:02:52 packer-builder-vmware-iso plugin: [INFO] starting remote command: powershell.exe -EncodedCommand JABQAHIAbwBnAHIAZQBzAHMAUAByAGUAZgBlAHIAZQBuAGMAZQAgAD0AIAAnAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAJwA7AGkAZgAgACgAVABlAHMAdAAtAFAAYQB0AGgAIAB2AGEAcgBpAGEAYgBsAGUAOgBnAGwAbwBiAGEAbAA6AFAAcgBvAGcAcgBlAHMAcwBQAHIAZQBmAGUAcgBlAG4AYwBlACkAewAkAFAAcgBvAGcAcgBlAHMAcwBQAHIAZQBmAGUAcgBlAG4AYwBlAD0AJwBTAGkAbABlAG4AdABsAHkAQwBvAG4AdABpAG4AdQBlACcAfQA7ACAAZQBjAGgAbwAgACIAVwBpAG4AUgBNACAAYwBvAG4AbgBlAGMAdABlAGQALgAiAA==
+2022/07/05 15:02:52 packer-builder-vmware-iso plugin: [INFO] command 'powershell.exe -EncodedCommand JABQAHIAbwBnAHIAZQBzAHMAUAByAGUAZgBlAHIAZQBuAGMAZQAgAD0AIAAnAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAJwA7AGkAZgAgACgAVABlAHMAdAAtAFAAYQB0AGgAIAB2AGEAcgBpAGEAYgBsAGUAOgBnAGwAbwBiAGEAbAA6AFAAcgBvAGcAcgBlAHMAcwBQAHIAZQBmAGUAcgBlAG4AYwBlACkAewAkAFAAcgBvAGcAcgBlAHMAcwBQAHIAZQBmAGUAcgBlAG4AYwBlAD0AJwBTAGkAbABlAG4AdABsAHkAQwBvAG4AdABpAG4AdQBlACcAfQA7ACAAZQBjAGgAbwAgACIAVwBpAG4AUgBNACAAYwBvAG4AbgBlAGMAdABlAGQALgAiAA==' exited with code: 0
+[0;32m    vmware-iso: WinRM connected.[0m
+[1;32m==> vmware-iso: Connected to WinRM![0m
+2022/07/05 15:02:52 packer-builder-vmware-iso plugin: Connected to machine
+2022/07/05 15:02:52 packer-builder-vmware-iso plugin: Running the provision hook
+2022/07/05 15:02:52 [INFO] (telemetry) Starting provisioner windows-shell
+[1;32m==> vmware-iso: Provisioning with windows-shell...[0m
+[1;32m==> vmware-iso: Provisioning with shell script: ../../Packer/scripts/vm-guest-tools.bat[0m
+2022/07/05 15:02:52 packer-provisioner-windows-shell plugin: Opening ../../Packer/scripts/vm-guest-tools.bat for reading
+2022/07/05 15:02:52 [INFO] 2630 bytes written for 'uploadData'
+2022/07/05 15:02:52 packer-provisioner-windows-shell plugin: [INFO] 2630 bytes written for 'uploadData'
+2022/07/05 15:02:52 packer-builder-vmware-iso plugin: Uploading file to '/tmp/script.bat'
+2022/07/05 15:02:54 packer-builder-vmware-iso plugin: [INFO] starting remote command: set "PACKER_BUILDER_TYPE=vmware-iso" && set "PACKER_BUILD_NAME=vmware-iso" && set "PACKER_HTTP_ADDR=192.168.222.130:0" && set "PACKER_HTTP_IP=192.168.222.130" && set "PACKER_HTTP_PORT=0" &&  cmd /c "/tmp/script.bat"
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>if not exist "C:\Windows\Temp\7z2102-x64.msi" (powershell -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; (New-Object System.Net.WebClient).DownloadFile('https://www.7-zip.org/a/7z2102-x64.msi', 'C:\Windows\Temp\7z2102-x64.msi')"  0<NUL )[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>if not exist "C:\Windows\Temp\7z2102-x64.msi" (powershell -Command "Start-Sleep 5; [Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; (New-Object System.Net.WebClient).DownloadFile('https://www.7-zip.org/a/7z2102-x64.msi', 'C:\Windows\Temp\7z2102-x64.msi')"  0<NUL )[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>msiexec /qb /i C:\Windows\Temp\7z2102-x64.msi[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>if "vmware-iso" EQU "vmware-iso" goto :vmware[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>if exist "C:\Users\vagrant\windows.iso" (move /Y C:\Users\vagrant\windows.iso C:\Windows\Temp )[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>if not exist "C:\Windows\Temp\windows.iso" ([0m
+[0;32m    vmware-iso: powershell -Command "[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls12; (New-Object System.Net.WebClient).DownloadFile('https://softwareupdate.vmware.com/cds/vmw-desktop/ws/15.5.5/16285975/windows/packages/tools-windows.tar', 'C:\Windows\Temp\vmware-tools.tar')"  0<NUL[0m
+[0;32m    vmware-iso:  cmd /c ""C:\Program Files\7-Zip\7z.exe" x C:\Windows\Temp\vmware-tools.tar -oC:\Windows\Temp"[0m
+[0;32m    vmware-iso:  FOR /R "C:\Windows\Temp" %a in (VMware-tools-windows-*.iso) DO REN "%~a" "windows.iso"[0m
+[0;32m    vmware-iso:  rd /S /Q "C:\Program Files (x86)\VMWare"[0m
+[0;32m    vmware-iso: )[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: 7-Zip 21.02 alpha (x64) : Copyright (c) 1999-2021 Igor Pavlov : 2021-05-06[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: Scanning the drive for archives:[0m
+[0;32m    vmware-iso: 1 file, 143431680 bytes (137 MiB)[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: Extracting archive: C:\Windows\Temp\vmware-tools.tar[0m
+[0;32m    vmware-iso: --[0m
+[1;31m==> vmware-iso: The system cannot find the file specified.[0m
+[0;32m    vmware-iso: Path = C:\Windows\Temp\vmware-tools.tar[0m
+[0;32m    vmware-iso: Type = tar[0m
+[0;32m    vmware-iso: Physical Size = 143431680[0m
+[0;32m    vmware-iso: Headers Size = 8704[0m
+[0;32m    vmware-iso: Code Page = UTF-8[0m
+[0;32m    vmware-iso: Characteristics = ASCII[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: Everything is Ok[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: Files: 2[0m
+[0;32m    vmware-iso: Size:       143422729[0m
+[0;32m    vmware-iso: Compressed: 143431680[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>REN "C:\Windows\Temp\VMware-tools-windows-11.0.6-15940789.iso" "windows.iso"[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>cmd /c ""C:\Program Files\7-Zip\7z.exe" x "C:\Windows\Temp\windows.iso" -oC:\Windows\Temp\VMWare"[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: 7-Zip 21.02 alpha (x64) : Copyright (c) 1999-2021 Igor Pavlov : 2021-05-06[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: Scanning the drive for archives:[0m
+[0;32m    vmware-iso: 1 file, 143421440 bytes (137 MiB)[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: Extracting archive: C:\Windows\Temp\windows.iso[0m
+[0;32m    vmware-iso: --[0m
+[0;32m    vmware-iso: Path = C:\Windows\Temp\windows.iso[0m
+[0;32m    vmware-iso: Type = Iso[0m
+[0;32m    vmware-iso: Physical Size = 143421440[0m
+[0;32m    vmware-iso: Created = 2020-03-30 15:59:23[0m
+[0;32m    vmware-iso: Modified = 2020-03-30 15:59:23[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: Everything is Ok[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: Folders: 12[0m
+[0;32m    vmware-iso: Files: 24[0m
+[0;32m    vmware-iso: Size:       142967402[0m
+[0;32m    vmware-iso: Compressed: 143421440[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>cmd /c C:\Windows\Temp\VMWare\setup.exe /S /v"/qn REBOOT=R\"[0m
+2022/07/05 15:03:46 packer-builder-vmware-iso plugin: [INFO] command 'set "PACKER_BUILDER_TYPE=vmware-iso" && set "PACKER_BUILD_NAME=vmware-iso" && set "PACKER_HTTP_ADDR=192.168.222.130:0" && set "PACKER_HTTP_IP=192.168.222.130" && set "PACKER_HTTP_PORT=0" &&  cmd /c "/tmp/script.bat"' exited with code: 0
+2022/07/05 15:03:46 packer-builder-vmware-iso plugin: [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:03:46 [INFO] 2917 bytes written for 'stdout'
+2022/07/05 15:03:46 [INFO] 44 bytes written for 'stderr'
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>del /Q "C:\Windows\Temp\vmware-tools.tar"[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>del /Q "C:\Windows\Temp\windows.iso"[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>rd /S /Q "C:\Windows\Temp\VMware"[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>goto :done[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>msiexec /qb /x C:\Windows\Temp\7z2102-x64.msi[0m
+2022/07/05 15:03:46 [INFO] RPC client: Communicator ended with: 0
+2022/07/05 15:03:46 [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:03:46 packer-provisioner-windows-shell plugin: [INFO] 2917 bytes written for 'stdout'
+2022/07/05 15:03:46 packer-provisioner-windows-shell plugin: [INFO] 44 bytes written for 'stderr'
+2022/07/05 15:03:46 packer-provisioner-windows-shell plugin: [INFO] RPC client: Communicator ended with: 0
+[1;32m==> vmware-iso: Provisioning with shell script: ../../Packer/scripts/enable-rdp.bat[0m
+2022/07/05 15:03:46 packer-provisioner-windows-shell plugin: Opening ../../Packer/scripts/enable-rdp.bat for reading
+2022/07/05 15:03:46 packer-builder-vmware-iso plugin: Uploading file to '/tmp/script.bat'
+2022/07/05 15:03:46 packer-provisioner-windows-shell plugin: [INFO] 227 bytes written for 'uploadData'
+2022/07/05 15:03:46 [INFO] 227 bytes written for 'uploadData'
+2022/07/05 15:03:48 packer-builder-vmware-iso plugin: [INFO] starting remote command: set "PACKER_BUILDER_TYPE=vmware-iso" && set "PACKER_BUILD_NAME=vmware-iso" && set "PACKER_HTTP_ADDR=192.168.222.130:0" && set "PACKER_HTTP_IP=192.168.222.130" && set "PACKER_HTTP_PORT=0" &&  cmd /c "/tmp/script.bat"
+2022/07/05 15:03:48 packer-builder-vmware-iso plugin: [INFO] command 'set "PACKER_BUILDER_TYPE=vmware-iso" && set "PACKER_BUILD_NAME=vmware-iso" && set "PACKER_HTTP_ADDR=192.168.222.130:0" && set "PACKER_HTTP_IP=192.168.222.130" && set "PACKER_HTTP_PORT=0" &&  cmd /c "/tmp/script.bat"' exited with code: 0
+2022/07/05 15:03:48 packer-builder-vmware-iso plugin: [INFO] RPC endpoint: Communicator ended with: 0
+[0;32m    vmware-iso:[0m
+2022/07/05 15:03:48 [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:03:48 [INFO] 316 bytes written for 'stdout'
+2022/07/05 15:03:48 [INFO] RPC client: Communicator ended with: 0
+2022/07/05 15:03:48 [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:03:48 packer-provisioner-windows-shell plugin: [INFO] 316 bytes written for 'stdout'
+2022/07/05 15:03:48 packer-provisioner-windows-shell plugin: [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:03:48 packer-provisioner-windows-shell plugin: [INFO] RPC client: Communicator ended with: 0
+[0;32m    vmware-iso: C:\Users\vagrant>netsh advfirewall firewall add rule name="Open Port 3389" dir=in action=allow protocol=TCP localport=3389[0m
+[0;32m    vmware-iso: Ok.[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f[0m
+[0;32m    vmware-iso: The operation completed successfully.[0m
+2022/07/05 15:03:48 [INFO] (telemetry) ending windows-shell
+2022/07/05 15:03:48 [INFO] (telemetry) Starting provisioner powershell
+[1;32m==> vmware-iso: Provisioning with Powershell...[0m
+[1;32m==> vmware-iso: Provisioning with powershell script: ../../Packer/scripts/debloat-windows.ps1[0m
+2022/07/05 15:03:48 packer-provisioner-powershell plugin: Opening ../../Packer/scripts/debloat-windows.ps1 for reading
+2022/07/05 15:03:48 packer-provisioner-powershell plugin: Uploading env vars to c:/Windows/Temp/packer-ps-env-vars-62c3e059-c108-7450-73b3-a45513e36fbb.ps1
+2022/07/05 15:03:48 packer-provisioner-powershell plugin: [INFO] 185 bytes written for 'uploadData'
+2022/07/05 15:03:48 [INFO] 185 bytes written for 'uploadData'
+2022/07/05 15:03:48 packer-builder-vmware-iso plugin: Uploading file to 'c:/Windows/Temp/packer-ps-env-vars-62c3e059-c108-7450-73b3-a45513e36fbb.ps1'
+2022/07/05 15:03:51 packer-builder-vmware-iso plugin: Uploading file to 'c:/Windows/Temp/script-62c3e059-5e5b-bd1f-76ed-dcf180519213.ps1'
+2022/07/05 15:03:51 packer-provisioner-powershell plugin: [INFO] 1526 bytes written for 'uploadData'
+2022/07/05 15:03:51 [INFO] 1526 bytes written for 'uploadData'
+2022/07/05 15:03:52 packer-builder-vmware-iso plugin: [INFO] starting remote command: powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-62c3e059-c108-7450-73b3-a45513e36fbb.ps1; &'c:/Windows/Temp/script-62c3e059-5e5b-bd1f-76ed-dcf180519213.ps1'; exit $LastExitCode }"
+[0;32m    vmware-iso: Downloading debloat zip[0m
+[0;32m    vmware-iso: Disable Windows Defender[0m
+2022/07/05 15:03:55 packer-builder-vmware-iso plugin: [INFO] command 'powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-62c3e059-c108-7450-73b3-a45513e36fbb.ps1; &'c:/Windows/Temp/script-62c3e059-5e5b-bd1f-76ed-dcf180519213.ps1'; exit $LastExitCode }"' exited with code: 0
+2022/07/05 15:03:55 packer-builder-vmware-iso plugin: [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:03:55 [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:03:55 [INFO] 2075 bytes written for 'stdout'
+2022/07/05 15:03:55 [INFO] RPC client: Communicator ended with: 0
+2022/07/05 15:03:55 [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:03:55 packer-provisioner-powershell plugin: [INFO] 2075 bytes written for 'stdout'
+2022/07/05 15:03:55 packer-provisioner-powershell plugin: [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:03:55 packer-provisioner-powershell plugin: [INFO] RPC client: Communicator ended with: 0
+[0;32m    vmware-iso: Optimize Windows Update[0m
+[0;32m    vmware-iso: Disable automatic download and installation of Windows updates[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso:     Hive: HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Policies\Microsoft\Windows\WindowsUpdate[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: Name                           Property[0m
+[0;32m    vmware-iso: ----                           --------[0m
+[0;32m    vmware-iso: AU[0m
+[0;32m    vmware-iso: Disable seeding of updates to other computers via Group Policies[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso:     Hive: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: Name                           Property[0m
+[0;32m    vmware-iso: ----                           --------[0m
+[0;32m    vmware-iso: DeliveryOptimization[0m
+[0;32m    vmware-iso: Disable 'Updates are available' message[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: SUCCESS: The file (or folder): "C:\Windows\System32\MusNotification.exe" now owned by user "VAGRANT-10\vagrant".[0m
+[0;32m    vmware-iso: processed file: C:\Windows\System32\MusNotification.exe[0m
+[0;32m    vmware-iso: Successfully processed 1 files; Failed processing 0 files[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: SUCCESS: The file (or folder): "C:\Windows\System32\MusNotificationUx.exe" now owned by user "VAGRANT-10\vagrant".[0m
+[0;32m    vmware-iso: processed file: C:\Windows\System32\MusNotificationUx.exe[0m
+[0;32m    vmware-iso: Successfully processed 1 files; Failed processing 0 files[0m
+[0;32m    vmware-iso: Disable Windows Update[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso:     Hive: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: Name                           Property[0m
+[0;32m    vmware-iso: ----                           --------[0m
+[0;32m    vmware-iso: Reliability[0m
+2022/07/05 15:03:56 packer-provisioner-powershell plugin: c:/Windows/Temp/script-62c3e059-5e5b-bd1f-76ed-dcf180519213.ps1 returned with exit code 0
+2022/07/05 15:03:56 packer-provisioner-powershell plugin: [INFO] 511 bytes written for 'uploadData'
+2022/07/05 15:03:56 [INFO] 511 bytes written for 'uploadData'
+2022/07/05 15:03:56 packer-builder-vmware-iso plugin: Uploading file to 'c:/Windows/Temp/packer-cleanup-62c3e059-b355-7d22-1897-969fe74979c4.ps1'
+2022/07/05 15:03:58 packer-builder-vmware-iso plugin: [INFO] starting remote command: powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-62c3e059-c108-7450-73b3-a45513e36fbb.ps1; &'c:/Windows/Temp/packer-cleanup-62c3e059-b355-7d22-1897-969fe74979c4.ps1'; exit $LastExitCode }"
+2022/07/05 15:03:58 packer-builder-vmware-iso plugin: [INFO] command 'powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-62c3e059-c108-7450-73b3-a45513e36fbb.ps1; &'c:/Windows/Temp/packer-cleanup-62c3e059-b355-7d22-1897-969fe74979c4.ps1'; exit $LastExitCode }"' exited with code: 0
+2022/07/05 15:03:58 packer-builder-vmware-iso plugin: [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:03:58 [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:03:58 [INFO] 0 bytes written for 'stdout'
+2022/07/05 15:03:58 [INFO] RPC client: Communicator ended with: 0
+2022/07/05 15:03:58 [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:03:58 [INFO] (telemetry) ending powershell
+2022/07/05 15:03:58 [INFO] (telemetry) Starting provisioner windows-restart
+2022/07/05 15:03:58 packer-provisioner-powershell plugin: [INFO] 0 bytes written for 'stdout'
+2022/07/05 15:03:58 packer-provisioner-powershell plugin: [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:03:58 packer-provisioner-powershell plugin: [INFO] RPC client: Communicator ended with: 0
+[1;32m==> vmware-iso: Restarting Machine[0m
+2022/07/05 15:03:58 packer-builder-vmware-iso plugin: [INFO] starting remote command: shutdown /r /f /t 0 /c "packer restart"
+2022/07/05 15:03:59 packer-builder-vmware-iso plugin: [INFO] command 'shutdown /r /f /t 0 /c "packer restart"' exited with code: 0
+2022/07/05 15:03:59 packer-builder-vmware-iso plugin: [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:03:59 [INFO] 0 bytes written for 'stdout'
+2022/07/05 15:03:59 [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:03:59 [INFO] RPC client: Communicator ended with: 0
+2022/07/05 15:03:59 [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:03:59 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stdout'
+2022/07/05 15:03:59 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:03:59 packer-provisioner-windows-restart plugin: [INFO] RPC client: Communicator ended with: 0
+[1;32m==> vmware-iso: Waiting for machine to restart...[0m
+2022/07/05 15:03:59 packer-provisioner-windows-restart plugin: Check if machine is rebooting...
+2022/07/05 15:03:59 packer-builder-vmware-iso plugin: [INFO] starting remote command: shutdown /r /f /t 60 /c "packer restart test"
+2022/07/05 15:03:59 packer-builder-vmware-iso plugin: [INFO] command 'shutdown /r /f /t 60 /c "packer restart test"' exited with code: 1115
+2022/07/05 15:03:59 packer-builder-vmware-iso plugin: [INFO] RPC endpoint: Communicator ended with: 1115
+2022/07/05 15:03:59 [INFO] 0 bytes written for 'stdout'
+2022/07/05 15:03:59 [INFO] 40 bytes written for 'stderr'
+[1;31m==> vmware-iso: A system shutdown is in progress.(1115)[0m
+2022/07/05 15:03:59 [INFO] RPC client: Communicator ended with: 1115
+2022/07/05 15:03:59 [INFO] RPC endpoint: Communicator ended with: 1115
+2022/07/05 15:03:59 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stdout'
+2022/07/05 15:03:59 packer-provisioner-windows-restart plugin: [INFO] 40 bytes written for 'stderr'
+2022/07/05 15:03:59 packer-provisioner-windows-restart plugin: [INFO] RPC client: Communicator ended with: 1115
+2022/07/05 15:03:59 packer-provisioner-windows-restart plugin: Reboot already in progress, waiting...
+2022/07/05 15:04:09 packer-provisioner-windows-restart plugin: Check if machine is rebooting...
+2022/07/05 15:04:30 [INFO] 0 bytes written for 'stdout'
+2022/07/05 15:04:30 [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:04:30 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stdout'
+2022/07/05 15:04:30 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:04:30 packer-provisioner-windows-restart plugin: Waiting for machine to reboot with timeout: 5m0s
+2022/07/05 15:04:30 packer-provisioner-windows-restart plugin: Waiting for machine to become available...
+2022/07/05 15:04:30 packer-provisioner-windows-restart plugin: Checking that communicator is connected with: 'powershell.exe -EncodedCommand JABQAHIAbwBnAHIAZQBzAHMAUAByAGUAZgBlAHIAZQBuAGMAZQAgAD0AIAAnAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAJwA7AGUAYwBoAG8AIAAoACIAewAwAH0AIAByAGUAcwB0AGEAcgB0AGUAZAAuACIAIAAtAGYAIABbAFMAeQBzAHQAZQBtAC4ATgBlAHQALgBEAG4AcwBdADoAOgBHAGUAdABIAG8AcwB0AE4AYQBtAGUAKAApACkA'
+2022/07/05 15:04:56 [INFO] 0 bytes written for 'stdout'
+2022/07/05 15:04:56 [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:04:56 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stdout'
+2022/07/05 15:04:56 packer-provisioner-windows-restart plugin: echo didn't succeed; retrying...
+2022/07/05 15:04:56 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:05:22 [INFO] 0 bytes written for 'stdout'
+2022/07/05 15:05:22 [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:05:22 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stdout'
+2022/07/05 15:05:22 packer-provisioner-windows-restart plugin: echo didn't succeed; retrying...
+2022/07/05 15:05:22 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:05:48 [INFO] 0 bytes written for 'stdout'
+2022/07/05 15:05:48 [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:05:48 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stdout'
+2022/07/05 15:05:48 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:05:48 packer-provisioner-windows-restart plugin: echo didn't succeed; retrying...
+2022/07/05 15:06:15 [INFO] 0 bytes written for 'stdout'
+2022/07/05 15:06:15 [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:06:15 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stdout'
+2022/07/05 15:06:15 packer-provisioner-windows-restart plugin: echo didn't succeed; retrying...
+2022/07/05 15:06:15 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:06:20 packer-builder-vmware-iso plugin: [INFO] starting remote command: powershell.exe -EncodedCommand JABQAHIAbwBnAHIAZQBzAHMAUAByAGUAZgBlAHIAZQBuAGMAZQAgAD0AIAAnAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAJwA7AGUAYwBoAG8AIAAoACIAewAwAH0AIAByAGUAcwB0AGEAcgB0AGUAZAAuACIAIAAtAGYAIABbAFMAeQBzAHQAZQBtAC4ATgBlAHQALgBEAG4AcwBdADoAOgBHAGUAdABIAG8AcwB0AE4AYQBtAGUAKAApACkA
+[0;32m    vmware-iso: vagrant-10 restarted.[0m
+[1;32m==> vmware-iso: Machine successfully restarted, moving on[0m
+2022/07/05 15:06:20 packer-builder-vmware-iso plugin: [INFO] command 'powershell.exe -EncodedCommand JABQAHIAbwBnAHIAZQBzAHMAUAByAGUAZgBlAHIAZQBuAGMAZQAgAD0AIAAnAFMAaQBsAGUAbgB0AGwAeQBDAG8AbgB0AGkAbgB1AGUAJwA7AGUAYwBoAG8AIAAoACIAewAwAH0AIAByAGUAcwB0AGEAcgB0AGUAZAAuACIAIAAtAGYAIABbAFMAeQBzAHQAZQBtAC4ATgBlAHQALgBEAG4AcwBdADoAOgBHAGUAdABIAG8AcwB0AE4AYQBtAGUAKAApACkA' exited with code: 0
+2022/07/05 15:06:20 packer-builder-vmware-iso plugin: [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:06:20 [INFO] 23 bytes written for 'stdout'
+2022/07/05 15:06:20 [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:06:20 [INFO] RPC client: Communicator ended with: 0
+2022/07/05 15:06:20 [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:06:20 packer-provisioner-windows-restart plugin: [INFO] 23 bytes written for 'stdout'
+2022/07/05 15:06:20 packer-provisioner-windows-restart plugin: [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:06:20 packer-provisioner-windows-restart plugin: [INFO] RPC client: Communicator ended with: 0
+2022/07/05 15:06:20 [INFO] (telemetry) ending windows-restart
+2022/07/05 15:06:20 [INFO] (telemetry) Starting provisioner powershell
+[1;32m==> vmware-iso: Provisioning with Powershell...[0m
+[1;32m==> vmware-iso: Provisioning with powershell script: ../../Packer/scripts/set-powerplan.ps1[0m
+2022/07/05 15:06:20 packer-provisioner-powershell plugin: Opening ../../Packer/scripts/set-powerplan.ps1 for reading
+2022/07/05 15:06:20 packer-provisioner-powershell plugin: Uploading env vars to c:/Windows/Temp/packer-ps-env-vars-62c3e059-2508-4c0e-fd6b-05333e52cdf7.ps1
+2022/07/05 15:06:20 packer-provisioner-powershell plugin: [INFO] 185 bytes written for 'uploadData'
+2022/07/05 15:06:20 [INFO] 185 bytes written for 'uploadData'
+2022/07/05 15:06:20 packer-builder-vmware-iso plugin: Uploading file to 'c:/Windows/Temp/packer-ps-env-vars-62c3e059-2508-4c0e-fd6b-05333e52cdf7.ps1'
+2022/07/05 15:06:22 packer-builder-vmware-iso plugin: Uploading file to 'c:/Windows/Temp/script-62c3e059-7757-a3c0-e98a-217c0b23ba44.ps1'
+2022/07/05 15:06:22 packer-provisioner-powershell plugin: [INFO] 529 bytes written for 'uploadData'
+2022/07/05 15:06:22 [INFO] 529 bytes written for 'uploadData'
+2022/07/05 15:06:23 packer-builder-vmware-iso plugin: [INFO] starting remote command: powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-62c3e059-2508-4c0e-fd6b-05333e52cdf7.ps1; &'c:/Windows/Temp/script-62c3e059-7757-a3c0-e98a-217c0b23ba44.ps1'; exit $LastExitCode }"
+2022/07/05 15:06:24 packer-builder-vmware-iso plugin: [INFO] command 'powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-62c3e059-2508-4c0e-fd6b-05333e52cdf7.ps1; &'c:/Windows/Temp/script-62c3e059-7757-a3c0-e98a-217c0b23ba44.ps1'; exit $LastExitCode }"' exited with code: 0
+[0;32m    vmware-iso: Set power plan to high performance[0m
+2022/07/05 15:06:24 packer-builder-vmware-iso plugin: [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:06:24 [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:06:24 [INFO] 36 bytes written for 'stdout'
+2022/07/05 15:06:24 [INFO] RPC client: Communicator ended with: 0
+2022/07/05 15:06:24 [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:06:24 packer-provisioner-powershell plugin: [INFO] 36 bytes written for 'stdout'
+2022/07/05 15:06:24 packer-provisioner-powershell plugin: [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:06:24 packer-provisioner-powershell plugin: [INFO] RPC client: Communicator ended with: 0
+2022/07/05 15:06:24 packer-provisioner-powershell plugin: c:/Windows/Temp/script-62c3e059-7757-a3c0-e98a-217c0b23ba44.ps1 returned with exit code 0
+[1;32m==> vmware-iso: Provisioning with powershell script: ../../Packer/scripts/docker/disable-windows-defender.ps1[0m
+2022/07/05 15:06:24 packer-provisioner-powershell plugin: Opening ../../Packer/scripts/docker/disable-windows-defender.ps1 for reading
+2022/07/05 15:06:24 packer-provisioner-powershell plugin: Uploading env vars to c:/Windows/Temp/packer-ps-env-vars-62c3e059-2508-4c0e-fd6b-05333e52cdf7.ps1
+2022/07/05 15:06:24 packer-provisioner-powershell plugin: [INFO] 185 bytes written for 'uploadData'
+2022/07/05 15:06:24 [INFO] 185 bytes written for 'uploadData'
+2022/07/05 15:06:24 packer-builder-vmware-iso plugin: Uploading file to 'c:/Windows/Temp/packer-ps-env-vars-62c3e059-2508-4c0e-fd6b-05333e52cdf7.ps1'
+2022/07/05 15:06:25 packer-builder-vmware-iso plugin: Uploading file to 'c:/Windows/Temp/script-62c3e059-7757-a3c0-e98a-217c0b23ba44.ps1'
+2022/07/05 15:06:25 packer-provisioner-powershell plugin: [INFO] 49 bytes written for 'uploadData'
+2022/07/05 15:06:25 [INFO] 49 bytes written for 'uploadData'
+2022/07/05 15:06:26 packer-builder-vmware-iso plugin: [INFO] starting remote command: powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-62c3e059-2508-4c0e-fd6b-05333e52cdf7.ps1; &'c:/Windows/Temp/script-62c3e059-7757-a3c0-e98a-217c0b23ba44.ps1'; exit $LastExitCode }"
+2022/07/05 15:06:28 packer-builder-vmware-iso plugin: [INFO] command 'powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-62c3e059-2508-4c0e-fd6b-05333e52cdf7.ps1; &'c:/Windows/Temp/script-62c3e059-7757-a3c0-e98a-217c0b23ba44.ps1'; exit $LastExitCode }"' exited with code: 0
+2022/07/05 15:06:28 packer-builder-vmware-iso plugin: [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:06:28 [INFO] 0 bytes written for 'stdout'
+2022/07/05 15:06:28 [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:06:28 [INFO] RPC client: Communicator ended with: 0
+2022/07/05 15:06:28 [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:06:28 packer-provisioner-powershell plugin: [INFO] 0 bytes written for 'stdout'
+2022/07/05 15:06:28 packer-provisioner-powershell plugin: [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:06:28 packer-provisioner-powershell plugin: [INFO] RPC client: Communicator ended with: 0
+2022/07/05 15:06:28 packer-provisioner-powershell plugin: c:/Windows/Temp/script-62c3e059-7757-a3c0-e98a-217c0b23ba44.ps1 returned with exit code 0
+2022/07/05 15:06:28 packer-provisioner-powershell plugin: [INFO] 668 bytes written for 'uploadData'
+2022/07/05 15:06:28 [INFO] 668 bytes written for 'uploadData'
+2022/07/05 15:06:28 packer-builder-vmware-iso plugin: Uploading file to 'c:/Windows/Temp/packer-cleanup-62c3e059-0c06-f103-eaeb-7e9d7fb0e24b.ps1'
+2022/07/05 15:06:29 packer-builder-vmware-iso plugin: [INFO] starting remote command: powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-62c3e059-2508-4c0e-fd6b-05333e52cdf7.ps1; &'c:/Windows/Temp/packer-cleanup-62c3e059-0c06-f103-eaeb-7e9d7fb0e24b.ps1'; exit $LastExitCode }"
+2022/07/05 15:06:29 packer-builder-vmware-iso plugin: [INFO] command 'powershell -executionpolicy bypass "& { if (Test-Path variable:global:ProgressPreference){set-variable -name variable:global:ProgressPreference -value 'SilentlyContinue'};. c:/Windows/Temp/packer-ps-env-vars-62c3e059-2508-4c0e-fd6b-05333e52cdf7.ps1; &'c:/Windows/Temp/packer-cleanup-62c3e059-0c06-f103-eaeb-7e9d7fb0e24b.ps1'; exit $LastExitCode }"' exited with code: 0
+2022/07/05 15:06:29 packer-builder-vmware-iso plugin: [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:06:29 [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:06:29 [INFO] 0 bytes written for 'stdout'
+2022/07/05 15:06:29 [INFO] RPC client: Communicator ended with: 0
+2022/07/05 15:06:29 [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:06:29 packer-provisioner-powershell plugin: [INFO] 0 bytes written for 'stdout'
+2022/07/05 15:06:29 packer-provisioner-powershell plugin: [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:06:29 packer-provisioner-powershell plugin: [INFO] RPC client: Communicator ended with: 0
+2022/07/05 15:06:29 [INFO] (telemetry) ending powershell
+2022/07/05 15:06:29 [INFO] (telemetry) Starting provisioner windows-shell
+[1;32m==> vmware-iso: Provisioning with windows-shell...[0m
+[1;32m==> vmware-iso: Provisioning with shell script: ../../Packer/scripts/pin-powershell.bat[0m
+2022/07/05 15:06:29 packer-provisioner-windows-shell plugin: Opening ../../Packer/scripts/pin-powershell.bat for reading
+2022/07/05 15:06:29 packer-builder-vmware-iso plugin: Uploading file to '/tmp/script.bat'
+2022/07/05 15:06:29 packer-provisioner-windows-shell plugin: [INFO] 259 bytes written for 'uploadData'
+2022/07/05 15:06:29 [INFO] 259 bytes written for 'uploadData'
+2022/07/05 15:06:31 packer-builder-vmware-iso plugin: [INFO] starting remote command: set "PACKER_BUILDER_TYPE=vmware-iso" && set "PACKER_BUILD_NAME=vmware-iso" && set "PACKER_HTTP_ADDR=192.168.222.130:0" && set "PACKER_HTTP_IP=192.168.222.130" && set "PACKER_HTTP_PORT=0" &&  cmd /c "/tmp/script.bat"
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>rem https://connect.microsoft.com/PowerShell/feedback/details/1609288/pin-to-taskbar-no-longer-working-in-windows-10[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>copy "A:\WindowsPowerShell.lnk" "C:\Users\vagrant\AppData\Local\Temp\Windows PowerShell.lnk"[0m
+[0;32m    vmware-iso:         1 file(s) copied.[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>A:\PinTo10.exe /PTFOL01:'C:\Users\vagrant\AppData\Local\Temp' /PTFILE01:'Windows PowerShell.lnk'[0m
+2022/07/05 15:06:33 packer-builder-vmware-iso plugin: [INFO] command 'set "PACKER_BUILDER_TYPE=vmware-iso" && set "PACKER_BUILD_NAME=vmware-iso" && set "PACKER_HTTP_ADDR=192.168.222.130:0" && set "PACKER_HTTP_IP=192.168.222.130" && set "PACKER_HTTP_PORT=0" &&  cmd /c "/tmp/script.bat"' exited with code: 0
+2022/07/05 15:06:33 [INFO] 428 bytes written for 'stdout'
+2022/07/05 15:06:33 [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:06:33 packer-builder-vmware-iso plugin: [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:06:33 [INFO] RPC client: Communicator ended with: 0
+2022/07/05 15:06:33 [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:06:33 packer-provisioner-windows-shell plugin: [INFO] 428 bytes written for 'stdout'
+2022/07/05 15:06:33 packer-provisioner-windows-shell plugin: [INFO] 0 bytes written for 'stderr'
+[0;32m    vmware-iso:[0m
+2022/07/05 15:06:33 packer-provisioner-windows-shell plugin: [INFO] RPC client: Communicator ended with: 0
+[0;32m    vmware-iso: C:\Users\vagrant>exit /b 0[0m
+[1;32m==> vmware-iso: Provisioning with shell script: ../../Packer/scripts/compile-dotnet-assemblies.bat[0m
+2022/07/05 15:06:33 packer-provisioner-windows-shell plugin: Opening ../../Packer/scripts/compile-dotnet-assemblies.bat for reading
+2022/07/05 15:06:33 packer-builder-vmware-iso plugin: Uploading file to '/tmp/script.bat'
+2022/07/05 15:06:33 [INFO] 684 bytes written for 'uploadData'
+2022/07/05 15:06:33 packer-provisioner-windows-shell plugin: [INFO] 684 bytes written for 'uploadData'
+2022/07/05 15:06:35 packer-builder-vmware-iso plugin: [INFO] starting remote command: set "PACKER_BUILDER_TYPE=vmware-iso" && set "PACKER_BUILD_NAME=vmware-iso" && set "PACKER_HTTP_ADDR=192.168.222.130:0" && set "PACKER_HTTP_IP=192.168.222.130" && set "PACKER_HTTP_PORT=0" &&  cmd /c "/tmp/script.bat"
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>if "AMD64" == "AMD64" goto 64BIT[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>C:\Windows\microsoft.net\framework\v4.0.30319\ngen.exe update /force /queue  1>NUL[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>C:\Windows\microsoft.net\framework64\v4.0.30319\ngen.exe update /force /queue  1>NUL[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>C:\Windows\microsoft.net\framework\v4.0.30319\ngen.exe executequeueditems  1>NUL[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>C:\Windows\microsoft.net\framework64\v4.0.30319\ngen.exe executequeueditems  1>NUL[0m
+2022/07/05 15:08:03 packer-builder-vmware-iso plugin: [INFO] command 'set "PACKER_BUILDER_TYPE=vmware-iso" && set "PACKER_BUILD_NAME=vmware-iso" && set "PACKER_HTTP_ADDR=192.168.222.130:0" && set "PACKER_HTTP_IP=192.168.222.130" && set "PACKER_HTTP_PORT=0" &&  cmd /c "/tmp/script.bat"' exited with code: 0
+2022/07/05 15:08:03 packer-builder-vmware-iso plugin: [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:08:03 [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:08:03 [INFO] 498 bytes written for 'stdout'
+2022/07/05 15:08:03 [INFO] RPC client: Communicator ended with: 0
+2022/07/05 15:08:03 [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:08:03 packer-provisioner-windows-shell plugin: [INFO] 498 bytes written for 'stdout'
+2022/07/05 15:08:03 packer-provisioner-windows-shell plugin: [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:08:03 packer-provisioner-windows-shell plugin: [INFO] RPC client: Communicator ended with: 0
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>exit 0[0m
+[1;32m==> vmware-iso: Provisioning with shell script: ../../Packer/scripts/set-winrm-automatic.bat[0m
+2022/07/05 15:08:03 packer-provisioner-windows-shell plugin: Opening ../../Packer/scripts/set-winrm-automatic.bat for reading
+2022/07/05 15:08:03 packer-builder-vmware-iso plugin: Uploading file to '/tmp/script.bat'
+2022/07/05 15:08:03 packer-provisioner-windows-shell plugin: [INFO] 62 bytes written for 'uploadData'
+2022/07/05 15:08:03 [INFO] 62 bytes written for 'uploadData'
+2022/07/05 15:08:05 packer-builder-vmware-iso plugin: [INFO] starting remote command: set "PACKER_BUILDER_TYPE=vmware-iso" && set "PACKER_BUILD_NAME=vmware-iso" && set "PACKER_HTTP_ADDR=192.168.222.130:0" && set "PACKER_HTTP_IP=192.168.222.130" && set "PACKER_HTTP_PORT=0" &&  cmd /c "/tmp/script.bat"
+2022/07/05 15:08:05 packer-builder-vmware-iso plugin: [INFO] command 'set "PACKER_BUILDER_TYPE=vmware-iso" && set "PACKER_BUILD_NAME=vmware-iso" && set "PACKER_HTTP_ADDR=192.168.222.130:0" && set "PACKER_HTTP_IP=192.168.222.130" && set "PACKER_HTTP_PORT=0" &&  cmd /c "/tmp/script.bat"' exited with code: 0
+2022/07/05 15:08:05 packer-builder-vmware-iso plugin: [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:08:05 [INFO] 168 bytes written for 'stdout'
+2022/07/05 15:08:05 [INFO] 0 bytes written for 'stderr'
+[0;32m    vmware-iso:[0m
+2022/07/05 15:08:05 [INFO] RPC client: Communicator ended with: 0
+2022/07/05 15:08:05 [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:08:05 packer-provisioner-windows-shell plugin: [INFO] 168 bytes written for 'stdout'
+2022/07/05 15:08:05 packer-provisioner-windows-shell plugin: [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:08:05 packer-provisioner-windows-shell plugin: [INFO] RPC client: Communicator ended with: 0
+[0;32m    vmware-iso: C:\Users\vagrant>echo Set WinRM start type to auto[0m
+[0;32m    vmware-iso: Set WinRM start type to auto[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>sc config winrm start= auto[0m
+[0;32m    vmware-iso: [SC] ChangeServiceConfig SUCCESS[0m
+[1;32m==> vmware-iso: Provisioning with shell script: ../../Packer/scripts/dis-updates.bat[0m
+2022/07/05 15:08:05 packer-provisioner-windows-shell plugin: Opening ../../Packer/scripts/dis-updates.bat for reading
+2022/07/05 15:08:05 packer-builder-vmware-iso plugin: Uploading file to '/tmp/script.bat'
+2022/07/05 15:08:05 packer-provisioner-windows-shell plugin: [INFO] 924 bytes written for 'uploadData'
+2022/07/05 15:08:05 [INFO] 924 bytes written for 'uploadData'
+2022/07/05 15:08:07 packer-builder-vmware-iso plugin: [INFO] starting remote command: set "PACKER_BUILDER_TYPE=vmware-iso" && set "PACKER_BUILD_NAME=vmware-iso" && set "PACKER_HTTP_ADDR=192.168.222.130:0" && set "PACKER_HTTP_IP=192.168.222.130" && set "PACKER_HTTP_PORT=0" &&  cmd /c "/tmp/script.bat"
+2022/07/05 15:08:07 packer-builder-vmware-iso plugin: [INFO] command 'set "PACKER_BUILDER_TYPE=vmware-iso" && set "PACKER_BUILD_NAME=vmware-iso" && set "PACKER_HTTP_ADDR=192.168.222.130:0" && set "PACKER_HTTP_IP=192.168.222.130" && set "PACKER_HTTP_PORT=0" &&  cmd /c "/tmp/script.bat"' exited with code: 0
+2022/07/05 15:08:07 [INFO] 1182 bytes written for 'stdout'
+2022/07/05 15:08:07 [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:08:07 packer-builder-vmware-iso plugin: [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:08:07 [INFO] RPC client: Communicator ended with: 0
+2022/07/05 15:08:07 [INFO] RPC endpoint: Communicator ended with: 0
+2022/07/05 15:08:07 packer-provisioner-windows-shell plugin: [INFO] 1182 bytes written for 'stdout'
+2022/07/05 15:08:07 packer-provisioner-windows-shell plugin: [INFO] 0 bytes written for 'stderr'
+2022/07/05 15:08:07 packer-provisioner-windows-shell plugin: [INFO] RPC client: Communicator ended with: 0
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>rem http://www.windows-commandline.com/disable-automatic-updates-command-line/[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>reg add "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\WindowsUpdate\Auto Update" /v AUOptions /t REG_DWORD /d 1 /f[0m
+[0;32m    vmware-iso: The operation completed successfully.[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>rem remove optional WSUS server settings[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>reg delete "HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate" /f[0m
+[0;32m    vmware-iso: The operation completed successfully.[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>rem even harder, disable windows update service[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>rem sc config wuauserv start= disabled[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>rem net stop wuauserv[0m
+[0;32m    vmware-iso:[0m
+[0;32m    vmware-iso: C:\Users\vagrant>if exist C:\Windows\Temp\win-updates.log ([0m
+[0;32m    vmware-iso: echo Show Windows Updates log file C:\Windows\Temp\win-updates.log[0m
+[0;32m    vmware-iso:  dir C:\Windows\Temp\win-updates.log[0m
+[0;32m    vmware-iso:  type C:\Windows\Temp\win-updates.log[0m
+[0;32m    vmware-iso:  rem output of type command is not fully shown in packer/ssh session, so try PowerShell[0m
+[0;32m    vmware-iso:  rem but it will hang if log file is about 22 KByte[0m
+[0;32m    vmware-iso:  rem powershell -command "Get-Content C:\Windows\Temp\win-updates.log"[0m
+[0;32m    vmware-iso:  echo End of Windows Updates log file C:\Windows\Temp\win-updates.log[0m
+[0;32m    vmware-iso: )[0m
+2022/07/05 15:08:07 [INFO] (telemetry) ending windows-shell
+[1;32m==> vmware-iso: Gracefully halting virtual machine...[0m
+2022/07/05 15:08:07 packer-builder-vmware-iso plugin: Executing shutdown command: a:/sysprep.bat
+2022/07/05 15:08:07 packer-builder-vmware-iso plugin: [INFO] starting remote command: a:/sysprep.bat
+2022/07/05 15:08:07 packer-builder-vmware-iso plugin: Waiting max 2h0m0s for shutdown to complete
+2022/07/05 15:08:07 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:07 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:07 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:07 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:08 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:08 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:08 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:08 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:09 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:09 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:09 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:09 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:09 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:09 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:10 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:10 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:10 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:10 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:10 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:10 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:11 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:11 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:11 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:11 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:12 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:12 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:12 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:12 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:12 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:12 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:13 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:13 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:13 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:13 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:13 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:13 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:14 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:14 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:14 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:14 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:14 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:14 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:15 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:15 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:15 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:15 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:15 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:15 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:16 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:16 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:16 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:16 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:17 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:17 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:17 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:17 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:17 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:17 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:18 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:18 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:18 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:18 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:18 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:18 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:19 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:19 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:19 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:19 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:19 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:19 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:20 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:20 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:20 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:20 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:21 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:21 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:21 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:21 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:21 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:21 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:22 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:22 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:22 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:22 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:22 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:22 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:23 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:23 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:23 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:23 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:23 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:23 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:24 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:24 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:24 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:24 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:25 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:25 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:25 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:25 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:25 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:25 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:26 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:26 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:26 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:26 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:26 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:26 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:27 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:27 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:27 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:27 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:27 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:27 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:28 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:28 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:28 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:28 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:29 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:29 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:29 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:29 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:29 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:29 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:30 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:30 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:30 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:30 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:30 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:30 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:31 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:31 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:31 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:31 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:31 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:31 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:32 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:32 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:32 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:32 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:33 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:33 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:33 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:33 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:33 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:33 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:34 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:34 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:34 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:34 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:34 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:34 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:35 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:35 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:35 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:35 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:35 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:35 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:36 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:36 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:36 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:36 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:36 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:36 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:37 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:37 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:37 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:37 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:38 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:38 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:38 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:38 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:38 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:38 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:39 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:39 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:39 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:39 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:39 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:39 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:40 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:40 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:40 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:40 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:40 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:40 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:41 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:41 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:41 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:41 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:42 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:42 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:42 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:42 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:42 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:42 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:43 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:43 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:43 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:43 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:43 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:43 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:44 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:44 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:44 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:44 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:44 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:44 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:45 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:45 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:45 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:45 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:45 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:45 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:46 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:46 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:46 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:46 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:47 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:47 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:47 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:47 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:47 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:47 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:48 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:48 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:48 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:48 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:48 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:48 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:49 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:49 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:49 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:49 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:49 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:49 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:50 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:50 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:50 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:50 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:51 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:51 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:51 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:51 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:51 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:51 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:52 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:52 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:52 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:52 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:52 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:52 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:53 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:53 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:53 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:53 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:53 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:53 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:54 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:54 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:54 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:54 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:54 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:54 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:55 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:55 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:55 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:55 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:55 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:55 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:56 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:56 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:56 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:56 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:57 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:57 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:57 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:57 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:57 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:57 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:58 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:58 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:58 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:58 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:58 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:58 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:59 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:59 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:59 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:59 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:08:59 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:08:59 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:09:00 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:09:00 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:09:00 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:09:00 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:09:00 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:09:00 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:09:01 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:09:01 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+2022/07/05 15:09:01 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:09:01 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+[0;32m    vmware-iso: Waiting for VMware to clean up after itself...[0m
+2022/07/05 15:09:01 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:09:01 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: ls -1p "/vmfs/volumes/datastore1/Windows10"
+2022/07/05 15:09:01 packer-builder-vmware-iso plugin: No more lock files found. VMware is clean.
+2022/07/05 15:09:06 packer-builder-vmware-iso plugin: VM shut down.
+[1;32m==> vmware-iso: Deleting unnecessary VMware files...[0m
+2022/07/05 15:09:06 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:09:06 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: ls -1p "/vmfs/volumes/datastore1/Windows10"
+[0;32m    vmware-iso: Deleting: /vmfs/volumes/datastore1/Windows10/vmware.log[0m
+2022/07/05 15:09:06 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:09:06 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: rm "/vmfs/volumes/datastore1/Windows10/vmware.log"
+2022/07/05 15:09:06 packer-builder-vmware-iso plugin: Skipping disk compaction step...
+2022/07/05 15:09:06 packer-builder-vmware-iso plugin: Configuring VMX...
+2022/07/05 15:09:06 packer-builder-vmware-iso plugin: Writing VMX to: /tmp/vmw-iso3507546469/Windows10.vmx
+[1;32m==> vmware-iso: Cleaning VMX prior to finishing up...[0m
+[0;32m    vmware-iso: Detaching ISO from CD-ROM device ide0:0...[0m
+[0;32m    vmware-iso: Unmounting floppy0 from VMX...[0m
+[0;32m    vmware-iso: Disabling VNC server...[0m
+2022/07/05 15:09:06 packer-builder-vmware-iso plugin: Deleting key for floppy device: floppy0.filename
+2022/07/05 15:09:06 packer-builder-vmware-iso plugin: Deleting key for floppy device: floppy0.present
+2022/07/05 15:09:06 packer-builder-vmware-iso plugin: Deleting key for floppy device: floppy0.filetype
+2022/07/05 15:09:06 packer-builder-vmware-iso plugin: Writing VMX to: /tmp/vmw-iso3507546469/Windows10.vmx
+2022/07/05 15:09:06 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:09:07 packer-builder-vmware-iso plugin: [DEBUG] Starting remote scp process:  scp -vt /vmfs/volumes/datastore1/Windows10
+2022/07/05 15:09:07 packer-builder-vmware-iso plugin: [DEBUG] Started SCP session, beginning transfers...
+2022/07/05 15:09:07 packer-builder-vmware-iso plugin: [DEBUG] Copying input data into temporary file so we can read the length
+2022/07/05 15:09:07 packer-builder-vmware-iso plugin: [DEBUG] scp: Uploading Windows10.vmx: perms=C0644 size=3063
+2022/07/05 15:09:07 packer-builder-vmware-iso plugin: [DEBUG] SCP session complete, closing stdin pipe.
+2022/07/05 15:09:07 packer-builder-vmware-iso plugin: [DEBUG] Waiting for SSH session to complete.
+2022/07/05 15:09:07 packer-builder-vmware-iso plugin: [DEBUG] scp stderr (length 31): Sink: C0644 3063 Windows10.vmx
+2022/07/05 15:09:07 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:09:07 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/reload 1
+[1;32m==> vmware-iso: Skipping export of virtual machine...[0m
+2022/07/05 15:09:07 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:09:07 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 1
+[1;32m==> vmware-iso: Keeping virtual machine registered with ESX host (keep_registered = true)[0m
+2022/07/05 15:09:07 packer-builder-vmware-iso plugin: Cleaning up remote path: /vmfs/volumes/datastore1/packer_cache/packer2332465485
+2022/07/05 15:09:07 packer-builder-vmware-iso plugin: Removing remote cache path /vmfs/volumes/datastore1/packer_cache/packer2332465485 (local /vmfs/volumes/datastore1/packer_cache/packer2332465485)
+2022/07/05 15:09:07 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:09:07 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: rm -f "/vmfs/volumes/datastore1/packer_cache/packer2332465485"
+2022/07/05 15:09:07 packer-builder-vmware-iso plugin: Deleting floppy disk: /tmp/packer2332465485
+2022/07/05 15:09:07 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 15:09:08 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: ls -1p "/vmfs/volumes/datastore1/Windows10"
+[1;32mBuild 'vmware-iso' finished after 13 minutes 46 seconds.[0m
+
+2022/07/05 15:09:08 [INFO] (telemetry) ending vmware-iso
+==> Wait completed after 13 minutes 46 seconds
+==> Wait completed after 13 minutes 46 seconds
+==> Builds finished. The artifacts of successful builds are:
+2022/07/05 15:09:08 machine readable: vmware-iso,artifact-count []string{"1"}
+2022/07/05 15:09:08 machine readable: vmware-iso,artifact []string{"0", "builder-id", "mitchellh.vmware-esx"}
+2022/07/05 15:09:08 machine readable: vmware-iso,artifact []string{"0", "id", "Windows10"}
+2022/07/05 15:09:08 machine readable: vmware-iso,artifact []string{"0", "string", "VM files in directory: /vmfs/volumes/datastore1/Windows10"}
+2022/07/05 15:09:08 machine readable: vmware-iso,artifact []string{"0", "files-count", "6"}
+2022/07/05 15:09:08 machine readable: vmware-iso,artifact []string{"0", "file", "0", "/vmfs/volumes/datastore1/Windows10/Windows10.nvram"}
+2022/07/05 15:09:08 machine readable: vmware-iso,artifact []string{"0", "file", "1", "/vmfs/volumes/datastore1/Windows10/Windows10.vmsd"}
+2022/07/05 15:09:08 machine readable: vmware-iso,artifact []string{"0", "file", "2", "/vmfs/volumes/datastore1/Windows10/Windows10.vmx"}
+2022/07/05 15:09:08 machine readable: vmware-iso,artifact []string{"0", "file", "3", "/vmfs/volumes/datastore1/Windows10/Windows10.vmxf"}
+2022/07/05 15:09:08 machine readable: vmware-iso,artifact []string{"0", "file", "4", "/vmfs/volumes/datastore1/Windows10/disk-flat.vmdk"}
+2022/07/05 15:09:08 machine readable: vmware-iso,artifact []string{"0", "file", "5", "/vmfs/volumes/datastore1/Windows10/disk.vmdk"}
+2022/07/05 15:09:08 machine readable: vmware-iso,artifact []string{"0", "end"}
+
+2022/07/05 15:09:08 [INFO] (telemetry) Finalizing.
+==> Builds finished. The artifacts of successful builds are:
+--> vmware-iso: VM files in directory: /vmfs/volumes/datastore1/Windows10
+2022/07/05 15:09:08 waiting for all plugin processes to complete...
+2022/07/05 15:09:08 /usr/bin/packer: plugin process exited
+2022/07/05 15:09:08 /usr/bin/packer: plugin process exited
+2022/07/05 15:09:08 /usr/bin/packer: plugin process exited
+2022/07/05 15:09:08 /usr/bin/packer: plugin process exited
+2022/07/05 15:09:08 /usr/bin/packer: plugin process exited
+2022/07/05 15:09:08 /usr/bin/packer: plugin process exited

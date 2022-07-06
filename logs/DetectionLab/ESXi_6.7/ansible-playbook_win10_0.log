@@ -1,0 +1,283 @@
+Using /home/az/workspace/eWalker/DetectionLab/ESXi/ansible/ansible.cfg as config file
+
+PLAY [logger] ******************************************************************
+
+PLAY [dc] **********************************************************************
+
+PLAY [wef] *********************************************************************
+/usr/lib/python3/dist-packages/paramiko/transport.py:219: CryptographyDeprecationWarning: Blowfish has been deprecated
+  "class": algorithms.Blowfish,
+[WARNING]: Could not match supplied host pattern, ignoring: exchange
+
+PLAY [exchange] ****************************************************************
+skipping: no hosts matched
+
+PLAY [win10] *******************************************************************
+
+TASK [Gathering Facts] *********************************************************
+ok: [192.168.1.17]
+
+TASK [win10 : Hostname -> WIN10] ***********************************************
+changed: [192.168.1.17] => {"changed": true, "old_name": "vagrant-2016", "reboot_required": true}
+
+TASK [win10 : Reboot] **********************************************************
+changed: [192.168.1.17] => {"changed": true, "elapsed": 23, "rebooted": true, "unreachable": false}
+
+TASK [win10 : Set HostOnly IP Address] *****************************************
+changed: [192.168.1.17] => {"changed": true, "cmd": "If (-not(get-netipaddress | where {$_.IPAddress -eq '192.168.56.104'})) {$adapter = (get-netadapter | where {$_.MacAddress -eq '00-50-56-A2-B1-C4'}).Name; New-NetIPAddress –InterfaceAlias $adapter –AddressFamily IPv4 -IPAddress 192.168.56.104 –PrefixLength 24 -DefaultGateway 192.168.56.1 } Else { Write-Host 'IP Address Already Created.' }", "delta": "0:00:02.968771", "end": "2022-07-05 10:26:03.391051", "rc": 0, "start": "2022-07-05 10:26:00.422279", "stderr": "", "stderr_lines": [], "stdout": "\r\n\r\nIPAddress         : 192.168.56.104\r\nInterfaceIndex    : 6\r\nInterfaceAlias    : Ethernet1\r\nAddressFamily     : IPv4\r\nType              : Unicast\r\nPrefixLength      : 24\r\nPrefixOrigin      : Manual\r\nSuffixOrigin      : Manual\r\nAddressState      : Tentative\r\nValidLifetime     : Infinite ([TimeSpan]::MaxValue)\r\nPreferredLifetime : Infinite ([TimeSpan]::MaxValue)\r\nSkipAsSource      : False\r\nPolicyStore       : ActiveStore\r\n\r\nIPAddress         : 192.168.56.104\r\nInterfaceIndex    : 6\r\nInterfaceAlias    : Ethernet1\r\nAddressFamily     : IPv4\r\nType              : Unicast\r\nPrefixLength      : 24\r\nPrefixOrigin      : Manual\r\nSuffixOrigin      : Manual\r\nAddressState      : Invalid\r\nValidLifetime     : Infinite ([TimeSpan]::MaxValue)\r\nPreferredLifetime : Infinite ([TimeSpan]::MaxValue)\r\nSkipAsSource      : False\r\nPolicyStore       : PersistentStore\r\n\r\n\r\n\r\n", "stdout_lines": ["", "", "IPAddress         : 192.168.56.104", "InterfaceIndex    : 6", "InterfaceAlias    : Ethernet1", "AddressFamily     : IPv4", "Type              : Unicast", "PrefixLength      : 24", "PrefixOrigin      : Manual", "SuffixOrigin      : Manual", "AddressState      : Tentative", "ValidLifetime     : Infinite ([TimeSpan]::MaxValue)", "PreferredLifetime : Infinite ([TimeSpan]::MaxValue)", "SkipAsSource      : False", "PolicyStore       : ActiveStore", "", "IPAddress         : 192.168.56.104", "InterfaceIndex    : 6", "InterfaceAlias    : Ethernet1", "AddressFamily     : IPv4", "Type              : Unicast", "PrefixLength      : 24", "PrefixOrigin      : Manual", "SuffixOrigin      : Manual", "AddressState      : Invalid", "ValidLifetime     : Infinite ([TimeSpan]::MaxValue)", "PreferredLifetime : Infinite ([TimeSpan]::MaxValue)", "SkipAsSource      : False", "PolicyStore       : PersistentStore", "", "", ""]}
+
+TASK [win10 : Set HostOnly DNS Address] ****************************************
+changed: [192.168.1.17] => {"changed": true, "cmd": "$adapter = (get-netadapter | where {$_.MacAddress -eq '00-50-56-A2-B1-C4'}).Name; Set-DnsClientServerAddress -InterfaceAlias $adapter -ServerAddresses 192.168.56.102,8.8.8.8", "delta": "0:00:01.906251", "end": "2022-07-05 10:26:06.641030", "rc": 0, "start": "2022-07-05 10:26:04.734778", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+
+TASK [win10 : Install git] *****************************************************
+[WARNING]: Chocolatey was missing from this system, so it was installed during
+this task run.
+changed: [192.168.1.17] => {"changed": true, "rc": 0}
+
+TASK [win10 : Check if existing DetectionLab directory] ************************
+ok: [192.168.1.17] => {"changed": false, "stat": {"exists": false}}
+
+TASK [win10 : Git clone Detectionlab] ******************************************
+changed: [192.168.1.17] => {"changed": true, "cmd": "git clone https://github.com/clong/DetectionLab.git", "delta": "0:00:16.078118", "end": "2022-07-05 10:27:12.156656", "rc": 0, "start": "2022-07-05 10:26:56.078538", "stderr": "Cloning into 'DetectionLab'...", "stderr_lines": ["Cloning into 'DetectionLab'..."], "stdout": "", "stdout_lines": []}
+
+TASK [win10 : Copy scripts to c:\vagrant] **************************************
+changed: [192.168.1.17] => {"changed": true, "cmd": "Copy-Item -Recurse c:\\DetectionLab\\Vagrant c:\\vagrant", "delta": "0:00:01.781230", "end": "2022-07-05 10:27:15.234779", "rc": 0, "start": "2022-07-05 10:27:13.453548", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+
+TASK [win10 : Making Windows10 Great Again] ************************************
+changed: [192.168.1.17] => {"changed": true, "cmd": ".\\\\MakeWindows10GreatAgain.ps1", "delta": "0:00:14.656250", "end": "2022-07-05 10:27:30.969154", "rc": 0, "start": "2022-07-05 10:27:16.312903", "stderr": "", "stderr_lines": [], "stdout": "[03:27] Making Windows 10 Great again\n[03:27] Importing registry keys...\n[03:27] Removing OneDrive...\n[03:27] Disabling automatic screen turnoff in order to prevent screen locking...\n[03:27] Downloading ShutUp10...\n[03:27] Installing ShutUp10 and disabling Windows Defender\n", "stdout_lines": ["[03:27] Making Windows 10 Great again", "[03:27] Importing registry keys...", "[03:27] Removing OneDrive...", "[03:27] Disabling automatic screen turnoff in order to prevent screen locking...", "[03:27] Downloading ShutUp10...", "[03:27] Installing ShutUp10 and disabling Windows Defender"]}
+
+TASK [win10 : Join the Domain] *************************************************
+changed: [192.168.1.17] => {"changed": true, "cmd": ".\\\\provision.ps1", "delta": "0:00:08.890628", "end": "2022-07-05 10:27:41.125407", "rc": 0, "start": "2022-07-05 10:27:32.234778", "stderr": "", "stderr_lines": [], "stdout": "[03:27] Setting timezone to UTC...\n[03:27] Checking if Windows evaluation is expiring soon or expired...\n[03:27] 90 days left until expiration, no need to rearm.\n[03:27] Disabling the Invoke-WebRequest download progress bar globally for speed improvements.\n[03:27] See https://github.com/PowerShell/PowerShell/issues/2138 for more info\n[03:27] Disabling IPv6 on all network adatpers...\n\r\nName                           DisplayName                                        ComponentID          Enabled     \r\n----                           -----------                                        -----------          -------     \r\nEthernet1                      Internet Protocol Version 6 (TCP/IPv6)             ms_tcpip6            False       \r\nEthernet0 2                    Internet Protocol Version 6 (TCP/IPv6)             ms_tcpip6            False       \r\nThe operation completed successfully.\r\r\n[03:27] Current domain is set to 'workgroup'. Time to join the domain!\n[03:27] Installing bginfo...\n[03:27] Installing BGInfo...\n\r\nPSPath            : Microsoft.PowerShell.Core\\FileSystem::C:\\Program Files\\sysinternals\r\nPSParentPath      : Microsoft.PowerShell.Core\\FileSystem::C:\\Program Files\r\nPSChildName       : sysinternals\r\nPSDrive           : C\r\nPSProvider        : Microsoft.PowerShell.Core\\FileSystem\r\nPSIsContainer     : True\r\nName              : sysinternals\r\nFullName          : C:\\Program Files\\sysinternals\r\nParent            : Program Files\r\nExists            : True\r\nRoot              : C:\\\r\nExtension         : \r\nCreationTime      : 7/5/2022 3:27:36 AM\r\nCreationTimeUtc   : 7/5/2022 10:27:36 AM\r\nLastAccessTime    : 7/5/2022 3:27:36 AM\r\nLastAccessTimeUtc : 7/5/2022 10:27:36 AM\r\nLastWriteTime     : 7/5/2022 3:27:36 AM\r\nLastWriteTimeUtc  : 7/5/2022 10:27:36 AM\r\nAttributes        : Directory\r\nMode              : d-----\r\nBaseName          : sysinternals\r\nTarget            : {}\r\nLinkType          : \r\n\r\n[03:27] My hostname is WIN10\n[03:27] Joining the domain...\n[03:27] First, set DNS to DC to join the domain...\n\r\n__GENUS          : 2\r\n__CLASS          : __PARAMETERS\r\n__SUPERCLASS     : \r\n__DYNASTY        : __PARAMETERS\r\n__RELPATH        : \r\n__PROPERTY_COUNT : 1\r\n__DERIVATION     : {}\r\n__SERVER         : \r\n__NAMESPACE      : \r\n__PATH           : \r\nReturnValue      : 0\r\nPSComputerName   : \r\n\r\n\r\n__GENUS          : 2\r\n__CLASS          : __PARAMETERS\r\n__SUPERCLASS     : \r\n__DYNASTY        : __PARAMETERS\r\n__RELPATH        : \r\n__PROPERTY_COUNT : 1\r\n__DERIVATION     : {}\r\n__SERVER         : \r\n__NAMESPACE      : \r\n__PATH           : \r\nReturnValue      : 0\r\nPSComputerName   : \r\n\r\n[03:27] Now join the domain...\n[03:27] Adding Win10 to the domain. Sometimes this step times out. If that happens, just run 'vagrant reload win10 --provision'\n[03:27] Disabling Windows Updates and Windows Module Services\n\r\n\r\n", "stdout_lines": ["[03:27] Setting timezone to UTC...", "[03:27] Checking if Windows evaluation is expiring soon or expired...", "[03:27] 90 days left until expiration, no need to rearm.", "[03:27] Disabling the Invoke-WebRequest download progress bar globally for speed improvements.", "[03:27] See https://github.com/PowerShell/PowerShell/issues/2138 for more info", "[03:27] Disabling IPv6 on all network adatpers...", "", "Name                           DisplayName                                        ComponentID          Enabled     ", "----                           -----------                                        -----------          -------     ", "Ethernet1                      Internet Protocol Version 6 (TCP/IPv6)             ms_tcpip6            False       ", "Ethernet0 2                    Internet Protocol Version 6 (TCP/IPv6)             ms_tcpip6            False       ", "The operation completed successfully.", "", "[03:27] Current domain is set to 'workgroup'. Time to join the domain!", "[03:27] Installing bginfo...", "[03:27] Installing BGInfo...", "", "PSPath            : Microsoft.PowerShell.Core\\FileSystem::C:\\Program Files\\sysinternals", "PSParentPath      : Microsoft.PowerShell.Core\\FileSystem::C:\\Program Files", "PSChildName       : sysinternals", "PSDrive           : C", "PSProvider        : Microsoft.PowerShell.Core\\FileSystem", "PSIsContainer     : True", "Name              : sysinternals", "FullName          : C:\\Program Files\\sysinternals", "Parent            : Program Files", "Exists            : True", "Root              : C:\\", "Extension         : ", "CreationTime      : 7/5/2022 3:27:36 AM", "CreationTimeUtc   : 7/5/2022 10:27:36 AM", "LastAccessTime    : 7/5/2022 3:27:36 AM", "LastAccessTimeUtc : 7/5/2022 10:27:36 AM", "LastWriteTime     : 7/5/2022 3:27:36 AM", "LastWriteTimeUtc  : 7/5/2022 10:27:36 AM", "Attributes        : Directory", "Mode              : d-----", "BaseName          : sysinternals", "Target            : {}", "LinkType          : ", "", "[03:27] My hostname is WIN10", "[03:27] Joining the domain...", "[03:27] First, set DNS to DC to join the domain...", "", "__GENUS          : 2", "__CLASS          : __PARAMETERS", "__SUPERCLASS     : ", "__DYNASTY        : __PARAMETERS", "__RELPATH        : ", "__PROPERTY_COUNT : 1", "__DERIVATION     : {}", "__SERVER         : ", "__NAMESPACE      : ", "__PATH           : ", "ReturnValue      : 0", "PSComputerName   : ", "", "", "__GENUS          : 2", "__CLASS          : __PARAMETERS", "__SUPERCLASS     : ", "__DYNASTY        : __PARAMETERS", "__RELPATH        : ", "__PROPERTY_COUNT : 1", "__DERIVATION     : {}", "__SERVER         : ", "__NAMESPACE      : ", "__PATH           : ", "ReturnValue      : 0", "PSComputerName   : ", "", "[03:27] Now join the domain...", "[03:27] Adding Win10 to the domain. Sometimes this step times out. If that happens, just run 'vagrant reload win10 --provision'", "[03:27] Disabling Windows Updates and Windows Module Services", "", ""]}
+
+TASK [win10 : Update group policy] *********************************************
+changed: [192.168.1.17] => {"changed": true, "cmd": "gpupdate /force", "delta": "0:00:10.453128", "end": "2022-07-05 10:27:52.859783", "rc": 0, "start": "2022-07-05 10:27:42.406654", "stderr": "", "stderr_lines": [], "stdout": "Updating policy...\r\r\n\r\r\nComputer Policy update has completed successfully.\r\r\nUser Policy update has completed successfully.\r\r\n\r\r\n", "stdout_lines": ["Updating policy...", "", "", "", "Computer Policy update has completed successfully.", "", "User Policy update has completed successfully.", "", "", ""]}
+
+TASK [win10 : Reboot Server] ***************************************************
+changed: [192.168.1.17] => {"changed": true, "elapsed": 64, "rebooted": true, "unreachable": false}
+
+TASK [win10 : Clear Event Logs] ************************************************
+changed: [192.168.1.17] => {"changed": true, "cmd": "wevtutil el | Select-String -notmatch \"Microsoft-Windows-LiveId\" | Foreach-Object {wevtutil cl \"$_\"}", "delta": "0:00:13.265623", "end": "2022-07-05 10:41:44.312953", "rc": 0, "start": "2022-07-05 10:41:31.047330", "stderr": "", "stderr_lines": [], "stdout": "", "stdout_lines": []}
+
+TASK [win10 : Install classic-shell with chocolatey] ***************************
+changed: [192.168.1.17] => {"changed": true, "rc": 0}
+
+TASK [win10 : DetectionLab Menu] ***********************************************
+changed: [192.168.1.17] => {"changed": true, "cmd": "\"C:\\Program Files\\Classic Shell\\ClassicStartMenu.exe -xml c:\\vagrant\\resources\\windows\\MenuSettings.xml\"", "delta": "0:00:00.234373", "end": "2022-07-05 10:42:00.484828", "rc": 0, "start": "2022-07-05 10:42:00.250454", "stderr": "", "stderr_lines": [], "stdout": "C:\\Program Files\\Classic Shell\\ClassicStartMenu.exe -xml c:\\vagrant\\resources\\windows\\MenuSettings.xml\r\n", "stdout_lines": ["C:\\Program Files\\Classic Shell\\ClassicStartMenu.exe -xml c:\\vagrant\\resources\\windows\\MenuSettings.xml"]}
+
+TASK [common : Downloading the Palantir WEF Configuration] *********************
+changed: [192.168.1.17] => {"changed": true, "cmd": ".\\download_palantir_wef.ps1", "delta": "0:00:05.531251", "end": "2022-07-05 10:42:07.109829", "failed_when_result": false, "rc": 0, "start": "2022-07-05 10:42:01.578577", "stderr": "", "stderr_lines": [], "stdout": "[10:42] Downloading and unzipping the Palantir Windows Event Forwarding Repo from Github...\n[10:42] Palantir WEF download complete!\n", "stdout_lines": ["[10:42] Downloading and unzipping the Palantir Windows Event Forwarding Repo from Github...", "[10:42] Palantir WEF download complete!"]}
+
+TASK [common : debug] **********************************************************
+ok: [192.168.1.17] => {
+    "msg": [
+        "[10:42] Downloading and unzipping the Palantir Windows Event Forwarding Repo from Github...",
+        "[10:42] Palantir WEF download complete!"
+    ]
+}
+
+TASK [common : Installing osquery] *********************************************
+changed: [192.168.1.17] => {"changed": true, "cmd": ".\\install-osquery.ps1", "delta": "0:00:21.374998", "end": "2022-07-05 10:42:29.781700", "failed_when_result": false, "rc": 0, "start": "2022-07-05 10:42:08.406701", "stderr": "", "stderr_lines": [], "stdout": "[10:42] Installing osquery...\nInstalling the following packages:\r\nosquery\r\nBy installing, you accept licenses for the packages.\r\n\r\nosquery v5.2.2 [Approved]\r\nosquery package files install completed. Performing other installation steps.\r\nC:\\Program Files\\osquery\\log\r\nTrue\r\nPATH environment variable does not have C:\\Program Files\\osquery in it. Adding...\r\nEnvironment Vars (like PATH) have changed. Close/reopen your shell to\r\n see the changes (or in powershell/cmd.exe just type `refreshenv`).\r\n ShimGen has successfully created a shim for osqueryi.exe\r\n ShimGen has successfully created a shim for osqueryd.exe\r\n The install of osquery was successful.\r\n  Software install location not explicitly set, it could be in package or\r\n  default install location of installer.\r\n\r\nChocolatey installed 1/1 packages. \r\n See the log for details (C:\\ProgramData\\chocolatey\\logs\\chocolatey.log).\r\n\r\n[10:42] Setting osquery to run as a service\n\r\nStatus   Name               DisplayName                           \r\n------   ----               -----------                           \r\nStopped  osqueryd           osqueryd                              \r\n[10:42] Adding Fleet to the hosts file\n\r\n\r\n", "stdout_lines": ["[10:42] Installing osquery...", "Installing the following packages:", "osquery", "By installing, you accept licenses for the packages.", "", "osquery v5.2.2 [Approved]", "osquery package files install completed. Performing other installation steps.", "C:\\Program Files\\osquery\\log", "True", "PATH environment variable does not have C:\\Program Files\\osquery in it. Adding...", "Environment Vars (like PATH) have changed. Close/reopen your shell to", " see the changes (or in powershell/cmd.exe just type `refreshenv`).", " ShimGen has successfully created a shim for osqueryi.exe", " ShimGen has successfully created a shim for osqueryd.exe", " The install of osquery was successful.", "  Software install location not explicitly set, it could be in package or", "  default install location of installer.", "", "Chocolatey installed 1/1 packages. ", " See the log for details (C:\\ProgramData\\chocolatey\\logs\\chocolatey.log).", "", "[10:42] Setting osquery to run as a service", "", "Status   Name               DisplayName                           ", "------   ----               -----------                           ", "Stopped  osqueryd           osqueryd                              ", "[10:42] Adding Fleet to the hosts file", "", ""]}
+
+TASK [common : debug] **********************************************************
+ok: [192.168.1.17] => {
+    "msg": [
+        "[10:42] Installing osquery...",
+        "Installing the following packages:",
+        "osquery",
+        "By installing, you accept licenses for the packages.",
+        "",
+        "osquery v5.2.2 [Approved]",
+        "osquery package files install completed. Performing other installation steps.",
+        "C:\\Program Files\\osquery\\log",
+        "True",
+        "PATH environment variable does not have C:\\Program Files\\osquery in it. Adding...",
+        "Environment Vars (like PATH) have changed. Close/reopen your shell to",
+        " see the changes (or in powershell/cmd.exe just type `refreshenv`).",
+        " ShimGen has successfully created a shim for osqueryi.exe",
+        " ShimGen has successfully created a shim for osqueryd.exe",
+        " The install of osquery was successful.",
+        "  Software install location not explicitly set, it could be in package or",
+        "  default install location of installer.",
+        "",
+        "Chocolatey installed 1/1 packages. ",
+        " See the log for details (C:\\ProgramData\\chocolatey\\logs\\chocolatey.log).",
+        "",
+        "[10:42] Setting osquery to run as a service",
+        "",
+        "Status   Name               DisplayName                           ",
+        "------   ----               -----------                           ",
+        "Stopped  osqueryd           osqueryd                              ",
+        "[10:42] Adding Fleet to the hosts file",
+        "",
+        ""
+    ]
+}
+
+TASK [common : Installing SysInternals Tools] **********************************
+changed: [192.168.1.17] => {"changed": true, "cmd": ".\\install-sysinternals.ps1", "delta": "0:00:25.546872", "end": "2022-07-05 10:42:56.594197", "failed_when_result": false, "rc": 0, "start": "2022-07-05 10:42:31.047325", "stderr": "", "stderr_lines": [], "stdout": "[10:42] Installing SysInternals Tooling...\n\r\n\r\n    Directory: C:\\Tools\r\n\r\n\r\nMode                LastWriteTime         Length Name                                                                  \r\n----                -------------         ------ ----                                                                  \r\nd-----         7/5/2022  10:42 AM                Sysinternals                                                          \r\n\r\n\r\n    Directory: C:\\ProgramData\r\n\r\n\r\nMode                LastWriteTime         Length Name                                                                  \r\n----                -------------         ------ ----                                                                  \r\nd-----         7/5/2022  10:42 AM                Sysmon                                                                \r\n[10:42] Downloading Autoruns64.exe...\n[10:42] Downloading Procmon.exe...\n[10:42] Downloading PsExec64.exe...\n[10:42] Downloading procexp64.exe...\n[10:42] Downloading sdelete64.exe...\n[10:42] Downloading Sysmon64.exe...\n[10:42] Downloading Tcpview.exe...\n[10:42] Downloading Olaf Hartong's Sysmon config...\n[10:42] Starting Sysmon...\n[10:42] Waiting 5 seconds to give the service time to install...\n[10:42] Verifying that the Sysmon service is running...\nThe Sysmon service has started successfully!\n\r\n\r\n", "stdout_lines": ["[10:42] Installing SysInternals Tooling...", "", "", "    Directory: C:\\Tools", "", "", "Mode                LastWriteTime         Length Name                                                                  ", "----                -------------         ------ ----                                                                  ", "d-----         7/5/2022  10:42 AM                Sysinternals                                                          ", "", "", "    Directory: C:\\ProgramData", "", "", "Mode                LastWriteTime         Length Name                                                                  ", "----                -------------         ------ ----                                                                  ", "d-----         7/5/2022  10:42 AM                Sysmon                                                                ", "[10:42] Downloading Autoruns64.exe...", "[10:42] Downloading Procmon.exe...", "[10:42] Downloading PsExec64.exe...", "[10:42] Downloading procexp64.exe...", "[10:42] Downloading sdelete64.exe...", "[10:42] Downloading Sysmon64.exe...", "[10:42] Downloading Tcpview.exe...", "[10:42] Downloading Olaf Hartong's Sysmon config...", "[10:42] Starting Sysmon...", "[10:42] Waiting 5 seconds to give the service time to install...", "[10:42] Verifying that the Sysmon service is running...", "The Sysmon service has started successfully!", "", ""]}
+
+TASK [common : debug] **********************************************************
+ok: [192.168.1.17] => {
+    "msg": [
+        "[10:42] Installing SysInternals Tooling...",
+        "",
+        "",
+        "    Directory: C:\\Tools",
+        "",
+        "",
+        "Mode                LastWriteTime         Length Name                                                                  ",
+        "----                -------------         ------ ----                                                                  ",
+        "d-----         7/5/2022  10:42 AM                Sysinternals                                                          ",
+        "",
+        "",
+        "    Directory: C:\\ProgramData",
+        "",
+        "",
+        "Mode                LastWriteTime         Length Name                                                                  ",
+        "----                -------------         ------ ----                                                                  ",
+        "d-----         7/5/2022  10:42 AM                Sysmon                                                                ",
+        "[10:42] Downloading Autoruns64.exe...",
+        "[10:42] Downloading Procmon.exe...",
+        "[10:42] Downloading PsExec64.exe...",
+        "[10:42] Downloading procexp64.exe...",
+        "[10:42] Downloading sdelete64.exe...",
+        "[10:42] Downloading Sysmon64.exe...",
+        "[10:42] Downloading Tcpview.exe...",
+        "[10:42] Downloading Olaf Hartong's Sysmon config...",
+        "[10:42] Starting Sysmon...",
+        "[10:42] Waiting 5 seconds to give the service time to install...",
+        "[10:42] Verifying that the Sysmon service is running...",
+        "The Sysmon service has started successfully!",
+        "",
+        ""
+    ]
+}
+
+TASK [common : Installing Velociraptor] ****************************************
+changed: [192.168.1.17] => {"changed": true, "cmd": ".\\install-velociraptor.ps1", "delta": "0:00:11.723326", "end": "2022-07-05 10:43:12.333168", "failed_when_result": false, "rc": 0, "start": "2022-07-05 10:43:00.609841", "stderr": "", "stderr_lines": [], "stdout": "[10:43] Adding logger to the hosts file\n[10:43] Determining latest release of Velociraptor...\n[10:43] Downloading Velociraptor...\n[10:43] Installing Velociraptor...\n[10:43] Velociraptor successfully installed!\n", "stdout_lines": ["[10:43] Adding logger to the hosts file", "[10:43] Determining latest release of Velociraptor...", "[10:43] Downloading Velociraptor...", "[10:43] Installing Velociraptor...", "[10:43] Velociraptor successfully installed!"]}
+
+TASK [common : debug] **********************************************************
+ok: [192.168.1.17] => {
+    "msg": [
+        "[10:43] Adding logger to the hosts file",
+        "[10:43] Determining latest release of Velociraptor...",
+        "[10:43] Downloading Velociraptor...",
+        "[10:43] Installing Velociraptor...",
+        "[10:43] Velociraptor successfully installed!"
+    ]
+}
+
+TASK [common : Installing AutorunsToWineventlog] *******************************
+changed: [192.168.1.17] => {"changed": true, "cmd": ".\\install-autorunstowineventlog.ps1", "delta": "0:00:10.113910", "end": "2022-07-05 10:43:24.862362", "failed_when_result": false, "rc": 0, "start": "2022-07-05 10:43:14.748452", "stderr": "", "stderr_lines": [], "stdout": "[10:43] Installing AutorunsToWinEventLog...\n\r\n\r\n    Directory: C:\\Program Files\r\n\r\n\r\nMode                LastWriteTime         Length Name                                                                  \r\n----                -------------         ------ ----                                                                  \r\nd-----         7/5/2022  10:43 AM                AutorunsToWinEventLog                                                 \r\n\r\nActions            : {MSFT_TaskExecAction}\r\nAuthor             : \r\nDate               : \r\nDescription        : \r\nDocumentation      : \r\nPrincipal          : MSFT_TaskPrincipal2\r\nSecurityDescriptor : \r\nSettings           : MSFT_TaskSettings3\r\nSource             : \r\nState              : Ready\r\nTaskName           : AutorunsToWinEventLog\r\nTaskPath           : \\\r\nTriggers           : {MSFT_TaskDailyTrigger}\r\nURI                : \\AutorunsToWinEventLog\r\nVersion            : \r\nPSComputerName     : \r\n\r\n\r\nActions            : {MSFT_TaskExecAction}\r\nAuthor             : \r\nDate               : \r\nDescription        : \r\nDocumentation      : \r\nPrincipal          : MSFT_TaskPrincipal2\r\nSecurityDescriptor : \r\nSettings           : MSFT_TaskSettings3\r\nSource             : \r\nState              : Ready\r\nTaskName           : AutorunsToWinEventLog\r\nTaskPath           : \\\r\nTriggers           : {MSFT_TaskDailyTrigger}\r\nURI                : \\AutorunsToWinEventLog\r\nVersion            : \r\nPSComputerName     : \r\n\r\n[10:43] AutorunsToWinEventLog installed. Starting the scheduled task. Future runs will begin at 11am\n\r\n\r\n", "stdout_lines": ["[10:43] Installing AutorunsToWinEventLog...", "", "", "    Directory: C:\\Program Files", "", "", "Mode                LastWriteTime         Length Name                                                                  ", "----                -------------         ------ ----                                                                  ", "d-----         7/5/2022  10:43 AM                AutorunsToWinEventLog                                                 ", "", "Actions            : {MSFT_TaskExecAction}", "Author             : ", "Date               : ", "Description        : ", "Documentation      : ", "Principal          : MSFT_TaskPrincipal2", "SecurityDescriptor : ", "Settings           : MSFT_TaskSettings3", "Source             : ", "State              : Ready", "TaskName           : AutorunsToWinEventLog", "TaskPath           : \\", "Triggers           : {MSFT_TaskDailyTrigger}", "URI                : \\AutorunsToWinEventLog", "Version            : ", "PSComputerName     : ", "", "", "Actions            : {MSFT_TaskExecAction}", "Author             : ", "Date               : ", "Description        : ", "Documentation      : ", "Principal          : MSFT_TaskPrincipal2", "SecurityDescriptor : ", "Settings           : MSFT_TaskSettings3", "Source             : ", "State              : Ready", "TaskName           : AutorunsToWinEventLog", "TaskPath           : \\", "Triggers           : {MSFT_TaskDailyTrigger}", "URI                : \\AutorunsToWinEventLog", "Version            : ", "PSComputerName     : ", "", "[10:43] AutorunsToWinEventLog installed. Starting the scheduled task. Future runs will begin at 11am", "", ""]}
+
+TASK [common : debug] **********************************************************
+ok: [192.168.1.17] => {
+    "msg": [
+        "[10:43] Installing AutorunsToWinEventLog...",
+        "",
+        "",
+        "    Directory: C:\\Program Files",
+        "",
+        "",
+        "Mode                LastWriteTime         Length Name                                                                  ",
+        "----                -------------         ------ ----                                                                  ",
+        "d-----         7/5/2022  10:43 AM                AutorunsToWinEventLog                                                 ",
+        "",
+        "Actions            : {MSFT_TaskExecAction}",
+        "Author             : ",
+        "Date               : ",
+        "Description        : ",
+        "Documentation      : ",
+        "Principal          : MSFT_TaskPrincipal2",
+        "SecurityDescriptor : ",
+        "Settings           : MSFT_TaskSettings3",
+        "Source             : ",
+        "State              : Ready",
+        "TaskName           : AutorunsToWinEventLog",
+        "TaskPath           : \\",
+        "Triggers           : {MSFT_TaskDailyTrigger}",
+        "URI                : \\AutorunsToWinEventLog",
+        "Version            : ",
+        "PSComputerName     : ",
+        "",
+        "",
+        "Actions            : {MSFT_TaskExecAction}",
+        "Author             : ",
+        "Date               : ",
+        "Description        : ",
+        "Documentation      : ",
+        "Principal          : MSFT_TaskPrincipal2",
+        "SecurityDescriptor : ",
+        "Settings           : MSFT_TaskSettings3",
+        "Source             : ",
+        "State              : Ready",
+        "TaskName           : AutorunsToWinEventLog",
+        "TaskPath           : \\",
+        "Triggers           : {MSFT_TaskDailyTrigger}",
+        "URI                : \\AutorunsToWinEventLog",
+        "Version            : ",
+        "PSComputerName     : ",
+        "",
+        "[10:43] AutorunsToWinEventLog installed. Starting the scheduled task. Future runs will begin at 11am",
+        "",
+        ""
+    ]
+}
+
+TASK [common : Installing Red Team Tooling] ************************************
+changed: [192.168.1.17] => {"changed": true, "cmd": ".\\install-redteam.ps1", "delta": "0:01:01.660681", "end": "2022-07-05 10:44:30.412008", "failed_when_result": false, "rc": 0, "start": "2022-07-05 10:43:28.751326", "stderr": "", "stderr_lines": [], "stdout": "[10:43] Installing Red Team Tooling...\n[10:43] Windows Defender has already been disabled or uninstalled.\n[10:43] Determining latest release of Mimikatz...\n[10:43] Downloading Powersploit...\n[10:43] Downloading BadBlood...\n[10:43] Downloading Invoke-AtomicRedTeam and atomic tests...\n\r\nName                           Version          Source           Summary                                               \r\n----                           -------          ------           -------                                               \r\nnuget                          2.8.5.208        https://onege... NuGet provider for the OneGet meta-package manager    \r\nInstallation of Invoke-AtomicRedTeam is complete. You can now use the Invoke-AtomicTest function\nSee Wiki at https://github.com/redcanaryco/invoke-atomicredteam/wiki for complete details\n[10:44] Updating Profile.ps1 to import the Invoke-AtomicRedTeam module...\n\r\nPSPath            : Microsoft.PowerShell.Core\\FileSystem::C:\\Tools\\PurpleSharp\r\nPSParentPath      : Microsoft.PowerShell.Core\\FileSystem::C:\\Tools\r\nPSChildName       : PurpleSharp\r\nPSDrive           : C\r\nPSProvider        : Microsoft.PowerShell.Core\\FileSystem\r\nPSIsContainer     : True\r\nName              : PurpleSharp\r\nFullName          : C:\\Tools\\PurpleSharp\r\nParent            : Tools\r\nExists            : True\r\nRoot              : C:\\\r\nExtension         : \r\nCreationTime      : 7/5/2022 10:44:28 AM\r\nCreationTimeUtc   : 7/5/2022 10:44:28 AM\r\nLastAccessTime    : 7/5/2022 10:44:28 AM\r\nLastAccessTimeUtc : 7/5/2022 10:44:28 AM\r\nLastWriteTime     : 7/5/2022 10:44:28 AM\r\nLastWriteTimeUtc  : 7/5/2022 10:44:28 AM\r\nAttributes        : Directory\r\nMode              : d-----\r\nBaseName          : PurpleSharp\r\nTarget            : {}\r\nLinkType          : \r\n\r\n[10:44] Determining latest release of Purplesharp...\n[10:44] Red Team tooling installation complete!\n\r\n\r\n", "stdout_lines": ["[10:43] Installing Red Team Tooling...", "[10:43] Windows Defender has already been disabled or uninstalled.", "[10:43] Determining latest release of Mimikatz...", "[10:43] Downloading Powersploit...", "[10:43] Downloading BadBlood...", "[10:43] Downloading Invoke-AtomicRedTeam and atomic tests...", "", "Name                           Version          Source           Summary                                               ", "----                           -------          ------           -------                                               ", "nuget                          2.8.5.208        https://onege... NuGet provider for the OneGet meta-package manager    ", "Installation of Invoke-AtomicRedTeam is complete. You can now use the Invoke-AtomicTest function", "See Wiki at https://github.com/redcanaryco/invoke-atomicredteam/wiki for complete details", "[10:44] Updating Profile.ps1 to import the Invoke-AtomicRedTeam module...", "", "PSPath            : Microsoft.PowerShell.Core\\FileSystem::C:\\Tools\\PurpleSharp", "PSParentPath      : Microsoft.PowerShell.Core\\FileSystem::C:\\Tools", "PSChildName       : PurpleSharp", "PSDrive           : C", "PSProvider        : Microsoft.PowerShell.Core\\FileSystem", "PSIsContainer     : True", "Name              : PurpleSharp", "FullName          : C:\\Tools\\PurpleSharp", "Parent            : Tools", "Exists            : True", "Root              : C:\\", "Extension         : ", "CreationTime      : 7/5/2022 10:44:28 AM", "CreationTimeUtc   : 7/5/2022 10:44:28 AM", "LastAccessTime    : 7/5/2022 10:44:28 AM", "LastAccessTimeUtc : 7/5/2022 10:44:28 AM", "LastWriteTime     : 7/5/2022 10:44:28 AM", "LastWriteTimeUtc  : 7/5/2022 10:44:28 AM", "Attributes        : Directory", "Mode              : d-----", "BaseName          : PurpleSharp", "Target            : {}", "LinkType          : ", "", "[10:44] Determining latest release of Purplesharp...", "[10:44] Red Team tooling installation complete!", "", ""]}
+
+TASK [common : debug] **********************************************************
+ok: [192.168.1.17] => {
+    "msg": [
+        "[10:43] Installing Red Team Tooling...",
+        "[10:43] Windows Defender has already been disabled or uninstalled.",
+        "[10:43] Determining latest release of Mimikatz...",
+        "[10:43] Downloading Powersploit...",
+        "[10:43] Downloading BadBlood...",
+        "[10:43] Downloading Invoke-AtomicRedTeam and atomic tests...",
+        "",
+        "Name                           Version          Source           Summary                                               ",
+        "----                           -------          ------           -------                                               ",
+        "nuget                          2.8.5.208        https://onege... NuGet provider for the OneGet meta-package manager    ",
+        "Installation of Invoke-AtomicRedTeam is complete. You can now use the Invoke-AtomicTest function",
+        "See Wiki at https://github.com/redcanaryco/invoke-atomicredteam/wiki for complete details",
+        "[10:44] Updating Profile.ps1 to import the Invoke-AtomicRedTeam module...",
+        "",
+        "PSPath            : Microsoft.PowerShell.Core\\FileSystem::C:\\Tools\\PurpleSharp",
+        "PSParentPath      : Microsoft.PowerShell.Core\\FileSystem::C:\\Tools",
+        "PSChildName       : PurpleSharp",
+        "PSDrive           : C",
+        "PSProvider        : Microsoft.PowerShell.Core\\FileSystem",
+        "PSIsContainer     : True",
+        "Name              : PurpleSharp",
+        "FullName          : C:\\Tools\\PurpleSharp",
+        "Parent            : Tools",
+        "Exists            : True",
+        "Root              : C:\\",
+        "Extension         : ",
+        "CreationTime      : 7/5/2022 10:44:28 AM",
+        "CreationTimeUtc   : 7/5/2022 10:44:28 AM",
+        "LastAccessTime    : 7/5/2022 10:44:28 AM",
+        "LastAccessTimeUtc : 7/5/2022 10:44:28 AM",
+        "LastWriteTime     : 7/5/2022 10:44:28 AM",
+        "LastWriteTimeUtc  : 7/5/2022 10:44:28 AM",
+        "Attributes        : Directory",
+        "Mode              : d-----",
+        "BaseName          : PurpleSharp",
+        "Target            : {}",
+        "LinkType          : ",
+        "",
+        "[10:44] Determining latest release of Purplesharp...",
+        "[10:44] Red Team tooling installation complete!",
+        "",
+        ""
+    ]
+}
+
+TASK [common : Install Utilities] **********************************************
+changed: [192.168.1.17] => {"changed": true, "cmd": ".\\install-utilities.ps1", "delta": "0:01:12.299936", "end": "2022-07-05 10:45:43.887472", "failed_when_result": false, "rc": 0, "start": "2022-07-05 10:44:31.587535", "stderr": "", "stderr_lines": [], "stdout": "[10:44] Chocolatey is already installed.\n[10:44] Installing utilities...\nInstalling the following packages:\r\nclassic-shell\r\nBy installing, you accept licenses for the packages.\r\nclassic-shell v4.3.1.20180405 already installed.\r\n Use --force to reinstall, specify a version to install, or try upgrade.\r\n\r\nChocolatey installed 0/1 packages. \r\n See the log for details (C:\\ProgramData\\chocolatey\\logs\\chocolatey.log).\r\n\r\nWarnings:\r\n - classic-shell - classic-shell v4.3.1.20180405 already installed.\r\n Use --force to reinstall, specify a version to install, or try upgrade.\r\nInstalling the following packages:\r\nNotepadPlusPlus;WinRar;processhacker\r\nBy installing, you accept licenses for the packages.\r\n\r\nnotepadplusplus.install v8.4.2 [Approved]\r\nnotepadplusplus.install package files install completed. Performing other installation steps.\r\nInstalling 64-bit notepadplusplus.install...\r\nnotepadplusplus.install has been installed.\r\nWARNING: No registry key found based on  'Notepad\\+\\+*'\r\nnotepadplusplus.install installed to 'C:\\Program Files\\Notepad++'\r\nAdded C:\\ProgramData\\chocolatey\\bin\\notepad++.exe shim pointed to 'c:\\program files\\notepad++\\notepad++.exe'.\r\n  notepadplusplus.install can be automatically uninstalled.\r\n The install of notepadplusplus.install was successful.\r\n  Software installed as 'exe', install location is likely default.\r\n\r\nnotepadplusplus v8.4.2 [Approved]\r\nnotepadplusplus package files install completed. Performing other installation steps.\r\n The install of notepadplusplus was successful.\r\n  Software install location not explicitly set, it could be in package or\r\n  default install location of installer.\r\n\r\nwinrar v6.11.0.20220504 [Approved]\r\nwinrar package files install completed. Performing other installation steps.\r\nDownloading winrar 64 bit\r\n  from 'https://www.rarlab.com/rar/winrar-x64-611.exe'\r\n\r\nDownload of winrar-x64-611.exe (3.32 MB) completed.\r\nHashes match.\r\nInstalling winrar...\r\nwinrar has been installed.\r\n The install of winrar was successful.\r\n  Software installed as 'exe', install location is likely default.\r\n\r\nprocesshacker.install v2.39 [Approved] - Likely broken for FOSS users (due to download location changes)\r\nprocesshacker.install package files install completed. Performing other installation steps.\r\nDownloading processhacker.install \r\n  from 'https://sourceforge.net/projects/processhacker/files/processhacker2/processhacker-2.39-setup.exe'\r\n\r\nDownload of processhacker-2.39-setup.exe (2.16 MB) completed.\r\nHashes match.\r\nInstalling processhacker.install...\r\nprocesshacker.install has been installed.\r\n  processhacker.install can be automatically uninstalled.\r\n The install of processhacker.install was successful.\r\n  Software installed to 'C:\\Program Files\\Process Hacker 2\\'\r\n\r\nprocesshacker v2.39 [Approved] - Possibly broken\r\nprocesshacker package files install completed. Performing other installation steps.\r\n The install of processhacker was successful.\r\n  Software install location not explicitly set, it could be in package or\r\n  default install location of installer.\r\n\r\nChocolatey installed 5/5 packages. \r\n See the log for details (C:\\ProgramData\\chocolatey\\logs\\chocolatey.log).\r\n\r\nInstalled:\r\n - processhacker.install v2.39\r\n - notepadplusplus.install v8.4.2\r\n - winrar v6.11.0.20220504\r\n - notepadplusplus v8.4.2\r\n - processhacker v2.39\r\nInstalling the following packages:\r\nGoogleChrome\r\nBy installing, you accept licenses for the packages.\r\n\r\nGoogleChrome v103.0.5060.114 [Approved]\r\ngooglechrome package files install completed. Performing other installation steps.\r\nDownloading googlechrome 64 bit\r\n  from 'https://dl.google.com/tag/s/dl/chrome/install/googlechromestandaloneenterprise64.msi'\r\n\r\nDownload of googlechromestandaloneenterprise64.msi (83.7 MB) completed.\r\nWARNING: Ignoring checksums due to feature checksumFiles turned off or option --ignore-checksums set.\r\nInstalling googlechrome...\r\ngooglechrome has been installed.\r\n  googlechrome may be able to be automatically uninstalled.\r\n The install of googlechrome was successful.\r\n  Software installed as 'MSI', install location is likely default.\r\n\r\nChocolatey installed 1/1 packages. \r\n See the log for details (C:\\ProgramData\\chocolatey\\logs\\chocolatey.log).\r\n[10:45] Utilties installation complete!\n", "stdout_lines": ["[10:44] Chocolatey is already installed.", "[10:44] Installing utilities...", "Installing the following packages:", "classic-shell", "By installing, you accept licenses for the packages.", "classic-shell v4.3.1.20180405 already installed.", " Use --force to reinstall, specify a version to install, or try upgrade.", "", "Chocolatey installed 0/1 packages. ", " See the log for details (C:\\ProgramData\\chocolatey\\logs\\chocolatey.log).", "", "Warnings:", " - classic-shell - classic-shell v4.3.1.20180405 already installed.", " Use --force to reinstall, specify a version to install, or try upgrade.", "Installing the following packages:", "NotepadPlusPlus;WinRar;processhacker", "By installing, you accept licenses for the packages.", "", "notepadplusplus.install v8.4.2 [Approved]", "notepadplusplus.install package files install completed. Performing other installation steps.", "Installing 64-bit notepadplusplus.install...", "notepadplusplus.install has been installed.", "WARNING: No registry key found based on  'Notepad\\+\\+*'", "notepadplusplus.install installed to 'C:\\Program Files\\Notepad++'", "Added C:\\ProgramData\\chocolatey\\bin\\notepad++.exe shim pointed to 'c:\\program files\\notepad++\\notepad++.exe'.", "  notepadplusplus.install can be automatically uninstalled.", " The install of notepadplusplus.install was successful.", "  Software installed as 'exe', install location is likely default.", "", "notepadplusplus v8.4.2 [Approved]", "notepadplusplus package files install completed. Performing other installation steps.", " The install of notepadplusplus was successful.", "  Software install location not explicitly set, it could be in package or", "  default install location of installer.", "", "winrar v6.11.0.20220504 [Approved]", "winrar package files install completed. Performing other installation steps.", "Downloading winrar 64 bit", "  from 'https://www.rarlab.com/rar/winrar-x64-611.exe'", "", "Download of winrar-x64-611.exe (3.32 MB) completed.", "Hashes match.", "Installing winrar...", "winrar has been installed.", " The install of winrar was successful.", "  Software installed as 'exe', install location is likely default.", "", "processhacker.install v2.39 [Approved] - Likely broken for FOSS users (due to download location changes)", "processhacker.install package files install completed. Performing other installation steps.", "Downloading processhacker.install ", "  from 'https://sourceforge.net/projects/processhacker/files/processhacker2/processhacker-2.39-setup.exe'", "", "Download of processhacker-2.39-setup.exe (2.16 MB) completed.", "Hashes match.", "Installing processhacker.install...", "processhacker.install has been installed.", "  processhacker.install can be automatically uninstalled.", " The install of processhacker.install was successful.", "  Software installed to 'C:\\Program Files\\Process Hacker 2\\'", "", "processhacker v2.39 [Approved] - Possibly broken", "processhacker package files install completed. Performing other installation steps.", " The install of processhacker was successful.", "  Software install location not explicitly set, it could be in package or", "  default install location of installer.", "", "Chocolatey installed 5/5 packages. ", " See the log for details (C:\\ProgramData\\chocolatey\\logs\\chocolatey.log).", "", "Installed:", " - processhacker.install v2.39", " - notepadplusplus.install v8.4.2", " - winrar v6.11.0.20220504", " - notepadplusplus v8.4.2", " - processhacker v2.39", "Installing the following packages:", "GoogleChrome", "By installing, you accept licenses for the packages.", "", "GoogleChrome v103.0.5060.114 [Approved]", "googlechrome package files install completed. Performing other installation steps.", "Downloading googlechrome 64 bit", "  from 'https://dl.google.com/tag/s/dl/chrome/install/googlechromestandaloneenterprise64.msi'", "", "Download of googlechromestandaloneenterprise64.msi (83.7 MB) completed.", "WARNING: Ignoring checksums due to feature checksumFiles turned off or option --ignore-checksums set.", "Installing googlechrome...", "googlechrome has been installed.", "  googlechrome may be able to be automatically uninstalled.", " The install of googlechrome was successful.", "  Software installed as 'MSI', install location is likely default.", "", "Chocolatey installed 1/1 packages. ", " See the log for details (C:\\ProgramData\\chocolatey\\logs\\chocolatey.log).", "[10:45] Utilties installation complete!"]}
+
+PLAY RECAP *********************************************************************
+192.168.1.17               : ok=29   changed=21   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+

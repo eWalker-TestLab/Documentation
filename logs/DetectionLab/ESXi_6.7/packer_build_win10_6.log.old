@@ -1,0 +1,523 @@
+2022/07/04 15:36:31 [INFO] Packer version: 1.8.2 [go1.17.11 linux amd64]
+2022/07/04 15:36:31 [TRACE] discovering plugins in /usr/bin
+2022/07/04 15:36:31 [TRACE] discovering plugins in /home/az/.config/packer/plugins
+2022/07/04 15:36:31 [TRACE] discovering plugins in .
+2022/07/04 15:36:31 [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2022/07/04 15:36:31 [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/az/.packerconfig
+2022/07/04 15:36:31 [WARN] Config file doesn't exist: /home/az/.packerconfig
+2022/07/04 15:36:31 [INFO] Setting cache directory: /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache
+2022/07/04 15:36:31 [TRACE] Starting internal plugin packer-builder-vmware-iso
+2022/07/04 15:36:31 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "plugin", "packer-builder-vmware-iso"}
+2022/07/04 15:36:31 Waiting for RPC address for: /usr/bin/packer
+2022/07/04 15:36:31 packer-builder-vmware-iso plugin: [INFO] Packer version: 1.8.2 [go1.17.11 linux amd64]
+2022/07/04 15:36:31 packer-builder-vmware-iso plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2022/07/04 15:36:31 packer-builder-vmware-iso plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/az/.packerconfig
+2022/07/04 15:36:31 packer-builder-vmware-iso plugin: [WARN] Config file doesn't exist: /home/az/.packerconfig
+2022/07/04 15:36:31 packer-builder-vmware-iso plugin: [INFO] Setting cache directory: /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache
+2022/07/04 15:36:31 packer-builder-vmware-iso plugin: args: []string{"packer-builder-vmware-iso"}
+2022/07/04 15:36:31 packer-builder-vmware-iso plugin: Plugin address: unix /tmp/packer-plugin2906583216
+2022/07/04 15:36:31 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin2906583216
+2022/07/04 15:36:31 packer-builder-vmware-iso plugin: Waiting for connection...
+2022/07/04 15:36:31 packer-builder-vmware-iso plugin: Serving a plugin connection...
+2022/07/04 15:36:31 [TRACE] Starting internal plugin packer-provisioner-windows-shell
+2022/07/04 15:36:31 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "plugin", "packer-provisioner-windows-shell"}
+2022/07/04 15:36:31 Waiting for RPC address for: /usr/bin/packer
+2022/07/04 15:36:31 packer-provisioner-windows-shell plugin: [INFO] Packer version: 1.8.2 [go1.17.11 linux amd64]
+2022/07/04 15:36:31 packer-provisioner-windows-shell plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2022/07/04 15:36:31 packer-provisioner-windows-shell plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/az/.packerconfig
+2022/07/04 15:36:31 packer-provisioner-windows-shell plugin: [WARN] Config file doesn't exist: /home/az/.packerconfig
+2022/07/04 15:36:31 packer-provisioner-windows-shell plugin: [INFO] Setting cache directory: /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache
+2022/07/04 15:36:31 packer-provisioner-windows-shell plugin: args: []string{"packer-provisioner-windows-shell"}
+2022/07/04 15:36:31 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin2489806053
+2022/07/04 15:36:31 packer-provisioner-windows-shell plugin: Plugin address: unix /tmp/packer-plugin2489806053
+2022/07/04 15:36:31 packer-provisioner-windows-shell plugin: Waiting for connection...
+2022/07/04 15:36:31 packer-provisioner-windows-shell plugin: Serving a plugin connection...
+2022/07/04 15:36:31 [TRACE] Starting internal plugin packer-provisioner-powershell
+2022/07/04 15:36:31 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "plugin", "packer-provisioner-powershell"}
+2022/07/04 15:36:31 Waiting for RPC address for: /usr/bin/packer
+2022/07/04 15:36:32 packer-provisioner-powershell plugin: [INFO] Packer version: 1.8.2 [go1.17.11 linux amd64]
+2022/07/04 15:36:32 packer-provisioner-powershell plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2022/07/04 15:36:32 packer-provisioner-powershell plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/az/.packerconfig
+2022/07/04 15:36:32 packer-provisioner-powershell plugin: [WARN] Config file doesn't exist: /home/az/.packerconfig
+2022/07/04 15:36:32 packer-provisioner-powershell plugin: [INFO] Setting cache directory: /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache
+2022/07/04 15:36:32 packer-provisioner-powershell plugin: args: []string{"packer-provisioner-powershell"}
+2022/07/04 15:36:32 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin3368031205
+2022/07/04 15:36:32 packer-provisioner-powershell plugin: Plugin address: unix /tmp/packer-plugin3368031205
+2022/07/04 15:36:32 packer-provisioner-powershell plugin: Waiting for connection...
+2022/07/04 15:36:32 packer-provisioner-powershell plugin: Serving a plugin connection...
+2022/07/04 15:36:32 [TRACE] Starting internal plugin packer-provisioner-windows-restart
+2022/07/04 15:36:32 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "plugin", "packer-provisioner-windows-restart"}
+2022/07/04 15:36:32 Waiting for RPC address for: /usr/bin/packer
+2022/07/04 15:36:32 packer-provisioner-windows-restart plugin: [INFO] Packer version: 1.8.2 [go1.17.11 linux amd64]
+2022/07/04 15:36:32 packer-provisioner-windows-restart plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2022/07/04 15:36:32 packer-provisioner-windows-restart plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/az/.packerconfig
+2022/07/04 15:36:32 packer-provisioner-windows-restart plugin: [WARN] Config file doesn't exist: /home/az/.packerconfig
+2022/07/04 15:36:32 packer-provisioner-windows-restart plugin: [INFO] Setting cache directory: /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache
+2022/07/04 15:36:32 packer-provisioner-windows-restart plugin: args: []string{"packer-provisioner-windows-restart"}
+2022/07/04 15:36:32 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin449066071
+2022/07/04 15:36:32 packer-provisioner-windows-restart plugin: Plugin address: unix /tmp/packer-plugin449066071
+2022/07/04 15:36:32 packer-provisioner-windows-restart plugin: Waiting for connection...
+2022/07/04 15:36:32 packer-provisioner-windows-restart plugin: Serving a plugin connection...
+2022/07/04 15:36:32 [TRACE] Starting internal plugin packer-provisioner-powershell
+2022/07/04 15:36:32 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "plugin", "packer-provisioner-powershell"}
+2022/07/04 15:36:32 Waiting for RPC address for: /usr/bin/packer
+2022/07/04 15:36:32 packer-provisioner-powershell plugin: [INFO] Packer version: 1.8.2 [go1.17.11 linux amd64]
+2022/07/04 15:36:32 packer-provisioner-powershell plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2022/07/04 15:36:32 packer-provisioner-powershell plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/az/.packerconfig
+2022/07/04 15:36:32 packer-provisioner-powershell plugin: [WARN] Config file doesn't exist: /home/az/.packerconfig
+2022/07/04 15:36:32 packer-provisioner-powershell plugin: [INFO] Setting cache directory: /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache
+2022/07/04 15:36:32 packer-provisioner-powershell plugin: args: []string{"packer-provisioner-powershell"}
+2022/07/04 15:36:32 packer-provisioner-powershell plugin: Plugin address: unix /tmp/packer-plugin2289208445
+2022/07/04 15:36:32 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin2289208445
+2022/07/04 15:36:32 packer-provisioner-powershell plugin: Waiting for connection...
+2022/07/04 15:36:32 packer-provisioner-powershell plugin: Serving a plugin connection...
+2022/07/04 15:36:32 [TRACE] Starting internal plugin packer-provisioner-windows-shell
+2022/07/04 15:36:32 Starting plugin: /usr/bin/packer []string{"/usr/bin/packer", "plugin", "packer-provisioner-windows-shell"}
+2022/07/04 15:36:32 Waiting for RPC address for: /usr/bin/packer
+2022/07/04 15:36:32 packer-provisioner-windows-shell plugin: [INFO] Packer version: 1.8.2 [go1.17.11 linux amd64]
+2022/07/04 15:36:32 packer-provisioner-windows-shell plugin: [INFO] PACKER_CONFIG env var not set; checking the default config file path
+2022/07/04 15:36:32 packer-provisioner-windows-shell plugin: [INFO] PACKER_CONFIG env var set; attempting to open config file: /home/az/.packerconfig
+2022/07/04 15:36:32 packer-provisioner-windows-shell plugin: [WARN] Config file doesn't exist: /home/az/.packerconfig
+2022/07/04 15:36:32 packer-provisioner-windows-shell plugin: [INFO] Setting cache directory: /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache
+2022/07/04 15:36:32 packer-provisioner-windows-shell plugin: args: []string{"packer-provisioner-windows-shell"}
+2022/07/04 15:36:32 Received unix RPC address for /usr/bin/packer: addr is /tmp/packer-plugin1389144902
+2022/07/04 15:36:32 packer-provisioner-windows-shell plugin: Plugin address: unix /tmp/packer-plugin1389144902
+2022/07/04 15:36:32 packer-provisioner-windows-shell plugin: Waiting for connection...
+2022/07/04 15:36:32 packer-provisioner-windows-shell plugin: Serving a plugin connection...
+2022/07/04 15:36:32 Preparing build: vmware-iso
+
+Your vmx data contains the following variable(s), which Packer normally sets
+when it generates its own default vmx template. This may cause your build to
+fail or behave unpredictably: numvcpus, memsize, scsi0.virtualDev
+
+2022/07/04 15:36:32 Build debug mode: false
+2022/07/04 15:36:32 Force build: false
+2022/07/04 15:36:32 On error: 
+2022/07/04 15:36:32 Waiting on builds to complete...
+2022/07/04 15:36:32 Starting build run: vmware-iso
+2022/07/04 15:36:32 Running builder: vmware-iso
+Warning: Warning when preparing build: "vmware-iso"
+2022/07/04 15:36:32 [INFO] (telemetry) Starting builder vmware-iso
+
+Your vmx data contains the following variable(s), which Packer normally sets
+when it generates its own default vmx template. This may cause your build to
+fail or behave unpredictably: numvcpus, memsize, scsi0.virtualDev
+
+
+[1;32mvmware-iso: output will be in this color.[0m
+
+2022/07/04 15:36:32 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/04 15:36:32 packer-builder-vmware-iso plugin: [DEBUG] handshaking with SSH
+2022/07/04 15:36:32 packer-builder-vmware-iso plugin: Keyboard interactive challenge:
+2022/07/04 15:36:32 packer-builder-vmware-iso plugin: -- User:
+2022/07/04 15:36:32 packer-builder-vmware-iso plugin: -- Instructions:
+2022/07/04 15:36:32 packer-builder-vmware-iso plugin: -- Question 1: Password:
+2022/07/04 15:36:32 packer-builder-vmware-iso plugin: Keyboard interactive challenge:
+2022/07/04 15:36:32 packer-builder-vmware-iso plugin: -- User:
+2022/07/04 15:36:32 packer-builder-vmware-iso plugin: -- Instructions:
+2022/07/04 15:36:32 packer-builder-vmware-iso plugin: [DEBUG] handshake complete!
+2022/07/04 15:36:32 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:36:32 packer-builder-vmware-iso plugin: [INFO] agent forwarding enabled
+2022/07/04 15:36:32 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:36:32 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv system version get
+2022/07/04 15:36:33 packer-builder-vmware-iso plugin: Connected to VMware ESXi 6.7.0 Releasebuild-14320388
+2022/07/04 15:36:33 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:36:33 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv system settings advanced list -o /Net/GuestIPHack
+2022/07/04 15:36:33 packer-builder-vmware-iso plugin: Testing against vmware driver *common.ESX5Driver, Success: true
+[1;32m==> vmware-iso: Retrieving ISO[0m
+[1;32m==> vmware-iso: Trying https://software-download.microsoft.com/download/pr/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso[0m
+2022/07/04 15:36:33 packer-builder-vmware-iso plugin: Acquiring lock for: https://software-download.microsoft.com/download/pr/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso?checksum=sha256%3Aab4862ba7d1644c27f27516d24cb21e6b39234eb3301e5f1fb365a78b22f79b3 (/home/az/workspace/eWalker/DetectionLab/Packer/packer_cache/d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso.lock)
+[1;32m==> vmware-iso: Trying https://software-download.microsoft.com/download/pr/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso?checksum=sha256%3Aab4862ba7d1644c27f27516d24cb21e6b39234eb3301e5f1fb365a78b22f79b3[0m
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: Leaving retrieve loop for ISO
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+[1;32m==> vmware-iso: https://software-download.microsoft.com/download/pr/18362.30.190401-1528.19h1_release_svc_refresh_CLIENTENTERPRISEEVAL_OEMRET_x64FRE_en-us.iso?checksum=sha256%3Aab4862ba7d1644c27f27516d24cb21e6b39234eb3301e5f1fb365a78b22f79b3 => /home/az/workspace/eWalker/DetectionLab/Packer/packer_cache/d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso[0m
+[1;32m==> vmware-iso: Configuring output and export directories...[0m
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: test -e "/vmfs/volumes/datastore1/Windows10"
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: [ERROR] Remote command exited with '1': test -e "/vmfs/volumes/datastore1/Windows10"
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: mkdir -p "/vmfs/volumes/datastore1/Windows10"
+[1;32m==> vmware-iso: Creating floppy disk...[0m
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: Floppy path: /tmp/packer5811526
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: Initializing block device backed by temporary file
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: Formatting the block device with a FAT filesystem...
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: Initializing FAT filesystem on block device
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: Reading the root directory from the filesystem
+[0;32m    vmware-iso: Copying files flatly from floppy_files[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/answer_files/10/Autounattend.xml[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/floppy/WindowsPowershell.lnk[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/floppy/PinTo10.exe[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/fixnetwork.ps1[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/rearm-windows.ps1[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/disable-screensaver.ps1[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/disable-winrm.ps1[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/enable-winrm.ps1[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/microsoft-updates.bat[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/win-updates.ps1[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/unattend.xml[0m
+[0;32m    vmware-iso: Copying file: ../../Packer/scripts/sysprep.bat[0m
+[0;32m    vmware-iso: Done copying files from floppy_files[0m
+[0;32m    vmware-iso: Collecting paths from floppy_dirs[0m
+[0;32m    vmware-iso: Resulting paths from floppy_dirs : [][0m
+[0;32m    vmware-iso: Done copying paths from floppy_dirs[0m
+[0;32m    vmware-iso: Copying files from floppy_content[0m
+[0;32m    vmware-iso: Done copying files from floppy_content[0m
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: No CD files specified. CD disk will not be made.
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: stat "/vmfs/volumes/datastore1/packer_cache/packer5811526"
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: [ERROR] Remote command exited with '1': stat "/vmfs/volumes/datastore1/packer_cache/packer5811526"
+[1;32m==> vmware-iso: Uploading Floppy to remote machine...[0m
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: Remote uploading: /tmp/packer5811526
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: mkdir -p "/vmfs/volumes/datastore1/packer_cache"
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: Verifying checksum of /vmfs/volumes/datastore1/packer_cache/packer5811526
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: stat "/vmfs/volumes/datastore1/packer_cache/packer5811526"
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: [ERROR] Remote command exited with '1': stat "/vmfs/volumes/datastore1/packer_cache/packer5811526"
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: Initial checksum did not match, uploading.
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: [DEBUG] Starting remote scp process:  scp -vt /vmfs/volumes/datastore1/packer_cache
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: [DEBUG] Started SCP session, beginning transfers...
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: [DEBUG] scp: Uploading packer5811526: perms=C0600 size=1474560
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: [DEBUG] SCP session complete, closing stdin pipe.
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: [DEBUG] Waiting for SSH session to complete.
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: [DEBUG] scp stderr (length 34): Sink: C0600 1474560 packer5811526
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: closing
+[0;32m    vmware-iso: packer5811526[0m 1.41 MiB / 1.41 MiB [===========================================================] 100.00% 0s
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+[1A[0;32m    vmware-iso: packer5811526[0m 1.41 MiB / 1.41 MiB [===========================================================] 100.00% 0s
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: stat "/vmfs/volumes/datastore1/packer_cache/packer5811526"
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: running: ab4862ba7d1644c27f27516d24cb21e6b39234eb3301e5f1fb365a78b22f79b3  /vmfs/volumes/datastore1/packer_cache/d48c36ef1e2c29895cbf01e82d405f0d93f875a4.iso | [sha256sum -c]
+2022/07/04 15:36:51 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:36:52 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: sha256sum -c
+[1;32m==> vmware-iso: Remote cache was verified skipping remote upload...[0m
+[1;32m==> vmware-iso: Creating required virtual machine disks[0m
+2022/07/04 15:37:20 packer-builder-vmware-iso plugin: [INFO] Creating disk with Path: Windows10/disk.vmdk and Size: 61440M
+2022/07/04 15:37:20 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:37:20 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vmkfstools -c 61440M -d zeroedthick -a lsilogic "/vmfs/volumes/datastore1/Windows10/disk.vmdk"
+[1;32m==> vmware-iso: Building and writing VMX file[0m
+2022/07/04 15:37:20 packer-builder-vmware-iso plugin: Writing VMX to: /tmp/vmw-iso2337280385/Windows10.vmx
+2022/07/04 15:37:20 packer-builder-vmware-iso plugin: Configuring VMX...
+2022/07/04 15:37:20 packer-builder-vmware-iso plugin: Setting VMX: 'numvcpus' = '2'
+2022/07/04 15:37:20 packer-builder-vmware-iso plugin: Setting VMX: 'time.synchronize.restore' = '0'
+2022/07/04 15:37:20 packer-builder-vmware-iso plugin: Setting VMX: 'time.synchronize.resume.disk' = '0'
+2022/07/04 15:37:20 packer-builder-vmware-iso plugin: Setting VMX: 'time.synchronize.shrink' = '0'
+2022/07/04 15:37:20 packer-builder-vmware-iso plugin: Setting VMX: 'memsize' = '2048'
+2022/07/04 15:37:20 packer-builder-vmware-iso plugin: Setting VMX: 'tools.syncTime' = '0'
+2022/07/04 15:37:20 packer-builder-vmware-iso plugin: Setting VMX: 'time.synchronize.tools.enable' = '0'
+2022/07/04 15:37:20 packer-builder-vmware-iso plugin: Setting VMX: 'ethernet0.networkName' = 'VM Network'
+2022/07/04 15:37:20 packer-builder-vmware-iso plugin: Setting VMX: 'time.synchronize.tools.startup' = '0'
+2022/07/04 15:37:20 packer-builder-vmware-iso plugin: Setting VMX: 'time.synchronize.resume.host' = '0'
+2022/07/04 15:37:20 packer-builder-vmware-iso plugin: Setting VMX: 'time.synchronize.continue' = '0'
+2022/07/04 15:37:20 packer-builder-vmware-iso plugin: Setting VMX: 'scsi0.virtualDev' = 'lsisas1068'
+2022/07/04 15:37:20 packer-builder-vmware-iso plugin: Floppy path present, setting in VMX
+2022/07/04 15:37:20 packer-builder-vmware-iso plugin: Writing VMX to: /tmp/vmw-iso2337280385/Windows10.vmx
+2022/07/04 15:37:20 packer-builder-vmware-iso plugin: Suppressing messages in VMX
+2022/07/04 15:37:20 packer-builder-vmware-iso plugin: Host IP for the VMware machine: 192.168.222.130
+2022/07/04 15:37:20 packer-builder-vmware-iso plugin: Looking for available port between 5900 and 5980
+2022/07/04 15:37:20 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:37:20 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: esxcli --formatter csv network ip connection list
+2022/07/04 15:37:21 packer-builder-vmware-iso plugin: ESXi listening on address [fe80:3::96c6:91ff:feaa:28d5]:427, port 427 unavailable for VNC
+2022/07/04 15:37:21 packer-builder-vmware-iso plugin: ESXi listening on address 192.168.137.156:427, port 427 unavailable for VNC
+2022/07/04 15:37:21 packer-builder-vmware-iso plugin: ESXi listening on address 0.0.0.0:443, port 443 unavailable for VNC
+2022/07/04 15:37:21 packer-builder-vmware-iso plugin: ESXi listening on address [::]:443, port 443 unavailable for VNC
+2022/07/04 15:37:21 packer-builder-vmware-iso plugin: ESXi listening on address 0.0.0.0:80, port 80 unavailable for VNC
+2022/07/04 15:37:21 packer-builder-vmware-iso plugin: ESXi listening on address [::]:80, port 80 unavailable for VNC
+2022/07/04 15:37:21 packer-builder-vmware-iso plugin: ESXi listening on address [::]:22, port 22 unavailable for VNC
+2022/07/04 15:37:21 packer-builder-vmware-iso plugin: ESXi listening on address 0.0.0.0:22, port 22 unavailable for VNC
+2022/07/04 15:37:21 packer-builder-vmware-iso plugin: ESXi listening on address [::]:9080, port 9080 unavailable for VNC
+2022/07/04 15:37:21 packer-builder-vmware-iso plugin: ESXi listening on address [::]:8000, port 8000 unavailable for VNC
+2022/07/04 15:37:21 packer-builder-vmware-iso plugin: ESXi listening on address [::]:902, port 902 unavailable for VNC
+2022/07/04 15:37:21 packer-builder-vmware-iso plugin: ESXi listening on address 0.0.0.0:902, port 902 unavailable for VNC
+2022/07/04 15:37:21 packer-builder-vmware-iso plugin: ESXi listening on address [::]:8300, port 8300 unavailable for VNC
+2022/07/04 15:37:21 packer-builder-vmware-iso plugin: Trying address: 192.168.137.156:5900...
+2022/07/04 15:37:23 packer-builder-vmware-iso plugin: Found available VNC port: 192.168.137.156:5900
+2022/07/04 15:37:23 packer-builder-vmware-iso plugin: Writing VMX to: /tmp/vmw-iso2337280385/Windows10.vmx
+[1;32m==> vmware-iso: Registering remote VM...[0m
+2022/07/04 15:37:23 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:37:23 packer-builder-vmware-iso plugin: [DEBUG] Starting remote scp process:  scp -vt /vmfs/volumes/datastore1/Windows10
+2022/07/04 15:37:23 packer-builder-vmware-iso plugin: [DEBUG] Started SCP session, beginning transfers...
+2022/07/04 15:37:23 packer-builder-vmware-iso plugin: [DEBUG] Copying input data into temporary file so we can read the length
+2022/07/04 15:37:23 packer-builder-vmware-iso plugin: [DEBUG] scp: Uploading Windows10.vmx: perms=C0644 size=3204
+2022/07/04 15:37:23 packer-builder-vmware-iso plugin: [DEBUG] SCP session complete, closing stdin pipe.
+2022/07/04 15:37:23 packer-builder-vmware-iso plugin: [DEBUG] Waiting for SSH session to complete.
+2022/07/04 15:37:23 packer-builder-vmware-iso plugin: [DEBUG] scp stderr (length 31): Sink: C0644 3204 Windows10.vmx
+2022/07/04 15:37:23 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:37:23 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd solo/registervm "/vmfs/volumes/datastore1/Windows10/Windows10.vmx"
+2022/07/04 15:37:23 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+[1;32m==> vmware-iso: Starting virtual machine...[0m
+2022/07/04 15:37:23 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.on 4
+2022/07/04 15:37:24 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:37:24 packer-builder-vmware-iso plugin: [DEBUG] starting remote command: vim-cmd vmsvc/power.getstate 4
+[1;32m==> vmware-iso: Connecting to VNC...[0m
+[1;32m==> vmware-iso: Waiting 6m0s for boot...[0m
+[1;32m==> vmware-iso: Typing the boot command over VNC...[0m
+2022/07/04 15:49:18 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:49:37 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'ssh: unexpected packet in response to channel open: <nil>', attempting reconnect
+2022/07/04 15:49:37 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/04 15:49:37 packer-builder-vmware-iso plugin: [DEBUG] handshaking with SSH
+2022/07/04 15:49:56 packer-builder-vmware-iso plugin: [DEBUG] Unable to get address during connection step: ssh: handshake failed: read tcp 192.168.222.130:44720->192.168.137.156:22: read: connection reset by peer
+2022/07/04 15:49:56 packer-builder-vmware-iso plugin: Waiting for WinRM, up to timeout: 4h0m0s
+[1;32m==> vmware-iso: Waiting for WinRM to become available...[0m
+2022/07/04 15:49:56 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:49:56 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/04 15:49:56 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/04 15:49:56 packer-builder-vmware-iso plugin: [DEBUG] handshaking with SSH
+2022/07/04 15:50:15 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: ssh: handshake failed: read tcp 192.168.222.130:44722->192.168.137.156:22: read: connection reset by peer
+2022/07/04 15:50:20 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:50:20 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/04 15:50:20 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/04 15:50:20 packer-builder-vmware-iso plugin: [DEBUG] handshaking with SSH
+2022/07/04 15:50:39 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: ssh: handshake failed: read tcp 192.168.222.130:44724->192.168.137.156:22: read: connection reset by peer
+2022/07/04 15:50:44 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:50:44 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/04 15:50:44 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/04 15:50:44 packer-builder-vmware-iso plugin: [DEBUG] handshaking with SSH
+2022/07/04 15:51:03 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: ssh: handshake failed: read tcp 192.168.222.130:44726->192.168.137.156:22: read: connection reset by peer
+2022/07/04 15:51:08 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:51:08 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/04 15:51:08 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/04 15:51:08 packer-builder-vmware-iso plugin: [DEBUG] handshaking with SSH
+2022/07/04 15:51:27 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: ssh: handshake failed: read tcp 192.168.222.130:44728->192.168.137.156:22: read: connection reset by peer
+2022/07/04 15:51:32 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:51:32 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/04 15:51:32 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/04 15:51:32 packer-builder-vmware-iso plugin: [DEBUG] handshaking with SSH
+2022/07/04 15:51:51 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: ssh: handshake failed: read tcp 192.168.222.130:44730->192.168.137.156:22: read: connection reset by peer
+2022/07/04 15:51:56 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:51:56 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/04 15:51:56 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/04 15:51:56 packer-builder-vmware-iso plugin: [DEBUG] handshaking with SSH
+2022/07/04 15:52:15 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: ssh: handshake failed: read tcp 192.168.222.130:44732->192.168.137.156:22: read: connection reset by peer
+2022/07/04 15:52:20 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:52:20 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/04 15:52:20 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/04 15:52:20 packer-builder-vmware-iso plugin: [DEBUG] handshaking with SSH
+2022/07/04 15:52:38 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: ssh: handshake failed: read tcp 192.168.222.130:44734->192.168.137.156:22: read: connection reset by peer
+2022/07/04 15:52:44 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/04 15:52:44 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/04 15:52:44 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/04 15:52:44 packer-builder-vmware-iso plugin: [DEBUG] handshaking with SSH
+2022/07/05 14:44:08 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: ssh: handshake failed: read tcp 192.168.222.130:44736->192.168.137.156:22: read: connection reset by peer
+2022/07/05 14:44:13 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:44:13 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:44:13 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:44:15 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:15 packer-builder-vmware-iso plugin: [DEBUG] Error getting WinRM host: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:17 packer-provisioner-windows-shell plugin: Received interrupt signal (count: 1). Ignoring.
+2022/07/05 14:44:17 packer-builder-vmware-iso plugin: Received interrupt signal (count: 1). Ignoring.
+2022/07/05 14:44:17 packer-provisioner-powershell plugin: Received interrupt signal (count: 1). Ignoring.
+2022/07/05 14:44:17 packer-provisioner-windows-shell plugin: Received interrupt signal (count: 1). Ignoring.
+2022/07/05 14:44:17 packer-provisioner-windows-restart plugin: Received interrupt signal (count: 1). Ignoring.
+2022/07/05 14:44:17 packer-provisioner-powershell plugin: Received interrupt signal (count: 1). Ignoring.
+Cancelling build after receiving interrupt
+2022/07/05 14:44:17 Cancelling builder after context cancellation context canceled
+2022/07/05 14:44:17 packer-builder-vmware-iso plugin: Interrupt detected, quitting waiting for WinRM.
+2022/07/05 14:44:17 packer-builder-vmware-iso plugin: [INFO] WinRM wait cancelled. Exiting loop.
+2022/07/05 14:44:17 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:44:17 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:44:17 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:44:19 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+[1;32m==> vmware-iso: Destroying virtual machine...[0m
+2022/07/05 14:44:19 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:44:19 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:44:19 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:44:21 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:21 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:44:21 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:44:21 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+[1;31m==> vmware-iso: Error destroying VM: dial tcp 192.168.137.156:22: connect: connection refused[0m
+2022/07/05 14:44:23 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:23 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:24 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:44:24 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:44:24 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:44:26 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:26 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:27 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:44:27 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:44:27 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:44:29 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:29 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:30 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:44:30 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:44:30 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:44:32 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:32 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:33 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:44:33 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:44:33 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:44:35 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:35 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:36 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:44:36 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:44:36 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:44:38 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:38 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:39 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:44:39 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:44:39 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:44:41 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:41 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:42 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:44:42 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:44:42 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:44:44 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:44 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:45 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:44:45 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:44:45 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:44:47 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:47 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:48 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:44:48 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:44:48 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:44:50 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:50 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:51 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:44:51 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:44:51 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:44:53 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:53 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:54 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:44:54 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:44:54 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:44:56 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:56 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:57 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:44:57 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:44:57 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:44:59 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:44:59 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:00 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:45:00 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:45:00 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:45:02 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:02 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:03 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:45:03 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:45:03 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:45:05 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:05 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:06 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:45:06 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:45:06 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:45:08 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:08 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:09 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:45:09 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:45:09 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:45:11 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:11 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:12 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:45:12 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:45:12 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:45:14 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:14 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:15 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:45:15 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:45:15 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:45:17 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:17 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:18 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:45:18 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:45:18 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:45:20 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:20 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:21 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:45:21 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:45:21 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:45:23 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:23 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:24 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:45:24 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:45:24 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:45:26 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:26 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:27 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:45:27 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:45:27 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:45:29 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:29 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:30 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:45:30 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:45:30 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:45:32 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:32 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:33 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:45:33 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:45:33 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:45:35 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:35 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:36 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:45:36 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:45:36 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:45:38 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:38 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:39 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:45:39 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:45:39 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:45:41 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:41 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:42 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:45:42 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:45:42 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:45:44 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:44 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:45 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:45:45 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:45:45 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:45:47 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:47 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:48 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:45:48 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:45:48 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:45:50 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:50 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:51 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:45:51 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:45:51 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:45:53 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:53 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:54 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:45:54 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:45:54 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:45:56 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:56 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:57 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:45:57 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:45:57 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:45:59 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:45:59 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:46:00 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:46:00 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:46:00 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:46:02 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:46:02 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:46:03 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:46:03 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:46:03 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:46:05 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:46:05 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:46:06 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:46:06 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:46:06 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:46:08 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:46:08 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:46:09 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:46:09 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:46:09 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:46:11 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:46:11 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:46:12 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:46:12 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:46:12 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:46:14 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:46:14 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:46:15 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:46:15 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:46:15 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH
+2022/07/05 14:46:17 packer-builder-vmware-iso plugin: [ERROR] reconnection error: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:46:17 packer-builder-vmware-iso plugin: error destroying vm: dial tcp 192.168.137.156:22: connect: connection refused
+2022/07/05 14:46:18 packer-builder-vmware-iso plugin: [DEBUG] Opening new ssh session
+2022/07/05 14:46:18 packer-builder-vmware-iso plugin: [ERROR] ssh session open error: 'client not available', attempting reconnect
+2022/07/05 14:46:18 packer-builder-vmware-iso plugin: [DEBUG] reconnecting to TCP connection for SSH

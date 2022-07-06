@@ -1,0 +1,53 @@
+2022-07-05T17:04:06.201+0800 [INFO]  Terraform version: 1.2.4
+2022-07-05T17:04:06.201+0800 [DEBUG] using github.com/hashicorp/go-tfe v1.0.0
+2022-07-05T17:04:06.201+0800 [DEBUG] using github.com/hashicorp/hcl/v2 v2.12.0
+2022-07-05T17:04:06.201+0800 [DEBUG] using github.com/hashicorp/terraform-config-inspect v0.0.0-20210209133302-4fd17a0faac2
+2022-07-05T17:04:06.201+0800 [DEBUG] using github.com/hashicorp/terraform-svchost v0.0.0-20200729002733-f050f53b9734
+2022-07-05T17:04:06.201+0800 [DEBUG] using github.com/zclconf/go-cty v1.10.0
+2022-07-05T17:04:06.201+0800 [INFO]  Go runtime version: go1.18.1
+2022-07-05T17:04:06.201+0800 [INFO]  CLI args: []string{"terraform", "init"}
+2022-07-05T17:04:06.201+0800 [DEBUG] Attempting to open CLI config file: /home/az/.terraformrc
+2022-07-05T17:04:06.201+0800 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2022-07-05T17:04:06.202+0800 [DEBUG] ignoring non-existing provider search directory terraform.d/plugins
+2022-07-05T17:04:06.202+0800 [DEBUG] ignoring non-existing provider search directory /home/az/.terraform.d/plugins
+2022-07-05T17:04:06.202+0800 [DEBUG] ignoring non-existing provider search directory /home/az/.local/share/terraform/plugins
+2022-07-05T17:04:06.202+0800 [DEBUG] ignoring non-existing provider search directory /usr/share/ubuntu/terraform/plugins
+2022-07-05T17:04:06.202+0800 [DEBUG] ignoring non-existing provider search directory /usr/local/share/terraform/plugins
+2022-07-05T17:04:06.202+0800 [DEBUG] ignoring non-existing provider search directory /usr/share/terraform/plugins
+2022-07-05T17:04:06.202+0800 [DEBUG] ignoring non-existing provider search directory /var/lib/snapd/desktop/terraform/plugins
+2022-07-05T17:04:06.205+0800 [INFO]  CLI command args: []string{"init"}
+
+[0m[1mInitializing the backend...[0m
+2022-07-05T17:04:06.218+0800 [DEBUG] New state was assigned lineage "762ff5f4-9d31-7134-be8a-e4b5fd5b7861"
+2022-07-05T17:04:06.218+0800 [DEBUG] checking for provisioner in "."
+2022-07-05T17:04:06.222+0800 [DEBUG] checking for provisioner in "/usr/bin"
+
+[0m[1mInitializing provider plugins...[0m
+- Finding josenk/esxi versions matching "1.10.2"...
+2022-07-05T17:04:06.223+0800 [DEBUG] Service discovery for registry.terraform.io at https://registry.terraform.io/.well-known/terraform.json
+2022-07-05T17:04:06.299+0800 [DEBUG] GET https://registry.terraform.io/v1/providers/josenk/esxi/versions
+2022-07-05T17:04:06.530+0800 [DEBUG] GET https://registry.terraform.io/v1/providers/josenk/esxi/1.10.2/download/linux/amd64
+2022-07-05T17:04:06.557+0800 [DEBUG] GET https://github.com/josenk/terraform-provider-esxi/releases/download/v1.10.2/terraform-provider-esxi_1.10.2_SHA256SUMS
+2022-07-05T17:04:07.506+0800 [DEBUG] GET https://github.com/josenk/terraform-provider-esxi/releases/download/v1.10.2/terraform-provider-esxi_1.10.2_SHA256SUMS.sig
+- Installing josenk/esxi v1.10.2...
+2022-07-05T17:04:09.617+0800 [DEBUG] Provider signed by F3C1CF43C702F553 Jonathan Senkerik <josenk@jintegrate.co>
+- Installed josenk/esxi v1.10.2 (self-signed, key ID [0m[1mF3C1CF43C702F553[0m[0m)
+
+Partner and community providers are signed by their developers.
+If you'd like to know more about provider signing, you can read about it here:
+https://www.terraform.io/docs/cli/plugins/signing.html
+
+Terraform has created a lock file [1m.terraform.lock.hcl[0m to record the provider
+selections it made above. Include this file in your version control repository
+so that Terraform can guarantee to make the same selections by default when
+you run "terraform init" in the future.[0m
+
+[0m[1m[32mTerraform has been successfully initialized![0m[32m[0m
+[0m[32m
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.[0m
