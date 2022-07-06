@@ -91,7 +91,7 @@ Refer to the instructions [here](https://clo.ng/blog/detectionlab-on-esxi/) in t
    esxcli system settings advanced set -o /Net/GuestIPHack -i 1
    ```
 
-3. Open VNC ports on the firewall. You can either configure it temporarily following the instructions [here](https://nickcharlton.net/posts/using-packer-esxi-6.html) or permanently [here](https://github.com/sukster/ESXi-Packer-VNC). More info on the [official article 1](https://kb.vmware.com/s/article/2008226) and [official article 2](https://kb.vmware.com/s/article/2043564). You can check it by the following command.
+3. Open VNC ports on the firewall. You can either configure it **temporarily** following the instructions [here](https://nickcharlton.net/posts/using-packer-esxi-6.html) or **permanently** [here](https://github.com/sukster/ESXi-Packer-VNC). More info on the [official article 1](https://kb.vmware.com/s/article/2008226) and [official article 2](https://kb.vmware.com/s/article/2043564). You can check it by the following command.
 
    ```bash
    esxcli network firewall ruleset list | grep vnc
@@ -101,7 +101,9 @@ Refer to the instructions [here](https://clo.ng/blog/detectionlab-on-esxi/) in t
 
 First of all, clone the repository to your workspace by `git clone git@github.com:clong/DetectionLab.git`
 
-1. Edit `DetectionLab/ESXi/Packer/variables.json` as described [here](https://detectionlab.network/deployment/esxi/#steps).
+1. Edit `DetectionLab/ESXi/Packer/variables.json` to match your ESXi configuration. The `esxi_network_with_dhcp_and_internet` variable refers to any ESXi network that will be able to provide DHCP and internet access to the VM while it’s being built in *Packer*. This is usually VM Network. The file should be similar to the following. More info [here](https://detectionlab.network/deployment/esxi/#steps).
+
+   ![variables.json](img/DetectionLab/variables.json.jpg)
 
 2. Since ESXi 6.7 is used, edit `DetectionLab/ESXi/Packer/windows_10_esxi.json`, `DetectionLab/ESXi/Packer/windows_2016_esxi.json` and `DetectionLab/ESXi/Packer/ubuntu2004_esxi.json` as described [here](https://detectionlab.network/deployment/esxi/#special-configuration-for-esxi-6x).
 
@@ -117,9 +119,9 @@ After all the prerequisites are satisfied, do the following.
    PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json ubuntu2004_esxi.json
    ```
 
-   After the *Packer* build finishes, verify that you now see `Windows10`, `WindowsServer2016`, and `Ubuntu2004` in the ESXi console.
+   After *Packer* build finish, verify that you now see `Windows10`, `WindowsServer2016`, and `Ubuntu2004` in the ESXi console.
 
-2. In `DetectionLab/ESXi`, Create a `terraform.tfvars` file to override the default variables listed in `variables.tf`. The file should be like the following:
+2. In `DetectionLab/ESXi`, Create a `terraform.tfvars` file to override the default variables listed in `variables.tf`. The file should be similar to the following.
 
    ![terraform.tfvars](img/DetectionLab/terraform.tfvars.jpg)
 
@@ -128,6 +130,27 @@ After all the prerequisites are satisfied, do the following.
    ```bash
    terraform init
    terraform apply
+   ```
+
+4. After *Terraform* build finish, change the working directory to `DetectionLab/ESXi/ansible`.
+
+5. Edit `DetectionLab/ESXi/ansible/inventory.yml` and replace the IP Addresses with the respective IP Addresses of your corresponding ESXi VMs. The file should be similar to the following.
+
+   ![inventory.yml](img/DetectionLab/inventory.yml.jpg)
+
+6. Take snapshots of all of the VMs. Then run the following command.
+
+   ```bash
+   ansible-playbook -v detectionlab.yml
+   ```
+
+7. After *Ansible* build finish, you should see results similar to the following.
+
+   ```log
+   192.168.1.227              : ok=39   changed=24   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+   192.168.1.46               : ok=40   changed=20   unreachable=0    failed=0    skipped=2    rescued=0    ignored=0
+   192.168.1.60               : ok=25   changed=16   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+   192.168.1.17               : ok=29   changed=21   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
    ```
 
 ## Things to Notice
@@ -153,4 +176,13 @@ After all the prerequisites are satisfied, do the following.
   ```bash
   TF_LOG=DEBUG terraform init &> logs/terraform_init_0.log
   TF_LOG=DEBUG terraform apply &> logs/terraform_apply_0.log
+  ```
+
+- Outputting *Ansible* debug information is highly recommended. To do so, use the following commands instead of the original build commands. More info by `ansible --help` command.
+
+  ```bash
+  ansible-playbook -vvv detectionlab.yml --tags "logger" &> logs/ansible-playbook_logger.log
+  ansible-playbook -vvv detectionlab.yml --tags "dc" &> logs/ansible-playbook_dc.log
+  ansible-playbook -vvv detectionlab.yml --tags "wef" &> logs/ansible-playbook_wef.log
+  ansible-playbook -vvv detectionlab.yml --tags "win10" &> logs/ansible-playbook_win10.log
   ```
