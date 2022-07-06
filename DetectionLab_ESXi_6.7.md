@@ -8,6 +8,8 @@ Although this setup is done using Ubuntu 20.04 guest OS in VMware, the same shou
 
 #### Ubuntu Environment Configurations
 
+Note that **all the commands in this section should be executed on the Ubuntu machine**.
+
 1. Before starting building the lab, updating the system is recommended. This can be done by executing `sudo apt update` and then `sudo apt full-upgrade -y`. Finally, `reboot` the machine.
 
 2. Install necessary tools by executing the following command.
@@ -77,6 +79,8 @@ Although this setup is done using Ubuntu 20.04 guest OS in VMware, the same shou
 
 #### ESXi Environment Configurations
 
+Note that **all the commands in this section should be executed on the ESXi machine**.
+
 Refer to the instructions [here](https://clo.ng/blog/detectionlab-on-esxi/) in the Software section and also the instructions [here](https://nickcharlton.net/posts/using-packer-esxi-6.html). The following steps should be executed on the ESXi machine.
 
 1. The ESXi instance must have at least two separate networks - one that is accessible from your current machine and has internet connectivity and a HostOnly network to allow the VMs to communicate over a private network. The network that provides DHCP and internet connectivity must also be reachable from the host that is running *Terraform* - ensure your firewall is configured to allow this. Below are some references.
@@ -98,6 +102,8 @@ Refer to the instructions [here](https://clo.ng/blog/detectionlab-on-esxi/) in t
    ```
 
 #### DetectionLab Project File Modifications
+
+Note that **all the commands in this section should be executed on the Ubuntu machine**.
 
 First of all, clone the repository to your workspace by `git clone git@github.com:clong/DetectionLab.git`
 
@@ -169,6 +175,12 @@ After all the prerequisites are satisfied, do the following.
   PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json windows_10_esxi.json &> logs/packer_build_win10.log
   PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json windows_2016_esxi.json &> logs/packer_build_winserver2016.log
   PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json ubuntu2004_esxi.json &> logs/packer_build_ubuntu20.log
+  ```
+
+  To view the log files in real-time, use the following command.
+
+  ```bash
+  tail -f <PATH TO YOUR LOG FILE>
   ```
 
 - Outputting *Terraform* debug information is highly recommended. To do so, use the following commands instead of the original build commands. More info on the [official website](https://www.terraform.io/internals/debugging).
