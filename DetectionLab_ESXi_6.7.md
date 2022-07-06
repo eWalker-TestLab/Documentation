@@ -10,13 +10,13 @@ Although this setup is done using Ubuntu 20.04 guest OS in VMware, the same shou
 
 1. Before starting building the lab, updating the system is recommended. This can be done by executing `sudo apt update` and then `sudo apt full-upgrade -y`. Finally, `reboot` the machine.
 
-2. Install necessary tools by executing the following command:
+2. Install necessary tools by executing the following command.
 
    ```bash
    sudo apt install build-essential curl git gnupg software-properties-common
    ```
 
-3. Install *Terraform* by executing the following commands (more info on [the official website](https://www.terraform.io/downloads)):
+3. Install *Terraform* by executing the following commands. More info on [the official website](https://www.terraform.io/downloads).
 
    ```bash
    curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
@@ -24,7 +24,7 @@ Although this setup is done using Ubuntu 20.04 guest OS in VMware, the same shou
    sudo apt-get update && sudo apt-get install terraform
    ```
 
-4. Install *Vagrant* by executing the following commands (more info on [the official website](https://www.vagrantup.com/downloads)):
+4. Install *Vagrant* by executing the following commands. More info on [the official website](https://www.vagrantup.com/downloads).
 
    ```bash
    curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
@@ -32,7 +32,7 @@ Although this setup is done using Ubuntu 20.04 guest OS in VMware, the same shou
    sudo apt-get update && sudo apt-get install vagrant
    ```
 
-5. Install *Packer* by executing the following commands (more info on [the official website](https://www.packer.io/downloads)):
+5. Install *Packer* by executing the following commands. More info on [the official website](https://www.packer.io/downloads).
 
    ```bash
    curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
@@ -40,7 +40,7 @@ Although this setup is done using Ubuntu 20.04 guest OS in VMware, the same shou
    sudo apt-get update && sudo apt-get install packer
    ```
 
-6. Install *Ansible* using the following commands. More details can be found in the [official documentation](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
+6. Install *Ansible* using the following commands. More info on [the official documentation](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
 
    ```bash
    sudo apt update
@@ -56,7 +56,7 @@ Although this setup is done using Ubuntu 20.04 guest OS in VMware, the same shou
    pip3 install pywinrm
    ```
 
-8. Install `sshpass` to allow *Ansible* to use password login by the following command:
+8. Install `sshpass` to allow *Ansible* to use password login by the following command.
 
    ```bash
    sudo apt install sshpass
@@ -68,7 +68,7 @@ Although this setup is done using Ubuntu 20.04 guest OS in VMware, the same shou
    echo 'export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES' >> ~/.bash_profile
    ```
 
-10. Install `ovftool`. In Ubuntu, open a web browser and download [ovftool](https://developer.vmware.com/web/tool/4.4.0/ovf). Unzip the downloaded file and add its path to your `PATH` environment variable by the following commands. Refer [here](https://docs.vmware.com/en/VMware-Telco-Cloud-Operations/1.4.0/deployment-guide-140/GUID-95301A42-F6F6-4BA9-B3A0-A86A268754B6.html).
+10. Install `ovftool`. In Ubuntu, open a web browser and download [ovftool](https://developer.vmware.com/web/tool/4.4.0/ovf). Unzip the downloaded file and add its path to your `PATH` environment variable by the following commands. More info [here](https://docs.vmware.com/en/VMware-Telco-Cloud-Operations/1.4.0/deployment-guide-140/GUID-95301A42-F6F6-4BA9-B3A0-A86A268754B6.html).
 
     ```bash
     unzip <YOUR DOWNLOADED FILE>
@@ -77,15 +77,15 @@ Although this setup is done using Ubuntu 20.04 guest OS in VMware, the same shou
 
 #### ESXi Environment Configurations
 
-Refer to the instructions [here](https://clo.ng/blog/detectionlab-on-esxi/) in the Software section and also [here](https://nickcharlton.net/posts/using-packer-esxi-6.html). The following steps should be executed on the ESXi machine.
+Refer to the instructions [here](https://clo.ng/blog/detectionlab-on-esxi/) in the Software section and also the instructions [here](https://nickcharlton.net/posts/using-packer-esxi-6.html). The following steps should be executed on the ESXi machine.
 
-1. The ESXi instance must have at least two separate networks - one that is accessible from your current machine and has internet connectivity and a HostOnly network to allow the VMs to communicate over a private network. The network that provides DHCP and internet connectivity must also be reachable from the host that is running Terraform - ensure your firewall is configured to allow this. Below are some references.
+1. The ESXi instance must have at least two separate networks - one that is accessible from your current machine and has internet connectivity and a HostOnly network to allow the VMs to communicate over a private network. The network that provides DHCP and internet connectivity must also be reachable from the host that is running *Terraform* - ensure your firewall is configured to allow this. Below are some references.
 
    ![vSwitch](./img/DetectionLab/ESXi_vSwitch.jpg)
 
    ![Network](./img/DetectionLab/ESXi_Network.jpg)
 
-2. Allow Packer to infer the guest IP from ESXi without the VM needing to report it itself by the following command.
+2. Allow *Packer* to infer the guest IP from ESXi without the VM needing to report it itself by the following command.
 
    ```bash
    esxcli system settings advanced set -o /Net/GuestIPHack -i 1
