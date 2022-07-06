@@ -14,13 +14,13 @@ Note that **all the commands in this section should be executed on the Ubuntu ma
 
 2. Install necessary tools by executing the following command.
 
-   ```bash
+   ```shell
    sudo apt install build-essential curl git gnupg software-properties-common
    ```
 
 3. Install *Terraform* by executing the following commands. More info on [the official website](https://www.terraform.io/downloads).
 
-   ```bash
+   ```shell
    curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
    sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
    sudo apt-get update && sudo apt-get install terraform
@@ -28,7 +28,7 @@ Note that **all the commands in this section should be executed on the Ubuntu ma
 
 4. Install *Vagrant* by executing the following commands. More info on [the official website](https://www.vagrantup.com/downloads).
 
-   ```bash
+   ```shell
    curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
    sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
    sudo apt-get update && sudo apt-get install vagrant
@@ -36,7 +36,7 @@ Note that **all the commands in this section should be executed on the Ubuntu ma
 
 5. Install *Packer* by executing the following commands. More info on [the official website](https://www.packer.io/downloads).
 
-   ```bash
+   ```shell
    curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
    sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
    sudo apt-get update && sudo apt-get install packer
@@ -44,7 +44,7 @@ Note that **all the commands in this section should be executed on the Ubuntu ma
 
 6. Install *Ansible* using the following commands. More info on [the official documentation](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
 
-   ```bash
+   ```shell
    sudo apt update
    sudo apt install software-properties-common
    sudo add-apt-repository --yes --update ppa:ansible/ansible
@@ -54,25 +54,25 @@ Note that **all the commands in this section should be executed on the Ubuntu ma
 
 7. Install `pywinrm` using the following command.
 
-   ```bash
+   ```shell
    pip3 install pywinrm
    ```
 
 8. Install `sshpass` to allow *Ansible* to use password login by the following command.
 
-   ```bash
+   ```shell
    sudo apt install sshpass
    ```
 
 9. To avoid a bug with *Ansible*, set an environment variable using the following command.
 
-   ```bash
+   ```shell
    echo 'export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES' >> ~/.bash_profile
    ```
 
 10. Install `ovftool`. In Ubuntu, open a web browser and download [ovftool](https://developer.vmware.com/web/tool/4.4.0/ovf). Unzip the downloaded file and add its path to your `PATH` environment variable by the following commands. More info [here](https://docs.vmware.com/en/VMware-Telco-Cloud-Operations/1.4.0/deployment-guide-140/GUID-95301A42-F6F6-4BA9-B3A0-A86A268754B6.html).
 
-    ```bash
+    ```shell
     unzip <YOUR DOWNLOADED FILE>
     echo 'export PATH="$PATH:<PATH TO YOUR UNZIPPED FOLDER>"' >> ~/.bash_profile
     ```
@@ -91,13 +91,13 @@ Refer to the instructions [here](https://clo.ng/blog/detectionlab-on-esxi/) in t
 
 2. Allow *Packer* to infer the guest IP from ESXi without the VM needing to report it itself by the following command.
 
-   ```bash
+   ```shell
    esxcli system settings advanced set -o /Net/GuestIPHack -i 1
    ```
 
 3. Open VNC ports on the firewall. You can either configure it **temporarily** following the instructions [here](https://nickcharlton.net/posts/using-packer-esxi-6.html) or **permanently** [here](https://github.com/sukster/ESXi-Packer-VNC). More info on the [official article 1](https://kb.vmware.com/s/article/2008226) and [official article 2](https://kb.vmware.com/s/article/2043564). You can check it by the following command.
 
-   ```bash
+   ```shell
    esxcli network firewall ruleset list | grep vnc
    ```
 
@@ -119,7 +119,7 @@ After all the prerequisites are satisfied, do the following.
 
 1. Execute the following commands from the `DetectionLab/ESXi/Packer` directory.
 
-   ```bash
+   ```shell
    PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json windows_10_esxi.json
    PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json windows_2016_esxi.json
    PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json ubuntu2004_esxi.json
@@ -133,7 +133,7 @@ After all the prerequisites are satisfied, do the following.
 
 3. In `DetectionLab/ESXi`, execute the following commands.
 
-   ```bash
+   ```shell
    terraform init
    terraform apply
    ```
@@ -146,7 +146,7 @@ After all the prerequisites are satisfied, do the following.
 
 6. Take snapshots of all of the VMs. Then run the following command.
 
-   ```bash
+   ```shell
    ansible-playbook -v detectionlab.yml
    ```
 
@@ -171,7 +171,7 @@ After all the prerequisites are satisfied, do the following.
 
 - Outputting *Packer* debug information is highly recommended. To do so, use the following commands instead of the original build commands. More info on the [official website](https://www.packer.io/docs/debugging).
 
-  ```bash
+  ```shell
   PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json windows_10_esxi.json &> logs/packer_build_win10.log
   PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json windows_2016_esxi.json &> logs/packer_build_winserver2016.log
   PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json ubuntu2004_esxi.json &> logs/packer_build_ubuntu20.log
@@ -179,20 +179,20 @@ After all the prerequisites are satisfied, do the following.
 
   To view the log files in real-time, use the following command.
 
-  ```bash
+  ```shell
   tail -f <PATH TO YOUR LOG FILE>
   ```
 
 - Outputting *Terraform* debug information is highly recommended. To do so, use the following commands instead of the original build commands. More info on the [official website](https://www.terraform.io/internals/debugging).
 
-  ```bash
+  ```shell
   TF_LOG=DEBUG terraform init &> logs/terraform_init_0.log
   TF_LOG=DEBUG terraform apply &> logs/terraform_apply_0.log
   ```
 
 - Outputting *Ansible* debug information is highly recommended. To do so, use the following commands instead of the original build commands. More info by `ansible --help` command.
 
-  ```bash
+  ```shell
   ansible-playbook -vvv detectionlab.yml --tags "logger" &> logs/ansible-playbook_logger.log
   ansible-playbook -vvv detectionlab.yml --tags "dc" &> logs/ansible-playbook_dc.log
   ansible-playbook -vvv detectionlab.yml --tags "wef" &> logs/ansible-playbook_wef.log

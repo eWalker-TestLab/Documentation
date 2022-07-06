@@ -10,13 +10,13 @@ Some additional steps are recommended besides the original instructions [here](h
 
 1. Install *Azure CLI* using the following command. More details can be found in the [official documentation](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli-linux?pivots=apt).
 
-   ```bash
+   ```shell
    curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
    ```
 
 2. Install *Terraform* using the following commands. More details can be found in the [official documentation](https://learn.hashicorp.com/tutorials/terraform/install-cli).
 
-    ```bash
+    ```shell
     sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl
     curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
     sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
@@ -25,7 +25,7 @@ Some additional steps are recommended besides the original instructions [here](h
 
 3. Install *Ansible* using the following commands. More details can be found in the [official documentation](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
 
-   ```bash
+   ```shell
    sudo apt update
    sudo apt install software-properties-common
    sudo add-apt-repository --yes --update ppa:ansible/ansible
@@ -35,19 +35,19 @@ Some additional steps are recommended besides the original instructions [here](h
 
 4. Install *Python* and *pip3* using the following command.
 
-   ```bash
+   ```shell
    sudo apt install python3 python3-pip
    ```
 
 5. Upgrade some packages required by the toolchain using the following command.
 
-   ```bash
+   ```shell
    pip3 install --upgrade cryptography PyJWT
    ```
 
 6. Finally, install python and various packages needed for remote connections and other activities using the following command.
 
-   ```bash
+   ```shell
    pip3 install pywinrm requests msrest msrestazure azure-cli
    ```
 
@@ -67,7 +67,7 @@ Some additional steps are recommended besides the original instructions [here](h
 
   Under this situation, you could add the path in the warning message to your PATH. For example, add the following line to the end of the `~/.bashrc` file.
 
-  ```bash
+  ```shell
   export PATH="~/.local/bin:$PATH"
   ```
 
@@ -75,7 +75,7 @@ Some additional steps are recommended besides the original instructions [here](h
 
 - Outputting the *Terraform* debug info is highly recommended, which the following commands can achieve. More details can be found in the [official documentation](https://www.terraform.io/internals/debugging) and this [blog](https://www.suse.com/support/kb/doc/?id=000020022).
 
-  ```bash
+  ```shell
   export TF_LOG="DEBUG"
   export TF_LOG_PATH="path to your log file"
   ```

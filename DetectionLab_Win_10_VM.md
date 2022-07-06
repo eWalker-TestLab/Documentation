@@ -12,7 +12,7 @@
 
 4. Install *Vagrant VMware provider plugin* by executing the command:
 
-   ```powershell
+   ```shell
    vagrant plugin install vagrant-vmware-desktop
    ```
 

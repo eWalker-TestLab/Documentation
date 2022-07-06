@@ -8,19 +8,19 @@
 
 2. Install necessary tools by executing the following command:
 
-   ```bash
+   ```shell
    sudo apt install build-essential curl git gnupg software-properties-common
    ```
 
 3. Install *VirtualBox* and *extension packs* by executing the following command:
 
-   ```bash
+   ```shell
    sudo apt install virtualbox virtualbox-ext-pack
    ```
 
 4. Install *Vagrant* by executing the following commands (more info on [the official website](https://www.vagrantup.com/downloads)):
 
-   ```bash
+   ```shell
    curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
    sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
    sudo apt-get update && sudo apt-get install vagrant
@@ -28,7 +28,7 @@
 
 5. Install *Packer* by executing the following commands (more info on [the official website](https://www.packer.io/downloads)):
 
-   ```bash
+   ```shell
    curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
    sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
    sudo apt-get update && sudo apt-get install packer
@@ -50,18 +50,18 @@ After all the installation, follow the instructions [here](https://www.detection
 
 - SSH is commonly used when managing a remote machine. And SSH service could be installed by the following command:
 
-  ```bash
+  ```shell
   sudo apt install ssh
   ```
 
   However, due to some library conflicts, errors might occur if building the lab with SSH service enabled. It is recommended to temporarily stop the SSH service by executing the following command prior to building the lab:
 
-  ```bash
+  ```shell
   sudo systemctl stop ssh
   ```
 
   After the lab is built, the SSH service can be started by executing the following command:
 
-  ```bash
+  ```shell
   sudo systemctl start ssh
   ```
