@@ -1,0 +1,334 @@
+06/07/2022 09:34:07 INFO: Starting Wazuh installation assistant. Wazuh version: 4.3.5
+06/07/2022 09:34:07 INFO: Verbose logging redirected to /var/log/wazuh-install.log
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://ppa.launchpad.net/apt-fast/stable/ubuntu focal InRelease
+Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Hit:3 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:4 http://download.opensuse.org/repositories/security:/zeek/xUbuntu_20.04  InRelease [1,563 B]
+Hit:5 http://ppa.launchpad.net/oisf/suricata-stable/ubuntu focal InRelease
+Get:6 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Hit:7 http://ppa.launchpad.net/rmescandon/yq/ubuntu focal InRelease
+Get:8 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Get:9 http://archive.ubuntu.com/ubuntu focal-updates/main amd64 Packages [1,946 kB]
+Get:10 http://archive.ubuntu.com/ubuntu focal-updates/main i386 Packages [687 kB]
+Get:11 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 Packages [924 kB]
+Get:12 http://archive.ubuntu.com/ubuntu focal-updates/multiverse i386 Packages [8,468 B]
+Get:13 http://archive.ubuntu.com/ubuntu focal-updates/multiverse amd64 Packages [24.5 kB]
+Fetched 3,928 kB in 4s (1,033 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+12 packages can be upgraded. Run 'apt list --upgradable' to see them.
+06/07/2022 09:34:17 INFO: --- Dependencies ----
+06/07/2022 09:34:17 INFO: Installing apt-transport-https.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  apt-transport-https
+0 upgraded, 1 newly installed, 0 to remove and 12 not upgraded.
+Need to get 1,704 B of archives.
+After this operation, 162 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 apt-transport-https all 2.0.9 [1,704 B]
+Fetched 1,704 B in 0s (4,341 B/s)
+Selecting previously unselected package apt-transport-https.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 80640 files and directories currently installed.)
+Preparing to unpack .../apt-transport-https_2.0.9_all.deb ...
+Unpacking apt-transport-https (2.0.9) ...
+Setting up apt-transport-https (2.0.9) ...
+06/07/2022 09:34:20 DEBUG: Adding the Wazuh repository.
+Warning: apt-key output should not be parsed (stdout is not a terminal)
+OK
+deb https://packages.wazuh.com/4.x/apt/ stable main
+Get:1 https://packages.wazuh.com/4.x/apt stable InRelease [17.3 kB]
+Get:2 https://packages.wazuh.com/4.x/apt stable/main i386 Packages [7,343 B]
+Get:3 https://packages.wazuh.com/4.x/apt stable/main amd64 Packages [22.8 kB]
+Hit:4 http://archive.ubuntu.com/ubuntu focal InRelease
+Hit:5 http://security.ubuntu.com/ubuntu focal-security InRelease
+Hit:6 http://ppa.launchpad.net/apt-fast/stable/ubuntu focal InRelease
+Get:7 http://download.opensuse.org/repositories/security:/zeek/xUbuntu_20.04  InRelease [1,563 B]
+Hit:8 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:9 http://ppa.launchpad.net/oisf/suricata-stable/ubuntu focal InRelease
+Hit:10 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:11 http://ppa.launchpad.net/rmescandon/yq/ubuntu focal InRelease
+Fetched 48.9 kB in 1s (39.2 kB/s)
+Reading package lists...
+06/07/2022 09:34:22 INFO: Wazuh repository added.
+06/07/2022 09:34:22 INFO: --- Configuration files ---
+06/07/2022 09:34:22 INFO: Generating configuration files.
+06/07/2022 09:34:22 DEBUG: Creating the root certificate.
+Generating a RSA private key
+...+++++
+............................................................................................................................................................................+++++
+writing new private key to '/tmp/wazuh-certificates/root-ca.key'
+-----
+Generating RSA private key, 2048 bit long modulus (2 primes)
+............................................+++++
+..................................+++++
+e is 65537 (0x010001)
+Signature ok
+subject=C = US, L = California, O = Wazuh, OU = Wazuh, CN = admin
+Getting CA Private Key
+06/07/2022 09:34:22 DEBUG: Creating the Wazuh indexer certificates.
+Ignoring -days; not generating a certificate
+Generating a RSA private key
+..........+++++
+.............+++++
+writing new private key to '/tmp/wazuh-certificates/wazuh-indexer-key.pem'
+-----
+Signature ok
+subject=C = US, L = California, O = Wazuh, OU = Wazuh, CN = wazuh-indexer
+Getting CA Private Key
+06/07/2022 09:34:23 DEBUG: Creating the Wazuh server certificates.
+Ignoring -days; not generating a certificate
+Generating a RSA private key
+......................................+++++
+......................................+++++
+writing new private key to '/tmp/wazuh-certificates/wazuh-server-key.pem'
+-----
+Signature ok
+subject=C = US, L = California, O = Wazuh, OU = Wazuh, CN = wazuh-server
+Getting CA Private Key
+06/07/2022 09:34:23 DEBUG: Creating the Wazuh dashboard certificates.
+Ignoring -days; not generating a certificate
+Generating a RSA private key
+.......................................................................................................................................................................+++++
+........................................+++++
+writing new private key to '/tmp/wazuh-certificates/wazuh-dashboard-key.pem'
+-----
+Signature ok
+subject=C = US, L = California, O = Wazuh, OU = Wazuh, CN = wazuh-dashboard
+Getting CA Private Key
+06/07/2022 09:34:23 DEBUG: Generating random passwords.
+06/07/2022 09:34:23 INFO: Created wazuh-install-files.tar. It contains the Wazuh cluster key, certificates, and passwords necessary for installation.
+06/07/2022 09:34:23 INFO: --- Wazuh indexer ---
+06/07/2022 09:34:23 INFO: Starting Wazuh indexer installation.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  wazuh-indexer
+0 upgraded, 1 newly installed, 0 to remove and 12 not upgraded.
+Need to get 365 MB of archives.
+After this operation, 639 MB of additional disk space will be used.
+Get:1 https://packages.wazuh.com/4.x/apt stable/main amd64 wazuh-indexer amd64 4.3.5-1 [365 MB]
+Fetched 365 MB in 17s (21.2 MB/s)
+Selecting previously unselected package wazuh-indexer.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 80644 files and directories currently installed.)
+Preparing to unpack .../wazuh-indexer_4.3.5-1_amd64.deb ...
+Creating wazuh-indexer group... OK
+Creating wazuh-indexer user... OK
+Unpacking wazuh-indexer (4.3.5-1) ...
+Setting up wazuh-indexer (4.3.5-1) ...
+Created opensearch keystore in /etc/wazuh-indexer/opensearch.keystore
+Processing triggers for systemd (245.4-4ubuntu3.17) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+06/07/2022 09:35:05 INFO: Wazuh indexer installation finished.
+06/07/2022 09:35:05 DEBUG: Configuring Wazuh indexer.
+06/07/2022 09:35:05 INFO: Wazuh indexer post-install configuration finished.
+06/07/2022 09:35:05 INFO: Starting service wazuh-indexer.
+Synchronizing state of wazuh-indexer.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable wazuh-indexer
+Created symlink /etc/systemd/system/multi-user.target.wants/wazuh-indexer.service → /lib/systemd/system/wazuh-indexer.service.
+06/07/2022 09:35:17 INFO: wazuh-indexer service started.
+06/07/2022 09:35:17 INFO: Initializing Wazuh indexer cluster security settings.
+Security Admin v7
+Will connect to 127.0.0.1:9300 ... done
+Connected as CN=admin,OU=Wazuh,O=Wazuh,L=California,C=US
+OpenSearch Version: 1.2.4
+OpenSearch Security Version: 1.2.4.0
+Contacting opensearch cluster 'opensearch' and wait for YELLOW clusterstate ...
+Clustername: wazuh-cluster
+Clusterstate: GREEN
+Number of nodes: 1
+Number of data nodes: 1
+.opendistro_security index does not exists, attempt to create it ... done (0-all replicas)
+Populate config from /usr/share/wazuh-indexer/plugins/opensearch-security/securityconfig/
+Will update '_doc/config' with /usr/share/wazuh-indexer/plugins/opensearch-security/securityconfig/config.yml 
+   SUCC: Configuration for 'config' created or updated
+Will update '_doc/roles' with /usr/share/wazuh-indexer/plugins/opensearch-security/securityconfig/roles.yml 
+   SUCC: Configuration for 'roles' created or updated
+Will update '_doc/rolesmapping' with /usr/share/wazuh-indexer/plugins/opensearch-security/securityconfig/roles_mapping.yml 
+   SUCC: Configuration for 'rolesmapping' created or updated
+Will update '_doc/internalusers' with /usr/share/wazuh-indexer/plugins/opensearch-security/securityconfig/internal_users.yml 
+   SUCC: Configuration for 'internalusers' created or updated
+Will update '_doc/actiongroups' with /usr/share/wazuh-indexer/plugins/opensearch-security/securityconfig/action_groups.yml 
+   SUCC: Configuration for 'actiongroups' created or updated
+Will update '_doc/tenants' with /usr/share/wazuh-indexer/plugins/opensearch-security/securityconfig/tenants.yml 
+   SUCC: Configuration for 'tenants' created or updated
+Will update '_doc/nodesdn' with /usr/share/wazuh-indexer/plugins/opensearch-security/securityconfig/nodes_dn.yml 
+   SUCC: Configuration for 'nodesdn' created or updated
+Will update '_doc/whitelist' with /usr/share/wazuh-indexer/plugins/opensearch-security/securityconfig/whitelist.yml 
+   SUCC: Configuration for 'whitelist' created or updated
+Will update '_doc/audit' with /usr/share/wazuh-indexer/plugins/opensearch-security/securityconfig/audit.yml 
+   SUCC: Configuration for 'audit' created or updated
+Done with success
+06/07/2022 09:35:22 INFO: Wazuh indexer cluster initialized.
+06/07/2022 09:35:22 INFO: --- Wazuh server ---
+06/07/2022 09:35:22 INFO: Starting the Wazuh manager installation.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Suggested packages:
+  expect
+The following NEW packages will be installed:
+  wazuh-manager
+0 upgraded, 1 newly installed, 0 to remove and 12 not upgraded.
+Need to get 119 MB of archives.
+After this operation, 456 MB of additional disk space will be used.
+Get:1 https://packages.wazuh.com/4.x/apt stable/main amd64 wazuh-manager amd64 4.3.5-1 [119 MB]
+Fetched 119 MB in 6s (20.5 MB/s)
+Selecting previously unselected package wazuh-manager.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 81589 files and directories currently installed.)
+Preparing to unpack .../wazuh-manager_4.3.5-1_amd64.deb ...
+Unpacking wazuh-manager (4.3.5-1) ...
+Setting up wazuh-manager (4.3.5-1) ...
+Processing triggers for systemd (245.4-4ubuntu3.17) ...
+06/07/2022 09:35:52 INFO: Wazuh manager installation finished.
+06/07/2022 09:35:52 INFO: Starting service wazuh-manager.
+Synchronizing state of wazuh-manager.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable wazuh-manager
+Created symlink /etc/systemd/system/multi-user.target.wants/wazuh-manager.service → /lib/systemd/system/wazuh-manager.service.
+06/07/2022 09:36:05 INFO: wazuh-manager service started.
+06/07/2022 09:36:05 INFO: Starting Filebeat installation.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  filebeat
+0 upgraded, 1 newly installed, 0 to remove and 12 not upgraded.
+Need to get 22.1 MB of archives.
+After this operation, 73.6 MB of additional disk space will be used.
+Get:1 https://packages.wazuh.com/4.x/apt stable/main amd64 filebeat amd64 7.10.2 [22.1 MB]
+Fetched 22.1 MB in 1s (18.5 MB/s)
+Selecting previously unselected package filebeat.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 100257 files and directories currently installed.)
+Preparing to unpack .../filebeat_7.10.2_amd64.deb ...
+Unpacking filebeat (7.10.2) ...
+Setting up filebeat (7.10.2) ...
+Processing triggers for systemd (245.4-4ubuntu3.17) ...
+06/07/2022 09:36:11 INFO: Filebeat installation finished.
+wazuh/alerts/
+wazuh/alerts/config/
+wazuh/alerts/config/alerts.yml
+wazuh/alerts/manifest.yml
+wazuh/alerts/ingest/
+wazuh/alerts/ingest/pipeline.json
+wazuh/archives/
+wazuh/archives/config/
+wazuh/archives/config/archives.yml
+wazuh/archives/manifest.yml
+wazuh/archives/ingest/
+wazuh/archives/ingest/pipeline.json
+wazuh/module.yml
+Created filebeat keystore
+Successfully updated the keystore
+Successfully updated the keystore
+06/07/2022 09:36:11 INFO: Filebeat post-install configuration finished.
+06/07/2022 09:36:11 INFO: Starting service filebeat.
+Synchronizing state of filebeat.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable filebeat
+Created symlink /etc/systemd/system/multi-user.target.wants/filebeat.service → /lib/systemd/system/filebeat.service.
+06/07/2022 09:36:12 INFO: filebeat service started.
+06/07/2022 09:36:12 INFO: --- Wazuh dashboard ---
+06/07/2022 09:36:12 INFO: Starting Wazuh dashboard installation.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  wazuh-dashboard
+0 upgraded, 1 newly installed, 0 to remove and 12 not upgraded.
+Need to get 130 MB of archives.
+After this operation, 636 MB of additional disk space will be used.
+Get:1 https://packages.wazuh.com/4.x/apt stable/main amd64 wazuh-dashboard amd64 4.3.5-1 [130 MB]
+Fetched 130 MB in 6s (22.0 MB/s)
+Selecting previously unselected package wazuh-dashboard.
+(Reading database ... (Reading database ... 5%(Reading database ... 10%(Reading database ... 15%(Reading database ... 20%(Reading database ... 25%(Reading database ... 30%(Reading database ... 35%(Reading database ... 40%(Reading database ... 45%(Reading database ... 50%(Reading database ... 55%(Reading database ... 60%(Reading database ... 65%(Reading database ... 70%(Reading database ... 75%(Reading database ... 80%(Reading database ... 85%(Reading database ... 90%(Reading database ... 95%(Reading database ... 100%(Reading database ... 100576 files and directories currently installed.)
+Preparing to unpack .../wazuh-dashboard_4.3.5-1_amd64.deb ...
+Creating wazuh-dashboard group... OK
+Creating wazuh-dashboard user... OK
+Unpacking wazuh-dashboard (4.3.5-1) ...
+Setting up wazuh-dashboard (4.3.5-1) ...
+06/07/2022 09:36:38 INFO: Wazuh dashboard installation finished.
+06/07/2022 09:36:38 DEBUG: Wazuh dashboard certificate setup finished.
+06/07/2022 09:36:38 INFO: Wazuh dashboard post-install configuration finished.
+06/07/2022 09:36:38 INFO: Starting service wazuh-dashboard.
+Created symlink /etc/systemd/system/multi-user.target.wants/wazuh-dashboard.service → /etc/systemd/system/wazuh-dashboard.service.
+06/07/2022 09:36:38 INFO: wazuh-dashboard service started.
+06/07/2022 09:36:38 DEBUG: Setting Wazuh indexer cluster passwords.
+06/07/2022 09:36:41 DEBUG: The given user wazuh does not exist
+06/07/2022 09:36:41 DEBUG: The given user wazuh-wui does not exist
+06/07/2022 09:36:41 DEBUG: Creating password backup.
+Security Admin v7
+Will connect to 127.0.0.1:9300 ... done
+Connected as CN=admin,OU=Wazuh,O=Wazuh,L=California,C=US
+OpenSearch Version: 1.2.4
+OpenSearch Security Version: 1.2.4.0
+Contacting opensearch cluster 'opensearch' and wait for YELLOW clusterstate ...
+Clustername: wazuh-cluster
+Clusterstate: GREEN
+Number of nodes: 1
+Number of data nodes: 1
+.opendistro_security index already exists, so we do not need to create one.
+Will retrieve '_doc/config' into /usr/share/wazuh-indexer/backup/config.yml 
+   SUCC: Configuration for 'config' stored in /usr/share/wazuh-indexer/backup/config.yml
+Will retrieve '_doc/roles' into /usr/share/wazuh-indexer/backup/roles.yml 
+   SUCC: Configuration for 'roles' stored in /usr/share/wazuh-indexer/backup/roles.yml
+Will retrieve '_doc/rolesmapping' into /usr/share/wazuh-indexer/backup/roles_mapping.yml 
+   SUCC: Configuration for 'rolesmapping' stored in /usr/share/wazuh-indexer/backup/roles_mapping.yml
+Will retrieve '_doc/internalusers' into /usr/share/wazuh-indexer/backup/internal_users.yml 
+   SUCC: Configuration for 'internalusers' stored in /usr/share/wazuh-indexer/backup/internal_users.yml
+Will retrieve '_doc/actiongroups' into /usr/share/wazuh-indexer/backup/action_groups.yml 
+   SUCC: Configuration for 'actiongroups' stored in /usr/share/wazuh-indexer/backup/action_groups.yml
+Will retrieve '_doc/tenants' into /usr/share/wazuh-indexer/backup/tenants.yml 
+   SUCC: Configuration for 'tenants' stored in /usr/share/wazuh-indexer/backup/tenants.yml
+Will retrieve '_doc/nodesdn' into /usr/share/wazuh-indexer/backup/nodes_dn.yml 
+   SUCC: Configuration for 'nodesdn' stored in /usr/share/wazuh-indexer/backup/nodes_dn.yml
+Will retrieve '_doc/whitelist' into /usr/share/wazuh-indexer/backup/whitelist.yml 
+   SUCC: Configuration for 'whitelist' stored in /usr/share/wazuh-indexer/backup/whitelist.yml
+Will retrieve '_doc/audit' into /usr/share/wazuh-indexer/backup/audit.yml 
+   SUCC: Configuration for 'audit' stored in /usr/share/wazuh-indexer/backup/audit.yml
+06/07/2022 09:36:47 DEBUG: Password backup created in /usr/share/wazuh-indexer/backup.
+06/07/2022 09:36:47 DEBUG: Generating password hashes.
+06/07/2022 09:36:53 DEBUG: Password hashes generated.
+Successfully updated the keystore
+06/07/2022 09:36:54 DEBUG: filebeat started
+06/07/2022 09:36:54 DEBUG: wazuh-dashboard started
+06/07/2022 09:36:54 DEBUG: Loading new passwords changes.
+Security Admin v7
+Will connect to 127.0.0.1:9300 ... done
+Connected as CN=admin,OU=Wazuh,O=Wazuh,L=California,C=US
+OpenSearch Version: 1.2.4
+OpenSearch Security Version: 1.2.4.0
+Contacting opensearch cluster 'opensearch' and wait for YELLOW clusterstate ...
+Clustername: wazuh-cluster
+Clusterstate: GREEN
+Number of nodes: 1
+Number of data nodes: 1
+.opendistro_security index already exists, so we do not need to create one.
+Populate config from /usr/share/wazuh-indexer/plugins/opensearch-security/securityconfig/
+Will update '_doc/config' with /usr/share/wazuh-indexer/plugins/opensearch-security/securityconfig/config.yml 
+   SUCC: Configuration for 'config' created or updated
+Will update '_doc/roles' with /usr/share/wazuh-indexer/plugins/opensearch-security/securityconfig/roles.yml 
+   SUCC: Configuration for 'roles' created or updated
+Will update '_doc/rolesmapping' with /usr/share/wazuh-indexer/plugins/opensearch-security/securityconfig/roles_mapping.yml 
+   SUCC: Configuration for 'rolesmapping' created or updated
+Will update '_doc/internalusers' with /usr/share/wazuh-indexer/plugins/opensearch-security/securityconfig/internal_users.yml 
+   SUCC: Configuration for 'internalusers' created or updated
+Will update '_doc/actiongroups' with /usr/share/wazuh-indexer/plugins/opensearch-security/securityconfig/action_groups.yml 
+   SUCC: Configuration for 'actiongroups' created or updated
+Will update '_doc/tenants' with /usr/share/wazuh-indexer/plugins/opensearch-security/securityconfig/tenants.yml 
+   SUCC: Configuration for 'tenants' created or updated
+Will update '_doc/nodesdn' with /usr/share/wazuh-indexer/plugins/opensearch-security/securityconfig/nodes_dn.yml 
+   SUCC: Configuration for 'nodesdn' created or updated
+Will update '_doc/whitelist' with /usr/share/wazuh-indexer/plugins/opensearch-security/securityconfig/whitelist.yml 
+   SUCC: Configuration for 'whitelist' created or updated
+Will update '_doc/audit' with /usr/share/wazuh-indexer/plugins/opensearch-security/securityconfig/audit.yml 
+   SUCC: Configuration for 'audit' created or updated
+Done with success
+06/07/2022 09:37:00 DEBUG: Passwords changed.
+06/07/2022 09:37:08 INFO: Initializing Wazuh dashboard web application.
+06/07/2022 09:37:09 INFO: Wazuh dashboard web application initialized.
+06/07/2022 09:37:09 INFO: Installation finished.
