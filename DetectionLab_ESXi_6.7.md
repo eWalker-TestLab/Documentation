@@ -115,6 +115,8 @@ First of all, clone the repository to your workspace by `git clone git@github.co
 
 ### Building and Deploying
 
+#### Build and Deploy DetectionLab
+
 After all the prerequisites are satisfied, do the following.
 
 1. Execute the following commands from the `DetectionLab/ESXi/Packer` directory.
@@ -158,6 +160,22 @@ After all the prerequisites are satisfied, do the following.
    192.168.1.60               : ok=25   changed=16   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
    192.168.1.17               : ok=29   changed=21   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
    ```
+
+#### Install and Deploy Wazuh (manually)
+
+1. It is highly recommended to take snapshots of all of the VMs before installing Wazuh. Then, power off the **logger** VM and change its RAM to at least 8GB.
+
+2. In the **logger** VM, add `User=root` to the `/usr/lib/systemd/system/fwupd-refresh.service` file. The file should be similar to the following. More info [here](https://github.com/fwupd/fwupd/issues/3037).
+
+   ![fwupd-refresh.service](img/DetectionLab/fwupd-refresh.service.jpg)
+
+3. In the **logger** VM, execute the following command. More info on [the official website](https://documentation.wazuh.com/current/quickstart.html#installing-wazuh).
+
+   ```shell
+   curl -sO https://packages.wazuh.com/4.3/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
+   ```
+
+4. In the **dc**, **wef**, and **win10** VM, download the installer from [the official website](https://packages.wazuh.com/4.x/windows/wazuh-agent-4.3.5-1.msi). Then double click the downloaded file to install it. More info [here](https://documentation.wazuh.com/current/installation-guide/wazuh-agent/wazuh-agent-package-windows.html).
 
 ## Things to Notice
 
