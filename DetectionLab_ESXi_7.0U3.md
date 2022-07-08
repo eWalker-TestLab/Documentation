@@ -1,14 +1,11 @@
 # ESXI 6.7 (all build with ubuntu in VMware) (NOT DONE)
 ## Build Procedure
 ### Step 1(1) - Prepare ESXi:
-- register account, get a license key, and download the ESXi .ISOs from: https://www.vmware.com/go/get-free-esxi
-- create a bootable USB using [Rufus](https://rufus.ie/)
-- install ESXi using the bootable USB
 - reference to the guide from [here](https://clo.ng/blog/detectionlab-on-esxi/) and [here](https://nickcharlton.net/posts/using-packer-esxi-6.html) to set up ESXi host networking and configuration
 
-### Step 1(2) - Prepare ESXi: ///
-- download ESXi 7.0 offline bundle
-- download Network Community Driver from [here](http)
+### Step 1(2) - Prepare ESXi: [ref.](https://www.virten.net/2021/11/vmware-esxi-7-0-update-3-on-intel-nuc/)///
+- download ESXi 7.0 offline bundle from [here](https://customerconnect.vmware.com/en/web/vmware/evalcenter?p=free-esxi7)
+- download Network Community Driver from [here](https://flings.vmware.com/community-networking-driver-for-esxi)
 - run commands as [here](http)
 - install ESXi using bootable USB using [Rufus](http)
 - set vlanID of Management Network to 4095 on ESXi host 
@@ -55,10 +52,10 @@
 	```
 
 ### Step 5 - terraform ///
-- locate to "DetectionLab/ESXi", create adn edit "terraform.tfvars" file
+- locate to "DetectionLab/ESXi", create and edit a "terraform.tfvars" file
 	```
 	esxi_hostname = "192.168.1.224"
-	esxi_password = "eWalker123"
+	esxi_password = ""
 	esxi_datastore = "datastore1"
 	vm_network = "VM Network"
 	hostonly_network = "HostOnly" 
@@ -66,26 +63,25 @@
 - creagte logger, dc, wef, win10
 	run 
 	```
-	terraform init
-	terraform apply
+	terraform init && terraform apply
 	```
 
 ### Step 6 - ansible
-- locate to "DetectionLab/ESXi/ansible", edit "inventory.yml" as [step8. here](https://detectionlab.network/deployment/esxi/）
+- locate to "DetectionLab/ESXi/ansible" and edit "inventory.yml" as [step8. here](https://detectionlab.network/deployment/esxi/)
 - take snapshot on VMs before ansible playlook
 - run
-	```
+	``` 
 	ansible-playbook -v detectionlab.yml
 	```
 
 
 ## Things to Notice
-1.ensure the ansible config file is from "DetectionLab/ESXi/ansible/ansible.cfg"
+\1. ensure the ansible config file is from "DetectionLab/ESXi/ansible/ansible.cfg"
 ```
 cd ~/code/DetectionLab/ESXi/ansible
 ansible --version
 ```
-2.you can use following syntax to send out debug log:
+\2. you can use following syntax to send out debug log:
 ```
 PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json windows_10_esxi.json &> ~/code/log/packer_build_windows_10_esxi_1.log
 PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json windows_2016_esxi.json &> ~/code/log/packer_build_windows_2016_esxi_1.log
@@ -97,7 +93,18 @@ tail -f ~/code/log/packer_build_windows_10_esxi_1.log
 tail -f ~/code/log/packer_build_windows_2016_esxi_1.log
 tail -f ~/code/log/packer_build_ubuntu2004_esxi_1.log
 ```
+\3. you can use following syntax to send out debug log
+```
+ansible-playbook -v detectionlab.yml -t "[logger/dc/wef/win10]" &> ~/code/log/ansible_playbook/[logger/dc/wef/win10]_1.log
+tail -f ~/code/log/ansible_playbook/[logger/dc/wef/win10]_1.log
+```
 
+\4. When setting up the VMs, it is advice to work under a isolated network. (i.e. only minimum devices like ESXi host and current machine conneted under a router)
+
+\5. When two ESXi host running same VMs set up script, network on both host would receive same address. When an admin try to work on the lab environment inside VMs, it is uncertain which ESXi host does does the VM locate. \
+Sol. 
+- change the mac address inside "DetectionLab/ESXi/main.tf".
+- change the mac address respectively in "ESXi/ansible/roles/dc/tasks/main.yml", "ESXi/ansible/roles/wef/tasks/main.yml, and "ESXi/ansible/roles/win10/tasks/main.yml"
 
 ## Reference 
 guide esxi install: https://clo.ng/blog/detectionlab-on-esxi/
@@ -106,3 +113,4 @@ guide DetectionLab deployment: https://detectionlab.network/deployment/esxi/
 
 guide esxi host config: https://nickcharlton.net/posts/using-packer-esxi-6.html
 
+[id 1]: https://www.virten.net/2021/11/vmware-esxi-7-0-update-3-on-intel-nuc/
