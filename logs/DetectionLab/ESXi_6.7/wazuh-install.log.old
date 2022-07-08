@@ -1,0 +1,238 @@
+06/07/2022 06:44:55 INFO: Starting Wazuh installation assistant. Wazuh version: 4.3.5
+06/07/2022 06:44:55 INFO: Verbose logging redirected to /var/log/wazuh-install.log
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Hit:1 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:2 http://security.ubuntu.com/ubuntu focal-security InRelease [114 kB]
+Hit:3 http://ppa.launchpad.net/apt-fast/stable/ubuntu focal InRelease
+Get:4 http://archive.ubuntu.com/ubuntu focal-updates InRelease [114 kB]
+Get:5 http://download.opensuse.org/repositories/security:/zeek/xUbuntu_20.04  InRelease [1,563 B]
+Hit:6 http://ppa.launchpad.net/oisf/suricata-stable/ubuntu focal InRelease
+Hit:7 http://ppa.launchpad.net/rmescandon/yq/ubuntu focal InRelease
+Get:8 http://archive.ubuntu.com/ubuntu focal-backports InRelease [108 kB]
+Fetched 338 kB in 2s (172 kB/s)
+Reading package lists...
+Building dependency tree...
+Reading state information...
+12 packages can be upgraded. Run 'apt list --upgradable' to see them.
+06/07/2022 06:45:04 INFO: --- Dependencies ----
+06/07/2022 06:45:04 INFO: Installing apt-transport-https.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  apt-transport-https
+0 upgraded, 1 newly installed, 0 to remove and 12 not upgraded.
+Need to get 1,704 B of archives.
+After this operation, 162 kB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu focal-updates/universe amd64 apt-transport-https all 2.0.9 [1,704 B]
+Fetched 1,704 B in 0s (4,372 B/s)
+Selecting previously unselected package apt-transport-https.
+(Reading database ...
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 80640 files and directories currently installed.)
+Preparing to unpack .../apt-transport-https_2.0.9_all.deb ...
+Unpacking apt-transport-https (2.0.9) ...
+Setting up apt-transport-https (2.0.9) ...
+Warning: apt-key output should not be parsed (stdout is not a terminal)
+OK
+deb https://packages.wazuh.com/4.x/apt/ stable main
+Get:1 https://packages.wazuh.com/4.x/apt stable InRelease [17.3 kB]
+Get:2 https://packages.wazuh.com/4.x/apt stable/main i386 Packages [7,343 B]
+Get:3 https://packages.wazuh.com/4.x/apt stable/main amd64 Packages [22.8 kB]
+Hit:4 http://security.ubuntu.com/ubuntu focal-security InRelease
+Hit:5 http://archive.ubuntu.com/ubuntu focal InRelease
+Get:6 http://download.opensuse.org/repositories/security:/zeek/xUbuntu_20.04  InRelease [1,563 B]
+Hit:7 http://ppa.launchpad.net/apt-fast/stable/ubuntu focal InRelease
+Hit:8 http://archive.ubuntu.com/ubuntu focal-updates InRelease
+Hit:9 http://archive.ubuntu.com/ubuntu focal-backports InRelease
+Hit:10 http://ppa.launchpad.net/oisf/suricata-stable/ubuntu focal InRelease
+Hit:11 http://ppa.launchpad.net/rmescandon/yq/ubuntu focal InRelease
+Fetched 48.9 kB in 1s (39.2 kB/s)
+Reading package lists...
+06/07/2022 06:45:10 INFO: Wazuh repository added.
+06/07/2022 06:45:10 INFO: --- Configuration files ---
+06/07/2022 06:45:10 INFO: Generating configuration files.
+Generating a RSA private key
+.......................................................................+++++
+...............................................................................................+++++
+writing new private key to '/tmp/wazuh-certificates/root-ca.key'
+-----
+Generating RSA private key, 2048 bit long modulus (2 primes)
+.........................................................................+++++
+...................+++++
+e is 65537 (0x010001)
+Signature ok
+subject=C = US, L = California, O = Wazuh, OU = Wazuh, CN = admin
+Getting CA Private Key
+Ignoring -days; not generating a certificate
+Generating a RSA private key
+...............................................+++++
+................................................................+++++
+writing new private key to '/tmp/wazuh-certificates/wazuh-indexer-key.pem'
+-----
+Signature ok
+subject=C = US, L = California, O = Wazuh, OU = Wazuh, CN = wazuh-indexer
+Getting CA Private Key
+Ignoring -days; not generating a certificate
+Generating a RSA private key
+...........................+++++
+.+++++
+writing new private key to '/tmp/wazuh-certificates/wazuh-server-key.pem'
+-----
+Signature ok
+subject=C = US, L = California, O = Wazuh, OU = Wazuh, CN = wazuh-server
+Getting CA Private Key
+Ignoring -days; not generating a certificate
+Generating a RSA private key
+..................................................+++++
+...........+++++
+writing new private key to '/tmp/wazuh-certificates/wazuh-dashboard-key.pem'
+-----
+Signature ok
+subject=C = US, L = California, O = Wazuh, OU = Wazuh, CN = wazuh-dashboard
+Getting CA Private Key
+06/07/2022 06:45:10 INFO: Created wazuh-install-files.tar. It contains the Wazuh cluster key, certificates, and passwords necessary for installation.
+06/07/2022 06:45:10 INFO: --- Wazuh indexer ---
+06/07/2022 06:45:10 INFO: Starting Wazuh indexer installation.
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following NEW packages will be installed:
+  wazuh-indexer
+0 upgraded, 1 newly installed, 0 to remove and 12 not upgraded.
+Need to get 365 MB of archives.
+After this operation, 639 MB of additional disk space will be used.
+Get:1 https://packages.wazuh.com/4.x/apt stable/main amd64 wazuh-indexer amd64 4.3.5-1 [365 MB]
+Fetched 365 MB in 16s (23.3 MB/s)
+Selecting previously unselected package wazuh-indexer.
+(Reading database ...
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 80644 files and directories currently installed.)
+Preparing to unpack .../wazuh-indexer_4.3.5-1_amd64.deb ...
+Creating wazuh-indexer group... OK
+Creating wazuh-indexer user... OK
+Unpacking wazuh-indexer (4.3.5-1) ...
+Setting up wazuh-indexer (4.3.5-1) ...
+Created opensearch keystore in /etc/wazuh-indexer/opensearch.keystore
+Processing triggers for systemd (245.4-4ubuntu3.17) ...
+Processing triggers for libc-bin (2.31-0ubuntu9.9) ...
+06/07/2022 06:45:53 INFO: Wazuh indexer installation finished.
+06/07/2022 06:45:53 INFO: Wazuh indexer post-install configuration finished.
+06/07/2022 06:45:53 INFO: Starting service wazuh-indexer.
+Synchronizing state of wazuh-indexer.service with SysV service script with /lib/systemd/systemd-sysv-install.
+Executing: /lib/systemd/systemd-sysv-install enable wazuh-indexer
+Created symlink /etc/systemd/system/multi-user.target.wants/wazuh-indexer.service → /lib/systemd/system/wazuh-indexer.service.
+Job for wazuh-indexer.service failed because a timeout was exceeded.
+See "systemctl status wazuh-indexer.service" and "journalctl -xe" for details.
+06/07/2022 06:48:30 ERROR: wazuh-indexer could not be started.
+-- Logs begin at Tue 2022-07-05 09:14:02 UTC, end at Wed 2022-07-06 06:48:30 UTC. --
+Jul 06 06:45:54 logger systemd[1]: Starting Wazuh-indexer...
+Jul 06 06:47:10 logger systemd[1]: wazuh-indexer.service: start operation timed out. Terminating.
+Jul 06 06:48:30 logger systemd[1]: wazuh-indexer.service: Failed with result 'timeout'.
+Jul 06 06:48:30 logger systemd[1]: Failed to start Wazuh-indexer.
+06/07/2022 06:48:30 INFO: --- Removing existing Wazuh installation ---
+06/07/2022 06:48:30 INFO: Removing Wazuh indexer.
+
+WARNING: apt does not have a stable CLI interface. Use with caution in scripts.
+
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following packages will be REMOVED:
+  wazuh-indexer*
+0 upgraded, 0 newly installed, 1 to remove and 12 not upgraded.
+After this operation, 639 MB disk space will be freed.
+(Reading database ...
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 81588 files and directories currently installed.)
+Removing wazuh-indexer (4.3.5-1) ...
+Stopping wazuh-indexer service... OK
+(Reading database ...
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 80656 files and directories currently installed.)
+Purging configuration files for wazuh-indexer (4.3.5-1) ...
+Deleting configuration directory... OK
+dpkg: warning: while removing wazuh-indexer, directory '/usr/lib/systemd/system' not empty so not removed
+dpkg: warning: while removing wazuh-indexer, directory '/var/lib/wazuh-indexer' not empty so not removed
+dpkg: warning: while removing wazuh-indexer, directory '/var/log/wazuh-indexer' not empty so not removed
+Processing triggers for systemd (245.4-4ubuntu3.17) ...
+06/07/2022 06:48:38 INFO: Wazuh indexer removed.
+06/07/2022 06:48:38 INFO: Installation cleaned. Check the /var/log/wazuh-install.log file to learn more about the issue.
