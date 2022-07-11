@@ -83,19 +83,21 @@ Note that **all the commands in this section should be executed on the ESXi mach
 
 Refer to the instructions [here](https://clo.ng/blog/detectionlab-on-esxi/) in the Software section and also the instructions [here](https://nickcharlton.net/posts/using-packer-esxi-6.html). The following steps should be executed on the ESXi machine.
 
-1. The ESXi instance must have at least two separate networks - one that is accessible from your current machine and has internet connectivity and a HostOnly network to allow the VMs to communicate over a private network. The network that provides DHCP and internet connectivity must also be reachable from the host that is running *Terraform* - ensure your firewall is configured to allow this. Below are some references.
+1. Navigate to `https://<your_esxi_ip_here>/ui/#/host/manage/services` and set the policy for SSH to "start and stop with host", and be sure to manually start the service as well.
+
+2. The ESXi instance must have at least two separate networks - one that is accessible from your current machine and has internet connectivity and a HostOnly network to allow the VMs to communicate over a private network. The network that provides DHCP and internet connectivity must also be reachable from the host that is running *Terraform* - ensure your firewall is configured to allow this. Below are some references.
 
    ![vSwitch](./img/DetectionLab/ESXi_vSwitch.jpg)
 
    ![Network](./img/DetectionLab/ESXi_Network.jpg)
 
-2. Allow *Packer* to infer the guest IP from ESXi without the VM needing to report it itself by the following command.
+3. Allow *Packer* to infer the guest IP from ESXi without the VM needing to report it itself by the following command.
 
    ```shell
    esxcli system settings advanced set -o /Net/GuestIPHack -i 1
    ```
 
-3. Open VNC ports on the firewall. You can either configure it **temporarily** following the instructions [here](https://nickcharlton.net/posts/using-packer-esxi-6.html) or **permanently** [here](https://github.com/sukster/ESXi-Packer-VNC). More info on the [official article 1](https://kb.vmware.com/s/article/2008226) and [official article 2](https://kb.vmware.com/s/article/2043564). You can check it by the following command.
+4. Open VNC ports on the firewall. You can either configure it **temporarily** following the instructions [here](https://nickcharlton.net/posts/using-packer-esxi-6.html) or **permanently** [here](https://github.com/sukster/ESXi-Packer-VNC). More info on the [official article 1](https://kb.vmware.com/s/article/2008226) and [official article 2](https://kb.vmware.com/s/article/2043564). You can check it by the following command.
 
    ```shell
    esxcli network firewall ruleset list | grep vnc
