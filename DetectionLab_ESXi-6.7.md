@@ -101,25 +101,21 @@ Refer to the instructions [here](https://clo.ng/blog/detectionlab-on-esxi/) in t
    esxcli network firewall ruleset list | grep vnc
    ```
 
-#### DetectionLab Project File Modifications
-
-Note that **all the commands in this section should be executed on the Ubuntu machine**.
-
-First of all, clone the repository to your workspace by `git clone git@github.com:clong/DetectionLab.git`
-
-1. Edit `DetectionLab/ESXi/Packer/variables.json` to match your ESXi configuration. The `esxi_network_with_dhcp_and_internet` variable refers to any ESXi network that will be able to provide DHCP and internet access to the VM while it’s being built in *Packer*. This is usually VM Network. The file should be similar to the following. More info [here](https://detectionlab.network/deployment/esxi/#steps).
-
-   ![variables.json](img/DetectionLab/variables.json.jpg)
-
-2. Since ESXi 6.7 is used, edit `DetectionLab/ESXi/Packer/windows_10_esxi.json`, `DetectionLab/ESXi/Packer/windows_2016_esxi.json` and `DetectionLab/ESXi/Packer/ubuntu2004_esxi.json` as described [here](https://detectionlab.network/deployment/esxi/#special-configuration-for-esxi-6x).
-
 ### Building and Deploying
 
 #### Build and Deploy DetectionLab
 
-After all the prerequisites are satisfied, do the following.
+After all the prerequisites are satisfied, do the following. Note that **all the commands in this section should be executed on the Ubuntu machine**.
 
-1. Execute the following commands from the `DetectionLab/ESXi/Packer` directory.
+1. Clone the repository to your workspace by `git clone git@github.com:eWalker-TestLab/TestLab.git`.
+
+2. Edit `DetectionLab/ESXi/Packer/variables.json` to match your ESXi configuration. The `esxi_network_with_dhcp_and_internet` variable refers to any ESXi network that will be able to provide DHCP and internet access to the VM while it’s being built in *Packer*. This is usually VM Network. The file should be similar to the following. More info [here](https://detectionlab.network/deployment/esxi/#steps).
+
+   ![variables.json](img/DetectionLab/variables.json.jpg)
+
+3. Since ESXi 6.7 is used, edit `DetectionLab/ESXi/Packer/windows_10_esxi.json`, `DetectionLab/ESXi/Packer/windows_2016_esxi.json` and `DetectionLab/ESXi/Packer/ubuntu2004_esxi.json` as described [here](https://detectionlab.network/deployment/esxi/#special-configuration-for-esxi-6x).
+
+4. Execute the following commands from the `DetectionLab/ESXi/Packer` directory.
 
    ```shell
    PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json windows_10_esxi.json
@@ -129,41 +125,41 @@ After all the prerequisites are satisfied, do the following.
 
    After *Packer* build finish, verify that you now see `Windows10`, `WindowsServer2016`, and `Ubuntu2004` in the ESXi console.
 
-2. In `DetectionLab/ESXi`, Create a `terraform.tfvars` file to override the default variables listed in `variables.tf`. The file should be similar to the following.
+5. In `DetectionLab/ESXi`, Create a `terraform.tfvars` file to override the default variables listed in `variables.tf`. The file should be similar to the following.
 
    ![terraform.tfvars](img/DetectionLab/terraform.tfvars.jpg)
 
-3. In `DetectionLab/ESXi`, execute the following commands.
+6. In `DetectionLab/ESXi`, execute the following commands.
 
    ```shell
    terraform init
    terraform apply
    ```
 
-4. After *Terraform* build finish, change the working directory to `DetectionLab/ESXi/ansible`.
+7. After *Terraform* build finish, change the working directory to `DetectionLab/ESXi/ansible`.
 
-5. Edit `DetectionLab/ESXi/ansible/inventory.yml` and replace the IP Addresses with the respective IP Addresses of your corresponding ESXi VMs. The file should be similar to the following.
+8. Edit `DetectionLab/ESXi/ansible/inventory.yml` and replace the IP Addresses with the respective IP Addresses of your corresponding ESXi VMs. The file should be similar to the following.
 
    ![inventory.yml](img/DetectionLab/inventory.yml.jpg)
 
-6. Take snapshots of all of the VMs. Then run the following command.
+9. Take snapshots of all of the VMs. Then run the following command.
 
    ```shell
    ansible-playbook -v detectionlab.yml
    ```
 
-7. After *Ansible* build finish, you should see results similar to the following.
+10. After *Ansible* build finish, you should see results similar to the following.
 
-   ```log
-   192.168.1.227              : ok=39   changed=24   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-   192.168.1.46               : ok=40   changed=20   unreachable=0    failed=0    skipped=2    rescued=0    ignored=0
-   192.168.1.60               : ok=25   changed=16   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-   192.168.1.17               : ok=29   changed=21   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-   ```
+    ```log
+    192.168.1.227              : ok=39   changed=24   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+    192.168.1.46               : ok=40   changed=20   unreachable=0    failed=0    skipped=2    rescued=0    ignored=0
+    192.168.1.60               : ok=25   changed=16   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+    192.168.1.17               : ok=29   changed=21   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+    ```
 
 #### Install and Deploy Wazuh (manually)
 
-1. It is highly recommended to take snapshots of all of the VMs before installing Wazuh. Then, power off the **logger** VM and change its RAM to at least 8GB.
+1. It is highly recommended to take snapshots of all of the VMs before installing Wazuh. Then, power off the **logger** VM and change its RAM to **at least 8GB**.
 
 2. In the **logger** VM, add `User=root` to the `/usr/lib/systemd/system/fwupd-refresh.service` file. The file should be similar to the following. More info [here](https://github.com/fwupd/fwupd/issues/3037).
 
