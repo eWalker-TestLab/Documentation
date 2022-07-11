@@ -155,7 +155,7 @@ After all the prerequisites are satisfied, do the following. Note that **all the
    ansible-playbook -v detectionlab.yml
    ```
 
-11. After *Ansible* build finish, you should see results similar to the following.
+10. After *Ansible* build finish, you should see results similar to the following.
 
     ```log
     192.168.1.227              : ok=39   changed=24   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
