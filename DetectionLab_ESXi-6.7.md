@@ -67,14 +67,14 @@ Note that **all the commands in this section should be executed on the Ubuntu ma
 9. To avoid a bug with *Ansible*, set an environment variable using the following command. More info [here](https://github.com/clong/DetectionLab/issues/543).
 
    ```shell
-   echo 'export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES' >> ~/.bash_profile
+   echo 'export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES' >> ~/.bashrc
    ```
 
 10. Install `ovftool`. In Ubuntu, open a web browser and download [ovftool](https://developer.vmware.com/web/tool/4.4.0/ovf). Unzip the downloaded file and add its path to your `PATH` environment variable by the following commands. More info [here](https://docs.vmware.com/en/VMware-Telco-Cloud-Operations/1.4.0/deployment-guide-140/GUID-95301A42-F6F6-4BA9-B3A0-A86A268754B6.html).
 
     ```shell
     unzip <YOUR DOWNLOADED FILE>
-    echo 'export PATH="$PATH:<PATH TO YOUR UNZIPPED FOLDER>"' >> ~/.bash_profile
+    echo 'export PATH="$PATH:<PATH TO YOUR UNZIPPED FOLDER>"' >> ~/.bashrc
     ```
 
 #### ESXi Environment Configurations
