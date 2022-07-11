@@ -15,7 +15,7 @@ Note that **all the commands in this section should be executed on the Ubuntu ma
 2. Install necessary tools by executing the following command.
 
    ```shell
-   sudo apt install build-essential curl git gnupg software-properties-common
+   sudo apt install build-essential curl git pip3 gnupg software-properties-common
    ```
 
 3. Install *Terraform* by executing the following commands. More info on [the official website](https://www.terraform.io/downloads).
