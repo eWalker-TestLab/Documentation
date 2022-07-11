@@ -64,7 +64,7 @@ Note that **all the commands in this section should be executed on the Ubuntu ma
    sudo apt install sshpass
    ```
 
-9. To avoid a bug with *Ansible*, set an environment variable using the following command.
+9. To avoid a bug with *Ansible*, set an environment variable using the following command. More info [here](https://github.com/clong/DetectionLab/issues/543).
 
    ```shell
    echo 'export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES' >> ~/.bash_profile
@@ -83,7 +83,7 @@ Note that **all the commands in this section should be executed on the ESXi mach
 
 Refer to the instructions [here](https://clo.ng/blog/detectionlab-on-esxi/) in the Software section and also the instructions [here](https://nickcharlton.net/posts/using-packer-esxi-6.html). The following steps should be executed on the ESXi machine.
 
-1. Navigate to `https://<your_esxi_ip_here>/ui/#/host/manage/services` and set the policy for SSH to "start and stop with host", and be sure to manually start the service as well.
+1. Navigate to `https://<YOUR ESXi IP ADDRESS>/ui/#/host/manage/services` and set the policy for SSH to "start and stop with host", and be sure to manually start the service as well.
 
 2. The ESXi instance must have at least two separate networks - one that is accessible from your current machine and has internet connectivity and a HostOnly network to allow the VMs to communicate over a private network. The network that provides DHCP and internet connectivity must also be reachable from the host that is running *Terraform* - ensure your firewall is configured to allow this. Below are some references.
 
@@ -115,7 +115,12 @@ After all the prerequisites are satisfied, do the following. Note that **all the
 
    ![variables.json](img/DetectionLab/variables.json.jpg)
 
-3. Since ESXi 6.7 is used, edit `DetectionLab/ESXi/Packer/windows_10_esxi.json`, `DetectionLab/ESXi/Packer/windows_2016_esxi.json` and `DetectionLab/ESXi/Packer/ubuntu2004_esxi.json` as described [here](https://detectionlab.network/deployment/esxi/#special-configuration-for-esxi-6x).
+3. Since ESXi 6.7 is used, delete the following code snippets from `DetectionLab/ESXi/Packer/windows_10_esxi.json`, `DetectionLab/ESXi/Packer/windows_2016_esxi.json`, and `DetectionLab/ESXi/Packer/ubuntu2004_esxi.json`. More info [here](https://detectionlab.network/deployment/esxi/#special-configuration-for-esxi-6x).
+
+   ```json
+   "vnc_over_websocket": true,
+   "insecure_connection": true,
+   ```
 
 4. Execute the following commands from the `DetectionLab/ESXi/Packer` directory.
 
@@ -150,7 +155,7 @@ After all the prerequisites are satisfied, do the following. Note that **all the
    ansible-playbook -v detectionlab.yml
    ```
 
-10. After *Ansible* build finish, you should see results similar to the following.
+11. After *Ansible* build finish, you should see results similar to the following.
 
     ```log
     192.168.1.227              : ok=39   changed=24   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
