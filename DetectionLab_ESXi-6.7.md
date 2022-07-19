@@ -136,34 +136,34 @@ After all the prerequisites are satisfied, do the following. Note that **all the
    PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json ubuntu2004_esxi.json
    ```
 
-5. After *Packer* build finish, verify that you now see `Windows10`, `WindowsServer2016`, and `Ubuntu2004` in the ESXi console.
+   After *Packer* build finish, verify that you now see `Windows10`, `WindowsServer2016`, and `Ubuntu2004` in the ESXi console.
 
-6. In `DetectionLab/ESXi`, Create a `terraform.tfvars` file to override the default variables listed in `variables.tf`. The file should be similar to the following.
+5. In `DetectionLab/ESXi`, Create a `terraform.tfvars` file to override the default variables listed in `variables.tf`. The file should be similar to the following.
 
    ![terraform.tfvars](img/DetectionLab/terraform.tfvars.jpg)
 
    Change all the mac addresses in `main.tf` if there are already existing VM using the same addresses.
 
-7. In `DetectionLab/ESXi`, execute the following commands.
+6. In `DetectionLab/ESXi`, execute the following commands.
 
    ```shell
    terraform init
    terraform apply
    ```
 
-8. After *Terraform* build finish, change the working directory to `DetectionLab/ESXi/ansible`.
+   After *Terraform* build finish, change the working directory to `DetectionLab/ESXi/ansible`.
 
-9. Edit `DetectionLab/ESXi/ansible/inventory.yml` and replace the IP Addresses with the respective IP Addresses of your corresponding ESXi VMs. The file should be similar to the following.
+7. Edit `DetectionLab/ESXi/ansible/inventory.yml` and replace the IP Addresses with the respective IP Addresses of your corresponding ESXi VMs. The file should be similar to the following.
 
    ![inventory.yml](img/DetectionLab/inventory.yml.jpg)
 
-10. Take snapshots of all of the VMs. Make sure to unlock all the VMs to prevent connection problems. Then run the following command.
+8. Take snapshots of all of the VMs. Make sure to unlock all the VMs to prevent connection problems. Then run the following command.
 
     ```shell
     ansible-playbook -v detectionlab.yml
     ```
 
-11. After *Ansible* build finish, you should see results similar to the following.
+   After *Ansible* build finish, you should see results similar to the following.
 
     ```log
     192.168.1.227              : ok=39   changed=24   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
