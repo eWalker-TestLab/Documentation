@@ -23,7 +23,7 @@ Note that **all the commands in this section should be executed on the Ubuntu ma
    ```shell
    curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
    sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
-   sudo apt-get update && sudo apt-get install terraform
+   sudo apt-get update && sudo apt-get install terraform 
    ```
 
 4. Install *Vagrant* by executing the following commands. More info on [the official website](https://www.vagrantup.com/downloads).
@@ -135,6 +135,8 @@ After all the prerequisites are satisfied, do the following. Note that **all the
 6. In `DetectionLab/ESXi`, Create a `terraform.tfvars` file to override the default variables listed in `variables.tf`. The file should be similar to the following.
 
    ![terraform.tfvars](img/DetectionLab/terraform.tfvars.jpg)
+
+/// change all mac addresses in `main.tf ` if there are already existing VM using same addresses. 
 
 7. In `DetectionLab/ESXi`, execute the following commands.
 
