@@ -8,7 +8,7 @@ Although this setup is done using Ubuntu 20.04 guest OS in VMware, the same shou
 
 #### Ubuntu Environment Configurations
 
-Note that **all the commands in this section should be executed on the Ubuntu machine**.
+Note that **all the commands in this subsection should be executed on the Ubuntu machine**.
 
 1. Before starting building the lab, updating the system is recommended. This can be done by executing `sudo apt update` and then `sudo apt full-upgrade -y`. Finally, `reboot` the machine.
 
@@ -85,7 +85,7 @@ Note that **all the commands in this section should be executed on the Ubuntu ma
 
 #### ESXi Environment Configurations
 
-Note that **all the commands in this section should be executed on the ESXi machine**.
+Note that **all the commands in this subsection should be executed on the ESXi machine**.
 
 Refer to the instructions [here](https://clo.ng/blog/detectionlab-on-esxi/) in the Software section and also the instructions [here](https://nickcharlton.net/posts/using-packer-esxi-6.html). The following steps should be executed on the ESXi machine.
 
@@ -113,7 +113,7 @@ Refer to the instructions [here](https://clo.ng/blog/detectionlab-on-esxi/) in t
 
 #### Build and Deploy DetectionLab
 
-After all the prerequisites are satisfied, do the following. Note that **all the commands in this section should be executed on the Ubuntu machine**.
+After all the prerequisites are satisfied, do the following. Note that **all the commands in this subsection should be executed on the Ubuntu machine**.
 
 1. Clone the repository to your workspace by `git clone git@github.com:eWalker-TestLab/TestLab.git`.
 
@@ -195,6 +195,8 @@ After all the prerequisites are satisfied, do the following. Note that **all the
 - It is recommended to check your system's proxy settings. Also, it is recommended not to use any proxy applications or browser plugins (e.g., *SwitchyOmega*) during the setup process.
 
 ### Building and Deploying
+
+- When cloning the `TestLab` repo, **DO NOT** clone the repo to the local machine and then copy and paste the repo into your working virtual machine. This will cause some permission errors. More info on [the official website](https://docs.ansible.com/ansible/latest/reference_appendices/config.html#avoiding-security-risks-with-ansible-cfg-in-the-current-directory).
 
 - Outputting *Packer* debug information is highly recommended. To do so, use the following commands instead of the original build commands. More info on the [official website](https://www.packer.io/docs/debugging).
 
