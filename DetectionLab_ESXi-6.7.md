@@ -8,14 +8,20 @@ Although this setup is done using Ubuntu 20.04 guest OS in VMware, the same shou
 
 #### Ubuntu Environment Configurations
 
-Note that **all the commands in this section should be executed on the Ubuntu machine**.
+Note that **all the commands in this subsection should be executed on the Ubuntu machine**.
 
 1. Before starting building the lab, updating the system is recommended. This can be done by executing `sudo apt update` and then `sudo apt full-upgrade -y`. Finally, `reboot` the machine.
 
 2. Install necessary tools by executing the following command.
 
    ```shell
-   sudo apt install build-essential curl git pip3 gnupg software-properties-common
+   sudo apt install build-essential curl git python3-pip gnupg software-properties-common
+   ```
+
+   After that, you may need to add `~/.local/bin` to your `PATH` to access tools installed by `pip3`. This can be achieved by the following command.
+
+   ```shell
+   echo 'export PATH="$PATH:~/.local/bin"' >> ~/.bashrc
    ```
 
 3. Install *Terraform* by executing the following commands. More info on [the official website](https://www.terraform.io/downloads).
@@ -42,7 +48,7 @@ Note that **all the commands in this section should be executed on the Ubuntu ma
    sudo apt-get update && sudo apt-get install packer
    ```
 
-6. Install *Ansible* using the following commands. More info on [the official documentation](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
+6. Install *Ansible* by the following commands. More info on [the official documentation](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
 
    ```shell
    sudo apt update
@@ -52,7 +58,7 @@ Note that **all the commands in this section should be executed on the Ubuntu ma
    sudo apt install ansible
    ```
 
-7. Install `pywinrm` using the following command.
+7. Install `pywinrm` by the following command.
 
    ```shell
    pip3 install pywinrm
@@ -64,7 +70,7 @@ Note that **all the commands in this section should be executed on the Ubuntu ma
    sudo apt install sshpass
    ```
 
-9. To avoid a bug with *Ansible*, set an environment variable using the following command. More info [here](https://github.com/clong/DetectionLab/issues/543).
+9. To avoid a bug with *Ansible*, set an environment variable by the following command. More info [here](https://github.com/clong/DetectionLab/issues/543).
 
    ```shell
    echo 'export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES' >> ~/.bashrc
@@ -79,7 +85,7 @@ Note that **all the commands in this section should be executed on the Ubuntu ma
 
 #### ESXi Environment Configurations
 
-Note that **all the commands in this section should be executed on the ESXi machine**.
+Note that **all the commands in this subsection should be executed on the ESXi machine**.
 
 Refer to the instructions [here](https://clo.ng/blog/detectionlab-on-esxi/) in the Software section and also the instructions [here](https://nickcharlton.net/posts/using-packer-esxi-6.html). The following steps should be executed on the ESXi machine.
 
@@ -107,7 +113,7 @@ Refer to the instructions [here](https://clo.ng/blog/detectionlab-on-esxi/) in t
 
 #### Build and Deploy DetectionLab
 
-After all the prerequisites are satisfied, do the following. Note that **all the commands in this section should be executed on the Ubuntu machine**.
+After all the prerequisites are satisfied, do the following. Note that **all the commands in this subsection should be executed on the Ubuntu machine**.
 
 1. Clone the repository to your workspace by `git clone git@github.com:eWalker-TestLab/TestLab.git`.
 
@@ -191,6 +197,8 @@ After all the prerequisites are satisfied, do the following. Note that **all the
 - It is recommended to check your system's proxy settings. Also, it is recommended not to use any proxy applications or browser plugins (e.g., *SwitchyOmega*) during the setup process.
 
 ### Building and Deploying
+
+- When cloning the `TestLab` repo, **DO NOT** clone the repo to the local machine and then copy and paste the repo into your working virtual machine. This will cause some permission errors. More info on [the official website](https://docs.ansible.com/ansible/latest/reference_appendices/config.html#avoiding-security-risks-with-ansible-cfg-in-the-current-directory).
 
 - Outputting *Packer* debug information is highly recommended. To do so, use the following commands instead of the original build commands. More info on the [official website](https://www.packer.io/docs/debugging).
 
