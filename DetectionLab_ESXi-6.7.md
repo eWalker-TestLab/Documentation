@@ -224,8 +224,8 @@ After all the prerequisites are satisfied, do the following. Note that **all the
 - Outputting *Ansible* debug information is highly recommended. To do so, use the following commands instead of the original build commands. More info by `ansible --help` command.
 
   ```shell
-  ansible-playbook -vvv detectionlab.yml --tags "logger" &> logs/ansible-playbook_logger.log
-  ansible-playbook -vvv detectionlab.yml --tags "dc" &> logs/ansible-playbook_dc.log
-  ansible-playbook -vvv detectionlab.yml --tags "wef" &> logs/ansible-playbook_wef.log
-  ansible-playbook -vvv detectionlab.yml --tags "win10" &> logs/ansible-playbook_win10.log
+  ansible-playbook -vvvv detectionlab.yml --tags "logger" &> logs/ansible-playbook_logger.log
+  ansible-playbook -vvvv detectionlab.yml --tags "dc" &> logs/ansible-playbook_dc.log
+  ansible-playbook -vvvv detectionlab.yml --tags "wef" &> logs/ansible-playbook_wef.log
+  ansible-playbook -vvvv detectionlab.yml --tags "win10" &> logs/ansible-playbook_win10.log
   ```
