@@ -18,6 +18,12 @@ Note that **all the commands in this section should be executed on the Ubuntu ma
    sudo apt install build-essential curl git pip3 gnupg software-properties-common
    ```
 
+   After that, you may need to add `~/.local/bin` to your `PATH` to access tools installed by `pip3`. This can be achieved by the following command.
+
+   ```shell
+   echo 'export PATH="$PATH:~/.local/bin"' >> ~/.bashrc
+   ```
+
 3. Install *Terraform* by executing the following commands. More info on [the official website](https://www.terraform.io/downloads).
 
    ```shell
