@@ -172,6 +172,10 @@ After all the prerequisites are satisfied, do the following. Note that **all the
     192.168.1.17               : ok=29   changed=21   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
     ```
 
+#### Install and Deploy Wazuh (automatically)
+
+After finishing building the **logger** with *Ansible*, Wazuh Server should be installed on the **logger** already. The credential is `admin:TestLab123`.
+
 #### Install and Deploy Wazuh (manually)
 
 1. It is highly recommended to take snapshots of all of the VMs before installing Wazuh. Then, power off the **logger** VM and change its RAM to **at least 8GB**.
