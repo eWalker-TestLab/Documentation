@@ -15,7 +15,7 @@ Note that **all the commands in this subsection should be executed on the Ubuntu
 2. Install necessary tools by executing the following command.
 
    ```shell
-   sudo apt install build-essential curl git pip3 gnupg software-properties-common
+   sudo apt install build-essential curl git python3-pip gnupg software-properties-common
    ```
 
    After that, you may need to add `~/.local/bin` to your `PATH` to access tools installed by `pip3`. This can be achieved by the following command.
@@ -48,7 +48,7 @@ Note that **all the commands in this subsection should be executed on the Ubuntu
    sudo apt-get update && sudo apt-get install packer
    ```
 
-6. Install *Ansible* using the following commands. More info on [the official documentation](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
+6. Install *Ansible* by the following commands. More info on [the official documentation](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
 
    ```shell
    sudo apt update
@@ -58,7 +58,7 @@ Note that **all the commands in this subsection should be executed on the Ubuntu
    sudo apt install ansible
    ```
 
-7. Install `pywinrm` using the following command.
+7. Install `pywinrm` by the following command.
 
    ```shell
    pip3 install pywinrm
@@ -70,7 +70,7 @@ Note that **all the commands in this subsection should be executed on the Ubuntu
    sudo apt install sshpass
    ```
 
-9. To avoid a bug with *Ansible*, set an environment variable using the following command. More info [here](https://github.com/clong/DetectionLab/issues/543).
+9. To avoid a bug with *Ansible*, set an environment variable by the following command. More info [here](https://github.com/clong/DetectionLab/issues/543).
 
    ```shell
    echo 'export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES' >> ~/.bashrc
