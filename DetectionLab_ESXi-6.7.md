@@ -192,6 +192,30 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
 4. In the **dc**, **wef**, and **win10** VM, download the installer from [the official website](https://packages.wazuh.com/4.x/windows/wazuh-agent-4.3.5-1.msi). Then double click the downloaded file to install it. More info on [the official website](https://documentation.wazuh.com/current/installation-guide/wazuh-agent/wazuh-agent-package-windows.html).
 
+#### Install and deploy winlogbeat (manually)
+
+1. In agent VMs, download and unzip winlogbeat-oss from [website](https://www.elastic.co/downloads/beats/winlogbeat-oss).  
+
+2. Change current directory to winlogbeat folder. Open a PowerShell prompt as an Administrator. Run
+   ```
+   .\install-service-winlogbeat.ps1
+   ```
+
+3. Configure `winlogbeat.yml` file as follows. 
+
+   ![winlogbeat_config](img/DetectionLab/winlogbeat_config.jpg)
+
+4. Run 
+   ``` 
+   .\winlogbeat.exe setup -e
+   Start-Service winlogbeat
+   ```
+
+5. More info from [official document](https://www.elastic.co/guide/en/beats/winlogbeat/current/winlogbeat-installation-configuration.html).
+
+6. Edit the logstash config file on the **logger** similar to the following to receive event logs from winlogbeat.
+
+   ![logstash_config](img/DetectionLab/logstash_config.jpg)
 ## Things to Notice
 
 ### Prerequisites
