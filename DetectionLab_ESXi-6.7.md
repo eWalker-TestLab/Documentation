@@ -204,7 +204,7 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
 3. Configure `winlogbeat.yml` file as follows. 
    
-   - Use `Get-EventLog *` to get the list of available event logs. And put all entrices under `winlogbeat.event_logs:`. More info from from [here](https://www.elastic.co/guide/en/beats/winlogbeat/current/configuration-winlogbeat-options.html#configuration-winlogbeat-options-event_logs-name)
+   - Use `Get-EventLog *` to get the list of available event logs on PowerShell. And put all entrices under `winlogbeat.event_logs:`. More info from from [here](https://www.elastic.co/guide/en/beats/winlogbeat/current/configuration-winlogbeat-options.html#configuration-winlogbeat-options-event_logs-name)
    
       ![Get-EventLog *](img/DetectionLab/get_eventlog.jpg)
 
