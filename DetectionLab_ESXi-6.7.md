@@ -194,7 +194,8 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
 #### Install and deploy winlogbeat (manually)
 
-1. In agent VMs, download and unzip winlogbeat-oss from [website](https://www.elastic.co/downloads/beats/winlogbeat-oss).  
+1. In agent VMs, download and unzip winlogbeat-oss from [website](https://www.elastic.co/downloads/beats/winlogbeat-oss).  More info from [official document](https://www.elastic.co/guide/en/beats/winlogbeat/current/winlogbeat-installation-configuration.html).
+
 
 2. Change current directory to winlogbeat folder. Open a PowerShell prompt as an Administrator. Run
    ```
@@ -202,8 +203,16 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
    ```
 
 3. Configure `winlogbeat.yml` file as follows. 
+   
+   - Use `Get-EventLog *` to get the list of available event logs. And put all entrices under `winlogbeat.event_logs:`. More info from from [here](https://www.elastic.co/guide/en/beats/winlogbeat/current/configuration-winlogbeat-options.html#configuration-winlogbeat-options-event_logs-name)
+   
+      ![Get-EventLog *](img/DetectionLab/get_eventlog.jpg)
 
-   ![winlogbeat_config](img/DetectionLab/winlogbeat_config.jpg)
+      ![winlogbeat_config](img/DetectionLab/winlogbeat_config_1.jpg)
+
+   - Configure winlogbeat to output all logs to logstash on **logger**
+
+      ![winlogbeat_config](img/DetectionLab/winlogbeat_config_2.jpg)
 
 4. Run 
    ``` 
@@ -211,11 +220,11 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
    Start-Service winlogbeat
    ```
 
-5. More info from [official document](https://www.elastic.co/guide/en/beats/winlogbeat/current/winlogbeat-installation-configuration.html).
-
-6. Edit the logstash config file on the **logger** similar to the following to receive event logs from winlogbeat.
+5. Edit the logstash config file on the **logger** similar to the following to receive event logs from winlogbeat.
 
    ![logstash_config](img/DetectionLab/logstash_config.jpg)
+
+
 ## Things to Notice
 
 ### Prerequisites
