@@ -142,7 +142,7 @@ After all the prerequisites are satisfied, do the following. Note that **all the
 
    ![terraform.tfvars](img/DetectionLab/terraform.tfvars.jpg)
 
-   Change all the mac addresses in `main.tf` if there are already existing VM using the same addresses.
+   - Change all mac addresses in `main.tf` if there are already existing VM using the same addresses.
 
 6. In `DetectionLab/ESXi`, execute the following commands.
 
@@ -156,6 +156,8 @@ After all the prerequisites are satisfied, do the following. Note that **all the
 7. Edit `DetectionLab/ESXi/ansible/inventory.yml` and replace the IP Addresses with the respective IP Addresses of your corresponding ESXi VMs. The file should be similar to the following.
 
    ![inventory.yml](img/DetectionLab/inventory.yml.jpg)
+
+   - Change mac addresses in `main.yml` under `ESXi/ansible/roles/<dc/logger/wef/win10>/tasks/` to match the mac address in `DetectionLab/ESXi/main.tf` if you changed earlier. 
 
 8. Take snapshots of all of the VMs. Make sure to unlock all the VMs to prevent connection problems. Then run the following command.
 
@@ -192,7 +194,7 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
 4. In the **dc**, **wef**, and **win10** VM, download the installer from [the official website](https://packages.wazuh.com/4.x/windows/wazuh-agent-4.3.5-1.msi). Then double click the downloaded file to install it. More info on [the official website](https://documentation.wazuh.com/current/installation-guide/wazuh-agent/wazuh-agent-package-windows.html).
 
-#### Install and deploy winlogbeat (manually)
+#### Install and deploy opensearch and winlogbeat (manually)
 
 1. In agent VMs, download and unzip winlogbeat-oss from [website](https://www.elastic.co/downloads/beats/winlogbeat-oss).  More info from [official document](https://www.elastic.co/guide/en/beats/winlogbeat/current/winlogbeat-installation-configuration.html).
 
@@ -220,10 +222,35 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
    Start-Service winlogbeat
    ```
 
-5. Edit the logstash config file on the **logger** similar to the following to receive event logs from winlogbeat.
+5. Move to **logger** vm. Download and unzip opensearch, opensearch dashboard, and logstash from [website](https://opensearch.org/downloads.html)
 
-   ![logstash_config](img/DetectionLab/logstash_config.jpg)
+6. Refer to [here](http://192.168.68.198:7111/wiki/Falcon/Opensearch)
 
+   ![opensearch install](img/DetectionLab/opensearch_install.jpg)
+
+   Run command once to install necessary files: 
+   ```
+   ./opensearch/opensearch-tar-install.sh
+   ```
+
+7. Configure both opensearch and dashboard yml file under respective config folder similar to follow:
+
+   ![opensearch config](img/DetectionLab/opensearch_config.jpg)
+
+8. Create a `testconf` folder to store all the filter and conf files. Create a `test.conf` file inside the folder. 
+
+9. Edit the config file similar to the following to receive event logs from winlogbeat.
+
+   ![logstash config](img/DetectionLab/logstash_config.jpg)
+
+9. Run following commands on three teminal respectively to start the service:
+   ```
+   ./opensearch/opensearch-tar-install.sh
+   ./dashboard/bin/opensearch-dashboards
+   ./logstash/bin/logstash -f ./logstash/testconf
+   ```
+
+10. Now you can go to `<192.168.56.105changeme>:5601` with `admin:admin` to work on opensearch
 
 ## Things to Notice
 
