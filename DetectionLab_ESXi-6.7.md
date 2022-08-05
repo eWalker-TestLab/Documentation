@@ -293,3 +293,12 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
   ansible-playbook -vvvv detectionlab.yml --tags "wef" &> logs/ansible-playbook_wef.log
   ansible-playbook -vvvv detectionlab.yml --tags "win10" &> logs/ansible-playbook_win10.log
   ```
+
+- To rebuild a specific vm, run following from `DetectionLab/ESXi/`
+   ```
+   terraform apply -replace="esxi_guest.<dc/logger/wef/win10>"
+   ```
+  Then go to `DetectionLab/ESXi/ansible/` and run
+   ```
+   ansible-playbook -v detectionlab.yml --tags "<dc/logger/wef/win10>"
+   ```
