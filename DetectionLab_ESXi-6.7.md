@@ -302,3 +302,8 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
    ```
    ansible-playbook -v detectionlab.yml --tags "<dc/logger/wef/win10>"
    ```
+
+- To restart playbook in a specific task, use
+   ```
+   ansible-playbook -v detectionlab.yml --tags="<dc/logger/wef/win10>" --start-at-task="<taskname>"
+   ```
