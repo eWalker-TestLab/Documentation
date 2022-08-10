@@ -157,7 +157,7 @@ After all the prerequisites are satisfied, do the following. Note that **all the
 
    ![inventory.yml](img/DetectionLab/inventory.yml.jpg)
 
-   - Change mac addresses in `main.yml` under `ESXi/ansible/roles/<dc/logger/wef/win10>/tasks/` to match the mac address in `DetectionLab/ESXi/main.tf` if you changed earlier. 
+   - Change mac addresses in `main.yml` under `ESXi/ansible/roles/<dc/logger/wef/win10>/tasks/` to match the mac address in `DetectionLab/ESXi/main.tf` if you changed earlier.
 
 8. Take snapshots of all of the VMs. Make sure to unlock all the VMs to prevent connection problems. Then run the following command.
 
@@ -198,16 +198,16 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
 1. In agent VMs, download and unzip winlogbeat-oss from [website](https://www.elastic.co/downloads/beats/winlogbeat-oss).  More info from [official document](https://www.elastic.co/guide/en/beats/winlogbeat/current/winlogbeat-installation-configuration.html).
 
-
 2. Change current directory to winlogbeat folder. Open a PowerShell prompt as an Administrator. Run
-   ```
+
+   ```powershell
    .\install-service-winlogbeat.ps1
    ```
 
-3. Configure `winlogbeat.yml` file as follows. 
-   
+3. Configure `winlogbeat.yml` file as follows.
+
    - Use `Get-EventLog *` on PowerShell to get the list of available event logs. And put all entrices under `winlogbeat.event_logs:`. More info from [here](https://www.elastic.co/guide/en/beats/winlogbeat/current/configuration-winlogbeat-options.html#configuration-winlogbeat-options-event_logs-name)
-   
+
       ![Get-EventLog *](img/DetectionLab/get_eventlog.jpg)
 
       ![winlogbeat_config](img/DetectionLab/winlogbeat_config_1.jpg)
@@ -216,8 +216,9 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
       ![winlogbeat_config](img/DetectionLab/winlogbeat_config_2.jpg)
 
-4. Run 
-   ``` 
+4. Run
+
+   ```powershell
    .\winlogbeat.exe setup -e
    Start-Service winlogbeat
    ```
@@ -228,8 +229,9 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
    ![opensearch install](img/DetectionLab/opensearch_install.jpg)
 
-   Run command once to install necessary files: 
-   ```
+   Run command once to install necessary files:
+
+   ```powershell
    ./opensearch/opensearch-tar-install.sh
    ```
 
@@ -237,20 +239,21 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
    ![opensearch config](img/DetectionLab/opensearch_config.jpg)
 
-8. Create a `testconf` folder to store all the filter and conf files. Create a `test.conf` file inside the folder. 
+8. Create a `testconf` folder to store all the filter and conf files. Create a `test.conf` file inside the folder.
 
 9. Edit the config file similar to the following to receive event logs from winlogbeat.
 
    ![logstash config](img/DetectionLab/logstash_config.jpg)
 
-9. Run following commands on three teminal respectively to start the service:
-   ```
-   ./opensearch/opensearch-tar-install.sh
-   ./dashboard/bin/opensearch-dashboards
-   ./logstash/bin/logstash -f ./logstash/testconf
-   ```
+10. Run following commands on three teminal respectively to start the service:
 
-10. Now you can go to `<192.168.56.105changeme>:5601` with `admin:admin` to work on opensearch
+    ```powershell
+    ./opensearch/opensearch-tar-install.sh
+    ./dashboard/bin/opensearch-dashboards
+    ./logstash/bin/logstash -f ./logstash/testconf
+    ```
+
+11. Now you can go to `<192.168.56.105changeme>:5601` with `admin:admin` to work on opensearch.
 
 ## Things to Notice
 
@@ -294,16 +297,20 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
   ansible-playbook -vvvv detectionlab.yml --tags "win10" &> logs/ansible-playbook_win10.log
   ```
 
-- To rebuild a specific vm, run following from `DetectionLab/ESXi/`
-   ```
-   terraform apply -replace="esxi_guest.<dc/logger/wef/win10>"
-   ```
+- To rebuild a specific VM, run the following from `DetectionLab`/ESXi/`
+
+  ```shell
+  terraform apply -replace="esxi_guest.<dc/logger/wef/win10>"
+  ```
+
   Then go to `DetectionLab/ESXi/ansible/` and run
-   ```
-   ansible-playbook -v detectionlab.yml --tags "<dc/logger/wef/win10>"
-   ```
+
+  ```shell
+  ansible-playbook -v detectionlab.yml --tags "<dc/logger/wef/win10>"
+  ```
 
 - To restart playbook in a specific task, use
-   ```
-   ansible-playbook -v detectionlab.yml --tags="<dc/logger/wef/win10>" --start-at-task="<taskname>"
-   ```
+
+  ```shell
+  ansible-playbook -v detectionlab.yml --tags="<dc/logger/wef/win10>" --start-at-task="<taskname>"
+  ```
