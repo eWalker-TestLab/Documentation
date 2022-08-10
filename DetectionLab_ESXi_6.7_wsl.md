@@ -1,4 +1,4 @@
-# ESXI 6.7 (build with win & wsl) (NOT DONE)
+# ESXI 6.7 (with win & wsl) (NOT DONE)
 ## Build Procedure
 ### ESXi installation(https://clo.ng/blog/detectionlab-on-esxi/):
 -  register account, get a license key, and download the ESXi .ISOs from: https://www.vmware.com/go/get-free-esxi

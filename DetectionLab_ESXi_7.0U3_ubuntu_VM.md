@@ -1,4 +1,4 @@
-# ESXI 7.0U3 (ubuntu in VMware) (NOT DONE)
+# ESXI 7.0U3 (with ubuntu in VMware) (NOT DONE)
 ## Build Procedure
 
 ### Step 1 - Prepare ESXi: [ref.](https://www.virten.net/2021/11/vmware-esxi-7-0-update-3-on-intel-nuc/)///
