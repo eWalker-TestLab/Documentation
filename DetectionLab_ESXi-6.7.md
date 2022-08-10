@@ -176,7 +176,7 @@ After all the prerequisites are satisfied, do the following. Note that **all the
 
 #### Install and Deploy Wazuh (automatically)
 
-After finishing building the **logger** with *Ansible*, Wazuh Server should be installed on the **logger** already. The credential is `admin:TestLab123`.
+After finishing building the **logger** with *Ansible*, Wazuh Server should be installed on the **logger** already. The credential is `admin:TestLab123?`.
 
 #### Install and Deploy Wazuh (manually)
 
