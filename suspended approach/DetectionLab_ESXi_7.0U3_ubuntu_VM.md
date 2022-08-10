@@ -1,15 +1,12 @@
-# ESXI 6.7 (all build with ubuntu in VMware) (NOT DONE)
+# ESXI 7.0U3 (ubuntu in VMware) (NOT DONE)
 ## Build Procedure
-### Step 1(1) - Prepare ESXi:
-- reference to the guide from [here](https://clo.ng/blog/detectionlab-on-esxi/) and [here](https://nickcharlton.net/posts/using-packer-esxi-6.html) to set up ESXi host networking and configuration
 
-### Step 1(2) - Prepare ESXi: [ref.](https://www.virten.net/2021/11/vmware-esxi-7-0-update-3-on-intel-nuc/)///
+### Step 1 - Prepare ESXi: [ref.](https://www.virten.net/2021/11/vmware-esxi-7-0-update-3-on-intel-nuc/)///
 - download ESXi 7.0 offline bundle from [here](https://customerconnect.vmware.com/en/web/vmware/evalcenter?p=free-esxi7)
 - download Network Community Driver from [here](https://flings.vmware.com/community-networking-driver-for-esxi)
 - run commands as [here](http)
 - install ESXi using bootable USB using [Rufus](http)
-- set vlanID of Management Network to 4095 on ESXi host 
-- set vlanID for host and VM Network on web
+- reference to the guide from [here](https://clo.ng/blog/detectionlab-on-esxi/) and [here](https://nickcharlton.net/posts/using-packer-esxi-6.html) to set up ESXi host networking and configuration
 
 ### Step 2 - Prepare Ubuntu:
 - run all commands as root user or with sudo
