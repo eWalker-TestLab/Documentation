@@ -2,15 +2,15 @@
 
 ## Build Procedure
 
-Although this setup is done using Ubuntu 20.04 guest OS in VMware, the same should apply to native OS running bare metal.
+Although this setup uses Ubuntu 20.04 guest OS in VMware, the same should apply to native OS running bare metal.
 
 ### Prerequisites
 
 #### Ubuntu Environment Configurations
 
-Note that **all the commands in this subsection should be executed on the Ubuntu machine**.
+**Note**: All the commands in this subsection should be executed on the **Ubuntu** machine.
 
-1. Before starting building the lab, updating the system is recommended. This can be done by executing `sudo apt update` and then `sudo apt full-upgrade -y`. Finally, `reboot` the machine.
+1. Before starting building the lab, updating the system is recommended. This can be done by executing `sudo apt update` and then `sudo apt full-upgrade --yes`. Finally, `reboot` the machine.
 
 2. Install necessary tools by executing the following command.
 
@@ -91,7 +91,7 @@ Note that **all the commands in this subsection should be executed on the Ubuntu
 
 #### ESXi Environment Configurations
 
-Note that **all the commands in this subsection should be executed on the ESXi machine**.
+**NOTE**: All the commands in this subsection should be executed on the **ESXi** machine.
 
 Refer to the instructions [here](https://clo.ng/blog/detectionlab-on-esxi/) in the Software section and also the instructions [here](https://nickcharlton.net/posts/using-packer-esxi-6.html). The following steps should be executed on the ESXi machine.
 
@@ -136,57 +136,91 @@ Refer to the instructions [here](https://clo.ng/blog/detectionlab-on-esxi/) in t
 
 ### Building and Deploying
 
-#### Build and Deploy DetectionLab
+**NOTE**: After all the prerequisites are satisfied, do the following. All the commands in this subsection should be executed on the **Ubuntu** machine.
 
-After all the prerequisites are satisfied, do the following. Note that **all the commands in this subsection should be executed on the Ubuntu machine**.
+#### Clone the Repo
 
-1. Clone the repository to your workspace by `git clone git@github.com:eWalker-TestLab/TestLab.git`.
+Clone the repository to your workspace by `git clone git@github.com:eWalker-TestLab/TestLab.git`.
 
-2. Edit `DetectionLab/ESXi/Packer/variables.json` to match your ESXi configuration. The `esxi_network_with_dhcp_and_internet` variable refers to any ESXi network that will be able to provide DHCP and internet access to the VM while it’s being built in *Packer*. This is usually *VM Network*. The file should be similar to the following. More info [here](https://detectionlab.network/deployment/esxi/#steps).
+#### Packer Build
 
-   ![variables.json](img/DetectionLab/variables.json.jpg)
+1. Edit `DetectionLab/ESXi/Packer/variables.json` to match your ESXi configuration. The `esxi_network_with_dhcp_and_internet` variable refers to any ESXi network that will be able to provide DHCP and internet access to the VM while it’s being built in *Packer*. This is usually *VM Network*. The file should be similar to the following. More info [here](https://detectionlab.network/deployment/esxi/#steps).
 
-3. Since ESXi 6.7 is used, delete the following code snippets from `DetectionLab/ESXi/Packer/windows_10_esxi.json`, `DetectionLab/ESXi/Packer/windows_2016_esxi.json`, and `DetectionLab/ESXi/Packer/ubuntu2004_esxi.json`. More info [here](https://detectionlab.network/deployment/esxi/#special-configuration-for-esxi-6x).
+   ![variables.json](img/DetectionLab/variables.json.png)
+
+2. Since ESXi 6.7 is used, delete the following code snippets from `DetectionLab/ESXi/Packer/windows_10_esxi.json`, `DetectionLab/ESXi/Packer/windows_2016_esxi.json`, and `DetectionLab/ESXi/Packer/ubuntu2004_esxi.json`. More info [here](https://detectionlab.network/deployment/esxi/#special-configuration-for-esxi-6x).
 
    ```json
    "vnc_over_websocket": true,
    "insecure_connection": true,
    ```
 
-4. Execute the following commands from the `DetectionLab/ESXi/Packer` directory.
+3. Execute the following commands from the `DetectionLab/ESXi/Packer` directory.
 
    ```shell
    PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json windows_10_esxi.json
    PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json windows_2016_esxi.json
    PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json ubuntu2004_esxi.json
+   PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json kali2022_esxi.json
    ```
 
-   After *Packer* build finish, verify that you now see `Windows10`, `WindowsServer2016`, and `Ubuntu2004` in the ESXi console.
+   **NOTE**: Outputting *Packer* debug information is highly recommended. To do so, use the following commands instead of the above build commands. More info on the [official website](https://www.packer.io/docs/debugging).
 
-5. In `DetectionLab/ESXi`, Create a `terraform.tfvars` file to override the default variables listed in `variables.tf`. **DO examine the `varibales.tf` file to determine the values of variables that match your environment needs!** The file should be similar to the following.
+   ```shell
+   PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json windows_10_esxi.json &> logs/packer_build_win10.log
+   PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json windows_2016_esxi.json &> logs/packer_build_winserver2016.log
+   PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json ubuntu2004_esxi.json &> logs/packer_build_ubuntu20.log
+   PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json kali2022_esxi.json &> logs/packer_build_kali.log
+   ```
 
-   ![terraform.tfvars](img/DetectionLab/terraform.tfvars.jpg)
+   To view the log files in real-time, use `tail -f <PATH TO YOUR LOG FILE>`.
 
-6. In `DetectionLab/ESXi`, execute the following commands.
+4. After *Packer* build finish, verify that you now see `Windows10`, `WindowsServer2016`, `Ubuntu2004`, and `Kali2022` in the ESXi console.
+
+#### Terraform Build
+
+1. In `DetectionLab/ESXi`, Create a `terraform.tfvars` file to override the default variables listed in `variables.tf`. **DO examine the `varibales.tf` file to determine the values of variables that match your environment needs!** The file should be similar to the following.
+
+   ![terraform.tfvars](img/DetectionLab/terraform.tfvars.png)
+
+2. In `DetectionLab/ESXi`, execute the following commands.
 
    ```shell
    terraform init
    terraform apply
    ```
 
-   After *Terraform* build finish, change the working directory to `DetectionLab/ESXi/ansible`.
+   **NOTE**: Outputting *Terraform* debug information is highly recommended. To do so, use the following commands instead of the above build commands. More info on the [official website](https://www.terraform.io/internals/debugging).
 
-7. Edit `DetectionLab/ESXi/ansible/inventory.yml` and replace the IP Addresses with the respective IP Addresses of your corresponding ESXi VMs. The file should be similar to the following.
+   ```shell
+   TF_LOG=DEBUG terraform init &> logs/terraform_init_0.log
+   TF_LOG=DEBUG terraform apply &> logs/terraform_apply_0.log
+   ```
 
-   ![inventory.yml](img/DetectionLab/inventory.yml.jpg)
+3. After *Terraform* build finish, change the working directory to `DetectionLab/ESXi/ansible`.
 
-   - Change mac addresses in `main.yml` under `ESXi/ansible/roles/<dc/logger/wef/win10>/tasks/` to match the mac address in `DetectionLab/ESXi/main.tf` if you changed earlier.
+#### Ansible Playbook
 
-8. Take snapshots of all of the VMs. Make sure to unlock all the VMs to prevent connection problems. Then run the following command.
+1. Edit `DetectionLab/ESXi/ansible/inventory.yml` and replace the IP Addresses with the respective IP Addresses of your corresponding ESXi VMs. The file should be similar to the following.
 
-    ```shell
-    ansible-playbook -v detectionlab.yml
-    ```
+   ![inventory.yml](img/DetectionLab/inventory.yml.png)
+
+   **NOTE**: Change mac addresses in `main.yml` under `ESXi/ansible/roles/<dc/logger/wef/win10>/tasks/` to match the mac address in `DetectionLab/ESXi/variables.tf` if you changed earlier.
+
+2. Take snapshots of all of the VMs. Make sure to unlock all the VMs to prevent connection problems. Then run the following command.
+
+   ```shell
+   ansible-playbook -v detectionlab.yml
+   ```
+
+   **NOTE**: Outputting *Ansible* debug information is highly recommended. To do so, use the following commands instead of the above build commands. More info by `ansible --help` command.
+
+   ```shell
+   ansible-playbook -vvvv detectionlab.yml --tags "logger" &> logs/ansible-playbook_logger.log
+   ansible-playbook -vvvv detectionlab.yml --tags "dc" &> logs/ansible-playbook_dc.log
+   ansible-playbook -vvvv detectionlab.yml --tags "wef" &> logs/ansible-playbook_wef.log
+   ansible-playbook -vvvv detectionlab.yml --tags "win10" &> logs/ansible-playbook_win10.log
+   ```
 
    After *Ansible* build finish, you should see results similar to the following.
 
@@ -206,7 +240,8 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 1. Move directory to `~/tool/`
 
 2. Run following commands on three teminal respectively to start opensearch service:
-   ```
+
+   ```shell
    ./opensearch/opensearch-tar-install.sh
    ./dashboard/bin/opensearch-dashboards
    ./logstash/bin/logstash -f ./logstash/testconf
@@ -304,36 +339,6 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 ### Building and Deploying
 
 - When cloning the `TestLab` repo, **DO NOT** clone the repo to the local machine and then copy and paste the repo into your working virtual machine. This will cause some permission errors. More info on [the official website](https://docs.ansible.com/ansible/latest/reference_appendices/config.html#avoiding-security-risks-with-ansible-cfg-in-the-current-directory).
-
-- Outputting *Packer* debug information is highly recommended. To do so, use the following commands instead of the original build commands. More info on the [official website](https://www.packer.io/docs/debugging).
-
-  ```shell
-  PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json windows_10_esxi.json &> logs/packer_build_win10.log
-  PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json windows_2016_esxi.json &> logs/packer_build_winserver2016.log
-  PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json ubuntu2004_esxi.json &> logs/packer_build_ubuntu20.log
-  ```
-
-  To view the log files in real-time, use the following command.
-
-  ```shell
-  tail -f <PATH TO YOUR LOG FILE>
-  ```
-
-- Outputting *Terraform* debug information is highly recommended. To do so, use the following commands instead of the original build commands. More info on the [official website](https://www.terraform.io/internals/debugging).
-
-  ```shell
-  TF_LOG=DEBUG terraform init &> logs/terraform_init_0.log
-  TF_LOG=DEBUG terraform apply &> logs/terraform_apply_0.log
-  ```
-
-- Outputting *Ansible* debug information is highly recommended. To do so, use the following commands instead of the original build commands. More info by `ansible --help` command.
-
-  ```shell
-  ansible-playbook -vvvv detectionlab.yml --tags "logger" &> logs/ansible-playbook_logger.log
-  ansible-playbook -vvvv detectionlab.yml --tags "dc" &> logs/ansible-playbook_dc.log
-  ansible-playbook -vvvv detectionlab.yml --tags "wef" &> logs/ansible-playbook_wef.log
-  ansible-playbook -vvvv detectionlab.yml --tags "win10" &> logs/ansible-playbook_win10.log
-  ```
 
 - To rebuild a specific VM, run the following from `DetectionLab`/ESXi/`
 
