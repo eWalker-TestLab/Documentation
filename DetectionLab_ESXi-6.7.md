@@ -95,9 +95,9 @@ Note that **all the commands in this subsection should be executed on the ESXi m
 
 Refer to the instructions [here](https://clo.ng/blog/detectionlab-on-esxi/) in the Software section and also the instructions [here](https://nickcharlton.net/posts/using-packer-esxi-6.html). The following steps should be executed on the ESXi machine.
 
-1. Navigate to `https://<YOUR ESXi IP ADDRESS>/ui/#/host/manage/services` and set the policy for SSH to "start and stop with host", and be sure to manually start the service as well.
+1. Navigate to `https://<YOUR ESXi IP ADDRESS>/ui/#/host/manage/services` and set the policy for SSH to *start and stop with host*, and be sure to manually start the service as well.
 
-2. The ESXi instance must have at least two separate networks - one that is accessible from your current machine and has internet connectivity and a HostOnly network to allow the VMs to communicate over a private network. The network that provides DHCP and internet connectivity must also be reachable from the host that is running *Terraform* - ensure your firewall is configured to allow this. Below are some references.
+2. The ESXi instance must have at least two separate networks - one that is accessible from your current machine and has internet connectivity and a hostonly network to allow the VMs to communicate over a private network. The network that provides DHCP and internet connectivity must also be reachable from the host that is running *Terraform* - ensure your firewall is configured to allow this. Below are some references.
 
    ![vSwitch](./img/DetectionLab/ESXi_vSwitch.jpg)
 
@@ -109,11 +109,30 @@ Refer to the instructions [here](https://clo.ng/blog/detectionlab-on-esxi/) in t
    esxcli system settings advanced set -o /Net/GuestIPHack -i 1
    ```
 
-4. Open VNC ports on the firewall. You can either configure it **temporarily** following the instructions [here](https://nickcharlton.net/posts/using-packer-esxi-6.html) or **permanently** [here](https://github.com/sukster/ESXi-Packer-VNC). More info on the [official article 1](https://kb.vmware.com/s/article/2008226) and [official article 2](https://kb.vmware.com/s/article/2043564). You can check it by the following command.
+4. Open VNC ports on the firewall. You can either configure it **temporarily** following the instructions [here](https://nickcharlton.net/posts/using-packer-esxi-6.html) or **permanently** [here](https://github.com/sukster/ESXi-Packer-VNC). More info on the [official article 1](https://kb.vmware.com/s/article/2008226) and [official article 2](https://kb.vmware.com/s/article/2043564).
 
-   ```shell
-   esxcli network firewall ruleset list | grep vnc
-   ```
+   **Permanently**:
+
+   1. Ensure that the Acceptance Level in ESXi is set to "Community" by going to Manage -> Security & Users -> Acceptance Level or the following command.
+
+      ```shell
+      esxcli software acceptance set --level=CommunitySupported
+      ```
+
+   2. Upload the VIB file to `/vmfs/volumes/datastore1/tmp` directory of the ESXi server
+
+   3. Login to ESXi via SSH and execute the following command.
+
+      ```shell
+      esxcli software vib install -v /vmfs/volumes/datastore1/tmp/packer-vnc.vib -f
+      ```
+
+   4. You can verify using the following commands.
+
+      ```shell
+      esxcli software vib list | grep 'vnc'
+      esxcli network firewall ruleset list | grep 'vnc'
+      ```
 
 ### Building and Deploying
 
@@ -123,7 +142,7 @@ After all the prerequisites are satisfied, do the following. Note that **all the
 
 1. Clone the repository to your workspace by `git clone git@github.com:eWalker-TestLab/TestLab.git`.
 
-2. Edit `DetectionLab/ESXi/Packer/variables.json` to match your ESXi configuration. The `esxi_network_with_dhcp_and_internet` variable refers to any ESXi network that will be able to provide DHCP and internet access to the VM while it’s being built in *Packer*. This is usually VM Network. The file should be similar to the following. More info [here](https://detectionlab.network/deployment/esxi/#steps).
+2. Edit `DetectionLab/ESXi/Packer/variables.json` to match your ESXi configuration. The `esxi_network_with_dhcp_and_internet` variable refers to any ESXi network that will be able to provide DHCP and internet access to the VM while it’s being built in *Packer*. This is usually *VM Network*. The file should be similar to the following. More info [here](https://detectionlab.network/deployment/esxi/#steps).
 
    ![variables.json](img/DetectionLab/variables.json.jpg)
 
@@ -144,11 +163,9 @@ After all the prerequisites are satisfied, do the following. Note that **all the
 
    After *Packer* build finish, verify that you now see `Windows10`, `WindowsServer2016`, and `Ubuntu2004` in the ESXi console.
 
-5. In `DetectionLab/ESXi`, Create a `terraform.tfvars` file to override the default variables listed in `variables.tf`. The file should be similar to the following.
+5. In `DetectionLab/ESXi`, Create a `terraform.tfvars` file to override the default variables listed in `variables.tf`. **DO examine the `varibales.tf` file to determine the values of variables that match your environment needs!** The file should be similar to the following.
 
    ![terraform.tfvars](img/DetectionLab/terraform.tfvars.jpg)
-
-   - Change all mac addresses in `main.tf` if there are already existing VM using the same addresses.
 
 6. In `DetectionLab/ESXi`, execute the following commands.
 
