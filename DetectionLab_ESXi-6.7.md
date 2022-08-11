@@ -184,6 +184,21 @@ After all the prerequisites are satisfied, do the following. Note that **all the
 
 After finishing building the **logger** with *Ansible*, Wazuh Server should be installed on the **logger** already. The credential is `admin:TestLab123?`.
 
+#### Install and deploy opensearch and winlogbeat (automatically)
+
+1. Move directory to `~/tool/`
+
+2. Run following commands on three teminal respectively to start opensearch service:
+   ```
+   ./opensearch/opensearch-tar-install.sh
+   ./dashboard/bin/opensearch-dashboards
+   ./logstash/bin/logstash -f ./logstash/testconf
+   ```
+
+3. Go to `<this.host.ip.address>:5601` with `admin:admin` to work on opensearch
+
+4. further filter.conf files can add to `~/tool/logstash/testconf/`
+
 #### Install and Deploy Wazuh (manually)
 
 1. It is highly recommended to take snapshots of all of the VMs before installing Wazuh. Then, power off the **logger** VM and change its RAM to **at least 8GB**.
@@ -259,7 +274,7 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
     ./logstash/bin/logstash -f ./logstash/testconf
     ```
 
-11. Now you can go to `<192.168.56.105changeme>:5601` with `admin:admin` to work on opensearch.
+11. Now you can go to `<this.host.ip.address>:5601` with `admin:admin` to work on opensearch.
 
 ## Things to Notice
 
