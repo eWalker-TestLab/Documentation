@@ -175,7 +175,7 @@ Clone the repository to your workspace by `git clone git@github.com:eWalker-Test
 
    To view the log files in real-time, use `tail -f <PATH TO YOUR LOG FILE>`.
 
-4. After *Packer* build finish, verify that you now see `Windows10`, `WindowsServer2016`, `Ubuntu2004`, and `Kali2022` in the ESXi console.
+4. After *Packer* finishes building, verify that you now see `Windows10`, `WindowsServer2016`, `Ubuntu2004`, and `Kali2022` in the ESXi console.
 
 #### Terraform Build
 
@@ -187,17 +187,17 @@ Clone the repository to your workspace by `git clone git@github.com:eWalker-Test
 
    ```shell
    terraform init
-   terraform apply
+   terraform apply -auto-approve
    ```
 
    **NOTE**: Outputting *Terraform* debug information is highly recommended. To do so, use the following commands instead of the above build commands. More info on the [official website](https://www.terraform.io/internals/debugging).
 
    ```shell
    TF_LOG=DEBUG terraform init &> logs/terraform_init_0.log
-   TF_LOG=DEBUG terraform apply &> logs/terraform_apply_0.log
+   TF_LOG=DEBUG terraform apply -auto-approve &> logs/terraform_apply_0.log
    ```
 
-3. After *Terraform* build finish, change the working directory to `DetectionLab/ESXi/ansible`.
+3. After *Terraform* finishes building, change the working directory to `DetectionLab/ESXi/ansible`.
 
 #### Ansible Playbook
 
@@ -222,7 +222,7 @@ Clone the repository to your workspace by `git clone git@github.com:eWalker-Test
    ansible-playbook -vvvv detectionlab.yml --tags "win10" &> logs/ansible-playbook_win10.log
    ```
 
-   After *Ansible* build finish, you should see results similar to the following.
+   After *Ansible* finishes building, you should see results similar to the following.
 
     ```log
     192.168.1.227              : ok=39   changed=24   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
