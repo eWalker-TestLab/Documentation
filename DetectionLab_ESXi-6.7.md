@@ -8,7 +8,7 @@ Although this setup uses Ubuntu 20.04 guest OS in VMware, the same should apply 
 
 #### Ubuntu Environment Configurations
 
-**Note**: All the commands in this subsection should be executed on the **Ubuntu** machine.
+Note that all the commands in this subsection should be executed on the **Ubuntu** machine.
 
 1. Before starting building the lab, updating the system is recommended. This can be done by executing `sudo apt update` and then `sudo apt full-upgrade --yes`. Finally, `reboot` the machine.
 
@@ -18,13 +18,13 @@ Although this setup uses Ubuntu 20.04 guest OS in VMware, the same should apply 
    sudo apt install build-essential curl git python3-pip gnupg software-properties-common
    ```
 
-   After that, you may need to add `~/.local/bin` to your `PATH` to access tools installed by `pip3`. This can be achieved by the following command.
+   After that, you may want to add `~/.local/bin` to the `PATH` variable to access tools installed by `pip3` by the following command.
 
    ```shell
    echo 'export PATH="$PATH:~/.local/bin"' >> ~/.bashrc
    ```
 
-3. Install *Terraform* by executing the following commands. More info on [the official website](https://www.terraform.io/downloads).
+3. Install *Terraform* by executing the following commands. Find more on [the official website](https://www.terraform.io/downloads).
 
    ```shell
    curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
@@ -32,7 +32,7 @@ Although this setup uses Ubuntu 20.04 guest OS in VMware, the same should apply 
    sudo apt-get update && sudo apt-get install terraform
    ```
 
-4. Install *Vagrant* by executing the following commands. More info on [the official website](https://www.vagrantup.com/downloads).
+4. Install *Vagrant* by executing the following commands. Find more on [the official website](https://www.vagrantup.com/downloads).
 
    ```shell
    curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
@@ -40,7 +40,7 @@ Although this setup uses Ubuntu 20.04 guest OS in VMware, the same should apply 
    sudo apt-get update && sudo apt-get install vagrant
    ```
 
-5. Install *Packer* by executing the following commands. More info on [the official website](https://www.packer.io/downloads).
+5. Install *Packer* by executing the following commands. Find more on [the official website](https://www.packer.io/downloads).
 
    ```shell
    curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
@@ -48,7 +48,7 @@ Although this setup uses Ubuntu 20.04 guest OS in VMware, the same should apply 
    sudo apt-get update && sudo apt-get install packer
    ```
 
-6. Install *Ansible* by the following commands. More info on [the official documentation](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
+6. Install *Ansible* by the following commands. Find more on [the official documentation](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
 
    ```shell
    pip3 install ansible
@@ -76,13 +76,13 @@ Although this setup uses Ubuntu 20.04 guest OS in VMware, the same should apply 
    sudo apt install sshpass
    ```
 
-9. To avoid a bug with *Ansible*, set an environment variable by the following command. More info [here](https://github.com/clong/DetectionLab/issues/543).
+9. To avoid a bug with *Ansible*, set an environment variable by the following command. Find more [here](https://github.com/clong/DetectionLab/issues/543).
 
    ```shell
    echo 'export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES' >> ~/.bashrc
    ```
 
-10. Install `ovftool`. Open a web browser and download [ovftool](https://developer.vmware.com/web/tool/4.4.0/ovf). Unzip the downloaded file and add its path to your `PATH` environment variable by the following commands. More info [here](https://docs.vmware.com/en/VMware-Telco-Cloud-Operations/1.4.0/deployment-guide-140/GUID-95301A42-F6F6-4BA9-B3A0-A86A268754B6.html).
+10. Install `ovftool`. Open a web browser and download [ovftool](https://developer.vmware.com/web/tool/4.4.0/ovf). Unzip the downloaded file and add its path to your `PATH` environment variable by the following commands. Find more on [the official website](https://docs.vmware.com/en/VMware-Telco-Cloud-Operations/1.4.0/deployment-guide-140/GUID-95301A42-F6F6-4BA9-B3A0-A86A268754B6.html).
 
     ```shell
     unzip <YOUR DOWNLOADED FILE>
@@ -91,13 +91,11 @@ Although this setup uses Ubuntu 20.04 guest OS in VMware, the same should apply 
 
 #### ESXi Environment Configurations
 
-**NOTE**: All the commands in this subsection should be executed on the **ESXi** machine.
-
-Refer to the instructions [here](https://clo.ng/blog/detectionlab-on-esxi/) in the Software section and also the instructions [here](https://nickcharlton.net/posts/using-packer-esxi-6.html). The following steps should be executed on the ESXi machine.
+Note that all the commands in this subsection should be executed on the **ESXi** machine. Find more in the Software section of [this tutorial](https://clo.ng/blog/detectionlab-on-esxi/) and the instructions [here](https://nickcharlton.net/posts/using-packer-esxi-6.html).
 
 1. Navigate to `https://<YOUR ESXi IP ADDRESS>/ui/#/host/manage/services` and set the policy for SSH to *start and stop with host*, and be sure to manually start the service as well.
 
-2. The ESXi instance must have at least two separate networks - one that is accessible from your current machine and has internet connectivity and a hostonly network to allow the VMs to communicate over a private network. The network that provides DHCP and internet connectivity must also be reachable from the host that is running *Terraform* - ensure your firewall is configured to allow this. Below are some references.
+2. The ESXi instance must have at least two separate networks - a network accessible from your current machine with internet connectivity and a hostonly network to allow the VMs to communicate over a private network. The network that provides DHCP and internet connectivity must also be reachable from the host that is running *Terraform* - ensure your firewall is configured to allow this. Below are some references.
 
    ![vSwitch](./img/DetectionLab/ESXi_vSwitch.jpg)
 
@@ -109,7 +107,7 @@ Refer to the instructions [here](https://clo.ng/blog/detectionlab-on-esxi/) in t
    esxcli system settings advanced set -o /Net/GuestIPHack -i 1
    ```
 
-4. Open VNC ports on the firewall. You can either configure it **temporarily** following the instructions [here](https://nickcharlton.net/posts/using-packer-esxi-6.html) or **permanently** [here](https://github.com/sukster/ESXi-Packer-VNC). More info on the [official article 1](https://kb.vmware.com/s/article/2008226) and [official article 2](https://kb.vmware.com/s/article/2043564).
+4. Open VNC ports on the firewall. Either configure it **temporarily** following the instructions [here](https://nickcharlton.net/posts/using-packer-esxi-6.html) or **permanently** [here](https://github.com/sukster/ESXi-Packer-VNC). Find more on [official article 1](https://kb.vmware.com/s/article/2008226) and [official article 2](https://kb.vmware.com/s/article/2043564).
 
    **Permanently**:
 
@@ -127,7 +125,7 @@ Refer to the instructions [here](https://clo.ng/blog/detectionlab-on-esxi/) in t
       esxcli software vib install -v /vmfs/volumes/datastore1/tmp/packer-vnc.vib -f
       ```
 
-   4. You can verify using the following commands.
+   4. Verify using the following commands.
 
       ```shell
       esxcli software vib list | grep 'vnc'
@@ -136,7 +134,7 @@ Refer to the instructions [here](https://clo.ng/blog/detectionlab-on-esxi/) in t
 
 ### Building and Deploying
 
-**NOTE**: After all the prerequisites are satisfied, do the following. All the commands in this subsection should be executed on the **Ubuntu** machine.
+After all the prerequisites are satisfied, do the following. Note that all the commands in this subsection should be executed on the **Ubuntu** machine.
 
 #### Clone the Repo
 
@@ -144,11 +142,11 @@ Clone the repository to your workspace by `git clone git@github.com:eWalker-Test
 
 #### Packer Build
 
-1. Edit `DetectionLab/ESXi/Packer/variables.json` to match your ESXi configuration. The `esxi_network_with_dhcp_and_internet` variable refers to any ESXi network that will be able to provide DHCP and internet access to the VM while it’s being built in *Packer*. This is usually *VM Network*. The file should be similar to the following. More info [here](https://detectionlab.network/deployment/esxi/#steps).
+1. Edit `DetectionLab/ESXi/Packer/variables.json` to match your ESXi configuration. The `esxi_network_with_dhcp_and_internet` variable refers to any ESXi network that will be able to provide DHCP and internet access to the VM while it’s being built in *Packer*. This is usually *VM Network*. The file should be similar to the following. Find more [here](https://detectionlab.network/deployment/esxi/#steps).
 
    ![variables.json](img/DetectionLab/variables.json.png)
 
-2. Since ESXi 6.7 is used, delete the following code snippets from `DetectionLab/ESXi/Packer/windows_10_esxi.json`, `DetectionLab/ESXi/Packer/windows_2016_esxi.json`, and `DetectionLab/ESXi/Packer/ubuntu2004_esxi.json`. More info [here](https://detectionlab.network/deployment/esxi/#special-configuration-for-esxi-6x).
+2. Since ESXi 6.7 is used, delete the following code snippets from `DetectionLab/ESXi/Packer/windows_10_esxi.json`, `DetectionLab/ESXi/Packer/windows_2016_esxi.json`, and `DetectionLab/ESXi/Packer/ubuntu2004_esxi.json`. Find more [here](https://detectionlab.network/deployment/esxi/#special-configuration-for-esxi-6x).
 
    ```json
    "vnc_over_websocket": true,
@@ -164,7 +162,7 @@ Clone the repository to your workspace by `git clone git@github.com:eWalker-Test
    PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json kali2022_esxi.json
    ```
 
-   **NOTE**: Outputting *Packer* debug information is highly recommended. To do so, use the following commands instead of the above build commands. More info on the [official website](https://www.packer.io/docs/debugging).
+   **NOTE**: Outputting *Packer* debug information is highly recommended. To do so, use the following commands instead of the above build commands. Find more on [the official website](https://www.packer.io/docs/debugging).
 
    ```shell
    PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json windows_10_esxi.json &> logs/packer_build_win10.log
@@ -190,7 +188,7 @@ Clone the repository to your workspace by `git clone git@github.com:eWalker-Test
    terraform apply -auto-approve
    ```
 
-   **NOTE**: Outputting *Terraform* debug information is highly recommended. To do so, use the following commands instead of the above build commands. More info on the [official website](https://www.terraform.io/internals/debugging).
+   **NOTE**: Outputting *Terraform* debug information is highly recommended. To do so, use the following commands instead of the above build commands. Find more on [the official website](https://www.terraform.io/internals/debugging).
 
    ```shell
    TF_LOG=DEBUG terraform init &> logs/terraform_init_0.log
@@ -213,7 +211,7 @@ Clone the repository to your workspace by `git clone git@github.com:eWalker-Test
    ansible-playbook -v detectionlab.yml
    ```
 
-   **NOTE**: Outputting *Ansible* debug information is highly recommended. To do so, use the following commands instead of the above build commands. More info by `ansible --help` command.
+   **NOTE**: Outputting *Ansible* debug information is highly recommended. To do so, use the following commands instead of the above build commands. Find more by `ansible --help` command.
 
    ```shell
    ansible-playbook -vvvv detectionlab.yml --tags "logger" &> logs/ansible-playbook_logger.log
@@ -239,7 +237,7 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
 1. Move directory to `~/tool/`
 
-2. Run following commands on three teminal respectively to start opensearch service:
+2. Run the following commands on three teminals respectively to start opensearch service:
 
    ```shell
    ./opensearch/opensearch-tar-install.sh
@@ -255,21 +253,21 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
 1. It is highly recommended to take snapshots of all of the VMs before installing Wazuh. Then, power off the **logger** VM and change its RAM to **at least 8GB**.
 
-2. In the **logger** VM, add `User=root` to the `/usr/lib/systemd/system/fwupd-refresh.service` file. The file should be similar to the following. More info [here](https://github.com/fwupd/fwupd/issues/3037).
+2. In the **logger** VM, add `User=root` to the `/usr/lib/systemd/system/fwupd-refresh.service` file. The file should be similar to the following. Find more [here](https://github.com/fwupd/fwupd/issues/3037).
 
    ![fwupd-refresh.service](img/DetectionLab/fwupd-refresh.service.jpg)
 
-3. In the **logger** VM, execute the following command. More info on [the official website](https://documentation.wazuh.com/current/quickstart.html#installing-wazuh).
+3. In the **logger** VM, execute the following command. Find more on [the official website](https://documentation.wazuh.com/current/quickstart.html#installing-wazuh).
 
    ```shell
    curl -sO https://packages.wazuh.com/4.3/wazuh-install.sh && sudo bash ./wazuh-install.sh -a
    ```
 
-4. In the **dc**, **wef**, and **win10** VM, download the installer from [the official website](https://packages.wazuh.com/4.x/windows/wazuh-agent-4.3.5-1.msi). Then double click the downloaded file to install it. More info on [the official website](https://documentation.wazuh.com/current/installation-guide/wazuh-agent/wazuh-agent-package-windows.html).
+4. In the **dc**, **wef**, and **win10** VM, download the installer from [the official website](https://packages.wazuh.com/4.x/windows/wazuh-agent-4.3.5-1.msi). Then double click the downloaded file to install it. Find more on [the official website](https://documentation.wazuh.com/current/installation-guide/wazuh-agent/wazuh-agent-package-windows.html).
 
 #### Install and deploy opensearch and winlogbeat (manually)
 
-1. In agent VMs, download and unzip winlogbeat-oss from [website](https://www.elastic.co/downloads/beats/winlogbeat-oss).  More info from [official document](https://www.elastic.co/guide/en/beats/winlogbeat/current/winlogbeat-installation-configuration.html).
+1. In agent VMs, download and unzip winlogbeat-oss from [website](https://www.elastic.co/downloads/beats/winlogbeat-oss).  Find more from [official document](https://www.elastic.co/guide/en/beats/winlogbeat/current/winlogbeat-installation-configuration.html).
 
 2. Change current directory to winlogbeat folder. Open a PowerShell prompt as an Administrator. Run
 
@@ -279,7 +277,7 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
 3. Configure `winlogbeat.yml` file as follows.
 
-   - Use `Get-EventLog *` on PowerShell to get the list of available event logs. And put all entrices under `winlogbeat.event_logs:`. More info from [here](https://www.elastic.co/guide/en/beats/winlogbeat/current/configuration-winlogbeat-options.html#configuration-winlogbeat-options-event_logs-name)
+   - Use `Get-EventLog *` on PowerShell to get the list of available event logs. And put all entrices under `winlogbeat.event_logs:`. Find more [here](https://www.elastic.co/guide/en/beats/winlogbeat/current/configuration-winlogbeat-options.html#configuration-winlogbeat-options-event_logs-name)
 
       ![Get-EventLog *](img/DetectionLab/get_eventlog.jpg)
 
@@ -338,9 +336,9 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
 ### Building and Deploying
 
-- When cloning the `TestLab` repo, **DO NOT** clone the repo to the local machine and then copy and paste the repo into your working virtual machine. This will cause some permission errors. More info on [the official website](https://docs.ansible.com/ansible/latest/reference_appendices/config.html#avoiding-security-risks-with-ansible-cfg-in-the-current-directory).
+- When cloning the `TestLab` repo, **DO NOT** clone the repo to the local machine and then copy and paste the repo into your working virtual machine. This will cause some permission errors. Find more on [the official website](https://docs.ansible.com/ansible/latest/reference_appendices/config.html#avoiding-security-risks-with-ansible-cfg-in-the-current-directory).
 
-- To rebuild a specific VM, run the following from `DetectionLab`/ESXi/`
+- To rebuild a specific VM, run the following from `DetectionLab`/ESXi/`.
 
   ```shell
   terraform apply -replace="esxi_guest.<dc/logger/wef/win10>"
@@ -352,7 +350,7 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
   ansible-playbook -v detectionlab.yml --tags "<dc/logger/wef/win10>"
   ```
 
-- To restart playbook in a specific task, use
+- To restart the playbook at a specific task, use
 
   ```shell
   ansible-playbook -v detectionlab.yml --tags="<dc/logger/wef/win10>" --start-at-task="<taskname>"
