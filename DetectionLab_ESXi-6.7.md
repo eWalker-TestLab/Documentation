@@ -1,5 +1,23 @@
 # ESXi 6.7 on NUC8i7BEH (with Ubuntu 20.04 in VMware Workstation Pro 16)
 
+- [ESXi 6.7 on NUC8i7BEH (with Ubuntu 20.04 in VMware Workstation Pro 16)](#esxi-67-on-nuc8i7beh-with-ubuntu-2004-in-vmware-workstation-pro-16)
+   - [Build Procedure](#build-procedure)
+      - [Prerequisites](#prerequisites)
+         - [Ubuntu Environment Configurations](#ubuntu-environment-configurations)
+         - [ESXi Environment Configurations](#esxi-environment-configurations)
+      - [Building and Deploying](#building-and-deploying)
+         - [Clone the Repo](#clone-the-repo)
+         - [Packer Build](#packer-build)
+         - [Terraform Build](#terraform-build)
+         - [Ansible Playbook](#ansible-playbook)
+         - [Install and Deploy Wazuh (automatically)](#install-and-deploy-wazuh-automatically)
+         - [Install and deploy opensearch and winlogbeat (automatically)](#install-and-deploy-opensearch-and-winlogbeat-automatically)
+         - [Install and Deploy Wazuh (manually)](#install-and-deploy-wazuh-manually)
+         - [Install and deploy opensearch and winlogbeat (manually)](#install-and-deploy-opensearch-and-winlogbeat-manually)
+   - [Things to Notice](#things-to-notice)
+      - [Prerequisites](#prerequisites-1)
+      - [Building and Deploying](#building-and-deploying-1)
+
 ## Build Procedure
 
 Although this setup uses Ubuntu 20.04 guest OS in VMware, the same should apply to native OS running bare metal.
@@ -199,7 +217,7 @@ Clone the repository to your workspace by `git clone git@github.com:eWalker-Test
 
 #### Ansible Playbook
 
-1. Edit `DetectionLab/ESXi/ansible/inventory.yml` and replace the IP Addresses with the respective IP Addresses of your corresponding ESXi VMs. The file should be similar to the following.
+1. Edit `DetectionLab/ESXi/ansible/inventory.yml` and replace the IP Addresses with the respective IP Addresses of the corresponding ESXi VMs. The file should be similar to the following.
 
    ![inventory.yml](img/DetectionLab/inventory.yml.png)
 
@@ -220,7 +238,7 @@ Clone the repository to your workspace by `git clone git@github.com:eWalker-Test
    ansible-playbook -vvvv detectionlab.yml --tags "win10" &> logs/ansible-playbook_win10.log
    ```
 
-   After *Ansible* finishes building, you should see results similar to the following.
+   After *Ansible* finishes building, the result should be similar to the following.
 
     ```log
     192.168.1.227              : ok=39   changed=24   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
@@ -251,7 +269,7 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
 #### Install and Deploy Wazuh (manually)
 
-1. It is highly recommended to take snapshots of all of the VMs before installing Wazuh. Then, power off the **logger** VM and change its RAM to **at least 8GB**.
+1. It is highly recommended to take snapshots of all VMs before installing Wazuh. Then, power off the **logger** VM and change its RAM to **at least 8GB**.
 
 2. In the **logger** VM, add `User=root` to the `/usr/lib/systemd/system/fwupd-refresh.service` file. The file should be similar to the following. Find more [here](https://github.com/fwupd/fwupd/issues/3037).
 
