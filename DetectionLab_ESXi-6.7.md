@@ -4,18 +4,18 @@
    - [Prerequisites](#prerequisites)
       - [Ubuntu Environment Configurations](#ubuntu-environment-configurations)
       - [ESXi Environment Configurations](#esxi-environment-configurations)
-   - [Building and Deploying](#building-and-deploying)
+   - [Build and Deploy](#build-and-deploy)
       - [Clone the Repo](#clone-the-repo)
       - [Packer Build](#packer-build)
       - [Terraform Build](#terraform-build)
       - [Ansible Playbook](#ansible-playbook)
-      - [Install and Deploy Wazuh (automatically)](#install-and-deploy-wazuh-automatically)
-      - [Install and Deploy Wazuh (manually)](#install-and-deploy-wazuh-manually)
-      - [Install and deploy opensearch and winlogbeat (automatically)](#install-and-deploy-opensearch-and-winlogbeat-automatically)
-      - [Install and deploy opensearch and winlogbeat (manually)](#install-and-deploy-opensearch-and-winlogbeat-manually)
+      - [Deploy Wazuh (automatically)](#deploy-wazuh-automatically)
+      - [Deploy Wazuh (manually)](#deploy-wazuh-manually)
+      - [Deploy opensearch and winlogbeat (automatically)](#deploy-opensearch-and-winlogbeat-automatically)
+      - [Deploy opensearch and winlogbeat (manually)](#deploy-opensearch-and-winlogbeat-manually)
    - [Things to Notice](#things-to-notice)
       - [Prerequisites](#prerequisites-1)
-      - [Building and Deploying](#building-and-deploying-1)
+      - [Build and Deploy](#build-and-deploy-1)
 
 Although this setup uses Ubuntu 20.04 guest OS in VMware, the same should apply to native OS running bare metal.
 
@@ -122,7 +122,7 @@ Note that all the commands in this subsection should be executed on the **ESXi**
    esxcli system settings advanced set -o /Net/GuestIPHack -i 1
    ```
 
-4. Open VNC ports on the firewall. Either configure it **temporarily** following the instructions [here](https://nickcharlton.net/posts/using-packer-esxi-6.html) or **permanently** [here](https://github.com/sukster/ESXi-Packer-VNC). Find more on [official article 1](https://kb.vmware.com/s/article/2008226) and [official article 2](https://kb.vmware.com/s/article/2043564).
+4. Open VNC ports on the firewall. Either configure it **temporarily** following the instructions [here](https://nickcharlton.net/posts/using-packer-esxi-6.html) or **permanently** [here](https://github.com/sukster/ESXi-Packer-VNC). Find more in [official article 1](https://kb.vmware.com/s/article/2008226) and [official article 2](https://kb.vmware.com/s/article/2043564).
 
    **Permanently**:
 
@@ -147,7 +147,7 @@ Note that all the commands in this subsection should be executed on the **ESXi**
       esxcli network firewall ruleset list | grep 'vnc'
       ```
 
-## Building and Deploying
+## Build and Deploy
 
 After all the prerequisites are satisfied, do the following. Note that all the commands in this subsection should be executed on the **Ubuntu** machine.
 
@@ -244,11 +244,11 @@ Clone the repository to your workspace by `git clone git@github.com:eWalker-Test
     192.168.1.17               : ok=29   changed=21   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
     ```
 
-### Install and Deploy Wazuh (automatically)
+### Deploy Wazuh (automatically)
 
 After finishing building the **logger** with *Ansible*, Wazuh Server should be installed on the **logger** already. The credential is `admin:TestLab123?`.
 
-### Install and Deploy Wazuh (manually)
+### Deploy Wazuh (manually)
 
 1. It is highly recommended to take snapshots of all VMs before installing Wazuh. Then, power off the **logger** VM and change its RAM to **at least 8GB**.
 
@@ -264,7 +264,7 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
 4. In the **dc**, **wef**, and **win10** VM, download the installer from [the official website](https://packages.wazuh.com/4.x/windows/wazuh-agent-4.3.5-1.msi). Then double click the downloaded file to install it. Find more on [the official website](https://documentation.wazuh.com/current/installation-guide/wazuh-agent/wazuh-agent-package-windows.html).
 
-### Install and deploy opensearch and winlogbeat (automatically)
+### Deploy opensearch and winlogbeat (automatically)
 
 1. Move directory to `~/tool/`
 
@@ -280,7 +280,7 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
 4. further filter.conf files can add to `~/tool/logstash/testconf/`
 
-### Install and deploy opensearch and winlogbeat (manually)
+### Deploy opensearch and winlogbeat (manually)
 
 1. In agent VMs, download and unzip winlogbeat-oss from [website](https://www.elastic.co/downloads/beats/winlogbeat-oss).  Find more from [official document](https://www.elastic.co/guide/en/beats/winlogbeat/current/winlogbeat-installation-configuration.html).
 
@@ -349,7 +349,7 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
 - It is recommended to check your system's proxy settings. Also, it is recommended not to use any proxy applications or browser plugins (e.g., *SwitchyOmega*) during the setup process.
 
-### Building and Deploying
+### Build and Deploy
 
 - When cloning the `TestLab` repo, **DO NOT** clone the repo to the local machine and then copy and paste the repo into your working virtual machine. This will cause some permission errors. Find more on [the official website](https://docs.ansible.com/ansible/latest/reference_appendices/config.html#avoiding-security-risks-with-ansible-cfg-in-the-current-directory).
 

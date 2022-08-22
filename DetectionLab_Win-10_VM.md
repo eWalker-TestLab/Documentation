@@ -1,8 +1,13 @@
-# Windows 10 + VMware Workstation Pro 16
+# VMware Workstation Pro 16 on Windows 10
 
-## Build Procedure
+- [VMware Workstation Pro 16 on Windows 10](#vmware-workstation-pro-16-on-windows-10)
+  - [Prerequisites](#prerequisites)
+  - [Build and Deploy](#build-and-deploy)
+  - [Things to Notice](#things-to-notice)
+    - [Prerequisites](#prerequisites-1)
+    - [Build and Deploy](#build-and-deploy-1)
 
-### Prerequisites
+## Prerequisites
 
 1. Download *VMware Workstation Pro 16* from [the official website](https://www.vmware.com/products/workstation-pro/workstation-pro-evaluation.html). After downloading the program from the site, double-click the program to install *VMware Workstation Pro 16*.
 
@@ -16,7 +21,7 @@
    vagrant plugin install vagrant-vmware-desktop
    ```
 
-### Building and Deploying
+## Build and Deploy
 
 After all the installation, follow the instructions [here](https://www.detectionlab.network/deployment/windowsvm/#instructions).
 
@@ -30,7 +35,7 @@ After all the installation, follow the instructions [here](https://www.detection
 
 - If you already have multiple virtual machine platforms installed on your machine, please examine the *network adapter settings* of your machine in order to avoid any collision. For example, you may want to check whether `192.168.56.1` is occupied or not because DetectionLab will utilize this address.
 
-### Building and Deploying
+### Build and Deploy
 
 - Outputting *Vagrant* debug information is highly recommended. This can be done by adding the `--debug 2>&1 | Tee-Object -FilePath "PATH TO YOUR LOG FILE"` flag after each `vagrant` command. For example, `vagrant up --debug 2>&1 | Tee-Object -FilePath ".\vagrant_up.log"`. Refer to [the official documentation](https://www.vagrantup.com/docs/other/debugging).
 

@@ -2,7 +2,7 @@
 
 ## DetectionLab Setup
 
-This section introduces how to set up [DetectionLab](https://github.com/clong/DetectionLab) (actually [TestLab](https://github.com/eWalker-TestLab/TestLab)). Select the corresponding environment in the following (please read the **whole** corresponding doc before you build).
+This part introduces how to set up [DetectionLab](https://github.com/clong/DetectionLab) (actually [TestLab](https://github.com/eWalker-TestLab/TestLab)). Select the corresponding environment in the following (please read the **whole** corresponding doc before building).
 
 - [VMware Workstation Pro 16 on Windows 10](./DetectionLab_Win-10_VM.md)
 - [VirtualBox 6.1 on Ubuntu 20.04](./DetectionLab_Ubuntu-20.04_VB.md)
@@ -12,6 +12,6 @@ This section introduces how to set up [DetectionLab](https://github.com/clong/De
 
 ## BlueTeam.Lab Setup
 
-This section introduces how to set up [BlueTeam.Lab](https://github.com/op7ic/BlueTeam.Lab). Select the corresponding environment in the following.
+This part introduces how to set up [BlueTeam.Lab](https://github.com/op7ic/BlueTeam.Lab). Select the corresponding environment in the following.
 
-- [Azure (with Ubuntu 20.04 in VMware Workstation Pro 16)](./BlueTeam.Lab_Azure_Ubuntu.md)
+- [Azure (with Ubuntu 20.04 in VMware Workstation Pro 16) (**NOT DONE**)](./BlueTeam.Lab_Azure_Ubuntu.md)
