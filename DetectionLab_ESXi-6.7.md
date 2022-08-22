@@ -5,7 +5,7 @@
       - [Ubuntu Environment Configurations](#ubuntu-environment-configurations)
       - [ESXi Environment Configurations](#esxi-environment-configurations)
    - [Build and Deploy](#build-and-deploy)
-      - [Clone the Repo](#clone-the-repo)
+      - [Clone TestLab Repo](#clone-testlab-repo)
       - [Packer Build](#packer-build)
       - [Terraform Build](#terraform-build)
       - [Ansible Playbook](#ansible-playbook)
@@ -63,7 +63,7 @@ Note that all the commands in this subsection should be executed on the **Ubuntu
    sudo apt-get update && sudo apt-get install packer
    ```
 
-6. Install *Ansible* by the following commands. Find more on [the official documentation](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
+6. Install *Ansible* by the following command. Find more on [the official documentation](https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html).
 
    ```shell
    pip3 install ansible
@@ -112,9 +112,9 @@ Note that all the commands in this subsection should be executed on the **ESXi**
 
 2. The ESXi instance must have at least two separate networks - a network accessible from your current machine with internet connectivity and a hostonly network to allow the VMs to communicate over a private network. The network that provides DHCP and internet connectivity must also be reachable from the host that is running *Terraform* - ensure your firewall is configured to allow this. Below are some references.
 
-   ![vSwitch](./img/DetectionLab/ESXi_vSwitch.jpg)
+   ![vSwitch](./img/TestLab/ESXi_vSwitch.jpg)
 
-   ![Network](./img/DetectionLab/ESXi_Network.jpg)
+   ![Network](./img/TestLab/ESXi_Network.jpg)
 
 3. Allow *Packer* to infer the guest IP from ESXi without the VM needing to report it itself by the following command.
 
@@ -151,24 +151,26 @@ Note that all the commands in this subsection should be executed on the **ESXi**
 
 After all the prerequisites are satisfied, do the following. Note that all the commands in this subsection should be executed on the **Ubuntu** machine.
 
-### Clone the Repo
+### Clone TestLab Repo
 
 Clone the repository to your workspace by `git clone git@github.com:eWalker-TestLab/TestLab.git`.
 
 ### Packer Build
 
-1. Edit `DetectionLab/ESXi/Packer/variables.json` to match your ESXi configuration. The `esxi_network_with_dhcp_and_internet` variable refers to any ESXi network that will be able to provide DHCP and internet access to the VM while it’s being built in *Packer*. This is usually *VM Network*. The file should be similar to the following. Find more info [here](https://detectionlab.network/deployment/esxi/#steps).
+1. Change your working directory to `TestLab/ESXi/Packer`.
 
-   ![variables.json](img/DetectionLab/variables.json.png)
+2. Edit `TestLab/ESXi/Packer/variables.json` to match your ESXi configuration. The `esxi_network_with_dhcp_and_internet` variable refers to any ESXi network that will be able to provide DHCP and internet access to the VM while it’s being built in *Packer*. This is usually *VM Network*. The file should be similar to the following. Find more info [here](https://detectionlab.network/deployment/esxi/#steps).
 
-2. Since ESXi 6.7 is used, delete the following code snippets from `DetectionLab/ESXi/Packer/ubuntu2004_esxi.json`, `DetectionLab/ESXi/Packer/windows_2016_esxi.json`, and `DetectionLab/ESXi/Packer/windows_10_esxi.json`. Find more info [here](https://detectionlab.network/deployment/esxi/#special-configuration-for-esxi-6x).
+   ![variables.json](img/TestLab/variables.json.png)
+
+3. Since ESXi 6.7 is used, delete the following code snippets from `TestLab/ESXi/Packer/ubuntu2004_esxi.json`, `TestLab/ESXi/Packer/windows_2016_esxi.json`, and `TestLab/ESXi/Packer/windows_10_esxi.json`. Find more info [here](https://detectionlab.network/deployment/esxi/#special-configuration-for-esxi-6x).
 
    ```json
    "vnc_over_websocket": true,
    "insecure_connection": true,
    ```
 
-3. Execute the following commands from the `DetectionLab/ESXi/Packer` directory.
+4. Execute the following commands from the `TestLab/ESXi/Packer` directory.
 
    ```shell
    PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json ubuntu2004_esxi.json
@@ -188,15 +190,17 @@ Clone the repository to your workspace by `git clone git@github.com:eWalker-Test
 
    To view the log files in real-time, use `tail -f <PATH TO YOUR LOG FILE>`.
 
-4. After *Packer* finishes building, verify that you now see `Windows10`, `WindowsServer2016`, `Ubuntu2004`, and `Kali2022` in the ESXi console.
+5. After *Packer* finishes building, verify that `Windows10`, `WindowsServer2016`, `Ubuntu2004`, and `Kali2022` exist in the ESXi console.
 
 ### Terraform Build
 
-1. In `DetectionLab/ESXi`, Create a `terraform.tfvars` file to override the default variables listed in `variables.tf`. **DO examine the `varibales.tf` file to determine the values of variables that match your environment needs!** The file should be similar to the following.
+1. Change your working directory to `TestLab/ESXi`.
 
-   ![terraform.tfvars](img/DetectionLab/terraform.tfvars.png)
+2. Create a `terraform.tfvars` file to override the default variables listed in `variables.tf`. The file should be similar to the following.
 
-2. In `DetectionLab/ESXi`, execute the following commands.
+   ![terraform.tfvars](img/TestLab/terraform.tfvars.png)
+
+3. Execute the following commands.
 
    ```shell
    terraform init
@@ -210,17 +214,19 @@ Clone the repository to your workspace by `git clone git@github.com:eWalker-Test
    TF_LOG=DEBUG terraform apply -auto-approve -parallelism=4 &> logs/terraform_apply_0.log
    ```
 
-3. After *Terraform* finishes building, change the working directory to `DetectionLab/ESXi/ansible`.
+4. After *Terraform* finishes building, verify that all the guests defined in `TestLab/ESXi/main.tf` exist in the ESXi console.
 
 ### Ansible Playbook
 
-1. Edit `DetectionLab/ESXi/ansible/inventory.yml` and replace the IP Addresses with the respective IP Addresses of the corresponding ESXi VMs. The file should be similar to the following.
+1. Change your working directory to `TestLab/ESXi/ansible`.
 
-   ![inventory.yml](img/DetectionLab/inventory.yml.png)
+2. Edit `TestLab/ESXi/ansible/inventory.yml` and replace the IP addresses with the respective IP addresses of the corresponding ESXi VMs. The file should be similar to the following.
 
-   **NOTE**: Change mac addresses in `main.yml` under `ESXi/ansible/roles/<dc/logger/wef/win10>/tasks/` to match the mac address in `DetectionLab/ESXi/variables.tf` if you changed earlier.
+   ![inventory.yml](img/TestLab/inventory.yml.png)
 
-2. Take snapshots of all of the VMs. Make sure to unlock all the VMs to prevent connection problems. Then run the following command.
+3. Change MAC addresses in `TestLab/ESXi/ansible/group_vars/testlab.yml` to match the MAC address in `TestLab/ESXi/variables.tf` and `TestLab/ESXi/terraform.tfvars` if you changed them earlier.
+
+4. Take snapshots of all of the VMs. Better to unlock all the VMs to prevent connection problems. Then run the following command.
 
    ```shell
    ansible-playbook -v detectionlab.yml
@@ -233,16 +239,18 @@ Clone the repository to your workspace by `git clone git@github.com:eWalker-Test
    ansible-playbook -vvvv detectionlab.yml --tags "dc" &> logs/ansible-playbook_dc.log
    ansible-playbook -vvvv detectionlab.yml --tags "wef" &> logs/ansible-playbook_wef.log
    ansible-playbook -vvvv detectionlab.yml --tags "win10" &> logs/ansible-playbook_win10.log
+   ansible-playbook -vvvv detectionlab.yml --tags "container" &> logs/ansible-playbook_container.log
+   ansible-playbook -vvvv detectionlab.yml --tags "kali" &> logs/ansible-playbook_kali.log
    ```
 
-   After *Ansible* finishes building, the result should be similar to the following.
+5. After *Ansible* finishes building, the result should be similar to the following.
 
-    ```log
-    192.168.1.227              : ok=39   changed=24   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-    192.168.1.46               : ok=40   changed=20   unreachable=0    failed=0    skipped=2    rescued=0    ignored=0
-    192.168.1.60               : ok=25   changed=16   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-    192.168.1.17               : ok=29   changed=21   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-    ```
+   ```log
+   192.168.1.227              : ok=39   changed=24   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+   192.168.1.46               : ok=40   changed=20   unreachable=0    failed=0    skipped=2    rescued=0    ignored=0
+   192.168.1.60               : ok=25   changed=16   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+   192.168.1.17               : ok=29   changed=21   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
+   ```
 
 ### Deploy Wazuh (automatically)
 
@@ -254,7 +262,7 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
 2. In the **logger** VM, add `User=root` to the `/usr/lib/systemd/system/fwupd-refresh.service` file. The file should be similar to the following. Find more info [here](https://github.com/fwupd/fwupd/issues/3037).
 
-   ![fwupd-refresh.service](img/DetectionLab/fwupd-refresh.service.jpg)
+   ![fwupd-refresh.service](img/TestLab/fwupd-refresh.service.jpg)
 
 3. In the **logger** VM, execute the following command. Find more on [the official website](https://documentation.wazuh.com/current/quickstart.html#installing-wazuh).
 
@@ -294,13 +302,13 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
    - Use `Get-EventLog *` on PowerShell to get the list of available event logs. And put all entrices under `winlogbeat.event_logs:`. Find more info [here](https://www.elastic.co/guide/en/beats/winlogbeat/current/configuration-winlogbeat-options.html#configuration-winlogbeat-options-event_logs-name)
 
-      ![Get-EventLog *](img/DetectionLab/get_eventlog.jpg)
+      ![Get-EventLog *](img/TestLab/get_eventlog.jpg)
 
-      ![winlogbeat_config](img/DetectionLab/winlogbeat_config_1.jpg)
+      ![winlogbeat_config](img/TestLab/winlogbeat_config_1.jpg)
 
    - Configure winlogbeat to output all logs to logstash on **logger**
 
-      ![winlogbeat_config](img/DetectionLab/winlogbeat_config_2.jpg)
+      ![winlogbeat_config](img/TestLab/winlogbeat_config_2.jpg)
 
 4. Run
 
@@ -313,7 +321,7 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
 6. Refer to [here](http://192.168.68.198:7111/wiki/Falcon/Opensearch)
 
-   ![opensearch install](img/DetectionLab/opensearch_install.jpg)
+   ![opensearch install](img/TestLab/opensearch_install.jpg)
 
    Run command once to install necessary files:
 
@@ -323,13 +331,13 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
 7. Configure both opensearch and dashboard yml file under respective config folder similar to follow:
 
-   ![opensearch config](img/DetectionLab/opensearch_config.jpg)
+   ![opensearch config](img/TestLab/opensearch_config.jpg)
 
 8. Create a `testconf` folder to store all the filter and conf files. Create a `test.conf` file inside the folder.
 
 9. Edit the config file similar to the following to receive event logs from winlogbeat.
 
-   ![logstash config](img/DetectionLab/logstash_config.jpg)
+   ![logstash config](img/TestLab/logstash_config.jpg)
 
 10. Run following commands on three teminal respectively to start the service:
 
@@ -345,7 +353,7 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
 ### Prerequisites
 
-- It is recommended to install setup the environment using *Linux* or *macOS*. *Windows* is not recommended because some of the tools, such as *Ansible*, cannot run on *Windows* according to the [official documentation](https://docs.ansible.com/ansible/latest/user_guide/windows_faq.html#can-ansible-run-on-windows).
+- It is recommended to install setup the environment using *Linux* or *macOS*. *Windows* is not recommended because some of the tools, such as *Ansible*, cannot run on *Windows* according to [the official documentation](https://docs.ansible.com/ansible/latest/user_guide/windows_faq.html#can-ansible-run-on-windows).
 
 - It is recommended to check your system's proxy settings. Also, it is recommended not to use any proxy applications or browser plugins (e.g., *SwitchyOmega*) during the setup process.
 
@@ -353,13 +361,13 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
 - When cloning the `TestLab` repo, **DO NOT** clone the repo to the local machine and then copy and paste the repo into your working virtual machine. This will cause some permission errors. Find more on [the official website](https://docs.ansible.com/ansible/latest/reference_appendices/config.html#avoiding-security-risks-with-ansible-cfg-in-the-current-directory).
 
-- To rebuild a specific VM, run the following from `DetectionLab`/ESXi/`.
+- To rebuild a specific VM, run the following from `TestLab/ESXi`.
 
   ```shell
   terraform apply -replace="esxi_guest.<dc/logger/wef/win10>"
   ```
 
-  Then go to `DetectionLab/ESXi/ansible/` and run
+  Then go to `TestLab/ESXi/ansible` and run
 
   ```shell
   ansible-playbook -v detectionlab.yml --tags "<dc/logger/wef/win10>"
