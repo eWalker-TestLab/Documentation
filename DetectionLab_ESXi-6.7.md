@@ -94,7 +94,7 @@ Note that all the commands in this subsection should be executed on the **Ubuntu
    sudo apt install sshpass
    ```
 
-9. To avoid a bug with *Ansible*, set an environment variable by the following command. Find more [here](https://github.com/clong/DetectionLab/issues/543).
+9. To avoid a bug with *Ansible*, set an environment variable by the following command. Find more info [here](https://github.com/clong/DetectionLab/issues/543).
 
    ```shell
    echo 'export OBJC_DISABLE_INITIALIZE_FORK_SAFETY=YES' >> ~/.bashrc
@@ -160,11 +160,11 @@ Clone the repository to your workspace by `git clone git@github.com:eWalker-Test
 
 #### Packer Build
 
-1. Edit `DetectionLab/ESXi/Packer/variables.json` to match your ESXi configuration. The `esxi_network_with_dhcp_and_internet` variable refers to any ESXi network that will be able to provide DHCP and internet access to the VM while it’s being built in *Packer*. This is usually *VM Network*. The file should be similar to the following. Find more [here](https://detectionlab.network/deployment/esxi/#steps).
+1. Edit `DetectionLab/ESXi/Packer/variables.json` to match your ESXi configuration. The `esxi_network_with_dhcp_and_internet` variable refers to any ESXi network that will be able to provide DHCP and internet access to the VM while it’s being built in *Packer*. This is usually *VM Network*. The file should be similar to the following. Find more info [here](https://detectionlab.network/deployment/esxi/#steps).
 
    ![variables.json](img/DetectionLab/variables.json.png)
 
-2. Since ESXi 6.7 is used, delete the following code snippets from `DetectionLab/ESXi/Packer/windows_10_esxi.json`, `DetectionLab/ESXi/Packer/windows_2016_esxi.json`, and `DetectionLab/ESXi/Packer/ubuntu2004_esxi.json`. Find more [here](https://detectionlab.network/deployment/esxi/#special-configuration-for-esxi-6x).
+2. Since ESXi 6.7 is used, delete the following code snippets from `DetectionLab/ESXi/Packer/ubuntu2004_esxi.json`, `DetectionLab/ESXi/Packer/windows_2016_esxi.json`, and `DetectionLab/ESXi/Packer/windows_10_esxi.json`. Find more info [here](https://detectionlab.network/deployment/esxi/#special-configuration-for-esxi-6x).
 
    ```json
    "vnc_over_websocket": true,
@@ -174,18 +174,18 @@ Clone the repository to your workspace by `git clone git@github.com:eWalker-Test
 3. Execute the following commands from the `DetectionLab/ESXi/Packer` directory.
 
    ```shell
-   PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json windows_10_esxi.json
-   PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json windows_2016_esxi.json
    PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json ubuntu2004_esxi.json
+   PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json windows_2016_esxi.json
+   PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json windows_10_esxi.json
    PACKER_CACHE_DIR=../../Packer/packer_cache packer build -var-file variables.json kali2022_esxi.json
    ```
 
    **NOTE**: Outputting *Packer* debug information is highly recommended. To do so, use the following commands instead of the above build commands. Find more on [the official website](https://www.packer.io/docs/debugging).
 
    ```shell
-   PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json windows_10_esxi.json &> logs/packer_build_win10.log
-   PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json windows_2016_esxi.json &> logs/packer_build_winserver2016.log
    PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json ubuntu2004_esxi.json &> logs/packer_build_ubuntu20.log
+   PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json windows_2016_esxi.json &> logs/packer_build_winserver2016.log
+   PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json windows_10_esxi.json &> logs/packer_build_win10.log
    PACKER_CACHE_DIR=../../Packer/packer_cache PACKER_LOG=1 packer build -var-file variables.json kali2022_esxi.json &> logs/packer_build_kali.log
    ```
 
@@ -203,14 +203,14 @@ Clone the repository to your workspace by `git clone git@github.com:eWalker-Test
 
    ```shell
    terraform init
-   terraform apply -auto-approve
+   terraform apply -auto-approve -parallelism=4
    ```
 
    **NOTE**: Outputting *Terraform* debug information is highly recommended. To do so, use the following commands instead of the above build commands. Find more on [the official website](https://www.terraform.io/internals/debugging).
 
    ```shell
    TF_LOG=DEBUG terraform init &> logs/terraform_init_0.log
-   TF_LOG=DEBUG terraform apply -auto-approve &> logs/terraform_apply_0.log
+   TF_LOG=DEBUG terraform apply -auto-approve -parallelism=4 &> logs/terraform_apply_0.log
    ```
 
 3. After *Terraform* finishes building, change the working directory to `DetectionLab/ESXi/ansible`.
@@ -271,7 +271,7 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
 1. It is highly recommended to take snapshots of all VMs before installing Wazuh. Then, power off the **logger** VM and change its RAM to **at least 8GB**.
 
-2. In the **logger** VM, add `User=root` to the `/usr/lib/systemd/system/fwupd-refresh.service` file. The file should be similar to the following. Find more [here](https://github.com/fwupd/fwupd/issues/3037).
+2. In the **logger** VM, add `User=root` to the `/usr/lib/systemd/system/fwupd-refresh.service` file. The file should be similar to the following. Find more info [here](https://github.com/fwupd/fwupd/issues/3037).
 
    ![fwupd-refresh.service](img/DetectionLab/fwupd-refresh.service.jpg)
 
@@ -295,7 +295,7 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
 3. Configure `winlogbeat.yml` file as follows.
 
-   - Use `Get-EventLog *` on PowerShell to get the list of available event logs. And put all entrices under `winlogbeat.event_logs:`. Find more [here](https://www.elastic.co/guide/en/beats/winlogbeat/current/configuration-winlogbeat-options.html#configuration-winlogbeat-options-event_logs-name)
+   - Use `Get-EventLog *` on PowerShell to get the list of available event logs. And put all entrices under `winlogbeat.event_logs:`. Find more info [here](https://www.elastic.co/guide/en/beats/winlogbeat/current/configuration-winlogbeat-options.html#configuration-winlogbeat-options-event_logs-name)
 
       ![Get-EventLog *](img/DetectionLab/get_eventlog.jpg)
 
