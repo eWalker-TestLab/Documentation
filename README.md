@@ -8,7 +8,7 @@ This section introduces how to set up [DetectionLab](https://github.com/clong/De
 - [Ubuntu 20.04 + VirtualBox 6.1](./DetectionLab_Ubuntu-20.04_VB.md)
 - [ESXi 6.7 on NUC8i7BEH (with Windows 10 & WSL2) (NOT DONE)](./DetectionLab_ESXi-6.7_WSL.md)
 - [ESXi 6.7 on NUC8i7BEH (with Ubuntu 20.04 in VMware Workstation Pro 16)](./DetectionLab_ESXi-6.7.md)
-- [ESXi 7.0 on NUC8i7BEH (with Ubuntu 20.04 in VMware Workstation Pro 16) (NOT DONE)](./DetectionLab_ESXi-7.0U3_Ubuntu_VM.md)
+- [ESXi 7.0 on NUC8i7BEH (with Ubuntu 20.04 in VMware Workstation Pro 16) (NOT DONE)](./DetectionLab_ESXi-7.0.md)
 
 ## BlueTeam.Lab Setup
 
