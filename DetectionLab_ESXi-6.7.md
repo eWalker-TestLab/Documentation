@@ -1,30 +1,27 @@
 # ESXi 6.7 on NUC8i7BEH (with Ubuntu 20.04 in VMware Workstation Pro 16)
 
 - [ESXi 6.7 on NUC8i7BEH (with Ubuntu 20.04 in VMware Workstation Pro 16)](#esxi-67-on-nuc8i7beh-with-ubuntu-2004-in-vmware-workstation-pro-16)
-   - [Build Procedure](#build-procedure)
-      - [Prerequisites](#prerequisites)
-         - [Ubuntu Environment Configurations](#ubuntu-environment-configurations)
-         - [ESXi Environment Configurations](#esxi-environment-configurations)
-      - [Building and Deploying](#building-and-deploying)
-         - [Clone the Repo](#clone-the-repo)
-         - [Packer Build](#packer-build)
-         - [Terraform Build](#terraform-build)
-         - [Ansible Playbook](#ansible-playbook)
-         - [Install and Deploy Wazuh (automatically)](#install-and-deploy-wazuh-automatically)
-         - [Install and deploy opensearch and winlogbeat (automatically)](#install-and-deploy-opensearch-and-winlogbeat-automatically)
-         - [Install and Deploy Wazuh (manually)](#install-and-deploy-wazuh-manually)
-         - [Install and deploy opensearch and winlogbeat (manually)](#install-and-deploy-opensearch-and-winlogbeat-manually)
+   - [Prerequisites](#prerequisites)
+      - [Ubuntu Environment Configurations](#ubuntu-environment-configurations)
+      - [ESXi Environment Configurations](#esxi-environment-configurations)
+   - [Building and Deploying](#building-and-deploying)
+      - [Clone the Repo](#clone-the-repo)
+      - [Packer Build](#packer-build)
+      - [Terraform Build](#terraform-build)
+      - [Ansible Playbook](#ansible-playbook)
+      - [Install and Deploy Wazuh (automatically)](#install-and-deploy-wazuh-automatically)
+      - [Install and Deploy Wazuh (manually)](#install-and-deploy-wazuh-manually)
+      - [Install and deploy opensearch and winlogbeat (automatically)](#install-and-deploy-opensearch-and-winlogbeat-automatically)
+      - [Install and deploy opensearch and winlogbeat (manually)](#install-and-deploy-opensearch-and-winlogbeat-manually)
    - [Things to Notice](#things-to-notice)
       - [Prerequisites](#prerequisites-1)
       - [Building and Deploying](#building-and-deploying-1)
 
-## Build Procedure
-
 Although this setup uses Ubuntu 20.04 guest OS in VMware, the same should apply to native OS running bare metal.
 
-### Prerequisites
+## Prerequisites
 
-#### Ubuntu Environment Configurations
+### Ubuntu Environment Configurations
 
 Note that all the commands in this subsection should be executed on the **Ubuntu** machine.
 
@@ -107,7 +104,7 @@ Note that all the commands in this subsection should be executed on the **Ubuntu
     echo 'export PATH="$PATH:<PATH TO YOUR UNZIPPED FOLDER>"' >> ~/.bashrc
     ```
 
-#### ESXi Environment Configurations
+### ESXi Environment Configurations
 
 Note that all the commands in this subsection should be executed on the **ESXi** machine. Find more in the Software section of [this tutorial](https://clo.ng/blog/detectionlab-on-esxi/) and the instructions [here](https://nickcharlton.net/posts/using-packer-esxi-6.html).
 
@@ -150,15 +147,15 @@ Note that all the commands in this subsection should be executed on the **ESXi**
       esxcli network firewall ruleset list | grep 'vnc'
       ```
 
-### Building and Deploying
+## Building and Deploying
 
 After all the prerequisites are satisfied, do the following. Note that all the commands in this subsection should be executed on the **Ubuntu** machine.
 
-#### Clone the Repo
+### Clone the Repo
 
 Clone the repository to your workspace by `git clone git@github.com:eWalker-TestLab/TestLab.git`.
 
-#### Packer Build
+### Packer Build
 
 1. Edit `DetectionLab/ESXi/Packer/variables.json` to match your ESXi configuration. The `esxi_network_with_dhcp_and_internet` variable refers to any ESXi network that will be able to provide DHCP and internet access to the VM while it’s being built in *Packer*. This is usually *VM Network*. The file should be similar to the following. Find more info [here](https://detectionlab.network/deployment/esxi/#steps).
 
@@ -193,7 +190,7 @@ Clone the repository to your workspace by `git clone git@github.com:eWalker-Test
 
 4. After *Packer* finishes building, verify that you now see `Windows10`, `WindowsServer2016`, `Ubuntu2004`, and `Kali2022` in the ESXi console.
 
-#### Terraform Build
+### Terraform Build
 
 1. In `DetectionLab/ESXi`, Create a `terraform.tfvars` file to override the default variables listed in `variables.tf`. **DO examine the `varibales.tf` file to determine the values of variables that match your environment needs!** The file should be similar to the following.
 
@@ -215,7 +212,7 @@ Clone the repository to your workspace by `git clone git@github.com:eWalker-Test
 
 3. After *Terraform* finishes building, change the working directory to `DetectionLab/ESXi/ansible`.
 
-#### Ansible Playbook
+### Ansible Playbook
 
 1. Edit `DetectionLab/ESXi/ansible/inventory.yml` and replace the IP Addresses with the respective IP Addresses of the corresponding ESXi VMs. The file should be similar to the following.
 
@@ -247,27 +244,11 @@ Clone the repository to your workspace by `git clone git@github.com:eWalker-Test
     192.168.1.17               : ok=29   changed=21   unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
     ```
 
-#### Install and Deploy Wazuh (automatically)
+### Install and Deploy Wazuh (automatically)
 
 After finishing building the **logger** with *Ansible*, Wazuh Server should be installed on the **logger** already. The credential is `admin:TestLab123?`.
 
-#### Install and deploy opensearch and winlogbeat (automatically)
-
-1. Move directory to `~/tool/`
-
-2. Run the following commands on three teminals respectively to start opensearch service:
-
-   ```shell
-   ./opensearch/opensearch-tar-install.sh
-   ./dashboard/bin/opensearch-dashboards
-   ./logstash/bin/logstash -f ./logstash/testconf
-   ```
-
-3. Go to `<this.host.ip.address>:5601` with `admin:admin` to work on opensearch
-
-4. further filter.conf files can add to `~/tool/logstash/testconf/`
-
-#### Install and Deploy Wazuh (manually)
+### Install and Deploy Wazuh (manually)
 
 1. It is highly recommended to take snapshots of all VMs before installing Wazuh. Then, power off the **logger** VM and change its RAM to **at least 8GB**.
 
@@ -283,7 +264,23 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 
 4. In the **dc**, **wef**, and **win10** VM, download the installer from [the official website](https://packages.wazuh.com/4.x/windows/wazuh-agent-4.3.5-1.msi). Then double click the downloaded file to install it. Find more on [the official website](https://documentation.wazuh.com/current/installation-guide/wazuh-agent/wazuh-agent-package-windows.html).
 
-#### Install and deploy opensearch and winlogbeat (manually)
+### Install and deploy opensearch and winlogbeat (automatically)
+
+1. Move directory to `~/tool/`
+
+2. Run the following commands on three teminals respectively to start opensearch service:
+
+   ```shell
+   ./opensearch/opensearch-tar-install.sh
+   ./dashboard/bin/opensearch-dashboards
+   ./logstash/bin/logstash -f ./logstash/testconf
+   ```
+
+3. Go to `<this.host.ip.address>:5601` with `admin:admin` to work on opensearch
+
+4. further filter.conf files can add to `~/tool/logstash/testconf/`
+
+### Install and deploy opensearch and winlogbeat (manually)
 
 1. In agent VMs, download and unzip winlogbeat-oss from [website](https://www.elastic.co/downloads/beats/winlogbeat-oss).  Find more from [official document](https://www.elastic.co/guide/en/beats/winlogbeat/current/winlogbeat-installation-configuration.html).
 
