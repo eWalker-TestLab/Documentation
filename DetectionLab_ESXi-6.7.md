@@ -104,6 +104,8 @@ Note that all the commands in this subsection should be executed on the **Ubuntu
     echo 'export PATH="$PATH:<PATH TO YOUR UNZIPPED FOLDER>"' >> ~/.bashrc
     ```
 
+11. Reload shell environment by `source ~/.bashrc`.
+
 ### ESXi Environment Configurations
 
 Note that all the commands in this subsection should be executed on the **ESXi** machine. Find more in the Software section of [this tutorial](https://clo.ng/blog/detectionlab-on-esxi/) and the instructions [here](https://nickcharlton.net/posts/using-packer-esxi-6.html).
