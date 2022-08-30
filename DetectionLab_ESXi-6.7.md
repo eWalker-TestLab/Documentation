@@ -155,7 +155,7 @@ After all the prerequisites are satisfied, do the following. Note that all the c
 
 ### Clone TestLab Repo
 
-Clone the repository to your workspace by `git clone git@github.com:eWalker-TestLab/TestLab.git`.
+Clone the repository to your workspace by `git clone git@github.com:eWalker-TestLab/TestLab.git`. Make sure you have access right to the repository.
 
 ### Packer Build
 
