@@ -16,6 +16,7 @@
    - [Things to Notice](#things-to-notice)
       - [Prerequisites](#prerequisites-1)
       - [Build and Deploy](#build-and-deploy-1)
+   - [TODO](#todo)
 
 Although this setup uses Ubuntu 20.04 guest OS in VMware, the same should apply to native OS running bare metal.
 
