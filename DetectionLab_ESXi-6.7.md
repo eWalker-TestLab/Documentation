@@ -380,3 +380,22 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
   ```shell
   ansible-playbook -v detectionlab.yml --tags="<dc/logger/wef/win10>" --start-at-task="<taskname>"
   ```
+
+
+## TODO 
+
+filebeat
+   - install filebeat on container / docker
+   - modify logstash config to receive log from filebeat
+
+windows domain name 
+   - make domain name variable (current: windows.domain / prosteritas.local) 
+
+winlogbeat config
+   - set logger ipaddress variable on winlogbeat config file with "sed" command 
+
+wazuh
+   - make wazuh sever send alert log to wazuh server 
+   - check wazuh dashboard logging
+   - make wazuh agent send event log to logstash
+   - check wazuh / opensearch dashboard for the log outcome
