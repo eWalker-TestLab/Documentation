@@ -13,6 +13,7 @@
       - [Deploy Wazuh (manually)](#deploy-wazuh-manually)
       - [Deploy opensearch and winlogbeat (automatically)](#deploy-opensearch-and-winlogbeat-automatically)
       - [Deploy opensearch and winlogbeat (manually)](#deploy-opensearch-and-winlogbeat-manually)
+      - [Move control machine into ESXi (optional)](#Move-control-machine-into-ESXi-optional)
    - [Things to Notice](#things-to-notice)
       - [Prerequisites](#prerequisites-1)
       - [Build and Deploy](#build-and-deploy-1)
@@ -351,6 +352,38 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
     ```
 
 11. Now you can go to `<this.host.ip.address>:5601` with `admin:admin` to work on opensearch.
+
+### Move control machine into ESXi (optional)
+
+1. From ESXi Web Client, navigate to "Virtual Machines" panel. Select win10 vm template named "Windows10". Select "Action" and choose "Export With Images". 
+
+   ![export vm image](img/TestLab/controlVM_export_vm_image.jpg)
+
+2. Click "Export" with default setting. (with "Windows10-0.vmdk" selected)
+
+3. After downloading, edit "Windows10.ovf" and remove line 
+
+   ```
+   <File ovf:href="Windows10.nvram" ovf:id="file2" ovf:size="0"/>
+   ```
+   ![win10.ovf](img/TestLab/controlVM_win10_ovf.jpg)
+
+4. Select "Create/Register VM". Choose "Deploy a virtual machine from an OVF or OVA file" and "Next". 
+
+5. Name the remote VM **remote**. Drag "Windows10.ovf" and "Windows10-0.vmdk".
+
+6. Step to "Deployment options", make sure "Network mappings" is set to "VM Network". 
+
+7. Finish config and wait for the VM Deployment. 
+
+8. To run nested virtual machine environment, edit the **remote** machine. Under "Virtual Hardware/CPU", enable "Expose hardware assisted virtualization to the guest OS". More detail refer to [here](https://communities.vmware.com/t5/VMware-Workstation-Pro/Nested-VM-s/td-p/2303905).
+
+9. To ensure the **remote** machine will always power on with ESXi host reboot, select "Action/Autostart/enable". Navigate to "Manage" panel, under "System/Autostart", choose "Edit settings" and "enabled".
+
+10. Install "Chrome, AnyDesk, VMware Workstation" or other required applications for remote hosting. 
+
+11. Once Ubuntu machine is set, prepare prerequisites starting from [Ubuntu Environment Configurations](#ubuntu-environment-configurations). 
+
 
 ## Things to Notice
 
