@@ -386,45 +386,45 @@ After finishing building the **logger** with *Ansible*, Wazuh Server should be i
 ## TODO 
 
 - filebeat
-   - install filebeat on container / docker
-   - modify logstash config to receive log from filebeat
+   - [ ] install filebeat on container / docker
+   - [ ] modify logstash config to receive log from filebeat
 
 - windows domain name 
-   - make domain name variable (current: windows.domain / prosteritas.local) 
+   - [ ] make domain name variable (current: windows.domain / prosteritas.local) 
 
 - winlogbeat config
-   - set logger ipaddress variable on winlogbeat config file with "sed" command 
+   - [ ] set logger ipaddress variable on winlogbeat config file with "sed" command 
 
 - wazuh
-   - make wazuh sever send alert log to wazuh server 
-   - check wazuh dashboard logging
-   - make wazuh agent send event log to logstash
-   - check wazuh / opensearch dashboard for the log outcome
+   - [ ] make wazuh sever send alert log to wazuh server 
+   - [ ] check wazuh dashboard logging
+   - [ ] make wazuh agent send event log to logstash
+   - [ ] check wazuh / opensearch dashboard for the log outcome
 
 ### the following come from Q&A session 
-- how to upgrade OS system with make \
+- [ ] how to upgrade OS system with make \
    e.g. win10 -> win11 \
    e.g. hotfix/security patch 
 
-- can we copy file(upload script) in packer 
+- [ ] can we copy file(upload script) in packer 
 
-- what happen if packer script have wrong variable
+- [ ] what happen if packer script have wrong variable
 
-- can preseed.cfg (hardcode password) be variable \
+- [ ] can preseed.cfg (hardcode password) be variable \
    or run a script to build preseed.cfg \
    (the existing script ping for preseed.cfg on detectionlab)
 
-- is it possible build template with 'thin provision' \
+- [ ] is it possible build template with 'thin provision' \
   (boot_disk_type = thick)
 
-- is mac address neccessay
+- [ ] is mac address neccessay
 
-- does opensearch apt package
+- [ ] does opensearch apt package
    - may not in ubuntu 2004
 
-- how to keep data even with terraform destroy 
+- [ ] how to keep data even with terraform destroy 
 
-- use hostname instead of ip address 
+- [ ] use hostname instead of ip address 
    - dc with DNS service
 
-- ansible inventory implement group
+- [ ] ansible inventory implement group
